@@ -1,0 +1,5 @@
+num_rows,num_nodes,num_edges,func,basic_block
+91,91,65,pjpeg_decode_mcu,%bb.131
+21,42,30,pjpeg_decode_mcu,%bb.149
+27966,2832,2832,pjpeg_decode_mcu,%bb.151
+9591,1380,1242,pjpeg_decode_mcu,%bb.337

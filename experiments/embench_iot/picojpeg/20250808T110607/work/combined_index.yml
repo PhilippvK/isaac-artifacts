@@ -1,0 +1,1655 @@
+candidates:
+- artifacts:
+    cdsl: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/gen/CUSTOM0.core_desc
+    flat: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/gen/CUSTOM0.flat
+    io_sub: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.131_0/io_sub8.pkl
+    sub: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.131_0/sub8.pkl
+    tree: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.131_0/tree8.pkl
+  id: 0
+  metrics:
+    code_size_reduction_rel: 0.0019766101136552416
+    enc_score: 0.9990234375
+    enc_weight: 0.0009765625
+    runtime_reduction_rel: 0.02321315520348044
+    seal5_score: 1.0
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 1.0
+    '#InputNodes': 2.0
+    '#Instrs': 2.0
+    '#Isos': 0.0
+    '#IsosNO': 0.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 2.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 2.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 1
+    ConstantNodes:
+    - 4903
+    ConstantSigns:
+    - false
+    ConstantValues:
+    - 1
+    Constraints: []
+    DateTime: 20250808T112304
+    EncodingBitsLeft (32 bits): 10.0
+    EncodingFootprint (32 bits): 0.6
+    EncodingWeight (32 bits): 0.0009765625
+    Freq: 60174.0
+    FullHash: 5a0af536d502d8a6330d600bb99204368468b58f
+    GlobalHash: abacf69428e63e4744cb736dda26f24ad1584768
+    IOSubHash: 9ae018def76ab9316bc53a3e75e775bd
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 1732
+    - 2004
+    InstrName: CUSTOM0
+    Instrs:
+    - ADD
+    - SLLI
+    IsoNodes:
+    - 1052
+    - 645
+    IsoWeight: 0.036178294165833715
+    Isos: []
+    IsosNO: []
+    LoadNodes: []
+    Nodes:
+    - 645
+    - 1052
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 15.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    OperandNodes:
+    - 5159
+    - 1732
+    - 2004
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 5159
+    Parent: .nan
+    Predicates: 256
+    Predicates (str): InstrPredicate.IS_COMMUTABLE
+    Registers: 2
+    ScheduleLength: 3.0
+    Status: 1
+    Status (str): ExportFilter.SELECTED
+    StoreNodes: []
+    SubHash: 4ddafd00eac0b15eb2d99c2af4e9e14b
+    TerminatorNodes: []
+    UniqueInstrs:
+    - SLLI
+    - ADD
+    Variations: 0
+    Weight: 0.036178294165833715
+    result: 8
+- artifacts:
+    cdsl: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/gen/CUSTOM1.core_desc
+    flat: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/gen/CUSTOM1.flat
+    io_sub: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.151_0/io_sub205.pkl
+    sub: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.151_0/sub205.pkl
+    tree: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.151_0/tree205.pkl
+  id: 1
+  metrics:
+    code_size_reduction_rel: 0.0032943501894252547
+    enc_score: 0.9990234375
+    enc_weight: 0.0009765625
+    runtime_reduction_rel: 0.012928663286600361
+    seal5_score: 1.0
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 2.0
+    '#InputNodes': 2.0
+    '#Instrs': 3.0
+    '#Isos': 1.0
+    '#IsosNO': 0.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 3.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 3.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 4
+    - 9
+    ConstantNodes:
+    - 2650
+    - 3932
+    ConstantSigns:
+    - false
+    - true
+    ConstantValues:
+    - 8
+    - -179
+    Constraints: []
+    DateTime: 20250808T112317
+    EncodingBitsLeft (32 bits): 10.0
+    EncodingFootprint (32 bits): 0.6
+    EncodingWeight (32 bits): 0.0009765625
+    Freq: 21504.0
+    FullHash: 199762d240a94fbea46b035ff908484572d434c9
+    GlobalHash: 3084737566b975572794ac48f532bf5856b4722e
+    IOSubHash: 9413e871c4a554f8e9dab04bb76de2e9
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 1031
+    - 1071
+    InstrName: CUSTOM1
+    Instrs:
+    - SRLI
+    - ADD
+    - ADDI
+    IsoNodes:
+    - 304
+    - 426
+    - 636
+    IsoWeight: 0.019393210632717324
+    Isos:
+    - 216
+    IsosNO: []
+    LoadNodes: []
+    Nodes:
+    - 636
+    - 426
+    - 304
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 15.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    OperandNodes:
+    - 5570
+    - 1031
+    - 1071
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 5570
+    Parent: .nan
+    Predicates: 256
+    Predicates (str): InstrPredicate.IS_COMMUTABLE
+    Registers: 2
+    ScheduleLength: 4.0
+    Status: 1
+    Status (str): ExportFilter.SELECTED
+    StoreNodes: []
+    SubHash: 35ae91a56fcde8443e6a01c565ffe072
+    TerminatorNodes: []
+    UniqueInstrs:
+    - SRLI
+    - ADD
+    - ADDI
+    Variations: 0
+    Weight: 0.019393210632717324
+    result: 205
+- artifacts:
+    cdsl: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/gen/CUSTOM2.core_desc
+    flat: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/gen/CUSTOM2.flat
+    io_sub: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.151_0/io_sub209.pkl
+    sub: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.151_0/sub209.pkl
+    tree: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.151_0/tree209.pkl
+  id: 2
+  metrics:
+    code_size_reduction_rel: 0.0
+    enc_score: 0.9990234375
+    enc_weight: 0.0009765625
+    runtime_reduction_rel: 0.0
+    seal5_score: 1.0
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 2.0
+    '#InputNodes': 2.0
+    '#Instrs': 3.0
+    '#Isos': 1.0
+    '#IsosNO': 0.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 3.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 3.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 4
+    - 8
+    ConstantNodes:
+    - 2650
+    - 3603
+    ConstantSigns:
+    - false
+    - false
+    ConstantValues:
+    - 8
+    - 103
+    Constraints: []
+    DateTime: 20250808T112317
+    EncodingBitsLeft (32 bits): 10.0
+    EncodingFootprint (32 bits): 0.6
+    EncodingWeight (32 bits): 0.0009765625
+    Freq: 21504.0
+    FullHash: 5667e98e8a1aa194a0dff265694f72d6891312f0
+    GlobalHash: 3084737566b975572794ac48f532bf5856b4722e
+    IOSubHash: 1999305c2cb72fa894daa7ebc33b0f43
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 2044
+    - 5126
+    InstrName: CUSTOM2
+    Instrs:
+    - SRLI
+    - ADDI
+    - MUL
+    IsoNodes:
+    - 1031
+    - 636
+    - 1949
+    IsoWeight: 0.019393210632717324
+    Isos:
+    - 217
+    IsosNO: []
+    LoadNodes: []
+    Nodes:
+    - 636
+    - 1949
+    - 1031
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 15.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    OperandNodes:
+    - 5575
+    - 2044
+    - 5126
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 5575
+    Parent: .nan
+    Predicates: 256
+    Predicates (str): InstrPredicate.IS_COMMUTABLE
+    Registers: 2
+    ScheduleLength: 4.0
+    Status: 1
+    Status (str): ExportFilter.SELECTED
+    StoreNodes: []
+    SubHash: 9e1acbf8d4efa2e937c6701f9c605842
+    TerminatorNodes: []
+    UniqueInstrs:
+    - MUL
+    - SRLI
+    - ADDI
+    Variations: 0
+    Weight: 0.019393210632717324
+    result: 209
+- artifacts:
+    cdsl: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/gen/CUSTOM3.core_desc
+    flat: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/gen/CUSTOM3.flat
+    io_sub: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.151_0/io_sub225.pkl
+    sub: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.151_0/sub225.pkl
+    tree: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.151_0/tree225.pkl
+  id: 3
+  metrics:
+    code_size_reduction_rel: 0.0
+    enc_score: 0.9990234375
+    enc_weight: 0.0009765625
+    runtime_reduction_rel: 0.0
+    seal5_score: 1.0
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 1.0
+    '#InputNodes': 2.0
+    '#Instrs': 2.0
+    '#Isos': 0.0
+    '#IsosNO': 0.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 2.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 2.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 8
+    ConstantNodes:
+    - 3603
+    ConstantSigns:
+    - false
+    ConstantValues:
+    - 103
+    Constraints: []
+    DateTime: 20250808T112317
+    EncodingBitsLeft (32 bits): 10.0
+    EncodingFootprint (32 bits): 0.6
+    EncodingWeight (32 bits): 0.0009765625
+    Freq: 21504.0
+    FullHash: 0ece0466d2d547a4dc3cd68e9b825ee597e29527
+    GlobalHash: 3084737566b975572794ac48f532bf5856b4722e
+    IOSubHash: 6aea90891b175cc834b09bc2392fffca
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 2044
+    - 5126
+    InstrName: CUSTOM3
+    Instrs:
+    - ADDI
+    - MUL
+    IsoNodes:
+    - 1949
+    - 1031
+    IsoWeight: 0.012928807088478217
+    Isos: []
+    IsosNO: []
+    LoadNodes: []
+    Nodes:
+    - 1949
+    - 1031
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 15.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    OperandNodes:
+    - 5601
+    - 2044
+    - 5126
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 5601
+    Parent: .nan
+    Predicates: 256
+    Predicates (str): InstrPredicate.IS_COMMUTABLE
+    Registers: 2
+    ScheduleLength: 3.0
+    Status: 1
+    Status (str): ExportFilter.SELECTED
+    StoreNodes: []
+    SubHash: a7889a6a037821a0001905ecf0d3327c
+    TerminatorNodes: []
+    UniqueInstrs:
+    - MUL
+    - ADDI
+    Variations: 0
+    Weight: 0.012928807088478217
+    result: 225
+- artifacts:
+    cdsl: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/gen/CUSTOM4.core_desc
+    flat: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/gen/CUSTOM4.flat
+    io_sub: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.151_0/io_sub227.pkl
+    sub: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.151_0/sub227.pkl
+    tree: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.151_0/tree227.pkl
+  id: 4
+  metrics:
+    code_size_reduction_rel: 0.00395322022731015
+    enc_score: 0.9990234375
+    enc_weight: 0.0009765625
+    runtime_reduction_rel: 0.011875323532223203
+    seal5_score: 1.0
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 1.0
+    '#InputNodes': 2.0
+    '#Instrs': 2.0
+    '#Isos': 0.0
+    '#IsosNO': 0.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 2.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 2.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 4
+    ConstantNodes:
+    - 2650
+    ConstantSigns:
+    - false
+    ConstantValues:
+    - 8
+    Constraints: []
+    DateTime: 20250808T112317
+    EncodingBitsLeft (32 bits): 10.0
+    EncodingFootprint (32 bits): 0.6
+    EncodingWeight (32 bits): 0.0009765625
+    Freq: 21504.0
+    FullHash: 381dc34b9fb004bf476eeb7038aa6a941c367021
+    GlobalHash: 3084737566b975572794ac48f532bf5856b4722e
+    IOSubHash: d855811b4954d82567569fb0e4c68603
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 1031
+    - 1071
+    InstrName: CUSTOM4
+    Instrs:
+    - SRLI
+    - ADD
+    IsoNodes:
+    - 426
+    - 636
+    IsoWeight: 0.012928807088478217
+    Isos: []
+    IsosNO: []
+    LoadNodes: []
+    Nodes:
+    - 636
+    - 426
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 15.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    OperandNodes:
+    - 5603
+    - 1031
+    - 1071
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 5603
+    Parent: .nan
+    Predicates: 256
+    Predicates (str): InstrPredicate.IS_COMMUTABLE
+    Registers: 2
+    ScheduleLength: 3.0
+    Status: 1
+    Status (str): ExportFilter.SELECTED
+    StoreNodes: []
+    SubHash: 66bcae466d3253e66d39932d76a7da9e
+    TerminatorNodes: []
+    UniqueInstrs:
+    - SRLI
+    - ADD
+    Variations: 0
+    Weight: 0.012928807088478217
+    result: 227
+- artifacts:
+    cdsl: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/gen/CUSTOM5.core_desc
+    flat: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/gen/CUSTOM5.flat
+    io_sub: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.151_0/io_sub228.pkl
+    sub: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.151_0/sub228.pkl
+    tree: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.151_0/tree228.pkl
+  id: 5
+  metrics:
+    code_size_reduction_rel: 0.0019766101136552416
+    enc_score: 0.9990234375
+    enc_weight: 0.0009765625
+    runtime_reduction_rel: 0.006464331643300181
+    seal5_score: 1.0
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 1.0
+    '#InputNodes': 2.0
+    '#Instrs': 2.0
+    '#Isos': 0.0
+    '#IsosNO': 0.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 2.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 2.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 9
+    ConstantNodes:
+    - 3932
+    ConstantSigns:
+    - true
+    ConstantValues:
+    - -179
+    Constraints: []
+    DateTime: 20250808T112317
+    EncodingBitsLeft (32 bits): 10.0
+    EncodingFootprint (32 bits): 0.6
+    EncodingWeight (32 bits): 0.0009765625
+    Freq: 21504.0
+    FullHash: 7c84ad622393bc3a1097ce4031c1abfee8810cb6
+    GlobalHash: 3084737566b975572794ac48f532bf5856b4722e
+    IOSubHash: 5d239eb8c8732a2ad8d53c52e38f263f
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 636
+    - 1071
+    InstrName: CUSTOM5
+    Instrs:
+    - ADD
+    - ADDI
+    IsoNodes:
+    - 304
+    - 426
+    IsoWeight: 0.012928807088478217
+    Isos: []
+    IsosNO: []
+    LoadNodes: []
+    Nodes:
+    - 426
+    - 304
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 15.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    OperandNodes:
+    - 5604
+    - 636
+    - 1071
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 5604
+    Parent: .nan
+    Predicates: 256
+    Predicates (str): InstrPredicate.IS_COMMUTABLE
+    Registers: 2
+    ScheduleLength: 3.0
+    Status: 1
+    Status (str): ExportFilter.SELECTED
+    StoreNodes: []
+    SubHash: 2cc2541ebcedb97f3fbbf4a7f220e6c8
+    TerminatorNodes: []
+    UniqueInstrs:
+    - ADD
+    - ADDI
+    Variations: 0
+    Weight: 0.012928807088478217
+    result: 228
+- artifacts:
+    cdsl: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/gen/CUSTOM6.core_desc
+    flat: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/gen/CUSTOM6.flat
+    io_sub: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.151_0/io_sub229.pkl
+    sub: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.151_0/sub229.pkl
+    tree: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.151_0/tree229.pkl
+  id: 6
+  metrics:
+    code_size_reduction_rel: 0.0
+    enc_score: 0.999969482421875
+    enc_weight: 3.0517578125e-05
+    runtime_reduction_rel: 0.0
+    seal5_score: 1.0
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 2.0
+    '#InputNodes': 1.0
+    '#Instrs': 2.0
+    '#Isos': 0.0
+    '#IsosNO': 0.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 2.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 2.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 1
+    - 1
+    ConstantNodes:
+    - 3325
+    - 4449
+    ConstantSigns:
+    - true
+    - false
+    ConstantValues:
+    - -1
+    - 0
+    Constraints: []
+    DateTime: 20250808T112317
+    EncodingBitsLeft (32 bits): 15.0
+    EncodingFootprint (32 bits): 0.4
+    EncodingWeight (32 bits): 3.0517578125e-05
+    Freq: 21504.0
+    FullHash: f7321ed0ed6ecd90c93d1ea1a397f0abba378b00
+    GlobalHash: 3084737566b975572794ac48f532bf5856b4722e
+    IOSubHash: d60a2c6688f140a5a30c6ba627f9ef11
+    InputNames:
+    - inp0
+    InputNodes:
+    - 304
+    InstrName: CUSTOM6
+    Instrs:
+    - ADDI
+    - SLTI
+    IsoNodes:
+    - 218
+    - 125
+    IsoWeight: 0.012928807088478217
+    Isos: []
+    IsosNO: []
+    LoadNodes: []
+    Nodes:
+    - 125
+    - 218
+    OperandDirs:
+    - OUT
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    OperandEncBitsSum: 10.0
+    OperandNames:
+    - rd
+    - rs1
+    OperandNodes:
+    - 5605
+    - 304
+    OperandRegClasses:
+    - GPR
+    - GPR
+    OperandTypes:
+    - REG
+    - REG
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 5605
+    Parent: .nan
+    Predicates: 0
+    Predicates (str): InstrPredicate.NONE
+    Registers: 2
+    ScheduleLength: 3.0
+    Status: 1
+    Status (str): ExportFilter.SELECTED
+    StoreNodes: []
+    SubHash: 7619ac094d58949ac1aa155a9cdaa655
+    TerminatorNodes: []
+    UniqueInstrs:
+    - SLTI
+    - ADDI
+    Variations: 0
+    Weight: 0.012928807088478217
+    result: 229
+- artifacts:
+    cdsl: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/gen/CUSTOM7.core_desc
+    flat: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/gen/CUSTOM7.flat
+    io_sub: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.151_0/io_sub233.pkl
+    sub: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.151_0/sub233.pkl
+    tree: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.151_0/tree233.pkl
+  id: 7
+  metrics:
+    code_size_reduction_rel: 0.006588700378850398
+    enc_score: 0.9990234375
+    enc_weight: 0.0009765625
+    runtime_reduction_rel: 0.025857326573200834
+    seal5_score: 1.0
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 1.0
+    '#InputNodes': 2.0
+    '#Instrs': 2.0
+    '#Isos': 0.0
+    '#IsosNO': 0.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 2.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 2.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 4
+    ConstantNodes:
+    - 2650
+    ConstantSigns:
+    - false
+    ConstantValues:
+    - 8
+    Constraints: []
+    DateTime: 20250808T112317
+    EncodingBitsLeft (32 bits): 10.0
+    EncodingFootprint (32 bits): 0.6
+    EncodingWeight (32 bits): 0.0009765625
+    Freq: 21504.0
+    FullHash: 9db71e1ac19dbb37266e3fa9c4b118a9ac9e7736
+    GlobalHash: 3084737566b975572794ac48f532bf5856b4722e
+    IOSubHash: b65b3a1e63031dcb25a5f34de38541a8
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 1949
+    - 2044
+    InstrName: CUSTOM7
+    Instrs:
+    - SRLI
+    - MUL
+    IsoNodes:
+    - 636
+    - 1031
+    IsoWeight: 0.012928807088478217
+    Isos: []
+    IsosNO: []
+    LoadNodes: []
+    Nodes:
+    - 636
+    - 1031
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 15.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    OperandNodes:
+    - 5611
+    - 1949
+    - 2044
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 5611
+    Parent: .nan
+    Predicates: 256
+    Predicates (str): InstrPredicate.IS_COMMUTABLE
+    Registers: 2
+    ScheduleLength: 3.0
+    Status: 1
+    Status (str): ExportFilter.SELECTED
+    StoreNodes: []
+    SubHash: d7f83c17346cfb4e370db30983194f35
+    TerminatorNodes: []
+    UniqueInstrs:
+    - MUL
+    - SRLI
+    Variations: 0
+    Weight: 0.012928807088478217
+    result: 233
+- artifacts:
+    cdsl: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/gen/CUSTOM8.core_desc
+    flat: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/gen/CUSTOM8.flat
+    io_sub: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.337_0/io_sub97.pkl
+    sub: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.337_0/sub97.pkl
+    tree: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.337_0/tree97.pkl
+  id: 8
+  metrics:
+    code_size_reduction_rel: 0.0
+    enc_score: 0.9990234375
+    enc_weight: 0.0009765625
+    runtime_reduction_rel: 0.0
+    seal5_score: 1.0
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 2.0
+    '#InputNodes': 2.0
+    '#Instrs': 4.0
+    '#Isos': 2.0
+    '#IsosNO': 0.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 4.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 4.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 4
+    - 9
+    ConstantNodes:
+    - 4093
+    - 3929
+    ConstantSigns:
+    - false
+    - false
+    ConstantValues:
+    - 8
+    - 198
+    Constraints: []
+    DateTime: 20250808T112326
+    EncodingBitsLeft (32 bits): 10.0
+    EncodingFootprint (32 bits): 0.6
+    EncodingWeight (32 bits): 0.0009765625
+    Freq: .nan
+    FullHash: f29e0b334671203bbbdc187827bcfb2d8ebb4430
+    GlobalHash: 82418af24fc51dc711942609af4b1cfeb30b0fb8
+    IOSubHash: ea8924323feb71d46998e49abb4480e7
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 2652
+    - 4119
+    InstrName: CUSTOM8
+    Instrs:
+    - ADD
+    - MUL
+    - SRLI
+    - ADDI
+    IsoNodes:
+    - 1092
+    - 2087
+    - 665
+    - 444
+    IsoWeight: .nan
+    Isos:
+    - 98
+    - 106
+    IsosNO: []
+    LoadNodes: []
+    Nodes:
+    - 444
+    - 1092
+    - 665
+    - 2087
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 15.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    OperandNodes:
+    - 5322
+    - 2652
+    - 4119
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 5322
+    Parent: .nan
+    Predicates: 256
+    Predicates (str): InstrPredicate.IS_COMMUTABLE
+    Registers: 2
+    ScheduleLength: 5.0
+    Status: 1
+    Status (str): ExportFilter.SELECTED
+    StoreNodes: []
+    SubHash: e40212692a8dabafc6ff1f947f5bada1
+    TerminatorNodes: []
+    UniqueInstrs:
+    - ADD
+    - MUL
+    - SRLI
+    - ADDI
+    Variations: 0
+    Weight: .nan
+    result: 97
+- artifacts:
+    cdsl: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/gen/CUSTOM9.core_desc
+    flat: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/gen/CUSTOM9.flat
+    io_sub: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.337_0/io_sub117.pkl
+    sub: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.337_0/sub117.pkl
+    tree: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.337_0/tree117.pkl
+  id: 9
+  metrics:
+    code_size_reduction_rel: 0.006588700378850398
+    enc_score: 0.9990234375
+    enc_weight: 0.0009765625
+    runtime_reduction_rel: 0.012928663286600361
+    seal5_score: 1.0
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 1.0
+    '#InputNodes': 2.0
+    '#Instrs': 3.0
+    '#Isos': 1.0
+    '#IsosNO': 0.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 3.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 3.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 4
+    ConstantNodes:
+    - 4093
+    ConstantSigns:
+    - false
+    ConstantValues:
+    - 8
+    Constraints: []
+    DateTime: 20250808T112326
+    EncodingBitsLeft (32 bits): 10.0
+    EncodingFootprint (32 bits): 0.6
+    EncodingWeight (32 bits): 0.0009765625
+    Freq: .nan
+    FullHash: 45cd82a312d30b00f622de1b0ca149973845e3a9
+    GlobalHash: 82418af24fc51dc711942609af4b1cfeb30b0fb8
+    IOSubHash: 3a9f1218eb1a4e5fd70fce5d33392bc1
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 2087
+    - 2652
+    InstrName: CUSTOM9
+    Instrs:
+    - ADD
+    - MUL
+    - SRLI
+    IsoNodes:
+    - 1092
+    - 665
+    - 444
+    IsoWeight: .nan
+    Isos:
+    - 128
+    IsosNO: []
+    LoadNodes: []
+    Nodes:
+    - 444
+    - 1092
+    - 665
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 15.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    OperandNodes:
+    - 5352
+    - 2087
+    - 2652
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 5352
+    Parent: .nan
+    Predicates: 256
+    Predicates (str): InstrPredicate.IS_COMMUTABLE
+    Registers: 2
+    ScheduleLength: 4.0
+    Status: 1
+    Status (str): ExportFilter.SELECTED
+    StoreNodes: []
+    SubHash: 1e55f3cfbb1c85a79a8e1f68b54b9ed2
+    TerminatorNodes: []
+    UniqueInstrs:
+    - ADD
+    - MUL
+    - SRLI
+    Variations: 0
+    Weight: .nan
+    result: 117
+- artifacts:
+    cdsl: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/gen/CUSTOM10.core_desc
+    flat: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/gen/CUSTOM10.flat
+    io_sub: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.337_0/io_sub122.pkl
+    sub: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.337_0/sub122.pkl
+    tree: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.337_0/tree122.pkl
+  id: 10
+  metrics:
+    code_size_reduction_rel: 0.0
+    enc_score: 0.9990234375
+    enc_weight: 0.0009765625
+    runtime_reduction_rel: 0.0
+    seal5_score: 1.0
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 2.0
+    '#InputNodes': 2.0
+    '#Instrs': 3.0
+    '#Isos': 1.0
+    '#IsosNO': 0.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 3.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 3.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 4
+    - 9
+    ConstantNodes:
+    - 4093
+    - 3929
+    ConstantSigns:
+    - false
+    - false
+    ConstantValues:
+    - 8
+    - 198
+    Constraints: []
+    DateTime: 20250808T112326
+    EncodingBitsLeft (32 bits): 10.0
+    EncodingFootprint (32 bits): 0.6
+    EncodingWeight (32 bits): 0.0009765625
+    Freq: .nan
+    FullHash: da14a08f1c13587569d4272b29b11a57b2d6b786
+    GlobalHash: 82418af24fc51dc711942609af4b1cfeb30b0fb8
+    IOSubHash: 1085e21669cf8fb3b06cd14a98eb1e48
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 2652
+    - 4119
+    InstrName: CUSTOM10
+    Instrs:
+    - MUL
+    - SRLI
+    - ADDI
+    IsoNodes:
+    - 1092
+    - 2087
+    - 665
+    IsoWeight: .nan
+    Isos:
+    - 127
+    IsosNO: []
+    LoadNodes: []
+    Nodes:
+    - 1092
+    - 665
+    - 2087
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 15.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    OperandNodes:
+    - 5358
+    - 2652
+    - 4119
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 5358
+    Parent: .nan
+    Predicates: 256
+    Predicates (str): InstrPredicate.IS_COMMUTABLE
+    Registers: 2
+    ScheduleLength: 4.0
+    Status: 1
+    Status (str): ExportFilter.SELECTED
+    StoreNodes: []
+    SubHash: 9e1acbf8d4efa2e937c6701f9c605842
+    TerminatorNodes: []
+    UniqueInstrs:
+    - MUL
+    - SRLI
+    - ADDI
+    Variations: 0
+    Weight: .nan
+    result: 122
+- artifacts:
+    cdsl: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/gen/CUSTOM11.core_desc
+    flat: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/gen/CUSTOM11.flat
+    io_sub: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.337_0/io_sub131.pkl
+    sub: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.337_0/sub131.pkl
+    tree: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.337_0/tree131.pkl
+  id: 11
+  metrics:
+    code_size_reduction_rel: 0.0019766101136552416
+    enc_score: 0.9990234375
+    enc_weight: 0.0009765625
+    runtime_reduction_rel: 0.006464331643300181
+    seal5_score: 1.0
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 1.0
+    '#InputNodes': 2.0
+    '#Instrs': 2.0
+    '#Isos': 0.0
+    '#IsosNO': 0.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 2.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 2.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 9
+    ConstantNodes:
+    - 2581
+    ConstantSigns:
+    - true
+    ConstantValues:
+    - -227
+    Constraints: []
+    DateTime: 20250808T112326
+    EncodingBitsLeft (32 bits): 10.0
+    EncodingFootprint (32 bits): 0.6
+    EncodingWeight (32 bits): 0.0009765625
+    Freq: .nan
+    FullHash: 687cf9d11022cefb845352037b037d51de0866ef
+    GlobalHash: 82418af24fc51dc711942609af4b1cfeb30b0fb8
+    IOSubHash: a3ff07211f9e2669fc859a4b5f4601ff
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 444
+    - 1370
+    InstrName: CUSTOM11
+    Instrs:
+    - ADD
+    - ADDI
+    IsoNodes:
+    - 235
+    - 319
+    IsoWeight: .nan
+    Isos: []
+    IsosNO: []
+    LoadNodes: []
+    Nodes:
+    - 319
+    - 235
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 15.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    OperandNodes:
+    - 5369
+    - 444
+    - 1370
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 5369
+    Parent: .nan
+    Predicates: 256
+    Predicates (str): InstrPredicate.IS_COMMUTABLE
+    Registers: 2
+    ScheduleLength: 3.0
+    Status: 1
+    Status (str): ExportFilter.SELECTED
+    StoreNodes: []
+    SubHash: 2cc2541ebcedb97f3fbbf4a7f220e6c8
+    TerminatorNodes: []
+    UniqueInstrs:
+    - ADD
+    - ADDI
+    Variations: 0
+    Weight: .nan
+    result: 131
+- artifacts:
+    cdsl: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/gen/CUSTOM12.core_desc
+    flat: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/gen/CUSTOM12.flat
+    io_sub: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.337_0/io_sub133.pkl
+    sub: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.337_0/sub133.pkl
+    tree: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/pjpeg_decode_mcu_%bb.337_0/tree133.pkl
+  id: 12
+  metrics:
+    code_size_reduction_rel: 0.0
+    enc_score: 0.9990234375
+    enc_weight: 0.0009765625
+    runtime_reduction_rel: 0.0
+    seal5_score: 1.0
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 1.0
+    '#InputNodes': 2.0
+    '#Instrs': 2.0
+    '#Isos': 0.0
+    '#IsosNO': 0.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 2.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 2.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 9
+    ConstantNodes:
+    - 3929
+    ConstantSigns:
+    - false
+    ConstantValues:
+    - 198
+    Constraints: []
+    DateTime: 20250808T112326
+    EncodingBitsLeft (32 bits): 10.0
+    EncodingFootprint (32 bits): 0.6
+    EncodingWeight (32 bits): 0.0009765625
+    Freq: .nan
+    FullHash: 531bc74a3d4f423a1abd1aa4e6bdea2ea15d449e
+    GlobalHash: 82418af24fc51dc711942609af4b1cfeb30b0fb8
+    IOSubHash: 4326ce2ddcd602c334917a9ab2ebec7b
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 2652
+    - 4119
+    InstrName: CUSTOM12
+    Instrs:
+    - MUL
+    - ADDI
+    IsoNodes:
+    - 1092
+    - 2087
+    IsoWeight: .nan
+    Isos: []
+    IsosNO: []
+    LoadNodes: []
+    Nodes:
+    - 1092
+    - 2087
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 15.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    OperandNodes:
+    - 5372
+    - 2652
+    - 4119
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 5372
+    Parent: .nan
+    Predicates: 256
+    Predicates (str): InstrPredicate.IS_COMMUTABLE
+    Registers: 2
+    ScheduleLength: 3.0
+    Status: 1
+    Status (str): ExportFilter.SELECTED
+    StoreNodes: []
+    SubHash: a7889a6a037821a0001905ecf0d3327c
+    TerminatorNodes: []
+    UniqueInstrs:
+    - MUL
+    - ADDI
+    Variations: 0
+    Weight: .nan
+    result: 133
+global:
+  artifacts:
+    ETISS_INSTALL_DIR: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/docker//etiss//etiss_install
+    LLVM_INSTALL_DIR: /work/git/students/tuw/michael/isaac-demo/out/embench_iot/picojpeg/20250808T110607/work/docker//seal5//llvm_install
+  properties:
+  - allowed_enc_sizes:
+    - 32
+    bb: '%bb.131'
+    candidate_count: 1
+    func: pjpeg_decode_mcu
+    ignore_names:
+    - G_PHI
+    - PHI
+    - COPY
+    - PseudoCALLIndirect
+    - PseudoLGA
+    - Select_GPR_Using_CC_GPR
+    - LUI
+    - PseudoMovAddr
+    ignore_op_types:
+    - input
+    - constant
+    - label
+    instr_predicates: 511
+    limit_results: null
+    max_branches: 1
+    max_enc_footprint: 1.0
+    max_enc_weight: 1.0
+    max_inputs: 4
+    max_loads: 1
+    max_mems: 0
+    max_nodes: 1000
+    max_outputs: 2
+    max_path_len: 9
+    max_path_width: 2
+    max_stores: 1
+    min_enc_bits_left: 5
+    min_inputs: 1
+    min_iso_weight: 0.008140116187312587
+    min_nodes: 1
+    min_outputs: 1
+    min_path_len: 1
+    session: isaac-demo-picojpeg-20250808T110607
+    stage: 32
+    timestamp: 20250808T112304
+    xlen: 32
+  - allowed_enc_sizes:
+    - 32
+    bb: '%bb.149'
+    candidate_count: 0
+    func: pjpeg_decode_mcu
+    ignore_names:
+    - G_PHI
+    - PHI
+    - COPY
+    - PseudoCALLIndirect
+    - PseudoLGA
+    - Select_GPR_Using_CC_GPR
+    - LUI
+    - PseudoMovAddr
+    ignore_op_types:
+    - input
+    - constant
+    - label
+    instr_predicates: 511
+    limit_results: null
+    max_branches: 1
+    max_enc_footprint: 1.0
+    max_enc_weight: 1.0
+    max_inputs: 4
+    max_loads: 1
+    max_mems: 0
+    max_nodes: 1000
+    max_outputs: 2
+    max_path_len: 9
+    max_path_width: 2
+    max_stores: 1
+    min_enc_bits_left: 5
+    min_inputs: 1
+    min_iso_weight: 0.001325229830858968
+    min_nodes: 1
+    min_outputs: 1
+    min_path_len: 1
+    session: isaac-demo-picojpeg-20250808T110607
+    stage: 32
+    timestamp: 20250808T112311
+    xlen: 32
+  - allowed_enc_sizes:
+    - 32
+    bb: '%bb.151'
+    candidate_count: 7
+    func: pjpeg_decode_mcu
+    ignore_names:
+    - G_PHI
+    - PHI
+    - COPY
+    - PseudoCALLIndirect
+    - PseudoLGA
+    - Select_GPR_Using_CC_GPR
+    - LUI
+    - PseudoMovAddr
+    ignore_op_types:
+    - input
+    - constant
+    - label
+    instr_predicates: 511
+    limit_results: null
+    max_branches: 1
+    max_enc_footprint: 1.0
+    max_enc_weight: 1.0
+    max_inputs: 4
+    max_loads: 1
+    max_mems: 0
+    max_nodes: 1000
+    max_outputs: 2
+    max_path_len: 9
+    max_path_width: 2
+    max_stores: 1
+    min_enc_bits_left: 5
+    min_inputs: 1
+    min_iso_weight: 0.00021575049596169214
+    min_nodes: 1
+    min_outputs: 1
+    min_path_len: 1
+    session: isaac-demo-picojpeg-20250808T110607
+    stage: 32
+    timestamp: 20250808T112317
+    xlen: 32
+  - allowed_enc_sizes:
+    - 32
+    bb: '%bb.337'
+    candidate_count: 8
+    func: pjpeg_decode_mcu
+    ignore_names:
+    - G_PHI
+    - PHI
+    - COPY
+    - PseudoCALLIndirect
+    - PseudoLGA
+    - Select_GPR_Using_CC_GPR
+    - LUI
+    - PseudoMovAddr
+    ignore_op_types:
+    - input
+    - constant
+    - label
+    instr_predicates: 511
+    limit_results: null
+    max_branches: 1
+    max_enc_footprint: 1.0
+    max_enc_weight: 1.0
+    max_inputs: 4
+    max_loads: 1
+    max_mems: 0
+    max_nodes: 1000
+    max_outputs: 2
+    max_path_len: 9
+    max_path_width: 2
+    max_stores: 1
+    min_enc_bits_left: 5
+    min_inputs: 1
+    min_iso_weight: 3.512468209196978e-05
+    min_nodes: 1
+    min_outputs: 1
+    min_path_len: 1
+    session: isaac-demo-picojpeg-20250808T110607
+    stage: 32
+    timestamp: 20250808T112326
+    xlen: 32

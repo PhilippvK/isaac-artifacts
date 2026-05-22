@@ -1,0 +1,3 @@
+,Model,Arch,Run Instructions,Run Instructions (rel.),Total ROM,Total RAM,ROM code,ROM code (rel.)
+0,tarfind,rv32im_zicsr_zifencei,1213490,1.0,3664,10228,3588,1.0
+1,tarfind,rv32im_zicsr_zifencei_xisaaccustom3single_xisaaccustom5single_xisaaccustom18single,996350,0.8210615662263389,3632,10228,3556,0.9910813823857302

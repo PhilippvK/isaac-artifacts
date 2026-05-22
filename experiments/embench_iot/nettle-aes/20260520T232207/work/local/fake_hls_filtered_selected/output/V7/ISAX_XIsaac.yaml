@@ -1,0 +1,13 @@
+- instruction: CUSTOM8
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 3
+- instruction: CUSTOM10
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 3
+- last stage: 4

@@ -1,0 +1,133 @@
+- instruction: CUSTOM0
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 2
+- instruction: CUSTOM2
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 2
+- instruction: CUSTOM3
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 2
+- instruction: CUSTOM4
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 2
+- instruction: CUSTOM5
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 2
+- instruction: CUSTOM7
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 2
+- instruction: CUSTOM11
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 2
+- instruction: CUSTOM12
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 2
+- instruction: CUSTOM13
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 2
+- instruction: CUSTOM15
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 2
+- instruction: CUSTOM17
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 2
+- instruction: CUSTOM18
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 2
+- instruction: CUSTOM21
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 2
+- instruction: CUSTOM24
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 2
+- instruction: CUSTOM25
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 2
+- instruction: CUSTOM27
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 2
+- instruction: CUSTOM29
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 2
+- instruction: CUSTOM31
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 2
+- instruction: CUSTOM32
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 2
+- instruction: CUSTOM33
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 2
+- instruction: CUSTOM35
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 2
+- instruction: CUSTOM37
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 2
+- last stage: 3

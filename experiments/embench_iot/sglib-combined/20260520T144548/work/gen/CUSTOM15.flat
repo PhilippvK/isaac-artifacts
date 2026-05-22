@@ -1,0 +1,5 @@
+// DateTime: 20260520T144929, Sub: 15, Name: CUSTOM15, Inputs: 2, Outputs: 2
+unsigned<32> rs1_val=X[rs1];
+unsigned<32> rs2_val=X[rs2];
+unsigned<32> outp0=(unsigned<32>)(AND((unsigned<32>)(ADDI((unsigned<32>)(SLTIU(rs2_val,(1))),(-1))),rs1_val));
+X[rd]=outp0;

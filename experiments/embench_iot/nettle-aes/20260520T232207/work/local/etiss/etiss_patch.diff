@@ -1,0 +1,1867 @@
+diff --git a/ArchImpl/XIsaacCore/XIsaacCore_XIsaacInstr.cpp b/ArchImpl/XIsaacCore/XIsaacCore_XIsaacInstr.cpp
+new file mode 100644
+index 0000000..62f32f9
+--- /dev/null
++++ b/ArchImpl/XIsaacCore/XIsaacCore_XIsaacInstr.cpp
+@@ -0,0 +1,1861 @@
++/**
++ * Generated on Wed, 20 May 2026 23:30:47 +0200.
++ *
++ * This file contains the instruction behavior models of the XIsaac
++ * instruction set for the XIsaacCore core architecture.
++ */
++
++#include "XIsaacCoreArch.h"
++#include "XIsaacCoreFuncs.h"
++
++using namespace etiss;
++using namespace etiss::instr;
++
++
++// CUSTOM0 ---------------------------------------------------------------------
++static InstructionDefinition custom0_rd_rs1_rs2 (
++	ISA32_XIsaacCore,
++	"custom0",
++	(uint32_t) 0x00007b,
++	(uint32_t) 0xfe00707f,
++	[] (BitArray & ba,etiss::CodeSet & cs,InstructionContext & ic)
++	{
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint8 rs2 = 0;
++static BitArrayRange R_rs2_0(24, 20);
++rs2 += R_rs2_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++	{
++		CodePart & cp = cs.append(CodePart::INITIALREQUIRED);
++
++		cp.code() = std::string("//CUSTOM0\n");
++
++// -----------------------------------------------------------------------------
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "cpu->nextPc = " + std::to_string(ic.current_address_ + 4) + "ULL;\n";
++cp.code() += "} // block\n";
++} // block
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "etiss_uint32 rs1_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs1) + "ULL];\n";
++cp.code() += "etiss_uint32 rs2_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs2) + "ULL];\n";
++cp.code() += "etiss_uint32 outp0 = (etiss_uint32)(((((etiss_int32)((rs2_val)) + (etiss_int32)(((etiss_uint32)(((((etiss_uint32)((rs1_val)) & 1020ULL))))))))));\n";
++cp.code() += "*((XIsaacCore*)cpu)->X[" + std::to_string(rd) + "ULL] = outp0;\n";
++cp.code() += "} // block\n";
++} // block
++cp.code() += "instr_exit_" + std::to_string(ic.current_address_) + ":\n";
++cp.code() += "cpu->instructionPointer = cpu->nextPc;\n";
++// -----------------------------------------------------------------------------
++		cp.getAffectedRegisters().add("instructionPointer", 32);
++	}
++
++		return true;
++	},
++	0,
++	[] (BitArray & ba, Instruction & instr)
++	{
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint8 rs2 = 0;
++static BitArrayRange R_rs2_0(24, 20);
++rs2 += R_rs2_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++		std::stringstream ss;
++// -----------------------------------------------------------------------------
++ss << "custom0" << " # " << ba << (" [rd=" + std::to_string(rd) + " | rs1=" + std::to_string(rs1) + " | rs2=" + std::to_string(rs2) + "]");
++// -----------------------------------------------------------------------------
++		return ss.str();
++	}
++);
++
++// CUSTOM1 ---------------------------------------------------------------------
++static InstructionDefinition custom1_rd_rs1_rs2 (
++	ISA32_XIsaacCore,
++	"custom1",
++	(uint32_t) 0x200007b,
++	(uint32_t) 0xfe00707f,
++	[] (BitArray & ba,etiss::CodeSet & cs,InstructionContext & ic)
++	{
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint8 rs2 = 0;
++static BitArrayRange R_rs2_0(24, 20);
++rs2 += R_rs2_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++	{
++		CodePart & cp = cs.append(CodePart::INITIALREQUIRED);
++
++		cp.code() = std::string("//CUSTOM1\n");
++
++// -----------------------------------------------------------------------------
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "cpu->nextPc = " + std::to_string(ic.current_address_ + 4) + "ULL;\n";
++cp.code() += "} // block\n";
++} // block
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "etiss_uint32 rs1_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs1) + "ULL];\n";
++cp.code() += "etiss_uint32 rs2_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs2) + "ULL];\n";
++cp.code() += "etiss_uint32 outp0 = (etiss_uint32)(((((etiss_int32)((rs2_val)) + (etiss_int32)(((etiss_uint32)(((((etiss_uint32)((rs1_val)) << 2ULL))))))))));\n";
++cp.code() += "*((XIsaacCore*)cpu)->X[" + std::to_string(rd) + "ULL] = outp0;\n";
++cp.code() += "} // block\n";
++} // block
++cp.code() += "instr_exit_" + std::to_string(ic.current_address_) + ":\n";
++cp.code() += "cpu->instructionPointer = cpu->nextPc;\n";
++// -----------------------------------------------------------------------------
++		cp.getAffectedRegisters().add("instructionPointer", 32);
++	}
++
++		return true;
++	},
++	0,
++	[] (BitArray & ba, Instruction & instr)
++	{
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint8 rs2 = 0;
++static BitArrayRange R_rs2_0(24, 20);
++rs2 += R_rs2_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++		std::stringstream ss;
++// -----------------------------------------------------------------------------
++ss << "custom1" << " # " << ba << (" [rd=" + std::to_string(rd) + " | rs1=" + std::to_string(rs1) + " | rs2=" + std::to_string(rs2) + "]");
++// -----------------------------------------------------------------------------
++		return ss.str();
++	}
++);
++
++// CUSTOM2 ---------------------------------------------------------------------
++static InstructionDefinition custom2_rd_rs1_rs2_uimm2 (
++	ISA32_XIsaacCore,
++	"custom2",
++	(uint32_t) 0x00107b,
++	(uint32_t) 0xc000707f,
++	[] (BitArray & ba,etiss::CodeSet & cs,InstructionContext & ic)
++	{
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint8 rs2 = 0;
++static BitArrayRange R_rs2_0(24, 20);
++rs2 += R_rs2_0.read(ba) << 0;
++etiss_uint8 uimm2 = 0;
++static BitArrayRange R_uimm2_0(29, 25);
++uimm2 += R_uimm2_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++	{
++		CodePart & cp = cs.append(CodePart::INITIALREQUIRED);
++
++		cp.code() = std::string("//CUSTOM2\n");
++
++// -----------------------------------------------------------------------------
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "cpu->nextPc = " + std::to_string(ic.current_address_ + 4) + "ULL;\n";
++cp.code() += "} // block\n";
++} // block
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "etiss_uint32 rs1_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs1) + "ULL];\n";
++cp.code() += "etiss_uint32 rs2_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs2) + "ULL];\n";
++cp.code() += "etiss_uint32 outp0 = (etiss_uint32)(((((etiss_int32)((rs2_val)) + (etiss_int32)(((etiss_uint32)(((((etiss_uint32)((rs1_val)) << " + std::to_string((etiss_uint32)(((etiss_uint8)(((uimm2)))))) + "ULL))))))))));\n";
++cp.code() += "*((XIsaacCore*)cpu)->X[" + std::to_string(rd) + "ULL] = outp0;\n";
++cp.code() += "} // block\n";
++} // block
++cp.code() += "instr_exit_" + std::to_string(ic.current_address_) + ":\n";
++cp.code() += "cpu->instructionPointer = cpu->nextPc;\n";
++// -----------------------------------------------------------------------------
++		cp.getAffectedRegisters().add("instructionPointer", 32);
++	}
++
++		return true;
++	},
++	0,
++	[] (BitArray & ba, Instruction & instr)
++	{
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint8 rs2 = 0;
++static BitArrayRange R_rs2_0(24, 20);
++rs2 += R_rs2_0.read(ba) << 0;
++etiss_uint8 uimm2 = 0;
++static BitArrayRange R_uimm2_0(29, 25);
++uimm2 += R_uimm2_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++		std::stringstream ss;
++// -----------------------------------------------------------------------------
++ss << "custom2" << " # " << ba << (" [rd=" + std::to_string(rd) + " | rs1=" + std::to_string(rs1) + " | rs2=" + std::to_string(rs2) + " | uimm2=" + std::to_string(uimm2) + "]");
++// -----------------------------------------------------------------------------
++		return ss.str();
++	}
++);
++
++// CUSTOM3 ---------------------------------------------------------------------
++static InstructionDefinition custom3_rd_rs1_rs2_uimm5 (
++	ISA32_XIsaacCore,
++	"custom3",
++	(uint32_t) 0x4000107b,
++	(uint32_t) 0xc000707f,
++	[] (BitArray & ba,etiss::CodeSet & cs,InstructionContext & ic)
++	{
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint8 rs2 = 0;
++static BitArrayRange R_rs2_0(24, 20);
++rs2 += R_rs2_0.read(ba) << 0;
++etiss_uint8 uimm5 = 0;
++static BitArrayRange R_uimm5_0(29, 25);
++uimm5 += R_uimm5_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++	{
++		CodePart & cp = cs.append(CodePart::INITIALREQUIRED);
++
++		cp.code() = std::string("//CUSTOM3\n");
++
++// -----------------------------------------------------------------------------
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "cpu->nextPc = " + std::to_string(ic.current_address_ + 4) + "ULL;\n";
++cp.code() += "} // block\n";
++} // block
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "etiss_uint32 rs1_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs1) + "ULL];\n";
++cp.code() += "etiss_uint32 rs2_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs2) + "ULL];\n";
++cp.code() += "etiss_uint32 outp0 = (etiss_uint32)(((((etiss_int32)((rs2_val)) + (etiss_int32)(((etiss_uint32)(((((etiss_uint32)((rs1_val)) << " + std::to_string((etiss_uint32)(((etiss_uint8)(((uimm5)))))) + "ULL))))))))));\n";
++cp.code() += "*((XIsaacCore*)cpu)->X[" + std::to_string(rd) + "ULL] = outp0;\n";
++cp.code() += "} // block\n";
++} // block
++cp.code() += "instr_exit_" + std::to_string(ic.current_address_) + ":\n";
++cp.code() += "cpu->instructionPointer = cpu->nextPc;\n";
++// -----------------------------------------------------------------------------
++		cp.getAffectedRegisters().add("instructionPointer", 32);
++	}
++
++		return true;
++	},
++	0,
++	[] (BitArray & ba, Instruction & instr)
++	{
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint8 rs2 = 0;
++static BitArrayRange R_rs2_0(24, 20);
++rs2 += R_rs2_0.read(ba) << 0;
++etiss_uint8 uimm5 = 0;
++static BitArrayRange R_uimm5_0(29, 25);
++uimm5 += R_uimm5_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++		std::stringstream ss;
++// -----------------------------------------------------------------------------
++ss << "custom3" << " # " << ba << (" [rd=" + std::to_string(rd) + " | rs1=" + std::to_string(rs1) + " | rs2=" + std::to_string(rs2) + " | uimm5=" + std::to_string(uimm5) + "]");
++// -----------------------------------------------------------------------------
++		return ss.str();
++	}
++);
++
++// CUSTOM4 ---------------------------------------------------------------------
++static InstructionDefinition custom4_rd_rs1_rs2 (
++	ISA32_XIsaacCore,
++	"custom4",
++	(uint32_t) 0x400007b,
++	(uint32_t) 0xfe00707f,
++	[] (BitArray & ba,etiss::CodeSet & cs,InstructionContext & ic)
++	{
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint8 rs2 = 0;
++static BitArrayRange R_rs2_0(24, 20);
++rs2 += R_rs2_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++	{
++		CodePart & cp = cs.append(CodePart::INITIALREQUIRED);
++
++		cp.code() = std::string("//CUSTOM4\n");
++
++// -----------------------------------------------------------------------------
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "cpu->nextPc = " + std::to_string(ic.current_address_ + 4) + "ULL;\n";
++cp.code() += "} // block\n";
++} // block
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "etiss_uint32 rs2_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs2) + "ULL];\n";
++cp.code() += "etiss_uint32 rs1_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs1) + "ULL];\n";
++cp.code() += "etiss_uint32 outp0 = (etiss_uint32)(((((etiss_int32)((rs2_val)) + (etiss_int32)(((etiss_uint32)(((((etiss_uint32)(((etiss_uint32)(((((etiss_uint32)((rs1_val)) >> 24ULL)))))) << 2ULL))))))))));\n";
++cp.code() += "*((XIsaacCore*)cpu)->X[" + std::to_string(rd) + "ULL] = outp0;\n";
++cp.code() += "} // block\n";
++} // block
++cp.code() += "instr_exit_" + std::to_string(ic.current_address_) + ":\n";
++cp.code() += "cpu->instructionPointer = cpu->nextPc;\n";
++// -----------------------------------------------------------------------------
++		cp.getAffectedRegisters().add("instructionPointer", 32);
++	}
++
++		return true;
++	},
++	0,
++	[] (BitArray & ba, Instruction & instr)
++	{
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint8 rs2 = 0;
++static BitArrayRange R_rs2_0(24, 20);
++rs2 += R_rs2_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++		std::stringstream ss;
++// -----------------------------------------------------------------------------
++ss << "custom4" << " # " << ba << (" [rd=" + std::to_string(rd) + " | rs1=" + std::to_string(rs1) + " | rs2=" + std::to_string(rs2) + "]");
++// -----------------------------------------------------------------------------
++		return ss.str();
++	}
++);
++
++// CUSTOM5 ---------------------------------------------------------------------
++static InstructionDefinition custom5_rd_rs1_rs2 (
++	ISA32_XIsaacCore,
++	"custom5",
++	(uint32_t) 0x600007b,
++	(uint32_t) 0xfe00707f,
++	[] (BitArray & ba,etiss::CodeSet & cs,InstructionContext & ic)
++	{
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint8 rs2 = 0;
++static BitArrayRange R_rs2_0(24, 20);
++rs2 += R_rs2_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++	{
++		CodePart & cp = cs.append(CodePart::INITIALREQUIRED);
++
++		cp.code() = std::string("//CUSTOM5\n");
++
++// -----------------------------------------------------------------------------
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "cpu->nextPc = " + std::to_string(ic.current_address_ + 4) + "ULL;\n";
++cp.code() += "} // block\n";
++} // block
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "etiss_uint32 rs2_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs2) + "ULL];\n";
++cp.code() += "etiss_uint32 rs1_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs1) + "ULL];\n";
++cp.code() += "etiss_uint32 outp0 = (etiss_uint32)(((((etiss_int32)((rs1_val)) + (etiss_int32)(((etiss_uint32)(((((etiss_uint32)(((etiss_uint32)(((((etiss_uint32)((rs2_val)) >> 6ULL)))))) & 1020ULL))))))))));\n";
++cp.code() += "*((XIsaacCore*)cpu)->X[" + std::to_string(rd) + "ULL] = outp0;\n";
++cp.code() += "} // block\n";
++} // block
++cp.code() += "instr_exit_" + std::to_string(ic.current_address_) + ":\n";
++cp.code() += "cpu->instructionPointer = cpu->nextPc;\n";
++// -----------------------------------------------------------------------------
++		cp.getAffectedRegisters().add("instructionPointer", 32);
++	}
++
++		return true;
++	},
++	0,
++	[] (BitArray & ba, Instruction & instr)
++	{
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint8 rs2 = 0;
++static BitArrayRange R_rs2_0(24, 20);
++rs2 += R_rs2_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++		std::stringstream ss;
++// -----------------------------------------------------------------------------
++ss << "custom5" << " # " << ba << (" [rd=" + std::to_string(rd) + " | rs1=" + std::to_string(rs1) + " | rs2=" + std::to_string(rs2) + "]");
++// -----------------------------------------------------------------------------
++		return ss.str();
++	}
++);
++
++// CUSTOM6 ---------------------------------------------------------------------
++static InstructionDefinition custom6_rd_rs1_rs2 (
++	ISA32_XIsaacCore,
++	"custom6",
++	(uint32_t) 0x800007b,
++	(uint32_t) 0xfe00707f,
++	[] (BitArray & ba,etiss::CodeSet & cs,InstructionContext & ic)
++	{
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint8 rs2 = 0;
++static BitArrayRange R_rs2_0(24, 20);
++rs2 += R_rs2_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++	{
++		CodePart & cp = cs.append(CodePart::INITIALREQUIRED);
++
++		cp.code() = std::string("//CUSTOM6\n");
++
++// -----------------------------------------------------------------------------
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "cpu->nextPc = " + std::to_string(ic.current_address_ + 4) + "ULL;\n";
++cp.code() += "} // block\n";
++} // block
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "etiss_uint32 rs2_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs2) + "ULL];\n";
++cp.code() += "etiss_uint32 rs1_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs1) + "ULL];\n";
++cp.code() += "etiss_uint32 outp0 = (etiss_uint32)(((((etiss_int32)((rs1_val)) + (etiss_int32)(((etiss_uint32)(((((etiss_uint32)(((etiss_uint32)(((((etiss_uint32)((rs2_val)) & 255ULL)))))) << 2ULL))))))))));\n";
++cp.code() += "*((XIsaacCore*)cpu)->X[" + std::to_string(rd) + "ULL] = outp0;\n";
++cp.code() += "} // block\n";
++} // block
++cp.code() += "instr_exit_" + std::to_string(ic.current_address_) + ":\n";
++cp.code() += "cpu->instructionPointer = cpu->nextPc;\n";
++// -----------------------------------------------------------------------------
++		cp.getAffectedRegisters().add("instructionPointer", 32);
++	}
++
++		return true;
++	},
++	0,
++	[] (BitArray & ba, Instruction & instr)
++	{
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint8 rs2 = 0;
++static BitArrayRange R_rs2_0(24, 20);
++rs2 += R_rs2_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++		std::stringstream ss;
++// -----------------------------------------------------------------------------
++ss << "custom6" << " # " << ba << (" [rd=" + std::to_string(rd) + " | rs1=" + std::to_string(rs1) + " | rs2=" + std::to_string(rs2) + "]");
++// -----------------------------------------------------------------------------
++		return ss.str();
++	}
++);
++
++// CUSTOM7 ---------------------------------------------------------------------
++static InstructionDefinition custom7_rd_rs1_rs2_uimm4 (
++	ISA32_XIsaacCore,
++	"custom7",
++	(uint32_t) 0x8000107b,
++	(uint32_t) 0xc000707f,
++	[] (BitArray & ba,etiss::CodeSet & cs,InstructionContext & ic)
++	{
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint8 rs2 = 0;
++static BitArrayRange R_rs2_0(24, 20);
++rs2 += R_rs2_0.read(ba) << 0;
++etiss_uint8 uimm4 = 0;
++static BitArrayRange R_uimm4_0(29, 25);
++uimm4 += R_uimm4_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++	{
++		CodePart & cp = cs.append(CodePart::INITIALREQUIRED);
++
++		cp.code() = std::string("//CUSTOM7\n");
++
++// -----------------------------------------------------------------------------
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "cpu->nextPc = " + std::to_string(ic.current_address_ + 4) + "ULL;\n";
++cp.code() += "} // block\n";
++} // block
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "etiss_uint32 rs2_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs2) + "ULL];\n";
++cp.code() += "etiss_uint32 rs1_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs1) + "ULL];\n";
++cp.code() += "etiss_uint32 outp0 = (etiss_uint32)(((((etiss_int32)((rs1_val)) + (etiss_int32)(((etiss_uint32)(((((etiss_uint32)(((etiss_uint32)(((((etiss_uint32)((rs2_val)) >> " + std::to_string((etiss_uint32)(((etiss_uint8)(((uimm4)))))) + "ULL)))))) & 1020ULL))))))))));\n";
++cp.code() += "*((XIsaacCore*)cpu)->X[" + std::to_string(rd) + "ULL] = outp0;\n";
++cp.code() += "} // block\n";
++} // block
++cp.code() += "instr_exit_" + std::to_string(ic.current_address_) + ":\n";
++cp.code() += "cpu->instructionPointer = cpu->nextPc;\n";
++// -----------------------------------------------------------------------------
++		cp.getAffectedRegisters().add("instructionPointer", 32);
++	}
++
++		return true;
++	},
++	0,
++	[] (BitArray & ba, Instruction & instr)
++	{
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint8 rs2 = 0;
++static BitArrayRange R_rs2_0(24, 20);
++rs2 += R_rs2_0.read(ba) << 0;
++etiss_uint8 uimm4 = 0;
++static BitArrayRange R_uimm4_0(29, 25);
++uimm4 += R_uimm4_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++		std::stringstream ss;
++// -----------------------------------------------------------------------------
++ss << "custom7" << " # " << ba << (" [rd=" + std::to_string(rd) + " | rs1=" + std::to_string(rs1) + " | rs2=" + std::to_string(rs2) + " | uimm4=" + std::to_string(uimm4) + "]");
++// -----------------------------------------------------------------------------
++		return ss.str();
++	}
++);
++
++// CUSTOM8 ---------------------------------------------------------------------
++static InstructionDefinition custom8_rd_rs1_rs2_uimm5 (
++	ISA32_XIsaacCore,
++	"custom8",
++	(uint32_t) 0xc000107b,
++	(uint32_t) 0xc000707f,
++	[] (BitArray & ba,etiss::CodeSet & cs,InstructionContext & ic)
++	{
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint8 rs2 = 0;
++static BitArrayRange R_rs2_0(24, 20);
++rs2 += R_rs2_0.read(ba) << 0;
++etiss_uint8 uimm5 = 0;
++static BitArrayRange R_uimm5_0(29, 25);
++uimm5 += R_uimm5_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++	{
++		CodePart & cp = cs.append(CodePart::INITIALREQUIRED);
++
++		cp.code() = std::string("//CUSTOM8\n");
++
++// -----------------------------------------------------------------------------
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "cpu->nextPc = " + std::to_string(ic.current_address_ + 4) + "ULL;\n";
++cp.code() += "} // block\n";
++} // block
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "etiss_uint32 rs2_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs2) + "ULL];\n";
++cp.code() += "etiss_uint32 rs1_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs1) + "ULL];\n";
++cp.code() += "etiss_uint32 outp0 = (etiss_uint32)(((((etiss_int32)((rs1_val)) + (etiss_int32)(((etiss_uint32)(((((etiss_uint32)(((etiss_uint32)(((((etiss_uint32)((rs2_val)) >> " + std::to_string((etiss_uint32)(((etiss_uint8)(((uimm5)))))) + "ULL)))))) & 1020ULL))))))))));\n";
++cp.code() += "*((XIsaacCore*)cpu)->X[" + std::to_string(rd) + "ULL] = outp0;\n";
++cp.code() += "} // block\n";
++} // block
++cp.code() += "instr_exit_" + std::to_string(ic.current_address_) + ":\n";
++cp.code() += "cpu->instructionPointer = cpu->nextPc;\n";
++// -----------------------------------------------------------------------------
++		cp.getAffectedRegisters().add("instructionPointer", 32);
++	}
++
++		return true;
++	},
++	0,
++	[] (BitArray & ba, Instruction & instr)
++	{
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint8 rs2 = 0;
++static BitArrayRange R_rs2_0(24, 20);
++rs2 += R_rs2_0.read(ba) << 0;
++etiss_uint8 uimm5 = 0;
++static BitArrayRange R_uimm5_0(29, 25);
++uimm5 += R_uimm5_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++		std::stringstream ss;
++// -----------------------------------------------------------------------------
++ss << "custom8" << " # " << ba << (" [rd=" + std::to_string(rd) + " | rs1=" + std::to_string(rs1) + " | rs2=" + std::to_string(rs2) + " | uimm5=" + std::to_string(uimm5) + "]");
++// -----------------------------------------------------------------------------
++		return ss.str();
++	}
++);
++
++// CUSTOM9 ---------------------------------------------------------------------
++static InstructionDefinition custom9_rd_rs1_rs2_uimm2 (
++	ISA32_XIsaacCore,
++	"custom9",
++	(uint32_t) 0x00207b,
++	(uint32_t) 0xc000707f,
++	[] (BitArray & ba,etiss::CodeSet & cs,InstructionContext & ic)
++	{
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint8 rs2 = 0;
++static BitArrayRange R_rs2_0(24, 20);
++rs2 += R_rs2_0.read(ba) << 0;
++etiss_uint8 uimm2 = 0;
++static BitArrayRange R_uimm2_0(29, 25);
++uimm2 += R_uimm2_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++	{
++		CodePart & cp = cs.append(CodePart::INITIALREQUIRED);
++
++		cp.code() = std::string("//CUSTOM9\n");
++
++// -----------------------------------------------------------------------------
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "cpu->nextPc = " + std::to_string(ic.current_address_ + 4) + "ULL;\n";
++cp.code() += "} // block\n";
++} // block
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "etiss_uint32 rs2_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs2) + "ULL];\n";
++cp.code() += "etiss_uint32 rs1_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs1) + "ULL];\n";
++cp.code() += "etiss_uint32 outp0 = (etiss_uint32)(((((etiss_int32)((rs1_val)) + (etiss_int32)(((etiss_uint32)(((((etiss_uint32)(((etiss_uint32)(((((etiss_uint32)((rs2_val)) & 255ULL)))))) << " + std::to_string((etiss_uint32)(((etiss_uint8)(((uimm2)))))) + "ULL))))))))));\n";
++cp.code() += "*((XIsaacCore*)cpu)->X[" + std::to_string(rd) + "ULL] = outp0;\n";
++cp.code() += "} // block\n";
++} // block
++cp.code() += "instr_exit_" + std::to_string(ic.current_address_) + ":\n";
++cp.code() += "cpu->instructionPointer = cpu->nextPc;\n";
++// -----------------------------------------------------------------------------
++		cp.getAffectedRegisters().add("instructionPointer", 32);
++	}
++
++		return true;
++	},
++	0,
++	[] (BitArray & ba, Instruction & instr)
++	{
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint8 rs2 = 0;
++static BitArrayRange R_rs2_0(24, 20);
++rs2 += R_rs2_0.read(ba) << 0;
++etiss_uint8 uimm2 = 0;
++static BitArrayRange R_uimm2_0(29, 25);
++uimm2 += R_uimm2_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++		std::stringstream ss;
++// -----------------------------------------------------------------------------
++ss << "custom9" << " # " << ba << (" [rd=" + std::to_string(rd) + " | rs1=" + std::to_string(rs1) + " | rs2=" + std::to_string(rs2) + " | uimm2=" + std::to_string(uimm2) + "]");
++// -----------------------------------------------------------------------------
++		return ss.str();
++	}
++);
++
++// CUSTOM10 --------------------------------------------------------------------
++static InstructionDefinition custom10_rd_rs1_rs2_uimm5 (
++	ISA32_XIsaacCore,
++	"custom10",
++	(uint32_t) 0x4000207b,
++	(uint32_t) 0xc000707f,
++	[] (BitArray & ba,etiss::CodeSet & cs,InstructionContext & ic)
++	{
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint8 rs2 = 0;
++static BitArrayRange R_rs2_0(24, 20);
++rs2 += R_rs2_0.read(ba) << 0;
++etiss_uint8 uimm5 = 0;
++static BitArrayRange R_uimm5_0(29, 25);
++uimm5 += R_uimm5_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++	{
++		CodePart & cp = cs.append(CodePart::INITIALREQUIRED);
++
++		cp.code() = std::string("//CUSTOM10\n");
++
++// -----------------------------------------------------------------------------
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "cpu->nextPc = " + std::to_string(ic.current_address_ + 4) + "ULL;\n";
++cp.code() += "} // block\n";
++} // block
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "etiss_uint32 rs2_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs2) + "ULL];\n";
++cp.code() += "etiss_uint32 rs1_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs1) + "ULL];\n";
++cp.code() += "etiss_uint32 outp0 = (etiss_uint32)(((((etiss_int32)((rs1_val)) + (etiss_int32)(((etiss_uint32)(((((etiss_uint32)(((etiss_uint32)(((((etiss_uint32)((rs2_val)) & 255ULL)))))) << " + std::to_string((etiss_uint32)(((etiss_uint8)(((uimm5)))))) + "ULL))))))))));\n";
++cp.code() += "*((XIsaacCore*)cpu)->X[" + std::to_string(rd) + "ULL] = outp0;\n";
++cp.code() += "} // block\n";
++} // block
++cp.code() += "instr_exit_" + std::to_string(ic.current_address_) + ":\n";
++cp.code() += "cpu->instructionPointer = cpu->nextPc;\n";
++// -----------------------------------------------------------------------------
++		cp.getAffectedRegisters().add("instructionPointer", 32);
++	}
++
++		return true;
++	},
++	0,
++	[] (BitArray & ba, Instruction & instr)
++	{
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint8 rs2 = 0;
++static BitArrayRange R_rs2_0(24, 20);
++rs2 += R_rs2_0.read(ba) << 0;
++etiss_uint8 uimm5 = 0;
++static BitArrayRange R_uimm5_0(29, 25);
++uimm5 += R_uimm5_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++		std::stringstream ss;
++// -----------------------------------------------------------------------------
++ss << "custom10" << " # " << ba << (" [rd=" + std::to_string(rd) + " | rs1=" + std::to_string(rs1) + " | rs2=" + std::to_string(rs2) + " | uimm5=" + std::to_string(uimm5) + "]");
++// -----------------------------------------------------------------------------
++		return ss.str();
++	}
++);
++
++// CUSTOM11 --------------------------------------------------------------------
++static InstructionDefinition custom11_rd_rs1 (
++	ISA32_XIsaacCore,
++	"custom11",
++	(uint32_t) 0xa00007b,
++	(uint32_t) 0xfff0707f,
++	[] (BitArray & ba,etiss::CodeSet & cs,InstructionContext & ic)
++	{
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++	{
++		CodePart & cp = cs.append(CodePart::INITIALREQUIRED);
++
++		cp.code() = std::string("//CUSTOM11\n");
++
++// -----------------------------------------------------------------------------
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "cpu->nextPc = " + std::to_string(ic.current_address_ + 4) + "ULL;\n";
++cp.code() += "} // block\n";
++} // block
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "etiss_uint32 rs1_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs1) + "ULL];\n";
++cp.code() += "etiss_uint32 outp0 = (etiss_uint32)(((((etiss_uint32)(((etiss_uint32)(((((etiss_uint32)((rs1_val)) >> 14ULL)))))) & 1020ULL))));\n";
++cp.code() += "*((XIsaacCore*)cpu)->X[" + std::to_string(rd) + "ULL] = outp0;\n";
++cp.code() += "} // block\n";
++} // block
++cp.code() += "instr_exit_" + std::to_string(ic.current_address_) + ":\n";
++cp.code() += "cpu->instructionPointer = cpu->nextPc;\n";
++// -----------------------------------------------------------------------------
++		cp.getAffectedRegisters().add("instructionPointer", 32);
++	}
++
++		return true;
++	},
++	0,
++	[] (BitArray & ba, Instruction & instr)
++	{
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++		std::stringstream ss;
++// -----------------------------------------------------------------------------
++ss << "custom11" << " # " << ba << (" [rd=" + std::to_string(rd) + " | rs1=" + std::to_string(rs1) + "]");
++// -----------------------------------------------------------------------------
++		return ss.str();
++	}
++);
++
++// CUSTOM12 --------------------------------------------------------------------
++static InstructionDefinition custom12_rd_rs1 (
++	ISA32_XIsaacCore,
++	"custom12",
++	(uint32_t) 0xc00007b,
++	(uint32_t) 0xfff0707f,
++	[] (BitArray & ba,etiss::CodeSet & cs,InstructionContext & ic)
++	{
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++	{
++		CodePart & cp = cs.append(CodePart::INITIALREQUIRED);
++
++		cp.code() = std::string("//CUSTOM12\n");
++
++// -----------------------------------------------------------------------------
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "cpu->nextPc = " + std::to_string(ic.current_address_ + 4) + "ULL;\n";
++cp.code() += "} // block\n";
++} // block
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "etiss_uint32 rs1_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs1) + "ULL];\n";
++cp.code() += "etiss_uint32 outp0 = (etiss_uint32)(((((etiss_uint32)(((etiss_uint32)(((((etiss_uint32)((rs1_val)) & 255ULL)))))) << 2ULL))));\n";
++cp.code() += "*((XIsaacCore*)cpu)->X[" + std::to_string(rd) + "ULL] = outp0;\n";
++cp.code() += "} // block\n";
++} // block
++cp.code() += "instr_exit_" + std::to_string(ic.current_address_) + ":\n";
++cp.code() += "cpu->instructionPointer = cpu->nextPc;\n";
++// -----------------------------------------------------------------------------
++		cp.getAffectedRegisters().add("instructionPointer", 32);
++	}
++
++		return true;
++	},
++	0,
++	[] (BitArray & ba, Instruction & instr)
++	{
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++		std::stringstream ss;
++// -----------------------------------------------------------------------------
++ss << "custom12" << " # " << ba << (" [rd=" + std::to_string(rd) + " | rs1=" + std::to_string(rs1) + "]");
++// -----------------------------------------------------------------------------
++		return ss.str();
++	}
++);
++
++// CUSTOM13 --------------------------------------------------------------------
++static InstructionDefinition custom13_rd_rs1 (
++	ISA32_XIsaacCore,
++	"custom13",
++	(uint32_t) 0xe00007b,
++	(uint32_t) 0xfff0707f,
++	[] (BitArray & ba,etiss::CodeSet & cs,InstructionContext & ic)
++	{
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++	{
++		CodePart & cp = cs.append(CodePart::INITIALREQUIRED);
++
++		cp.code() = std::string("//CUSTOM13\n");
++
++// -----------------------------------------------------------------------------
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "cpu->nextPc = " + std::to_string(ic.current_address_ + 4) + "ULL;\n";
++cp.code() += "} // block\n";
++} // block
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "etiss_uint32 rs1_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs1) + "ULL];\n";
++cp.code() += "etiss_uint32 outp0 = (etiss_uint32)(((((etiss_uint32)(((etiss_uint32)(((((etiss_uint32)((rs1_val)) >> 6ULL)))))) & 1020ULL))));\n";
++cp.code() += "*((XIsaacCore*)cpu)->X[" + std::to_string(rd) + "ULL] = outp0;\n";
++cp.code() += "} // block\n";
++} // block
++cp.code() += "instr_exit_" + std::to_string(ic.current_address_) + ":\n";
++cp.code() += "cpu->instructionPointer = cpu->nextPc;\n";
++// -----------------------------------------------------------------------------
++		cp.getAffectedRegisters().add("instructionPointer", 32);
++	}
++
++		return true;
++	},
++	0,
++	[] (BitArray & ba, Instruction & instr)
++	{
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++		std::stringstream ss;
++// -----------------------------------------------------------------------------
++ss << "custom13" << " # " << ba << (" [rd=" + std::to_string(rd) + " | rs1=" + std::to_string(rs1) + "]");
++// -----------------------------------------------------------------------------
++		return ss.str();
++	}
++);
++
++// CUSTOM14 --------------------------------------------------------------------
++static InstructionDefinition custom14_rd_rs1 (
++	ISA32_XIsaacCore,
++	"custom14",
++	(uint32_t) 0x1000007b,
++	(uint32_t) 0xfff0707f,
++	[] (BitArray & ba,etiss::CodeSet & cs,InstructionContext & ic)
++	{
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++	{
++		CodePart & cp = cs.append(CodePart::INITIALREQUIRED);
++
++		cp.code() = std::string("//CUSTOM14\n");
++
++// -----------------------------------------------------------------------------
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "cpu->nextPc = " + std::to_string(ic.current_address_ + 4) + "ULL;\n";
++cp.code() += "} // block\n";
++} // block
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "etiss_uint32 rs1_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs1) + "ULL];\n";
++cp.code() += "etiss_uint32 outp0 = (etiss_uint32)(((((etiss_uint32)(((etiss_uint32)(((((etiss_uint32)((rs1_val)) >> 24ULL)))))) << 2ULL))));\n";
++cp.code() += "*((XIsaacCore*)cpu)->X[" + std::to_string(rd) + "ULL] = outp0;\n";
++cp.code() += "} // block\n";
++} // block
++cp.code() += "instr_exit_" + std::to_string(ic.current_address_) + ":\n";
++cp.code() += "cpu->instructionPointer = cpu->nextPc;\n";
++// -----------------------------------------------------------------------------
++		cp.getAffectedRegisters().add("instructionPointer", 32);
++	}
++
++		return true;
++	},
++	0,
++	[] (BitArray & ba, Instruction & instr)
++	{
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++		std::stringstream ss;
++// -----------------------------------------------------------------------------
++ss << "custom14" << " # " << ba << (" [rd=" + std::to_string(rd) + " | rs1=" + std::to_string(rs1) + "]");
++// -----------------------------------------------------------------------------
++		return ss.str();
++	}
++);
++
++// CUSTOM15 --------------------------------------------------------------------
++static InstructionDefinition custom15_rd_rs1_uimm5 (
++	ISA32_XIsaacCore,
++	"custom15",
++	(uint32_t) 0x1200007b,
++	(uint32_t) 0xfe00707f,
++	[] (BitArray & ba,etiss::CodeSet & cs,InstructionContext & ic)
++	{
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint8 uimm5 = 0;
++static BitArrayRange R_uimm5_0(24, 20);
++uimm5 += R_uimm5_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++	{
++		CodePart & cp = cs.append(CodePart::INITIALREQUIRED);
++
++		cp.code() = std::string("//CUSTOM15\n");
++
++// -----------------------------------------------------------------------------
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "cpu->nextPc = " + std::to_string(ic.current_address_ + 4) + "ULL;\n";
++cp.code() += "} // block\n";
++} // block
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "etiss_uint32 rs1_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs1) + "ULL];\n";
++cp.code() += "etiss_uint32 outp0 = (etiss_uint32)(((((etiss_uint32)(((etiss_uint32)(((((etiss_uint32)((rs1_val)) >> " + std::to_string((etiss_uint32)(((etiss_uint8)(((uimm5)))))) + "ULL)))))) & 1020ULL))));\n";
++cp.code() += "*((XIsaacCore*)cpu)->X[" + std::to_string(rd) + "ULL] = outp0;\n";
++cp.code() += "} // block\n";
++} // block
++cp.code() += "instr_exit_" + std::to_string(ic.current_address_) + ":\n";
++cp.code() += "cpu->instructionPointer = cpu->nextPc;\n";
++// -----------------------------------------------------------------------------
++		cp.getAffectedRegisters().add("instructionPointer", 32);
++	}
++
++		return true;
++	},
++	0,
++	[] (BitArray & ba, Instruction & instr)
++	{
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint8 uimm5 = 0;
++static BitArrayRange R_uimm5_0(24, 20);
++uimm5 += R_uimm5_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++		std::stringstream ss;
++// -----------------------------------------------------------------------------
++ss << "custom15" << " # " << ba << (" [rd=" + std::to_string(rd) + " | rs1=" + std::to_string(rs1) + " | uimm5=" + std::to_string(uimm5) + "]");
++// -----------------------------------------------------------------------------
++		return ss.str();
++	}
++);
++
++// CUSTOM16 --------------------------------------------------------------------
++static InstructionDefinition custom16_rd_rs1_uimm2 (
++	ISA32_XIsaacCore,
++	"custom16",
++	(uint32_t) 0x1400007b,
++	(uint32_t) 0xfe00707f,
++	[] (BitArray & ba,etiss::CodeSet & cs,InstructionContext & ic)
++	{
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint8 uimm2 = 0;
++static BitArrayRange R_uimm2_0(24, 20);
++uimm2 += R_uimm2_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++	{
++		CodePart & cp = cs.append(CodePart::INITIALREQUIRED);
++
++		cp.code() = std::string("//CUSTOM16\n");
++
++// -----------------------------------------------------------------------------
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "cpu->nextPc = " + std::to_string(ic.current_address_ + 4) + "ULL;\n";
++cp.code() += "} // block\n";
++} // block
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "etiss_uint32 rs1_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs1) + "ULL];\n";
++cp.code() += "etiss_uint32 outp0 = (etiss_uint32)(((((etiss_uint32)(((etiss_uint32)(((((etiss_uint32)((rs1_val)) & 255ULL)))))) << " + std::to_string((etiss_uint32)(((etiss_uint8)(((uimm2)))))) + "ULL))));\n";
++cp.code() += "*((XIsaacCore*)cpu)->X[" + std::to_string(rd) + "ULL] = outp0;\n";
++cp.code() += "} // block\n";
++} // block
++cp.code() += "instr_exit_" + std::to_string(ic.current_address_) + ":\n";
++cp.code() += "cpu->instructionPointer = cpu->nextPc;\n";
++// -----------------------------------------------------------------------------
++		cp.getAffectedRegisters().add("instructionPointer", 32);
++	}
++
++		return true;
++	},
++	0,
++	[] (BitArray & ba, Instruction & instr)
++	{
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint8 uimm2 = 0;
++static BitArrayRange R_uimm2_0(24, 20);
++uimm2 += R_uimm2_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++		std::stringstream ss;
++// -----------------------------------------------------------------------------
++ss << "custom16" << " # " << ba << (" [rd=" + std::to_string(rd) + " | rs1=" + std::to_string(rs1) + " | uimm2=" + std::to_string(uimm2) + "]");
++// -----------------------------------------------------------------------------
++		return ss.str();
++	}
++);
++
++// CUSTOM17 --------------------------------------------------------------------
++static InstructionDefinition custom17_rd_rs1_uimm5 (
++	ISA32_XIsaacCore,
++	"custom17",
++	(uint32_t) 0x1600007b,
++	(uint32_t) 0xfe00707f,
++	[] (BitArray & ba,etiss::CodeSet & cs,InstructionContext & ic)
++	{
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint8 uimm5 = 0;
++static BitArrayRange R_uimm5_0(24, 20);
++uimm5 += R_uimm5_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++	{
++		CodePart & cp = cs.append(CodePart::INITIALREQUIRED);
++
++		cp.code() = std::string("//CUSTOM17\n");
++
++// -----------------------------------------------------------------------------
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "cpu->nextPc = " + std::to_string(ic.current_address_ + 4) + "ULL;\n";
++cp.code() += "} // block\n";
++} // block
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "etiss_uint32 rs1_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs1) + "ULL];\n";
++cp.code() += "etiss_uint32 outp0 = (etiss_uint32)(((((etiss_uint32)(((etiss_uint32)(((((etiss_uint32)((rs1_val)) & 255ULL)))))) << " + std::to_string((etiss_uint32)(((etiss_uint8)(((uimm5)))))) + "ULL))));\n";
++cp.code() += "*((XIsaacCore*)cpu)->X[" + std::to_string(rd) + "ULL] = outp0;\n";
++cp.code() += "} // block\n";
++} // block
++cp.code() += "instr_exit_" + std::to_string(ic.current_address_) + ":\n";
++cp.code() += "cpu->instructionPointer = cpu->nextPc;\n";
++// -----------------------------------------------------------------------------
++		cp.getAffectedRegisters().add("instructionPointer", 32);
++	}
++
++		return true;
++	},
++	0,
++	[] (BitArray & ba, Instruction & instr)
++	{
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint8 uimm5 = 0;
++static BitArrayRange R_uimm5_0(24, 20);
++uimm5 += R_uimm5_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++		std::stringstream ss;
++// -----------------------------------------------------------------------------
++ss << "custom17" << " # " << ba << (" [rd=" + std::to_string(rd) + " | rs1=" + std::to_string(rs1) + " | uimm5=" + std::to_string(uimm5) + "]");
++// -----------------------------------------------------------------------------
++		return ss.str();
++	}
++);
++
++// CUSTOM18 --------------------------------------------------------------------
++static InstructionDefinition custom18_rd_rs1_uimm6 (
++	ISA32_XIsaacCore,
++	"custom18",
++	(uint32_t) 0x00307b,
++	(uint32_t) 0x00707f,
++	[] (BitArray & ba,etiss::CodeSet & cs,InstructionContext & ic)
++	{
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint16 uimm6 = 0;
++static BitArrayRange R_uimm6_0(31, 20);
++uimm6 += R_uimm6_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++	{
++		CodePart & cp = cs.append(CodePart::INITIALREQUIRED);
++
++		cp.code() = std::string("//CUSTOM18\n");
++
++// -----------------------------------------------------------------------------
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "cpu->nextPc = " + std::to_string(ic.current_address_ + 4) + "ULL;\n";
++cp.code() += "} // block\n";
++} // block
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "etiss_uint32 rs1_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs1) + "ULL];\n";
++cp.code() += "etiss_uint32 outp0 = (etiss_uint32)(((((etiss_uint32)(((etiss_uint32)(((((etiss_uint32)((rs1_val)) >> " + std::to_string((etiss_uint32)(((etiss_uint8)(((uimm6)))))) + "ULL)))))) << 2ULL))));\n";
++cp.code() += "*((XIsaacCore*)cpu)->X[" + std::to_string(rd) + "ULL] = outp0;\n";
++cp.code() += "} // block\n";
++} // block
++cp.code() += "instr_exit_" + std::to_string(ic.current_address_) + ":\n";
++cp.code() += "cpu->instructionPointer = cpu->nextPc;\n";
++// -----------------------------------------------------------------------------
++		cp.getAffectedRegisters().add("instructionPointer", 32);
++	}
++
++		return true;
++	},
++	0,
++	[] (BitArray & ba, Instruction & instr)
++	{
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint16 uimm6 = 0;
++static BitArrayRange R_uimm6_0(31, 20);
++uimm6 += R_uimm6_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++		std::stringstream ss;
++// -----------------------------------------------------------------------------
++ss << "custom18" << " # " << ba << (" [rd=" + std::to_string(rd) + " | rs1=" + std::to_string(rs1) + " | uimm6=" + std::to_string(uimm6) + "]");
++// -----------------------------------------------------------------------------
++		return ss.str();
++	}
++);
++
++// CUSTOM19 --------------------------------------------------------------------
++static InstructionDefinition custom19_rd_rs1_uimm7 (
++	ISA32_XIsaacCore,
++	"custom19",
++	(uint32_t) 0x00407b,
++	(uint32_t) 0x00707f,
++	[] (BitArray & ba,etiss::CodeSet & cs,InstructionContext & ic)
++	{
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint16 uimm7 = 0;
++static BitArrayRange R_uimm7_0(31, 20);
++uimm7 += R_uimm7_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++	{
++		CodePart & cp = cs.append(CodePart::INITIALREQUIRED);
++
++		cp.code() = std::string("//CUSTOM19\n");
++
++// -----------------------------------------------------------------------------
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "cpu->nextPc = " + std::to_string(ic.current_address_ + 4) + "ULL;\n";
++cp.code() += "} // block\n";
++} // block
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "etiss_uint32 rs1_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs1) + "ULL];\n";
++cp.code() += "etiss_uint32 outp0 = (etiss_uint32)(((((etiss_uint32)(((etiss_uint32)(((((etiss_uint32)((rs1_val)) >> " + std::to_string((etiss_uint32)(((etiss_uint8)(((uimm7)))))) + "ULL)))))) << 2ULL))));\n";
++cp.code() += "*((XIsaacCore*)cpu)->X[" + std::to_string(rd) + "ULL] = outp0;\n";
++cp.code() += "} // block\n";
++} // block
++cp.code() += "instr_exit_" + std::to_string(ic.current_address_) + ":\n";
++cp.code() += "cpu->instructionPointer = cpu->nextPc;\n";
++// -----------------------------------------------------------------------------
++		cp.getAffectedRegisters().add("instructionPointer", 32);
++	}
++
++		return true;
++	},
++	0,
++	[] (BitArray & ba, Instruction & instr)
++	{
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint16 uimm7 = 0;
++static BitArrayRange R_uimm7_0(31, 20);
++uimm7 += R_uimm7_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++		std::stringstream ss;
++// -----------------------------------------------------------------------------
++ss << "custom19" << " # " << ba << (" [rd=" + std::to_string(rd) + " | rs1=" + std::to_string(rs1) + " | uimm7=" + std::to_string(uimm7) + "]");
++// -----------------------------------------------------------------------------
++		return ss.str();
++	}
++);
++
++// CUSTOM20 --------------------------------------------------------------------
++static InstructionDefinition custom20_rd_rs1_uimm9 (
++	ISA32_XIsaacCore,
++	"custom20",
++	(uint32_t) 0x00507b,
++	(uint32_t) 0x00707f,
++	[] (BitArray & ba,etiss::CodeSet & cs,InstructionContext & ic)
++	{
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint16 uimm9 = 0;
++static BitArrayRange R_uimm9_0(31, 20);
++uimm9 += R_uimm9_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++	{
++		CodePart & cp = cs.append(CodePart::INITIALREQUIRED);
++
++		cp.code() = std::string("//CUSTOM20\n");
++
++// -----------------------------------------------------------------------------
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "cpu->nextPc = " + std::to_string(ic.current_address_ + 4) + "ULL;\n";
++cp.code() += "} // block\n";
++} // block
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "etiss_uint32 rs1_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs1) + "ULL];\n";
++cp.code() += "etiss_uint32 outp0 = (etiss_uint32)(((((etiss_uint32)(((etiss_uint32)(((((etiss_uint32)((rs1_val)) & " + std::to_string((etiss_uint32)(((etiss_uint16)(((uimm9)))))) + "ULL)))))) << 2ULL))));\n";
++cp.code() += "*((XIsaacCore*)cpu)->X[" + std::to_string(rd) + "ULL] = outp0;\n";
++cp.code() += "} // block\n";
++} // block
++cp.code() += "instr_exit_" + std::to_string(ic.current_address_) + ":\n";
++cp.code() += "cpu->instructionPointer = cpu->nextPc;\n";
++// -----------------------------------------------------------------------------
++		cp.getAffectedRegisters().add("instructionPointer", 32);
++	}
++
++		return true;
++	},
++	0,
++	[] (BitArray & ba, Instruction & instr)
++	{
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint16 uimm9 = 0;
++static BitArrayRange R_uimm9_0(31, 20);
++uimm9 += R_uimm9_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++		std::stringstream ss;
++// -----------------------------------------------------------------------------
++ss << "custom20" << " # " << ba << (" [rd=" + std::to_string(rd) + " | rs1=" + std::to_string(rs1) + " | uimm9=" + std::to_string(uimm9) + "]");
++// -----------------------------------------------------------------------------
++		return ss.str();
++	}
++);
++
++// CUSTOM21 --------------------------------------------------------------------
++static InstructionDefinition custom21_rd_rs1_uimm10 (
++	ISA32_XIsaacCore,
++	"custom21",
++	(uint32_t) 0x00607b,
++	(uint32_t) 0x00707f,
++	[] (BitArray & ba,etiss::CodeSet & cs,InstructionContext & ic)
++	{
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint16 uimm10 = 0;
++static BitArrayRange R_uimm10_0(31, 20);
++uimm10 += R_uimm10_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++	{
++		CodePart & cp = cs.append(CodePart::INITIALREQUIRED);
++
++		cp.code() = std::string("//CUSTOM21\n");
++
++// -----------------------------------------------------------------------------
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "cpu->nextPc = " + std::to_string(ic.current_address_ + 4) + "ULL;\n";
++cp.code() += "} // block\n";
++} // block
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "etiss_uint32 rs1_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs1) + "ULL];\n";
++cp.code() += "etiss_uint32 outp0 = (etiss_uint32)(((((etiss_uint32)(((etiss_uint32)(((((etiss_uint32)((rs1_val)) & " + std::to_string((etiss_uint32)(((etiss_uint16)(((uimm10)))))) + "ULL)))))) << 2ULL))));\n";
++cp.code() += "*((XIsaacCore*)cpu)->X[" + std::to_string(rd) + "ULL] = outp0;\n";
++cp.code() += "} // block\n";
++} // block
++cp.code() += "instr_exit_" + std::to_string(ic.current_address_) + ":\n";
++cp.code() += "cpu->instructionPointer = cpu->nextPc;\n";
++// -----------------------------------------------------------------------------
++		cp.getAffectedRegisters().add("instructionPointer", 32);
++	}
++
++		return true;
++	},
++	0,
++	[] (BitArray & ba, Instruction & instr)
++	{
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint16 uimm10 = 0;
++static BitArrayRange R_uimm10_0(31, 20);
++uimm10 += R_uimm10_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++		std::stringstream ss;
++// -----------------------------------------------------------------------------
++ss << "custom21" << " # " << ba << (" [rd=" + std::to_string(rd) + " | rs1=" + std::to_string(rs1) + " | uimm10=" + std::to_string(uimm10) + "]");
++// -----------------------------------------------------------------------------
++		return ss.str();
++	}
++);
++
++// CUSTOM22 --------------------------------------------------------------------
++static InstructionDefinition custom22_rd_rs1_uimm4 (
++	ISA32_XIsaacCore,
++	"custom22",
++	(uint32_t) 0x1800007b,
++	(uint32_t) 0xfe00707f,
++	[] (BitArray & ba,etiss::CodeSet & cs,InstructionContext & ic)
++	{
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint8 uimm4 = 0;
++static BitArrayRange R_uimm4_0(24, 20);
++uimm4 += R_uimm4_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++	{
++		CodePart & cp = cs.append(CodePart::INITIALREQUIRED);
++
++		cp.code() = std::string("//CUSTOM22\n");
++
++// -----------------------------------------------------------------------------
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "cpu->nextPc = " + std::to_string(ic.current_address_ + 4) + "ULL;\n";
++cp.code() += "} // block\n";
++} // block
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "etiss_uint32 rs1_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs1) + "ULL];\n";
++cp.code() += "etiss_uint32 outp0 = (etiss_uint32)(((((etiss_uint32)(((etiss_uint32)(((((etiss_uint32)((rs1_val)) >> " + std::to_string((etiss_uint32)(((etiss_uint8)(((uimm4)))))) + "ULL)))))) & 1020ULL))));\n";
++cp.code() += "*((XIsaacCore*)cpu)->X[" + std::to_string(rd) + "ULL] = outp0;\n";
++cp.code() += "} // block\n";
++} // block
++cp.code() += "instr_exit_" + std::to_string(ic.current_address_) + ":\n";
++cp.code() += "cpu->instructionPointer = cpu->nextPc;\n";
++// -----------------------------------------------------------------------------
++		cp.getAffectedRegisters().add("instructionPointer", 32);
++	}
++
++		return true;
++	},
++	0,
++	[] (BitArray & ba, Instruction & instr)
++	{
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint8 uimm4 = 0;
++static BitArrayRange R_uimm4_0(24, 20);
++uimm4 += R_uimm4_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++		std::stringstream ss;
++// -----------------------------------------------------------------------------
++ss << "custom22" << " # " << ba << (" [rd=" + std::to_string(rd) + " | rs1=" + std::to_string(rs1) + " | uimm4=" + std::to_string(uimm4) + "]");
++// -----------------------------------------------------------------------------
++		return ss.str();
++	}
++);
++
++// CUSTOM23 --------------------------------------------------------------------
++static InstructionDefinition custom23_rd_rs1_rs2 (
++	ISA32_XIsaacCore,
++	"custom23",
++	(uint32_t) 0x1a00007b,
++	(uint32_t) 0xfe00707f,
++	[] (BitArray & ba,etiss::CodeSet & cs,InstructionContext & ic)
++	{
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint8 rs2 = 0;
++static BitArrayRange R_rs2_0(24, 20);
++rs2 += R_rs2_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++	{
++		CodePart & cp = cs.append(CodePart::INITIALREQUIRED);
++
++		cp.code() = std::string("//CUSTOM23\n");
++
++// -----------------------------------------------------------------------------
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "cpu->nextPc = " + std::to_string(ic.current_address_ + 4) + "ULL;\n";
++cp.code() += "} // block\n";
++} // block
++{ // block
++cp.code() += "{ // block\n";
++cp.code() += "etiss_uint32 rs1_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs1) + "ULL];\n";
++cp.code() += "etiss_uint32 rs2_val = *((XIsaacCore*)cpu)->X[" + std::to_string(rs2) + "ULL];\n";
++cp.code() += "etiss_uint32 outp0 = (etiss_uint32)(((((etiss_int32)((rs2_val)) + (etiss_int32)(((etiss_uint32)(((((etiss_uint32)(((etiss_uint32)(((((etiss_uint32)((rs1_val)) >> 14ULL)))))) & 1020ULL))))))))));\n";
++cp.code() += "*((XIsaacCore*)cpu)->X[" + std::to_string(rd) + "ULL] = outp0;\n";
++cp.code() += "} // block\n";
++} // block
++cp.code() += "instr_exit_" + std::to_string(ic.current_address_) + ":\n";
++cp.code() += "cpu->instructionPointer = cpu->nextPc;\n";
++// -----------------------------------------------------------------------------
++		cp.getAffectedRegisters().add("instructionPointer", 32);
++	}
++
++		return true;
++	},
++	0,
++	[] (BitArray & ba, Instruction & instr)
++	{
++// -----------------------------------------------------------------------------
++etiss_uint8 rd = 0;
++static BitArrayRange R_rd_0(11, 7);
++rd += R_rd_0.read(ba) << 0;
++etiss_uint8 rs1 = 0;
++static BitArrayRange R_rs1_0(19, 15);
++rs1 += R_rs1_0.read(ba) << 0;
++etiss_uint8 rs2 = 0;
++static BitArrayRange R_rs2_0(24, 20);
++rs2 += R_rs2_0.read(ba) << 0;
++
++// -----------------------------------------------------------------------------
++
++		std::stringstream ss;
++// -----------------------------------------------------------------------------
++ss << "custom23" << " # " << ba << (" [rd=" + std::to_string(rd) + " | rs1=" + std::to_string(rs1) + " | rs2=" + std::to_string(rs2) + "]");
++// -----------------------------------------------------------------------------
++		return ss.str();
++	}
++);

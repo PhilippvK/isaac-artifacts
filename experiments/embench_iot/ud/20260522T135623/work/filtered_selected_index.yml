@@ -1,0 +1,553 @@
+candidates:
+- artifacts:
+    cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/ud/20260522T135623/work/gen_filtered/CUSTOM0.core_desc
+    cdsl_encoded: /var/tmp/ga87puy/isaac-demo/out/embench_iot/ud/20260522T135623/work/gen/CUSTOM0.encoded.core_desc
+    flat: /var/tmp/ga87puy/isaac-demo/out/embench_iot/ud/20260522T135623/work/gen_filtered/CUSTOM0.flat
+    fuse_cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/ud/20260522T135623/work/gen_filtered/CUSTOM0.fuse_core_desc
+    io_sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/ud/20260522T135623/work/benchmark_body_%bb.4_0/io_sub6.pkl
+    sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/ud/20260522T135623/work/benchmark_body_%bb.4_0/sub6.pkl
+    tree: /var/tmp/ga87puy/isaac-demo/out/embench_iot/ud/20260522T135623/work/benchmark_body_%bb.4_0/tree6.pkl
+  id: 0
+  metrics:
+    arch: xisaaccustom0single
+    benefit: 0.02111367408801257
+    code_size_reduction_rel: 0.0
+    cost: 1.0
+    enc_score: 0.9990234375
+    enc_weight: 0.0009765625
+    hls_area: 1.0
+    hls_area_scaled: 1.0
+    hls_ii: 1
+    hls_latency: 3
+    hls_num_shared: 1
+    instr: CUSTOM0
+    ratio: 0.02111367408801257
+    runtime_reduction_rel: 0.02111367408801257
+    seal5_score: 1.0
+    util_score: 0.0415696918133301
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 1.0
+    '#InputNodes': 2.0
+    '#Instrs': 2.0
+    '#Isos': 0.0
+    '#IsosNO': 0.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 2.0
+    '#Operands': .nan
+    '#OutputNodes': 2.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 2.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 1
+    ConstantNodes:
+    - 96
+    ConstantSigns:
+    - false
+    ConstantValues:
+    - 1
+    Constraints: []
+    DateTime: 20260522T135806
+    EncodingBitsLeft (32 bits): 10.0
+    EncodingFootprint (32 bits): 0.6
+    EncodingWeight (32 bits): 0.0009765625
+    Freq: 53208.0
+    FullHash: 63058dbb5e2528c33a1c4c9ee80ba783f1ea9806
+    GlobalHash: 9f569a240e0bdc32abf5ccb5c3a64ef70235a741
+    IOSubHash: 9291b287b74fee6aa9a58349a6e30f34
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 58
+    - 94
+    InstrName: CUSTOM0
+    Instrs:
+    - SLTIU
+    - SLL
+    IsoNodes:
+    - 25
+    - 7
+    IsoWeight: 0.04222796817188326
+    Isos: []
+    IsosNO: []
+    LoadNodes: []
+    Nodes:
+    - 25
+    - 7
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 15.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    OperandNodes:
+    - 130
+    - 58
+    - 94
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 130
+    Parent: .nan
+    Predicates: 0
+    Predicates (str): '0'
+    Registers: 2
+    ScheduleLength: 3.0
+    Status: 1
+    Status (str): '1'
+    StoreNodes: []
+    SubHash: 325287b8f6e1a4d1750461ba173e28a4
+    TerminatorNodes: []
+    UniqueInstrs:
+    - SLTIU
+    - SLL
+    Variations: 0
+    Weight: 0.04222796817188326
+    result: 6
+- artifacts:
+    cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/ud/20260522T135623/work/gen_filtered/CUSTOM4.core_desc
+    cdsl_encoded: /var/tmp/ga87puy/isaac-demo/out/embench_iot/ud/20260522T135623/work/gen/CUSTOM4.encoded.core_desc
+    flat: /var/tmp/ga87puy/isaac-demo/out/embench_iot/ud/20260522T135623/work/gen_filtered/CUSTOM4.flat
+    fuse_cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/ud/20260522T135623/work/gen_filtered/CUSTOM4.fuse_core_desc
+    io_sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/ud/20260522T135623/work/ludcmp_%bb.8_0/io_sub44.pkl
+    sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/ud/20260522T135623/work/ludcmp_%bb.8_0/sub44.pkl
+    tree: /var/tmp/ga87puy/isaac-demo/out/embench_iot/ud/20260522T135623/work/ludcmp_%bb.8_0/tree44.pkl
+  id: 3
+  metrics:
+    arch: xisaaccustom4single
+    benefit: 0.02463301658324979
+    code_size_reduction_rel: 0.008780487804877946
+    cost: 1.0
+    enc_score: 0.96875
+    enc_weight: 0.03125
+    hls_area: 1.0
+    hls_area_scaled: 1.0
+    hls_ii: 1
+    hls_latency: 3
+    hls_num_shared: 1
+    instr: CUSTOM4
+    ratio: 0.02463301658324979
+    runtime_reduction_rel: 0.02463301658324979
+    seal5_score: 1.0
+    util_score: 0.0796752426422161
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 0.0
+    '#InputNodes': 2.0
+    '#Instrs': 2.0
+    '#Isos': 0.0
+    '#IsosNO': 0.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 2.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 2.0
+    BranchNodes: []
+    ConstantMinBits: []
+    ConstantNodes: []
+    ConstantSigns:
+    - false
+    ConstantValues: []
+    Constraints: []
+    DateTime: 20260522T135843
+    EncodingBitsLeft (32 bits): 5.0
+    EncodingFootprint (32 bits): 0.8
+    EncodingWeight (32 bits): 0.03125
+    Freq: 14780.0
+    FullHash: f66bc6fdb8f7c428d0a41e3093f78e7ba1bae9a9
+    GlobalHash: 2484740ea2a10f8b2c11030f208ebf2c715f6e95
+    IOSubHash: 264281ef9a0bcf77718ad4b960866076
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 32
+    - 297
+    InstrName: CUSTOM4
+    Instrs:
+    - SLLI
+    - ADD
+    IsoNodes:
+    - 112
+    - 12
+    IsoWeight: 0.011729991158856461
+    Isos: []
+    IsosNO: []
+    LoadNodes: []
+    Nodes:
+    - 112
+    - 12
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 20.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    - uimm5
+    OperandNodes:
+    - 451
+    - 32
+    - 297
+    - 458
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    - null
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    - IMM
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 451
+    Parent: 37.0
+    Predicates: 256
+    Predicates (str): '256'
+    Registers: 2
+    ScheduleLength: 3.0
+    Status: 1
+    Status (str): '1'
+    StoreNodes: []
+    SubHash: 4ddafd00eac0b15eb2d99c2af4e9e14b
+    TerminatorNodes: []
+    UniqueInstrs:
+    - ADD
+    - SLLI
+    Variations: 16
+    Weight: 0.011729991158856461
+    result: 44
+global:
+  artifacts:
+    ETISS_INSTALL_DIR: /var/tmp/ga87puy/isaac-demo/out/embench_iot/ud/20260522T135623/work/local//etiss//etiss_install
+    ETISS_PERF_INSTALL_DIR: /var/tmp/ga87puy/isaac-demo/out/embench_iot/ud/20260522T135623/work/local//etiss_perf_filtered_selected//etiss_perf_install
+    HLS_DIR: /var/tmp/ga87puy/isaac-demo/out/embench_iot/ud/20260522T135623/work/local/fake_hls_filtered_selected
+    LLVM_INSTALL_DIR: /var/tmp/ga87puy/isaac-demo/out/embench_iot/ud/20260522T135623/work/local//seal5//llvm_install
+  properties:
+  - allowed_enc_sizes:
+    - 32
+    bb: '%bb.4'
+    candidate_count: 1
+    func: benchmark_body
+    ignore_names:
+    - G_PHI
+    - PHI
+    - COPY
+    - PseudoCALLIndirect
+    - PseudoLGA
+    - Select_GPR_Using_CC_GPR
+    - LUI
+    - PseudoMovAddr
+    - IMPLICIT_DEF
+    ignore_op_types:
+    - input
+    - constant
+    - label
+    instr_predicates: 511
+    limit_results: null
+    max_branches: 1
+    max_enc_footprint: 1.0
+    max_enc_weight: 1.0
+    max_inputs: 4
+    max_loads: 1
+    max_mems: 0
+    max_nodes: 1000
+    max_outputs: 2
+    max_path_len: 9
+    max_path_width: 2
+    max_stores: 1
+    min_enc_bits_left: 5
+    min_inputs: 1
+    min_iso_weight: 0.008445593634376653
+    min_nodes: 1
+    min_outputs: 1
+    min_path_len: 1
+    session: isaac-demo-ud-20260522T135623
+    stage: 32
+    timestamp: 20260522T135806
+    xlen: 32
+  - allowed_enc_sizes:
+    - 32
+    bb: '%bb.13'
+    candidate_count: 0
+    func: ludcmp
+    ignore_names:
+    - G_PHI
+    - PHI
+    - COPY
+    - PseudoCALLIndirect
+    - PseudoLGA
+    - Select_GPR_Using_CC_GPR
+    - LUI
+    - PseudoMovAddr
+    - IMPLICIT_DEF
+    ignore_op_types:
+    - input
+    - constant
+    - label
+    instr_predicates: 511
+    limit_results: null
+    max_branches: 1
+    max_enc_footprint: 1.0
+    max_enc_weight: 1.0
+    max_inputs: 4
+    max_loads: 1
+    max_mems: 0
+    max_nodes: 1000
+    max_outputs: 2
+    max_path_len: 9
+    max_path_width: 2
+    max_stores: 1
+    min_enc_bits_left: 5
+    min_inputs: 1
+    min_iso_weight: 0.0014265610367404688
+    min_nodes: 1
+    min_outputs: 1
+    min_path_len: 1
+    session: isaac-demo-ud-20260522T135623
+    stage: 32
+    timestamp: 20260522T135815
+    xlen: 32
+  - allowed_enc_sizes:
+    - 32
+    bb: '%bb.9'
+    candidate_count: 0
+    func: ludcmp
+    ignore_names:
+    - G_PHI
+    - PHI
+    - COPY
+    - PseudoCALLIndirect
+    - PseudoLGA
+    - Select_GPR_Using_CC_GPR
+    - LUI
+    - PseudoMovAddr
+    - IMPLICIT_DEF
+    ignore_op_types:
+    - input
+    - constant
+    - label
+    instr_predicates: 511
+    limit_results: null
+    max_branches: 1
+    max_enc_footprint: 1.0
+    max_enc_weight: 1.0
+    max_inputs: 4
+    max_loads: 1
+    max_mems: 0
+    max_nodes: 1000
+    max_outputs: 2
+    max_path_len: 9
+    max_path_width: 2
+    max_stores: 1
+    min_enc_bits_left: 5
+    min_inputs: 1
+    min_iso_weight: 0.00024096309621890122
+    min_nodes: 1
+    min_outputs: 1
+    min_path_len: 1
+    session: isaac-demo-ud-20260522T135623
+    stage: 32
+    timestamp: 20260522T135822
+    xlen: 32
+  - allowed_enc_sizes:
+    - 32
+    bb: '%bb.23'
+    candidate_count: 0
+    func: ludcmp
+    ignore_names:
+    - G_PHI
+    - PHI
+    - COPY
+    - PseudoCALLIndirect
+    - PseudoLGA
+    - Select_GPR_Using_CC_GPR
+    - LUI
+    - PseudoMovAddr
+    - IMPLICIT_DEF
+    ignore_op_types:
+    - input
+    - constant
+    - label
+    instr_predicates: 511
+    limit_results: null
+    max_branches: 1
+    max_enc_footprint: 1.0
+    max_enc_weight: 1.0
+    max_inputs: 4
+    max_loads: 1
+    max_mems: 0
+    max_nodes: 1000
+    max_outputs: 2
+    max_path_len: 9
+    max_path_width: 2
+    max_stores: 1
+    min_enc_bits_left: 5
+    min_inputs: 1
+    min_iso_weight: 4.070152783092082e-05
+    min_nodes: 1
+    min_outputs: 1
+    min_path_len: 1
+    session: isaac-demo-ud-20260522T135623
+    stage: 32
+    timestamp: 20260522T135830
+    xlen: 32
+  - allowed_enc_sizes:
+    - 32
+    bb: '%bb.17'
+    candidate_count: 0
+    func: ludcmp
+    ignore_names:
+    - G_PHI
+    - PHI
+    - COPY
+    - PseudoCALLIndirect
+    - PseudoLGA
+    - Select_GPR_Using_CC_GPR
+    - LUI
+    - PseudoMovAddr
+    - IMPLICIT_DEF
+    ignore_op_types:
+    - input
+    - constant
+    - label
+    instr_predicates: 511
+    limit_results: null
+    max_branches: 1
+    max_enc_footprint: 1.0
+    max_enc_weight: 1.0
+    max_inputs: 4
+    max_loads: 1
+    max_mems: 0
+    max_nodes: 1000
+    max_outputs: 2
+    max_path_len: 9
+    max_path_width: 2
+    max_stores: 1
+    min_enc_bits_left: 5
+    min_inputs: 1
+    min_iso_weight: 6.87497128716458e-06
+    min_nodes: 1
+    min_outputs: 1
+    min_path_len: 1
+    session: isaac-demo-ud-20260522T135623
+    stage: 32
+    timestamp: 20260522T135837
+    xlen: 32
+  - allowed_enc_sizes:
+    - 32
+    bb: '%bb.8'
+    candidate_count: 3
+    func: ludcmp
+    ignore_names:
+    - G_PHI
+    - PHI
+    - COPY
+    - PseudoCALLIndirect
+    - PseudoLGA
+    - Select_GPR_Using_CC_GPR
+    - LUI
+    - PseudoMovAddr
+    - IMPLICIT_DEF
+    ignore_op_types:
+    - input
+    - constant
+    - label
+    instr_predicates: 511
+    limit_results: null
+    max_branches: 1
+    max_enc_footprint: 1.0
+    max_enc_weight: 1.0
+    max_inputs: 4
+    max_loads: 1
+    max_mems: 0
+    max_nodes: 1000
+    max_outputs: 2
+    max_path_len: 9
+    max_path_width: 2
+    max_stores: 1
+    min_enc_bits_left: 5
+    min_inputs: 1
+    min_iso_weight: 1.1612642747879888e-06
+    min_nodes: 1
+    min_outputs: 1
+    min_path_len: 1
+    session: isaac-demo-ud-20260522T135623
+    stage: 32
+    timestamp: 20260522T135843
+    xlen: 32
+  - allowed_enc_sizes:
+    - 32
+    bb: '%bb.12'
+    candidate_count: 4
+    func: ludcmp
+    ignore_names:
+    - G_PHI
+    - PHI
+    - COPY
+    - PseudoCALLIndirect
+    - PseudoLGA
+    - Select_GPR_Using_CC_GPR
+    - LUI
+    - PseudoMovAddr
+    - IMPLICIT_DEF
+    ignore_op_types:
+    - input
+    - constant
+    - label
+    instr_predicates: 511
+    limit_results: null
+    max_branches: 1
+    max_enc_footprint: 1.0
+    max_enc_weight: 1.0
+    max_inputs: 4
+    max_loads: 1
+    max_mems: 0
+    max_nodes: 1000
+    max_outputs: 2
+    max_path_len: 9
+    max_path_width: 2
+    max_stores: 1
+    min_enc_bits_left: 5
+    min_inputs: 1
+    min_iso_weight: 1.9615132333956916e-07
+    min_nodes: 1
+    min_outputs: 1
+    min_path_len: 1
+    session: isaac-demo-ud-20260522T135623
+    stage: 32
+    timestamp: 20260522T135854
+    xlen: 32

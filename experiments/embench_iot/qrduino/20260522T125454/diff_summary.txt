@@ -1,0 +1,112 @@
+=== DIFFS ===
+0) <qrencode-%bb.80>
+rel_weight [old] : 0.14660731954859707
+rel_weight [new] : 0.09773828213515443
+rel_weight [diff]: -0.04887
+rel_weight [rel] : -33.33%
+num_instrs [old] : 18
+num_instrs [new] : 12
+num_instrs [diff]: -6
+num_instrs [rel] : -33.33%
+diff --git a/old b/new
+index 8dcfcc1..4ce14ed 100644
+--- a/old
++++ b/new
+@@ -1,18 +1,12 @@
+-srli      t2, a7, 0x3                   
+-add       t2, a2, t2                    
+-add       t3, t2, t0                    
+-lbu       t3, 0x0(t3)                   
+-not       t4, a7                        
+-andi      t4, t4, 0x7                   
+-sll       t4, s8, t4                    
+-and       s1, t4, t3                    
++custom7   t5, a7, a2, 0x3               
++add       t2, t5, t0                    
++lbu       t3, 0x0(t2)                   
++custom21  t4, s8, a7                    
+ addi      a7, a7, 0x1                   
+-srli      t3, a7, 0x3                   
+-add       t3, a2, t3                    
+-add       t5, t3, t0                    
+-lbu       t6, 0x0(t5)                   
+-not       t5, a7                        
+-andi      t5, t5, 0x7                   
+-sll       t5, s8, t5                    
+-and       t6, t5, t6                    
+-beqz      s1, 0x1001df8 <qrencode+0x84c>
++custom7   t2, a7, a2, 0x3               
++add       t6, t2, t0                    
++lbu       t6, 0x0(t6)                   
++and       s1, t4, t3                    
++custom21  t3, s8, a7                    
++and       t6, t3, t6                    
++beqz      s1, 0x1001c80 <qrencode+0x830>
+
+1) <qrencode-%bb.94>
+rel_weight [old] : 0.1237282066020664
+rel_weight [new] : 0.08837735291445532
+rel_weight [diff]: -0.03535
+rel_weight [rel] : -28.57%
+num_instrs [old] : 14
+num_instrs [new] : 10
+num_instrs [diff]: -4
+num_instrs [rel] : -28.57%
+diff --git a/old b/new
+index 2379102..f9fc7bc 100644
+--- a/old
++++ b/new
+@@ -1,14 +1,10 @@
+ lbu      a3, 0x6bc(s4)                     
+ lw       a7, 0x6d0(s3)                     
+-mv       t0, a5                            
+-srli     a5, a4, 0x3                       
+ mul      a3, a2, a3                        
+-add      a5, a7, a5                        
+-add      a3, a5, a3                        
+-lbu      a5, 0x0(a3)                       
+-not      a3, a4                            
+-andi     a7, a3, 0x7                       
++custom7  a7, a5, a7, 0x3                   
++add      a3, a7, a3                        
++lbu      a7, 0x0(a3)                       
+ lw       a3, 0x6c8(s11)                    
+-srl      a5, a5, a7                        
+-andi     a5, a5, 0x1                       
+-bne      a5, t0, 0x1001ed8 <qrencode+0x92c>
++mv       t0, a4                            
++custom2  a4, a7, a5, 0x7                   
++bne      a4, t0, 0x1001d48 <qrencode+0x8f8>
+
+2) <qrencode-%bb.120>
+rel_weight [old] : 0.09721501947305217
+rel_weight [new] : 0.08837735291445532
+rel_weight [diff]: -0.00884
+rel_weight [rel] : -9.09%
+num_instrs [old] : 11
+num_instrs [new] : 10
+num_instrs [diff]: -1
+num_instrs [rel] : -9.09%
+diff --git a/old b/new
+index ee77f42..b59d7c7 100644
+--- a/old
++++ b/new
+@@ -1,11 +1,10 @@
+ lbu       a2, 0x6bc(s4)                     
+ lw        a7, 0x6d0(s3)                     
+ mul       a2, a1, a2                        
+-add       a7, a7, a3                        
++add       a7, a7, a5                        
+ add       a2, a7, a2                        
+ lbu       a7, 0x0(a2)                       
+-mv        t0, a6                            
+ lw        a2, 0x6c8(s11)                    
+-srl       a6, a7, a5                        
+-andi      a6, a6, 0x1                       
+-bne       a6, t0, 0x10020a4 <qrencode+0xaf8>
++mv        t0, a3                            
++custom31  a3, a7, a6, 0x1                   
++bne       a3, t0, 0x1001f0c <qrencode+0xabc>
+
+3) <qrencode-%bb.97>
+Not found!

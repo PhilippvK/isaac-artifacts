@@ -1,0 +1,4 @@
+,uArch,Run CPI,description,details,total_area_estimate,Rank
+0,CV32E40PXISAACV0,1.3538272890226664,all:0,"SG1(II=1, lats={CUSTOM5: 1}, full_lats={CUSTOM5: 3})",123.0,1
+1,CV32E40PXISAACV1,1.4129856665875329,all:1,"SG1(II=1, lats={CUSTOM5: 2}, full_lats={CUSTOM5: 4})",123.0,2
+2,CV32E40PXISAACV2,1.4129856665875329,all:2,"SG1(II=2, lats={CUSTOM5: 2}, full_lats={CUSTOM5: 4})",123.0,2

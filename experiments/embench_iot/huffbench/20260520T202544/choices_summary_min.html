@@ -1,0 +1,56 @@
+<h2>Choice 0</h2>
+<table>
+<tr><th>func_name</th><th>bb_name</th><th>rel_weight</th><th>num_instrs</th><th>freq</th><th>start</th><th>end</th></tr>
+<tr><td>compdecomp</td><td>%bb.68</td><td>0.197431</td><td>4</td><td>112629.0</td><td>0x1000ab4</td><td>0x1000ac4</td></tr>
+</table>
+<pre><code class='asm'>
+ 1000ab4: 00032383     	lw	t2, 0x0(t1)
+ 1000ab8: 00128293     	addi	t0, t0, 0x1
+ 1000abc: 00430313     	addi	t1, t1, 0x4
+ 1000ac0: ff13eae3     	bltu	t2, a7, 0x1000ab4 <compdecomp+0x778>
+</code></pre>
+<h2>Choice 1</h2>
+<table>
+<tr><th>func_name</th><th>bb_name</th><th>rel_weight</th><th>num_instrs</th><th>freq</th><th>start</th><th>end</th></tr>
+<tr><td>compdecomp</td><td>%bb.61</td><td>0.190347</td><td>8</td><td>54294.0</td><td>0x1000a18</td><td>0x1000a38</td></tr>
+</table>
+<pre><code class='asm'>
+ 1000a18: fff3ce83     	lbu	t4, -0x1(t2)
+ 1000a1c: fff28293     	addi	t0, t0, -0x1
+ 1000a20: 01c32023     	sw	t3, 0x0(t1)
+ 1000a24: 01d38023     	sb	t4, 0x0(t2)
+ 1000a28: fff38393     	addi	t2, t2, -0x1
+ 1000a2c: ffc30313     	addi	t1, t1, -0x4
+ 1000a30: fe0290e3     	bnez	t0, 0x1000a10 <compdecomp+0x6d4>
+ 1000a34: f99ff06f     	j	0x10009cc <compdecomp+0x690>
+</code></pre>
+<h2>Choice 2</h2>
+<table>
+<tr><th>func_name</th><th>bb_name</th><th>rel_weight</th><th>num_instrs</th><th>freq</th><th>start</th><th>end</th></tr>
+<tr><td>compdecomp</td><td>%bb.48</td><td>0.132247</td><td>11</td><td>27434.0</td><td>0x10006e0</td><td>0x100070c</td></tr>
+</table>
+<pre><code class='asm'>
+ 10006e0: 00231e93     	slli	t4, t1, 0x2
+ 10006e4: 01d78eb3     	add	t4, a5, t4
+ 10006e8: 000eae83     	lw	t4, 0x0(t4)
+ 10006ec: 01cefeb3     	and	t4, t4, t3
+ 10006f0: 00660f33     	add	t5, a2, t1
+ 10006f4: 000f4f03     	lbu	t5, 0x0(t5)
+ 10006f8: 01d03eb3     	snez	t4, t4
+ 10006fc: 01d2e2b3     	or	t0, t0, t4
+ 1000700: 00138393     	addi	t2, t2, 0x1
+ 1000704: 001e5e13     	srli	t3, t3, 0x1
+ 1000708: fbe3f2e3     	bgeu	t2, t5, 0x10006ac <compdecomp+0x370>
+</code></pre>
+<h2>Choice 3</h2>
+<table>
+<tr><th>func_name</th><th>bb_name</th><th>rel_weight</th><th>num_instrs</th><th>freq</th><th>start</th><th>end</th></tr>
+<tr><td>compdecomp</td><td>%bb.92</td><td>0.052616</td><td>5</td><td>24013.0</td><td>0x1000ae8</td><td>0x1000afc</td></tr>
+</table>
+<pre><code class='asm'>
+ 1000ae8: 00185313     	srli	t1, a6, 0x1
+ 1000aec: 00283813     	sltiu	a6, a6, 0x2
+ 1000af0: 010787b3     	add	a5, a5, a6
+ 1000af4: 00030813     	mv	a6, t1
+ 1000af8: f885eae3     	bltu	a1, s0, 0x1000a8c <compdecomp+0x750>
+</code></pre>

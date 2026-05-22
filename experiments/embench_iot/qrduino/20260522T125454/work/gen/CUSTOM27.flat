@@ -1,0 +1,4 @@
+// DateTime: 20260522T125748, Sub: 27, Name: CUSTOM27, Inputs: 1, Outputs: 1
+unsigned<32> rs1_val=X[rs1];
+unsigned<32> outp0=(unsigned<32>)(ANDI((unsigned<32>)(XORI(rs1_val,(-1))),(unsigned<5>)(uimm5)));
+X[rd]=outp0;

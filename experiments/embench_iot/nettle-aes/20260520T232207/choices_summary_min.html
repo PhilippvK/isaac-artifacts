@@ -1,0 +1,188 @@
+<h2>Choice 0</h2>
+<table>
+<tr><th>func_name</th><th>bb_name</th><th>rel_weight</th><th>num_instrs</th><th>freq</th><th>start</th><th>end</th></tr>
+<tr><td>_nettle_aes_decrypt</td><td>%bb.6</td><td>0.394009</td><td>87</td><td>16224.0</td><td>0x1000d2c</td><td>0x1000e88</td></tr>
+</table>
+<pre><code class='asm'>
+ 1000d2c: 0ffef993     	andi	s3, t4, 0xff
+ 1000d30: 00299993     	slli	s3, s3, 0x2
+ 1000d34: 013809b3     	add	s3, a6, s3
+ 1000d38: 0009a983     	lw	s3, 0x0(s3)
+ 1000d3c: 006f5a13     	srli	s4, t5, 0x6
+ 1000d40: 3fca7a13     	andi	s4, s4, 0x3fc
+ 1000d44: 01488a33     	add	s4, a7, s4
+ 1000d48: 000a2a03     	lw	s4, 0x0(s4)
+ 1000d4c: 00e45a93     	srli	s5, s0, 0xe
+ 1000d50: 3fcafa93     	andi	s5, s5, 0x3fc
+ 1000d54: 01528ab3     	add	s5, t0, s5
+ 1000d58: 000aaa83     	lw	s5, 0x0(s5)
+ 1000d5c: 018fdb13     	srli	s6, t6, 0x18
+ 1000d60: 002b1b13     	slli	s6, s6, 0x2
+ 1000d64: 01630b33     	add	s6, t1, s6
+ 1000d68: 000b2b03     	lw	s6, 0x0(s6)
+ 1000d6c: 013a49b3     	xor	s3, s4, s3
+ 1000d70: 016aca33     	xor	s4, s5, s6
+ 1000d74: 0149c9b3     	xor	s3, s3, s4
+ 1000d78: ff44aa03     	lw	s4, -0xc(s1)
+ 1000d7c: 0ffffa93     	andi	s5, t6, 0xff
+ 1000d80: 002a9a93     	slli	s5, s5, 0x2
+ 1000d84: 01580ab3     	add	s5, a6, s5
+ 1000d88: 000aaa83     	lw	s5, 0x0(s5)
+ 1000d8c: 006edb13     	srli	s6, t4, 0x6
+ 1000d90: 3fcb7b13     	andi	s6, s6, 0x3fc
+ 1000d94: 01688b33     	add	s6, a7, s6
+ 1000d98: 000b2b03     	lw	s6, 0x0(s6)
+ 1000d9c: 00ef5b93     	srli	s7, t5, 0xe
+ 1000da0: 3fcbfb93     	andi	s7, s7, 0x3fc
+ 1000da4: 01728bb3     	add	s7, t0, s7
+ 1000da8: 000bab83     	lw	s7, 0x0(s7)
+ 1000dac: 01845c13     	srli	s8, s0, 0x18
+ 1000db0: 002c1c13     	slli	s8, s8, 0x2
+ 1000db4: 01830c33     	add	s8, t1, s8
+ 1000db8: 000c2c03     	lw	s8, 0x0(s8)
+ 1000dbc: 00eedc93     	srli	s9, t4, 0xe
+ 1000dc0: 018edd13     	srli	s10, t4, 0x18
+ 1000dc4: 0149ceb3     	xor	t4, s3, s4
+ 1000dc8: 015b49b3     	xor	s3, s6, s5
+ 1000dcc: 018bca33     	xor	s4, s7, s8
+ 1000dd0: 0149c9b3     	xor	s3, s3, s4
+ 1000dd4: ff84aa03     	lw	s4, -0x8(s1)
+ 1000dd8: 0ff47a93     	andi	s5, s0, 0xff
+ 1000ddc: 002a9a93     	slli	s5, s5, 0x2
+ 1000de0: 01580ab3     	add	s5, a6, s5
+ 1000de4: 000aaa83     	lw	s5, 0x0(s5)
+ 1000de8: 006fdb13     	srli	s6, t6, 0x6
+ 1000dec: 3fcb7b13     	andi	s6, s6, 0x3fc
+ 1000df0: 01688b33     	add	s6, a7, s6
+ 1000df4: 000b2b03     	lw	s6, 0x0(s6)
+ 1000df8: 3fccfb93     	andi	s7, s9, 0x3fc
+ 1000dfc: 01728bb3     	add	s7, t0, s7
+ 1000e00: 000bab83     	lw	s7, 0x0(s7)
+ 1000e04: 018f5c13     	srli	s8, t5, 0x18
+ 1000e08: 002c1c13     	slli	s8, s8, 0x2
+ 1000e0c: 01830c33     	add	s8, t1, s8
+ 1000e10: 000c2c03     	lw	s8, 0x0(s8)
+ 1000e14: 00efdc93     	srli	s9, t6, 0xe
+ 1000e18: 0149cfb3     	xor	t6, s3, s4
+ 1000e1c: 015b49b3     	xor	s3, s6, s5
+ 1000e20: 018bca33     	xor	s4, s7, s8
+ 1000e24: 0149c9b3     	xor	s3, s3, s4
+ 1000e28: ffc4aa03     	lw	s4, -0x4(s1)
+ 1000e2c: 0fff7f13     	andi	t5, t5, 0xff
+ 1000e30: 002f1f13     	slli	t5, t5, 0x2
+ 1000e34: 01e80f33     	add	t5, a6, t5
+ 1000e38: 000f2f03     	lw	t5, 0x0(t5)
+ 1000e3c: 00645413     	srli	s0, s0, 0x6
+ 1000e40: 3fc47413     	andi	s0, s0, 0x3fc
+ 1000e44: 00888433     	add	s0, a7, s0
+ 1000e48: 00042a83     	lw	s5, 0x0(s0)
+ 1000e4c: 3fccf413     	andi	s0, s9, 0x3fc
+ 1000e50: 00828433     	add	s0, t0, s0
+ 1000e54: 00042b03     	lw	s6, 0x0(s0)
+ 1000e58: 002d1d13     	slli	s10, s10, 0x2
+ 1000e5c: 01a30d33     	add	s10, t1, s10
+ 1000e60: 000d2b83     	lw	s7, 0x0(s10)
+ 1000e64: 0149c433     	xor	s0, s3, s4
+ 1000e68: 0004a983     	lw	s3, 0x0(s1)
+ 1000e6c: 01eacf33     	xor	t5, s5, t5
+ 1000e70: 017b4a33     	xor	s4, s6, s7
+ 1000e74: 014f4f33     	xor	t5, t5, s4
+ 1000e78: 013f4f33     	xor	t5, t5, s3
+ 1000e7c: fff90913     	addi	s2, s2, -0x1
+ 1000e80: 01048493     	addi	s1, s1, 0x10
+ 1000e84: ea0914e3     	bnez	s2, 0x1000d2c <_nettle_aes_decrypt+0x318>
+</code></pre>
+<h2>Choice 1</h2>
+<table>
+<tr><th>func_name</th><th>bb_name</th><th>rel_weight</th><th>num_instrs</th><th>freq</th><th>start</th><th>end</th></tr>
+<tr><td>_nettle_aes_encrypt</td><td>%bb.6</td><td>0.394009</td><td>87</td><td>16224.0</td><td>0x1000870</td><td>0x10009cc</td></tr>
+</table>
+<pre><code class='asm'>
+ 1000870: 0fff7993     	andi	s3, t5, 0xff
+ 1000874: 00299993     	slli	s3, s3, 0x2
+ 1000878: 013809b3     	add	s3, a6, s3
+ 100087c: 0009a983     	lw	s3, 0x0(s3)
+ 1000880: 006fda13     	srli	s4, t6, 0x6
+ 1000884: 3fca7a13     	andi	s4, s4, 0x3fc
+ 1000888: 01488a33     	add	s4, a7, s4
+ 100088c: 000a2a03     	lw	s4, 0x0(s4)
+ 1000890: 00e45a93     	srli	s5, s0, 0xe
+ 1000894: 3fcafa93     	andi	s5, s5, 0x3fc
+ 1000898: 01528ab3     	add	s5, t0, s5
+ 100089c: 000aaa83     	lw	s5, 0x0(s5)
+ 10008a0: 018edb13     	srli	s6, t4, 0x18
+ 10008a4: 002b1b13     	slli	s6, s6, 0x2
+ 10008a8: 01630b33     	add	s6, t1, s6
+ 10008ac: 000b2b03     	lw	s6, 0x0(s6)
+ 10008b0: 013a49b3     	xor	s3, s4, s3
+ 10008b4: 016aca33     	xor	s4, s5, s6
+ 10008b8: 0149c9b3     	xor	s3, s3, s4
+ 10008bc: ff44aa03     	lw	s4, -0xc(s1)
+ 10008c0: 0ffffa93     	andi	s5, t6, 0xff
+ 10008c4: 002a9a93     	slli	s5, s5, 0x2
+ 10008c8: 01580ab3     	add	s5, a6, s5
+ 10008cc: 000aaa83     	lw	s5, 0x0(s5)
+ 10008d0: 00645b13     	srli	s6, s0, 0x6
+ 10008d4: 3fcb7b13     	andi	s6, s6, 0x3fc
+ 10008d8: 01688b33     	add	s6, a7, s6
+ 10008dc: 000b2b03     	lw	s6, 0x0(s6)
+ 10008e0: 00eedb93     	srli	s7, t4, 0xe
+ 10008e4: 3fcbfb93     	andi	s7, s7, 0x3fc
+ 10008e8: 01728bb3     	add	s7, t0, s7
+ 10008ec: 000bab83     	lw	s7, 0x0(s7)
+ 10008f0: 018f5c13     	srli	s8, t5, 0x18
+ 10008f4: 002c1c13     	slli	s8, s8, 0x2
+ 10008f8: 01830c33     	add	s8, t1, s8
+ 10008fc: 000c2c03     	lw	s8, 0x0(s8)
+ 1000900: 00ef5c93     	srli	s9, t5, 0xe
+ 1000904: 006f5d13     	srli	s10, t5, 0x6
+ 1000908: 0149cf33     	xor	t5, s3, s4
+ 100090c: 015b49b3     	xor	s3, s6, s5
+ 1000910: 018bca33     	xor	s4, s7, s8
+ 1000914: 0149c9b3     	xor	s3, s3, s4
+ 1000918: ff84aa03     	lw	s4, -0x8(s1)
+ 100091c: 0ff47a93     	andi	s5, s0, 0xff
+ 1000920: 002a9a93     	slli	s5, s5, 0x2
+ 1000924: 01580ab3     	add	s5, a6, s5
+ 1000928: 000aaa83     	lw	s5, 0x0(s5)
+ 100092c: 006edb13     	srli	s6, t4, 0x6
+ 1000930: 3fcb7b13     	andi	s6, s6, 0x3fc
+ 1000934: 01688b33     	add	s6, a7, s6
+ 1000938: 000b2b03     	lw	s6, 0x0(s6)
+ 100093c: 3fccfb93     	andi	s7, s9, 0x3fc
+ 1000940: 01728bb3     	add	s7, t0, s7
+ 1000944: 000bab83     	lw	s7, 0x0(s7)
+ 1000948: 018fdc13     	srli	s8, t6, 0x18
+ 100094c: 002c1c13     	slli	s8, s8, 0x2
+ 1000950: 01830c33     	add	s8, t1, s8
+ 1000954: 000c2c03     	lw	s8, 0x0(s8)
+ 1000958: 00efdc93     	srli	s9, t6, 0xe
+ 100095c: 0149cfb3     	xor	t6, s3, s4
+ 1000960: 015b49b3     	xor	s3, s6, s5
+ 1000964: 018bca33     	xor	s4, s7, s8
+ 1000968: 0149c9b3     	xor	s3, s3, s4
+ 100096c: ffc4aa03     	lw	s4, -0x4(s1)
+ 1000970: 0ffefe93     	andi	t4, t4, 0xff
+ 1000974: 002e9e93     	slli	t4, t4, 0x2
+ 1000978: 01d80eb3     	add	t4, a6, t4
+ 100097c: 000eae83     	lw	t4, 0x0(t4)
+ 1000980: 3fcd7a93     	andi	s5, s10, 0x3fc
+ 1000984: 01588ab3     	add	s5, a7, s5
+ 1000988: 000aaa83     	lw	s5, 0x0(s5)
+ 100098c: 3fccfb13     	andi	s6, s9, 0x3fc
+ 1000990: 01628b33     	add	s6, t0, s6
+ 1000994: 000b2b03     	lw	s6, 0x0(s6)
+ 1000998: 01845413     	srli	s0, s0, 0x18
+ 100099c: 00241413     	slli	s0, s0, 0x2
+ 10009a0: 00830433     	add	s0, t1, s0
+ 10009a4: 00042b83     	lw	s7, 0x0(s0)
+ 10009a8: 0149c433     	xor	s0, s3, s4
+ 10009ac: 0004a983     	lw	s3, 0x0(s1)
+ 10009b0: 01daceb3     	xor	t4, s5, t4
+ 10009b4: 017b4a33     	xor	s4, s6, s7
+ 10009b8: 014eceb3     	xor	t4, t4, s4
+ 10009bc: 013eceb3     	xor	t4, t4, s3
+ 10009c0: fff90913     	addi	s2, s2, -0x1
+ 10009c4: 01048493     	addi	s1, s1, 0x10
+ 10009c8: ea0914e3     	bnez	s2, 0x1000870 <_nettle_aes_encrypt+0x318>
+</code></pre>

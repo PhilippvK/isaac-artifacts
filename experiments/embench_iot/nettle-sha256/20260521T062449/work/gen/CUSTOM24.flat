@@ -1,0 +1,5 @@
+// DateTime: 20260521T073547, Sub: 24, Name: CUSTOM24, Inputs: 2, Outputs: 1
+unsigned<32> rs1_val=X[rs1];
+unsigned<32> rs2_val=X[rs2];
+unsigned<32> outp0=(unsigned<32>)(XOR(rs1_val,(unsigned<32>)(OR((unsigned<32>)(SLLI(rs2_val,(13))),(unsigned<32>)(SRLI(rs2_val,(19)))))));
+X[rd]=outp0;

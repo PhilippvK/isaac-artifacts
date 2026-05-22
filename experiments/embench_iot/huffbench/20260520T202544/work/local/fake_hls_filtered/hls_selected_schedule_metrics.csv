@@ -1,0 +1,2 @@
+,num_groups,num_instrs,max_instrs,min_instrs,avg_instrs,min_ii,max_ii,avg_ii,min_lat,max_lat,avg_lat,total_area_estimate,total_area_estimate_with_lifetimes,Variant idx,Variant name,Variant description,Variant details
+0,4,4,1,1,1.0,1,1,1.0,3,3,3.0,492.0,492.0,0,V0,all:0,"SG1(II=1, lats={CUSTOM3: 1}, full_lats={CUSTOM3: 3}), SG2(II=1, lats={CUSTOM5: 1}, full_lats={CUSTOM5: 3}), SG3(II=1, lats={CUSTOM6: 1}, full_lats={CUSTOM6: 3}), SG4(II=1, lats={CUSTOM8: 1}, full_lats={CUSTOM8: 3})"

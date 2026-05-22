@@ -1,0 +1,247 @@
+=== DIFFS ===
+0) <_nettle_aes_decrypt-%bb.6>
+rel_weight [old] : 0.39400867245165083
+rel_weight [new] : 0.24908608141635608
+rel_weight [diff]: -0.14492
+rel_weight [rel] : -36.78%
+num_instrs [old] : 87
+num_instrs [new] : 55
+num_instrs [diff]: -32
+num_instrs [rel] : -36.78%
+diff --git a/old b/new
+index f289abc..d85c26a 100644
+--- a/old
++++ b/new
+@@ -1,80 +1,48 @@
+-andi      s3, t4, 0xff                             
+-slli      s3, s3, 0x2                              
+-add       s3, a6, s3                               
++custom10  s3, a6, t4, 0x2                          
+ lw        s3, 0x0(s3)                              
+-srli      s4, t5, 0x6                              
+-andi      s4, s4, 0x3fc                            
+-add       s4, a7, s4                               
++custom8   s4, a7, t5, 0x6                          
+ lw        s4, 0x0(s4)                              
+-srli      s5, s0, 0xe                              
+-andi      s5, s5, 0x3fc                            
+-add       s5, t0, s5                               
++custom8   s5, t0, s0, 0xe                          
+ lw        s5, 0x0(s5)                              
+-srli      s6, t6, 0x18                             
+-slli      s6, s6, 0x2                              
+-add       s6, t1, s6                               
++custom8   s6, t1, t6, 0x16                         
+ lw        s6, 0x0(s6)                              
+ xor       s3, s4, s3                               
+ xor       s4, s5, s6                               
+ xor       s3, s3, s4                               
+ lw        s4, -0xc(s1)                             
+-andi      s5, t6, 0xff                             
+-slli      s5, s5, 0x2                              
+-add       s5, a6, s5                               
++custom10  s5, a6, t6, 0x2                          
+ lw        s5, 0x0(s5)                              
+-srli      s6, t4, 0x6                              
+-andi      s6, s6, 0x3fc                            
+-add       s6, a7, s6                               
++custom8   s6, a7, t4, 0x6                          
+ lw        s6, 0x0(s6)                              
+-srli      s7, t5, 0xe                              
+-andi      s7, s7, 0x3fc                            
+-add       s7, t0, s7                               
++custom8   s7, t0, t5, 0xe                          
+ lw        s7, 0x0(s7)                              
+-srli      s8, s0, 0x18                             
+-slli      s8, s8, 0x2                              
+-add       s8, t1, s8                               
++custom8   s8, t1, s0, 0x16                         
+ lw        s8, 0x0(s8)                              
+-srli      s9, t4, 0xe                              
+-srli      s10, t4, 0x18                            
++custom8   s9, t0, t4, 0xe                          
++custom8   s10, t1, t4, 0x16                        
+ xor       t4, s3, s4                               
+ xor       s3, s6, s5                               
+ xor       s4, s7, s8                               
+ xor       s3, s3, s4                               
+ lw        s4, -0x8(s1)                             
+-andi      s5, s0, 0xff                             
+-slli      s5, s5, 0x2                              
+-add       s5, a6, s5                               
++custom10  s5, a6, s0, 0x2                          
+ lw        s5, 0x0(s5)                              
+-srli      s6, t6, 0x6                              
+-andi      s6, s6, 0x3fc                            
+-add       s6, a7, s6                               
++custom8   s6, a7, t6, 0x6                          
+ lw        s6, 0x0(s6)                              
+-andi      s7, s9, 0x3fc                            
+-add       s7, t0, s7                               
+-lw        s7, 0x0(s7)                              
+-srli      s8, t5, 0x18                             
+-slli      s8, s8, 0x2                              
+-add       s8, t1, s8                               
++lw        s7, 0x0(s9)                              
++custom8   s8, t1, t5, 0x16                         
+ lw        s8, 0x0(s8)                              
+-srli      s9, t6, 0xe                              
++custom8   s9, t0, t6, 0xe                          
+ xor       t6, s3, s4                               
+ xor       s3, s6, s5                               
+ xor       s4, s7, s8                               
+ xor       s3, s3, s4                               
+ lw        s4, -0x4(s1)                             
+-andi      t5, t5, 0xff                             
+-slli      t5, t5, 0x2                              
+-add       t5, a6, t5                               
++custom10  t5, a6, t5, 0x2                          
+ lw        t5, 0x0(t5)                              
+-srli      s0, s0, 0x6                              
+-andi      s0, s0, 0x3fc                            
+-add       s0, a7, s0                               
++custom8   s0, a7, s0, 0x6                          
+ lw        s5, 0x0(s0)                              
+-andi      s0, s9, 0x3fc                            
+-add       s0, t0, s0                               
+-lw        s6, 0x0(s0)                              
+-slli      s10, s10, 0x2                            
+-add       s10, t1, s10                             
++lw        s6, 0x0(s9)                              
+ lw        s7, 0x0(s10)                             
+ xor       s0, s3, s4                               
+ lw        s3, 0x0(s1)                              
+@@ -84,4 +52,4 @@ xor       t5, t5, s4
+ xor       t5, t5, s3                               
+ addi      s2, s2, -0x1                             
+ addi      s1, s1, 0x10                             
+-bnez      s2, 0x1000d2c <_nettle_aes_decrypt+0x318>
++bnez      s2, 0x1000cb0 <_nettle_aes_decrypt+0x318>
+
+1) <_nettle_aes_encrypt-%bb.6>
+rel_weight [old] : 0.39400867245165083
+rel_weight [new] : 0.24908608141635608
+rel_weight [diff]: -0.14492
+rel_weight [rel] : -36.78%
+num_instrs [old] : 87
+num_instrs [new] : 55
+num_instrs [diff]: -32
+num_instrs [rel] : -36.78%
+diff --git a/old b/new
+index 9c976bc..4bcf582 100644
+--- a/old
++++ b/new
+@@ -1,87 +1,55 @@
+-andi      s3, t5, 0xff                             
+-slli      s3, s3, 0x2                              
+-add       s3, a6, s3                               
++custom10  s3, a6, t4, 0x2                          
+ lw        s3, 0x0(s3)                              
+-srli      s4, t6, 0x6                              
+-andi      s4, s4, 0x3fc                            
+-add       s4, a7, s4                               
++custom8   s4, a7, t6, 0x6                          
+ lw        s4, 0x0(s4)                              
+-srli      s5, s0, 0xe                              
+-andi      s5, s5, 0x3fc                            
+-add       s5, t0, s5                               
++custom8   s5, t0, s0, 0xe                          
+ lw        s5, 0x0(s5)                              
+-srli      s6, t4, 0x18                             
+-slli      s6, s6, 0x2                              
+-add       s6, t1, s6                               
++custom8   s6, t1, t5, 0x16                         
+ lw        s6, 0x0(s6)                              
+ xor       s3, s4, s3                               
+ xor       s4, s5, s6                               
+ xor       s3, s3, s4                               
+ lw        s4, -0xc(s1)                             
+-andi      s5, t6, 0xff                             
+-slli      s5, s5, 0x2                              
+-add       s5, a6, s5                               
++custom10  s5, a6, t6, 0x2                          
+ lw        s5, 0x0(s5)                              
+-srli      s6, s0, 0x6                              
+-andi      s6, s6, 0x3fc                            
+-add       s6, a7, s6                               
++custom8   s6, a7, s0, 0x6                          
+ lw        s6, 0x0(s6)                              
+-srli      s7, t4, 0xe                              
+-andi      s7, s7, 0x3fc                            
+-add       s7, t0, s7                               
++custom8   s7, t0, t5, 0xe                          
+ lw        s7, 0x0(s7)                              
+-srli      s8, t5, 0x18                             
+-slli      s8, s8, 0x2                              
+-add       s8, t1, s8                               
++custom8   s8, t1, t4, 0x16                         
+ lw        s8, 0x0(s8)                              
+-srli      s9, t5, 0xe                              
+-srli      s10, t5, 0x6                             
+-xor       t5, s3, s4                               
++custom8   s9, t0, t4, 0xe                          
++custom8   s10, a7, t4, 0x6                         
++xor       t4, s3, s4                               
+ xor       s3, s6, s5                               
+ xor       s4, s7, s8                               
+ xor       s3, s3, s4                               
+ lw        s4, -0x8(s1)                             
+-andi      s5, s0, 0xff                             
+-slli      s5, s5, 0x2                              
+-add       s5, a6, s5                               
++custom10  s5, a6, s0, 0x2                          
+ lw        s5, 0x0(s5)                              
+-srli      s6, t4, 0x6                              
+-andi      s6, s6, 0x3fc                            
+-add       s6, a7, s6                               
++custom8   s6, a7, t5, 0x6                          
+ lw        s6, 0x0(s6)                              
+-andi      s7, s9, 0x3fc                            
+-add       s7, t0, s7                               
+-lw        s7, 0x0(s7)                              
+-srli      s8, t6, 0x18                             
+-slli      s8, s8, 0x2                              
+-add       s8, t1, s8                               
++lw        s7, 0x0(s9)                              
++custom8   s8, t1, t6, 0x16                         
+ lw        s8, 0x0(s8)                              
+-srli      s9, t6, 0xe                              
++custom8   s9, t0, t6, 0xe                          
+ xor       t6, s3, s4                               
+ xor       s3, s6, s5                               
+ xor       s4, s7, s8                               
+ xor       s3, s3, s4                               
+ lw        s4, -0x4(s1)                             
+-andi      t4, t4, 0xff                             
+-slli      t4, t4, 0x2                              
+-add       t4, a6, t4                               
+-lw        t4, 0x0(t4)                              
+-andi      s5, s10, 0x3fc                           
+-add       s5, a7, s5                               
+-lw        s5, 0x0(s5)                              
+-andi      s6, s9, 0x3fc                            
+-add       s6, t0, s6                               
+-lw        s6, 0x0(s6)                              
+-srli      s0, s0, 0x18                             
+-slli      s0, s0, 0x2                              
+-add       s0, t1, s0                               
++custom10  t5, a6, t5, 0x2                          
++lw        t5, 0x0(t5)                              
++lw        s5, 0x0(s10)                             
++lw        s6, 0x0(s9)                              
++custom8   s0, t1, s0, 0x16                         
+ lw        s7, 0x0(s0)                              
+ xor       s0, s3, s4                               
+ lw        s3, 0x0(s1)                              
+-xor       t4, s5, t4                               
++xor       t5, s5, t5                               
+ xor       s4, s6, s7                               
+-xor       t4, t4, s4                               
+-xor       t4, t4, s3                               
++xor       t5, t5, s4                               
++xor       t5, t5, s3                               
+ addi      s2, s2, -0x1                             
+ addi      s1, s1, 0x10                             
+-bnez      s2, 0x1000870 <_nettle_aes_encrypt+0x318>
++bnez      s2, 0x1000874 <_nettle_aes_encrypt+0x318>
+

@@ -1,0 +1,61 @@
+- instruction: CUSTOM2
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 2
+- instruction: CUSTOM5
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 2
+- instruction: CUSTOM9
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 2
+- instruction: CUSTOM21
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 2
+- instruction: CUSTOM27
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 2
+- instruction: CUSTOM29
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 2
+- instruction: CUSTOM31
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 2
+- instruction: CUSTOM33
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 3
+- instruction: CUSTOM35
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 4
+- instruction: CUSTOM37
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 4
+- last stage: 5

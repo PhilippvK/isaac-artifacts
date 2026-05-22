@@ -1,0 +1,3 @@
+instr,bits,footprint,weight,enc_score
+CUSTOM0,15.0,0.6,0.0009765625,0.9990234375
+CUSTOM2,20.0,0.8,0.03125,0.96875

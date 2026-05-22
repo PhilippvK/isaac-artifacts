@@ -1,0 +1,25 @@
+// DateTime: 20260521T073547, Sub: 45, Name: CUSTOM45, Inputs: 1, Outputs: 1
+
+import "RV32I.core_desc"
+
+InstructionSet MySet extends RV32I {
+    instructions {
+        CUSTOM45 {
+            operands: {
+                unsigned<5> rd [[is_reg]] [[reg_class="GPR"]] [[reg_type="s32"]] [[out]];
+                unsigned<5> rs1 [[is_reg]] [[reg_class="GPR"]] [[reg_type="s32"]] [[in]];
+                unsigned<7> uimm7 [[is_imm]] [[in]];
+            }
+            encoding: auto;
+            assembly: {"custom45", "{name(rd)}, {name(rs1)}, {uimm7}"};
+            behavior: {
+                unsigned<32> rs1_val=X[rs1];
+                unsigned<32> outp0=(unsigned<32>)(((unsigned<32>)(unsigned<32>)(((unsigned<32>)rs1_val<<(unsigned<32>)(13)))|(unsigned<32>)(unsigned<32>)(((unsigned<32>)rs1_val>>(unsigned<32>)(unsigned<7>)(uimm7)))));
+                X[rd]=outp0;
+                
+            }
+        }
+        
+
+    }
+}

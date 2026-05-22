@@ -1,0 +1,632 @@
+candidates:
+- artifacts:
+    cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/xgboost/20260520T151251/work/gen/CUSTOM0.core_desc
+    cdsl_encoded: /var/tmp/ga87puy/isaac-demo/out/embench_iot/xgboost/20260520T151251/work/gen/CUSTOM0.encoded.core_desc
+    flat: /var/tmp/ga87puy/isaac-demo/out/embench_iot/xgboost/20260520T151251/work/gen/CUSTOM0.flat
+    fuse_cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/xgboost/20260520T151251/work/gen/CUSTOM0.fuse_core_desc
+    io_sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/xgboost/20260520T151251/work/predict_%bb.6_0/io_sub18.pkl
+    sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/xgboost/20260520T151251/work/predict_%bb.6_0/sub18.pkl
+    tree: /var/tmp/ga87puy/isaac-demo/out/embench_iot/xgboost/20260520T151251/work/predict_%bb.6_0/tree18.pkl
+  id: 0
+  metrics:
+    code_size_reduction_rel: 0.0
+    enc_score: 0.9990234375
+    enc_weight: 0.0009765625
+    runtime_reduction_rel: 0.015069132588941603
+    seal5_score: 1.0
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 1.0
+    '#InputNodes': 2.0
+    '#Instrs': 2.0
+    '#Isos': 0.0
+    '#IsosNO': 0.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 2.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 2.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 1
+    ConstantNodes:
+    - 78
+    ConstantSigns:
+    - false
+    ConstantValues:
+    - 1
+    Constraints: []
+    DateTime: 20260520T151343
+    EncodingBitsLeft (32 bits): 10.0
+    EncodingFootprint (32 bits): 0.6
+    EncodingWeight (32 bits): 0.0009765625
+    Freq: 51200.0
+    FullHash: 010c248f14521747cff16f460cbd88d65a7670c4
+    GlobalHash: 7e6d0211226e8439126d8552bb72274a4ce8fae8
+    IOSubHash: b07b0964d5aaf96998563a33691ee130
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 79
+    - 114
+    InstrName: CUSTOM0
+    Instrs:
+    - ADD
+    - ADDI
+    IsoNodes:
+    - 36
+    - 14
+    IsoWeight: 0.030138593381223478
+    Isos: []
+    IsosNO: []
+    LoadNodes: []
+    Nodes:
+    - 36
+    - 14
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 15.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    OperandNodes:
+    - 187
+    - 79
+    - 114
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 187
+    Parent: .nan
+    Predicates: 256
+    Predicates (str): '256'
+    Registers: 2
+    ScheduleLength: 3.0
+    Status: 1
+    Status (str): '1'
+    StoreNodes: []
+    SubHash: 2cc2541ebcedb97f3fbbf4a7f220e6c8
+    TerminatorNodes: []
+    UniqueInstrs:
+    - ADD
+    - ADDI
+    Variations: 0
+    Weight: 0.030138593381223478
+    result: 18
+- artifacts:
+    cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/xgboost/20260520T151251/work/gen/CUSTOM1.core_desc
+    cdsl_encoded: /var/tmp/ga87puy/isaac-demo/out/embench_iot/xgboost/20260520T151251/work/gen/CUSTOM1.encoded.core_desc
+    flat: /var/tmp/ga87puy/isaac-demo/out/embench_iot/xgboost/20260520T151251/work/gen/CUSTOM1.flat
+    fuse_cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/xgboost/20260520T151251/work/gen/CUSTOM1.fuse_core_desc
+    io_sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/xgboost/20260520T151251/work/predict_%bb.6_0/io_sub19.pkl
+    sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/xgboost/20260520T151251/work/predict_%bb.6_0/sub19.pkl
+    tree: /var/tmp/ga87puy/isaac-demo/out/embench_iot/xgboost/20260520T151251/work/predict_%bb.6_0/tree19.pkl
+  id: 1
+  metrics:
+    code_size_reduction_rel: 0.0
+    enc_score: 0.9990234375
+    enc_weight: 0.0009765625
+    runtime_reduction_rel: 0.015069132588941603
+    seal5_score: 1.0
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 1.0
+    '#InputNodes': 2.0
+    '#Instrs': 2.0
+    '#Isos': 0.0
+    '#IsosNO': 0.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 2.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 2.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 8
+    ConstantNodes:
+    - 84
+    ConstantSigns:
+    - false
+    ConstantValues:
+    - 127
+    Constraints: []
+    DateTime: 20260520T151343
+    EncodingBitsLeft (32 bits): 10.0
+    EncodingFootprint (32 bits): 0.6
+    EncodingWeight (32 bits): 0.0009765625
+    Freq: 51200.0
+    FullHash: b7c622988c2cc8a970942d061bcc11051c428077
+    GlobalHash: 7e6d0211226e8439126d8552bb72274a4ce8fae8
+    IOSubHash: 4f8989b180d7612b8b0407712485bd4b
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 25
+    - 97
+    InstrName: CUSTOM1
+    Instrs:
+    - ANDI
+    - ADD
+    IsoNodes:
+    - 41
+    - 10
+    IsoWeight: 0.030138593381223478
+    Isos: []
+    IsosNO: []
+    LoadNodes: []
+    Nodes:
+    - 41
+    - 10
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 15.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    OperandNodes:
+    - 188
+    - 25
+    - 97
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 188
+    Parent: .nan
+    Predicates: 256
+    Predicates (str): '256'
+    Registers: 2
+    ScheduleLength: 3.0
+    Status: 1
+    Status (str): '1'
+    StoreNodes: []
+    SubHash: 6ce2b332f815edcac74c8441ebc75452
+    TerminatorNodes: []
+    UniqueInstrs:
+    - ANDI
+    - ADD
+    Variations: 0
+    Weight: 0.030138593381223478
+    result: 19
+- artifacts:
+    cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/xgboost/20260520T151251/work/gen/CUSTOM2.core_desc
+    cdsl_encoded: /var/tmp/ga87puy/isaac-demo/out/embench_iot/xgboost/20260520T151251/work/gen/CUSTOM2.encoded.core_desc
+    flat: /var/tmp/ga87puy/isaac-demo/out/embench_iot/xgboost/20260520T151251/work/gen/CUSTOM2.flat
+    fuse_cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/xgboost/20260520T151251/work/gen/CUSTOM2.fuse_core_desc
+    io_sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/xgboost/20260520T151251/work/predict_%bb.6_0/io_sub22.pkl
+    sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/xgboost/20260520T151251/work/predict_%bb.6_0/sub22.pkl
+    tree: /var/tmp/ga87puy/isaac-demo/out/embench_iot/xgboost/20260520T151251/work/predict_%bb.6_0/tree22.pkl
+  id: 2
+  metrics:
+    code_size_reduction_rel: 0.0
+    enc_score: 0.998046875
+    enc_weight: 0.001953125
+    runtime_reduction_rel: 0.0
+    seal5_score: 1.0
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 0.0
+    '#InputNodes': 2.0
+    '#Instrs': 2.0
+    '#Isos': 0.0
+    '#IsosNO': 0.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 2.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 2.0
+    BranchNodes: []
+    ConstantMinBits: []
+    ConstantNodes: []
+    ConstantSigns:
+    - false
+    ConstantValues: []
+    Constraints: []
+    DateTime: 20260520T151343
+    EncodingBitsLeft (32 bits): 9.0
+    EncodingFootprint (32 bits): 0.64
+    EncodingWeight (32 bits): 0.001953125
+    Freq: 51200.0
+    FullHash: f4172b2050af10494fed8d74c58ef9806a59d09f
+    GlobalHash: 7e6d0211226e8439126d8552bb72274a4ce8fae8
+    IOSubHash: b07b0964d5aaf96998563a33691ee130
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 79
+    - 114
+    InstrName: CUSTOM2
+    Instrs:
+    - ADD
+    - ADDI
+    IsoNodes:
+    - 36
+    - 14
+    IsoWeight: 0.030138593381223478
+    Isos: []
+    IsosNO: []
+    LoadNodes: []
+    Nodes:
+    - 36
+    - 14
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    - 1
+    OperandEncBitsSum: 16.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    - uimm1
+    OperandNodes:
+    - 187
+    - 79
+    - 114
+    - 191
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    - null
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    - IMM
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 187
+    Parent: 18.0
+    Predicates: 256
+    Predicates (str): '256'
+    Registers: 2
+    ScheduleLength: 3.0
+    Status: 1
+    Status (str): '1'
+    StoreNodes: []
+    SubHash: 2cc2541ebcedb97f3fbbf4a7f220e6c8
+    TerminatorNodes: []
+    UniqueInstrs:
+    - ADD
+    - ADDI
+    Variations: 16
+    Weight: 0.030138593381223478
+    result: 22
+- artifacts:
+    cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/xgboost/20260520T151251/work/gen/CUSTOM3.core_desc
+    cdsl_encoded: /var/tmp/ga87puy/isaac-demo/out/embench_iot/xgboost/20260520T151251/work/gen/CUSTOM3.encoded.core_desc
+    flat: /var/tmp/ga87puy/isaac-demo/out/embench_iot/xgboost/20260520T151251/work/gen/CUSTOM3.flat
+    fuse_cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/xgboost/20260520T151251/work/gen/CUSTOM3.fuse_core_desc
+    io_sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/xgboost/20260520T151251/work/predict_%bb.6_0/io_sub23.pkl
+    sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/xgboost/20260520T151251/work/predict_%bb.6_0/sub23.pkl
+    tree: /var/tmp/ga87puy/isaac-demo/out/embench_iot/xgboost/20260520T151251/work/predict_%bb.6_0/tree23.pkl
+  id: 3
+  metrics:
+    code_size_reduction_rel: 0.0
+    enc_score: 0.96875
+    enc_weight: 0.03125
+    runtime_reduction_rel: 0.015069132588941603
+    seal5_score: 1.0
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 0.0
+    '#InputNodes': 2.0
+    '#Instrs': 2.0
+    '#Isos': 0.0
+    '#IsosNO': 0.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 2.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 2.0
+    BranchNodes: []
+    ConstantMinBits: []
+    ConstantNodes: []
+    ConstantSigns:
+    - false
+    ConstantValues: []
+    Constraints: []
+    DateTime: 20260520T151343
+    EncodingBitsLeft (32 bits): 5.0
+    EncodingFootprint (32 bits): 0.8
+    EncodingWeight (32 bits): 0.03125
+    Freq: 51200.0
+    FullHash: da21f7cabe35629cf2c9056905b1effeaabd12af
+    GlobalHash: 7e6d0211226e8439126d8552bb72274a4ce8fae8
+    IOSubHash: b07b0964d5aaf96998563a33691ee130
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 79
+    - 114
+    InstrName: CUSTOM3
+    Instrs:
+    - ADD
+    - ADDI
+    IsoNodes:
+    - 36
+    - 14
+    IsoWeight: 0.030138593381223478
+    Isos: []
+    IsosNO: []
+    LoadNodes: []
+    Nodes:
+    - 36
+    - 14
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 20.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    - uimm5
+    OperandNodes:
+    - 187
+    - 79
+    - 114
+    - 192
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    - null
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    - IMM
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 187
+    Parent: 18.0
+    Predicates: 256
+    Predicates (str): '256'
+    Registers: 2
+    ScheduleLength: 3.0
+    Status: 1
+    Status (str): '1'
+    StoreNodes: []
+    SubHash: 2cc2541ebcedb97f3fbbf4a7f220e6c8
+    TerminatorNodes: []
+    UniqueInstrs:
+    - ADD
+    - ADDI
+    Variations: 16
+    Weight: 0.030138593381223478
+    result: 23
+global:
+  artifacts:
+    ETISS_INSTALL_DIR: /var/tmp/ga87puy/isaac-demo/out/embench_iot/xgboost/20260520T151251/work/local//etiss//etiss_install
+    LLVM_INSTALL_DIR: /var/tmp/ga87puy/isaac-demo/out/embench_iot/xgboost/20260520T151251/work/local//seal5//llvm_install
+  properties:
+  - allowed_enc_sizes:
+    - 32
+    bb: '%bb.5'
+    candidate_count: 0
+    func: predict
+    ignore_names:
+    - G_PHI
+    - PHI
+    - COPY
+    - PseudoCALLIndirect
+    - PseudoLGA
+    - Select_GPR_Using_CC_GPR
+    - LUI
+    - PseudoMovAddr
+    - IMPLICIT_DEF
+    ignore_op_types:
+    - input
+    - constant
+    - label
+    instr_predicates: 511
+    limit_results: null
+    max_branches: 1
+    max_enc_footprint: 1.0
+    max_enc_weight: 1.0
+    max_inputs: 4
+    max_loads: 1
+    max_mems: 0
+    max_nodes: 1000
+    max_outputs: 2
+    max_path_len: 9
+    max_path_width: 2
+    max_stores: 1
+    min_enc_bits_left: 5
+    min_inputs: 1
+    min_iso_weight: 0.021577584656630476
+    min_nodes: 1
+    min_outputs: 1
+    min_path_len: 1
+    session: isaac-demo-xgboost-20260520T151251
+    stage: 32
+    timestamp: 20260520T151335
+    xlen: 32
+  - allowed_enc_sizes:
+    - 32
+    bb: '%bb.9'
+    candidate_count: 0
+    func: predict
+    ignore_names:
+    - G_PHI
+    - PHI
+    - COPY
+    - PseudoCALLIndirect
+    - PseudoLGA
+    - Select_GPR_Using_CC_GPR
+    - LUI
+    - PseudoMovAddr
+    - IMPLICIT_DEF
+    ignore_op_types:
+    - input
+    - constant
+    - label
+    instr_predicates: 511
+    limit_results: null
+    max_branches: 1
+    max_enc_footprint: 1.0
+    max_enc_weight: 1.0
+    max_inputs: 4
+    max_loads: 1
+    max_mems: 0
+    max_nodes: 1000
+    max_outputs: 2
+    max_path_len: 9
+    max_path_width: 2
+    max_stores: 1
+    min_enc_bits_left: 5
+    min_inputs: 1
+    min_iso_weight: 0.009311843192281097
+    min_nodes: 1
+    min_outputs: 1
+    min_path_len: 1
+    session: isaac-demo-xgboost-20260520T151251
+    stage: 32
+    timestamp: 20260520T151339
+    xlen: 32
+  - allowed_enc_sizes:
+    - 32
+    bb: '%bb.6'
+    candidate_count: 4
+    func: predict
+    ignore_names:
+    - G_PHI
+    - PHI
+    - COPY
+    - PseudoCALLIndirect
+    - PseudoLGA
+    - Select_GPR_Using_CC_GPR
+    - LUI
+    - PseudoMovAddr
+    - IMPLICIT_DEF
+    ignore_op_types:
+    - input
+    - constant
+    - label
+    instr_predicates: 511
+    limit_results: null
+    max_branches: 1
+    max_enc_footprint: 1.0
+    max_enc_weight: 1.0
+    max_inputs: 4
+    max_loads: 1
+    max_mems: 0
+    max_nodes: 1000
+    max_outputs: 2
+    max_path_len: 9
+    max_path_width: 2
+    max_stores: 1
+    min_enc_bits_left: 5
+    min_inputs: 1
+    min_iso_weight: 0.004018541695814271
+    min_nodes: 1
+    min_outputs: 1
+    min_path_len: 1
+    session: isaac-demo-xgboost-20260520T151251
+    stage: 32
+    timestamp: 20260520T151343
+    xlen: 32
+  - allowed_enc_sizes:
+    - 32
+    bb: '%bb.4'
+    candidate_count: 0
+    func: predict
+    ignore_names:
+    - G_PHI
+    - PHI
+    - COPY
+    - PseudoCALLIndirect
+    - PseudoLGA
+    - Select_GPR_Using_CC_GPR
+    - LUI
+    - PseudoMovAddr
+    - IMPLICIT_DEF
+    ignore_op_types:
+    - input
+    - constant
+    - label
+    instr_predicates: 511
+    limit_results: null
+    max_branches: 1
+    max_enc_footprint: 1.0
+    max_enc_weight: 1.0
+    max_inputs: 4
+    max_loads: 1
+    max_mems: 0
+    max_nodes: 1000
+    max_outputs: 2
+    max_path_len: 9
+    max_path_width: 2
+    max_stores: 1
+    min_enc_bits_left: 5
+    min_inputs: 1
+    min_iso_weight: 0.0017342084727526366
+    min_nodes: 1
+    min_outputs: 1
+    min_path_len: 1
+    session: isaac-demo-xgboost-20260520T151251
+    stage: 32
+    timestamp: 20260520T151348
+    xlen: 32

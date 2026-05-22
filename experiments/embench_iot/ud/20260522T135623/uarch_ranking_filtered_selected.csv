@@ -1,0 +1,10 @@
+,uArch,Run CPI,description,details,total_area_estimate,Rank
+0,CV32E40PXISAACV0,1.6060068496682451,all:0,"SG1(II=1, lats={CUSTOM0: 1}, full_lats={CUSTOM0: 3}), SG2(II=1, lats={CUSTOM4: 1}, full_lats={CUSTOM4: 3})",246.0,1
+3,CV32E40PXISAACV3,1.6281327085797168,all:3,"SG1(II=1, lats={CUSTOM0: 2}, full_lats={CUSTOM0: 4}), SG2(II=1, lats={CUSTOM4: 1}, full_lats={CUSTOM4: 3})",246.0,2
+6,CV32E40PXISAACV6,1.6281327085797168,all:6,"SG1(II=2, lats={CUSTOM0: 2}, full_lats={CUSTOM0: 4}), SG2(II=1, lats={CUSTOM4: 1}, full_lats={CUSTOM4: 3})",246.0,2
+1,CV32E40PXISAACV1,1.6484155775893758,all:1,"SG1(II=1, lats={CUSTOM0: 1}, full_lats={CUSTOM0: 3}), SG2(II=1, lats={CUSTOM4: 2}, full_lats={CUSTOM4: 4})",246.0,3
+2,CV32E40PXISAACV2,1.6484155775893758,all:2,"SG1(II=1, lats={CUSTOM0: 1}, full_lats={CUSTOM0: 3}), SG2(II=2, lats={CUSTOM4: 2}, full_lats={CUSTOM4: 4})",246.0,3
+4,CV32E40PXISAACV4,1.6705414365008475,all:4,"SG1(II=1, lats={CUSTOM0: 2}, full_lats={CUSTOM0: 4}), SG2(II=1, lats={CUSTOM4: 2}, full_lats={CUSTOM4: 4})",246.0,4
+5,CV32E40PXISAACV5,1.6705414365008475,all:5,"SG1(II=1, lats={CUSTOM0: 2}, full_lats={CUSTOM0: 4}), SG2(II=2, lats={CUSTOM4: 2}, full_lats={CUSTOM4: 4})",246.0,4
+7,CV32E40PXISAACV7,1.6705414365008475,all:7,"SG1(II=2, lats={CUSTOM0: 2}, full_lats={CUSTOM0: 4}), SG2(II=1, lats={CUSTOM4: 2}, full_lats={CUSTOM4: 4})",246.0,4
+8,CV32E40PXISAACV8,1.6705414365008475,all:8,"SG1(II=2, lats={CUSTOM0: 2}, full_lats={CUSTOM0: 4}), SG2(II=2, lats={CUSTOM4: 2}, full_lats={CUSTOM4: 4})",246.0,4

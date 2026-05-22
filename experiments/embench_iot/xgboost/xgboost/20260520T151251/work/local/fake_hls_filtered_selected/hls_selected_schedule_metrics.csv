@@ -1,0 +1,10 @@
+,num_groups,num_instrs,max_instrs,min_instrs,avg_instrs,min_ii,max_ii,avg_ii,min_lat,max_lat,avg_lat,total_area_estimate,total_area_estimate_with_lifetimes,Variant idx,Variant name,Variant description,Variant details
+0,2,2,1,1,1.0,1,1,1.0,3,3,3.0,246.0,246.0,0,V0,all:0,"SG1(II=1, lats={CUSTOM1: 1}, full_lats={CUSTOM1: 3}), SG2(II=1, lats={CUSTOM3: 1}, full_lats={CUSTOM3: 3})"
+1,2,2,1,1,1.0,1,1,1.0,3,4,3.5,246.0,246.0,1,V1,all:1,"SG1(II=1, lats={CUSTOM1: 1}, full_lats={CUSTOM1: 3}), SG2(II=1, lats={CUSTOM3: 2}, full_lats={CUSTOM3: 4})"
+2,2,2,1,1,1.0,1,2,1.5,3,4,3.5,246.0,246.0,2,V2,all:2,"SG1(II=1, lats={CUSTOM1: 1}, full_lats={CUSTOM1: 3}), SG2(II=2, lats={CUSTOM3: 2}, full_lats={CUSTOM3: 4})"
+3,2,2,1,1,1.0,1,1,1.0,3,4,3.5,246.0,246.0,3,V3,all:3,"SG1(II=1, lats={CUSTOM1: 2}, full_lats={CUSTOM1: 4}), SG2(II=1, lats={CUSTOM3: 1}, full_lats={CUSTOM3: 3})"
+4,2,2,1,1,1.0,1,1,1.0,4,4,4.0,246.0,246.0,4,V4,all:4,"SG1(II=1, lats={CUSTOM1: 2}, full_lats={CUSTOM1: 4}), SG2(II=1, lats={CUSTOM3: 2}, full_lats={CUSTOM3: 4})"
+5,2,2,1,1,1.0,1,2,1.5,4,4,4.0,246.0,246.0,5,V5,all:5,"SG1(II=1, lats={CUSTOM1: 2}, full_lats={CUSTOM1: 4}), SG2(II=2, lats={CUSTOM3: 2}, full_lats={CUSTOM3: 4})"
+6,2,2,1,1,1.0,1,2,1.5,3,4,3.5,246.0,246.0,6,V6,all:6,"SG1(II=2, lats={CUSTOM1: 2}, full_lats={CUSTOM1: 4}), SG2(II=1, lats={CUSTOM3: 1}, full_lats={CUSTOM3: 3})"
+7,2,2,1,1,1.0,1,2,1.5,4,4,4.0,246.0,246.0,7,V7,all:7,"SG1(II=2, lats={CUSTOM1: 2}, full_lats={CUSTOM1: 4}), SG2(II=1, lats={CUSTOM3: 2}, full_lats={CUSTOM3: 4})"
+8,2,2,1,1,1.0,2,2,2.0,4,4,4.0,246.0,246.0,8,V8,all:8,"SG1(II=2, lats={CUSTOM1: 2}, full_lats={CUSTOM1: 4}), SG2(II=2, lats={CUSTOM3: 2}, full_lats={CUSTOM3: 4})"

@@ -1,0 +1,7 @@
+,Model,Arch,Run Instructions,Run Instructions (rel.),Total ROM,Total RAM,ROM code,ROM code (rel.)
+0,edn,rv32im_zicsr_zifencei,3765988,1.0,6672,2828,4996,1.0
+1,edn,rv32im_zicsr_zifencei_xisaaccustom0single,3610084,0.9586020985728048,6624,2828,4948,0.9903923138510808
+2,edn,rv32im_zicsr_zifencei_xisaaccustom1single,3682468,0.9778225528068596,6624,2828,4948,0.9903923138510808
+3,edn,rv32im_zicsr_zifencei_xisaaccustom2single,3679423,0.9770140000446098,6640,2828,4964,0.9935948759007206
+4,edn,rv32im_zicsr_zifencei_xisaaccustom3single,3696388,0.9815187940057164,6672,2828,4996,1.0
+5,edn,rv32im_zicsr_zifencei_xisaaccustom4single,3679423,0.9770140000446098,6640,2828,4964,0.9935948759007206

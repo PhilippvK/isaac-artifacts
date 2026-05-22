@@ -1,0 +1,10 @@
+,uarch,uarch_lower,variant,description,details,total_area_estimate
+0,CV32E40PXISAACV0,cv32e40pxisaacv0,V0,all:0,"SG1(II=1, lats={CUSTOM1: 1}, full_lats={CUSTOM1: 3}), SG2(II=1, lats={CUSTOM3: 1}, full_lats={CUSTOM3: 3})",246.0
+1,CV32E40PXISAACV1,cv32e40pxisaacv1,V1,all:1,"SG1(II=1, lats={CUSTOM1: 1}, full_lats={CUSTOM1: 3}), SG2(II=1, lats={CUSTOM3: 2}, full_lats={CUSTOM3: 4})",246.0
+2,CV32E40PXISAACV2,cv32e40pxisaacv2,V2,all:2,"SG1(II=1, lats={CUSTOM1: 1}, full_lats={CUSTOM1: 3}), SG2(II=2, lats={CUSTOM3: 2}, full_lats={CUSTOM3: 4})",246.0
+3,CV32E40PXISAACV3,cv32e40pxisaacv3,V3,all:3,"SG1(II=1, lats={CUSTOM1: 2}, full_lats={CUSTOM1: 4}), SG2(II=1, lats={CUSTOM3: 1}, full_lats={CUSTOM3: 3})",246.0
+4,CV32E40PXISAACV4,cv32e40pxisaacv4,V4,all:4,"SG1(II=1, lats={CUSTOM1: 2}, full_lats={CUSTOM1: 4}), SG2(II=1, lats={CUSTOM3: 2}, full_lats={CUSTOM3: 4})",246.0
+5,CV32E40PXISAACV5,cv32e40pxisaacv5,V5,all:5,"SG1(II=1, lats={CUSTOM1: 2}, full_lats={CUSTOM1: 4}), SG2(II=2, lats={CUSTOM3: 2}, full_lats={CUSTOM3: 4})",246.0
+6,CV32E40PXISAACV6,cv32e40pxisaacv6,V6,all:6,"SG1(II=2, lats={CUSTOM1: 2}, full_lats={CUSTOM1: 4}), SG2(II=1, lats={CUSTOM3: 1}, full_lats={CUSTOM3: 3})",246.0
+7,CV32E40PXISAACV7,cv32e40pxisaacv7,V7,all:7,"SG1(II=2, lats={CUSTOM1: 2}, full_lats={CUSTOM1: 4}), SG2(II=1, lats={CUSTOM3: 2}, full_lats={CUSTOM3: 4})",246.0
+8,CV32E40PXISAACV8,cv32e40pxisaacv8,V8,all:8,"SG1(II=2, lats={CUSTOM1: 2}, full_lats={CUSTOM1: 4}), SG2(II=2, lats={CUSTOM3: 2}, full_lats={CUSTOM3: 4})",246.0

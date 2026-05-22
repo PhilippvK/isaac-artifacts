@@ -1,0 +1,24 @@
+// DateTime: 20260520T223718, Sub: 2, Name: CUSTOM6, Inputs: 1, Outputs: 1
+
+import "RV32I.core_desc"
+
+InstructionSet MySet extends RV32I {
+    instructions {
+        CUSTOM6 {
+            operands: {
+                unsigned<5> rd [[is_reg]] [[reg_class="GPR"]] [[reg_type="s32"]] [[out]];
+                unsigned<5> rs1 [[is_reg]] [[reg_class="GPR"]] [[reg_type="s32"]] [[in]];
+            }
+            encoding: auto;
+            assembly: {"custom6", "{name(rd)}, {name(rs1)}"};
+            behavior: {
+                unsigned<32> rs1_val=X[rs1];
+                unsigned<32> outp0=(unsigned<32>)(ADD((unsigned<32>)(SRLI(rs1_val,(3))),(unsigned<32>)(SRLI(rs1_val,(31)))));
+                X[rd]=outp0;
+                
+            }
+        }
+        
+
+    }
+}

@@ -1,0 +1,2352 @@
+## Summary
+
+Directory: `/var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-sha256/20260521T062449`
+
+### Experiment
+```ini
+[isaac-demo-embench_iot/nettle-sha256-20260521T062449]
+benchmark=embench_iot/nettle-sha256
+datetime=20260521T062449
+directory=/var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-sha256/20260521T062449
+comment=""
+```
+
+### Environment/Config
+<details>
+<summary>Vars</summary>
+
+```sh
+ARCH=rv32im_zicsr_zifencei
+ABI=ilp32
+GLOBAL_ISEL=0
+UNROLL=0
+OPTIMIZE=3
+TARGET=
+CCACHE=1
+LLVM_BUILD_TYPE=Release
+LLVM_ENABLE_ASSERTIONS=ON
+CDFG_STAGE=32
+FORCE_PURGE_DB=1
+ISAAC_LIMIT_RESULTS=
+ISAAC_MIN_ISO_WEIGHT=0.05
+ISAAC_SCALE_ISO_WEIGHT=auto
+ISAAC_SORT_BY=IsoWeight
+ISAAC_TOPK=
+ISAAC_PARTITION_WITH_MAXMISO=auto
+HLS_ENABLE=1
+HLS_SKIP_BASELINE=0
+HLS_SKIP_DEFAULT=0
+HLS_SKIP_SHARED=0
+HLS_NAILGUN_LIBRARY=
+HLS_NAILGUN_RESOURCE_MODEL=ol_sky130
+HLS_NAILGUN_CLOCK_NS=100
+HLS_NAILGUN_SCHEDULE_TIMEOUT=60
+HLS_NAILGUN_REFINE_TIMEOUT=60
+HLS_NAILGUN_CORE_NAME=CV32E40P
+HLS_NAILGUN_ILP_SOLVER=GUROBI
+HLS_NAILGUN_SCHED_ALGO_MS=y
+HLS_NAILGUN_SCHED_ALGO_PA=y
+HLS_NAILGUN_SCHED_ALGO_RA=y
+HLS_NAILGUN_SCHED_ALGO_MI=y
+HLS_NAILGUN_OL2_ENABLE=y
+HLS_NAILGUN_OL2_CONFIG_TEMPLATE=/var/tmp/ga87puy/isaac-demo/cfg/openlane/minimal_config_fast.json
+HLS_NAILGUN_OL2_UNTIL_STEP=OpenROAD.Floorplan
+HLS_NAILGUN_OL2_TARGET_FREQ=20
+HLS_NAILGUN_OL2_TARGET_UTIL=20
+HLS_NAILGUN_SHARE_RESOURCES=0
+ASIP_SYN_ENABLE=1
+ASIP_SYN_SKIP_BASELINE=0
+ASIP_SYN_SKIP_DEFAULT=0
+ASIP_SYN_SKIP_SHARED=0
+ASIP_SYN_TOOL=synopsys
+ASIP_SYN_SYNOPSYS_PDK=nangate45
+ASIP_SYN_SYNOPSYS_CLOCK_NS=10
+ASIP_SYN_SYNOPSYS_CORE_NAME=CV32E40P
+FPGA_SYN_ENABLE=0
+FPGA_SYN_SKIP_BASELINE=0
+FPGA_SYN_SKIP_DEFAULT=0
+FPGA_SYN_SKIP_SHARED=0
+FPGA_SYN_TOOL=vivado
+FPGA_SYN_VIVADO_PART=xc7a200tffv1156-1
+FPGA_SYN_VIVADO_CLOCK_NS=50
+FPGA_SYN_VIVADO_CORE_NAME=CV32E40P
+ISAAC_QUERY_CONFIG_YAML=cfg/isaac/query/paper/cv32e40p.yml
+```
+
+</details>
+
+### Times
+<details>
+<summary>Stages</summary>
+
+| Stage                               |   Diff [s] |
+|:------------------------------------|-----------:|
+| bench_0                             |      4.542 |
+| trace_0                             |      8.284 |
+| isaac_0_load                        |     10.958 |
+| isaac_0_analyze                     |      6.851 |
+| isaac_0_visualize                   |      3.104 |
+| isaac_0_pick                        |      2.608 |
+| isaac_0_cdfg                        |     20.819 |
+| isaac_0_query                       |    311.725 |
+| isaac_0_generate                    |      6.77  |
+| assign_0_enc                        |      1.227 |
+| isaac_0_etiss                       |      3.629 |
+| seal5_0_splitted                    |    349.152 |
+| assign_0_seal5                      |      0.987 |
+| etiss_0                             |     23.3   |
+| compare_0                           |     10.457 |
+| compare_0_per_instr                 |     23.416 |
+| assign_0_compare_per_instr          |      1.013 |
+| filter_0                            |      1.188 |
+| spec_0_filtered                     |      1.197 |
+| isaac_0_generate_filtered           |      6.208 |
+| isaac_0_etiss_filtered              |      2.074 |
+| fake_hls_0_filtered                 |      3.231 |
+| fake_hls_0_filtered                 |      3.964 |
+| assign_0_fake_hls_filtered          |      3.436 |
+| select_0_filtered                   |    329.056 |
+| isaac_0_etiss_filtered_selected     |      3.722 |
+| fake_hls_0_filtered_selected        |      2.22  |
+| assign_0_fake_hls_filtered_selected |      2.945 |
+| compare_0_filtered_selected         |     20.444 |
+| assign_0_compare_filtered_selected  |      0.025 |
+| retrace_0_filtered_selected         |     11.31  |
+| reanalyze_0_filtered_selected       |    143.204 |
+| assign_0_util_filtered_selected     |      1.871 |
+| etiss_perf_0_filtered_selected      |    838.498 |
+| compare_perf_0_filtered_selected    |     94.868 |
+| retrace_perf_0_filtered_selected    |     11.455 |
+
+</details>
+
+### ISE Potential
+|   supported_rel_count |   unsupported_rel_count | has_potential   |
+|----------------------:|------------------------:|:----------------|
+|              0.893448 |                0.106552 | True            |
+
+### Choices
+<details>
+<summary>Summary</summary>
+
+<h2>Choice 0</h2>
+<table>
+<tr><th>func_name</th><th>bb_name</th><th>rel_weight</th><th>num_instrs</th><th>freq</th><th>start</th><th>end</th></tr>
+<tr><td>_nettle_sha256_compress</td><td>%bb.5</td><td>0.715458</td><td>948</td><td>2850.0</td><td>0x1000930</td><td>0x1001800</td></tr>
+</table>
+<pre><code class='asm'>
+ 1000930: 006e5613     	srli	a2, t3, 0x6
+ 1000934: 01ae1713     	slli	a4, t3, 0x1a
+ 1000938: 00c76633     	or	a2, a4, a2
+ 100093c: 00be5713     	srli	a4, t3, 0xb
+ 1000940: 015e1793     	slli	a5, t3, 0x15
+ 1000944: 00e7e733     	or	a4, a5, a4
+ 1000948: 00e64633     	xor	a2, a2, a4
+ 100094c: 019e5713     	srli	a4, t3, 0x19
+ 1000950: 007e1793     	slli	a5, t3, 0x7
+ 1000954: 00e7e733     	or	a4, a5, a4
+ 1000958: 00e64633     	xor	a2, a2, a4
+ 100095c: 02712a23     	sw	t2, 0x34(sp)
+ 1000960: 0113d713     	srli	a4, t2, 0x11
+ 1000964: 00f39793     	slli	a5, t2, 0xf
+ 1000968: 00e7e733     	or	a4, a5, a4
+ 100096c: 0133d793     	srli	a5, t2, 0x13
+ 1000970: 00d39513     	slli	a0, t2, 0xd
+ 1000974: 00f56533     	or	a0, a0, a5
+ 1000978: 00a74533     	xor	a0, a4, a0
+ 100097c: 00a3d713     	srli	a4, t2, 0xa
+ 1000980: 00e54533     	xor	a0, a0, a4
+ 1000984: 02c12383     	lw	t2, 0x2c(sp)
+ 1000988: 0073d713     	srli	a4, t2, 0x7
+ 100098c: 01939793     	slli	a5, t2, 0x19
+ 1000990: 00e7e733     	or	a4, a5, a4
+ 1000994: 0123d793     	srli	a5, t2, 0x12
+ 1000998: 000f0493     	mv	s1, t5
+ 100099c: 00e39f93     	slli	t6, t2, 0xe
+ 10009a0: 00ffe7b3     	or	a5, t6, a5
+ 10009a4: 00f74733     	xor	a4, a4, a5
+ 10009a8: 0033d793     	srli	a5, t2, 0x3
+ 10009ac: 00f74733     	xor	a4, a4, a5
+ 10009b0: 00b6c7b3     	xor	a5, a3, a1
+ 10009b4: 01c7f7b3     	and	a5, a5, t3
+ 10009b8: 00d7c7b3     	xor	a5, a5, a3
+ 10009bc: 03812f83     	lw	t6, 0x38(sp)
+ 10009c0: 01df8fb3     	add	t6, t6, t4
+ 10009c4: 01f50533     	add	a0, a0, t6
+ 10009c8: fc4baf83     	lw	t6, -0x3c(s7)
+ 10009cc: 00e50f33     	add	t5, a0, a4
+ 10009d0: 00f087b3     	add	a5, ra, a5
+ 10009d4: 00c78633     	add	a2, a5, a2
+ 10009d8: 01f60633     	add	a2, a2, t6
+ 10009dc: 01e600b3     	add	ra, a2, t5
+ 10009e0: 01008633     	add	a2, ra, a6
+ 10009e4: 00235513     	srli	a0, t1, 0x2
+ 10009e8: 01e31713     	slli	a4, t1, 0x1e
+ 10009ec: 00a76533     	or	a0, a4, a0
+ 10009f0: 00d35713     	srli	a4, t1, 0xd
+ 10009f4: 01331793     	slli	a5, t1, 0x13
+ 10009f8: 00e7e733     	or	a4, a5, a4
+ 10009fc: 00e54533     	xor	a0, a0, a4
+ 1000a00: 01635713     	srli	a4, t1, 0x16
+ 1000a04: 00a31793     	slli	a5, t1, 0xa
+ 1000a08: 00e7e733     	or	a4, a5, a4
+ 1000a0c: 00e54533     	xor	a0, a0, a4
+ 1000a10: 0062f733     	and	a4, t0, t1
+ 1000a14: 0062c7b3     	xor	a5, t0, t1
+ 1000a18: 00f8f7b3     	and	a5, a7, a5
+ 1000a1c: 00e7c733     	xor	a4, a5, a4
+ 1000a20: 00a70533     	add	a0, a4, a0
+ 1000a24: 001500b3     	add	ra, a0, ra
+ 1000a28: 00665513     	srli	a0, a2, 0x6
+ 1000a2c: 01a61713     	slli	a4, a2, 0x1a
+ 1000a30: 00a76533     	or	a0, a4, a0
+ 1000a34: 00b65713     	srli	a4, a2, 0xb
+ 1000a38: 01561793     	slli	a5, a2, 0x15
+ 1000a3c: 00e7e733     	or	a4, a5, a4
+ 1000a40: 00e54533     	xor	a0, a0, a4
+ 1000a44: 01965713     	srli	a4, a2, 0x19
+ 1000a48: 00761793     	slli	a5, a2, 0x7
+ 1000a4c: 00e7e733     	or	a4, a5, a4
+ 1000a50: 00e54533     	xor	a0, a0, a4
+ 1000a54: 02912823     	sw	s1, 0x30(sp)
+ 1000a58: 0114d713     	srli	a4, s1, 0x11
+ 1000a5c: 00f49793     	slli	a5, s1, 0xf
+ 1000a60: 00e7e733     	or	a4, a5, a4
+ 1000a64: 0134d793     	srli	a5, s1, 0x13
+ 1000a68: 00d49813     	slli	a6, s1, 0xd
+ 1000a6c: 00f867b3     	or	a5, a6, a5
+ 1000a70: 00f74733     	xor	a4, a4, a5
+ 1000a74: 00a4d793     	srli	a5, s1, 0xa
+ 1000a78: 00f74733     	xor	a4, a4, a5
+ 1000a7c: 00795793     	srli	a5, s2, 0x7
+ 1000a80: 01991813     	slli	a6, s2, 0x19
+ 1000a84: 00f867b3     	or	a5, a6, a5
+ 1000a88: 01295813     	srli	a6, s2, 0x12
+ 1000a8c: 00e91f93     	slli	t6, s2, 0xe
+ 1000a90: 010fe833     	or	a6, t6, a6
+ 1000a94: 0107c7b3     	xor	a5, a5, a6
+ 1000a98: 00395813     	srli	a6, s2, 0x3
+ 1000a9c: 0107c7b3     	xor	a5, a5, a6
+ 1000aa0: 01c5c833     	xor	a6, a1, t3
+ 1000aa4: 007403b3     	add	t2, s0, t2
+ 1000aa8: 00e38733     	add	a4, t2, a4
+ 1000aac: fc8baf83     	lw	t6, -0x38(s7)
+ 1000ab0: 01067833     	and	a6, a2, a6
+ 1000ab4: 00b84833     	xor	a6, a6, a1
+ 1000ab8: 00f703b3     	add	t2, a4, a5
+ 1000abc: 00df86b3     	add	a3, t6, a3
+ 1000ac0: 010686b3     	add	a3, a3, a6
+ 1000ac4: 007686b3     	add	a3, a3, t2
+ 1000ac8: 00a68533     	add	a0, a3, a0
+ 1000acc: 011508b3     	add	a7, a0, a7
+ 1000ad0: 0020d693     	srli	a3, ra, 0x2
+ 1000ad4: 01e09713     	slli	a4, ra, 0x1e
+ 1000ad8: 00d766b3     	or	a3, a4, a3
+ 1000adc: 00d0d713     	srli	a4, ra, 0xd
+ 1000ae0: 01309793     	slli	a5, ra, 0x13
+ 1000ae4: 00e7e733     	or	a4, a5, a4
+ 1000ae8: 00e6c6b3     	xor	a3, a3, a4
+ 1000aec: 0160d713     	srli	a4, ra, 0x16
+ 1000af0: 00a09793     	slli	a5, ra, 0xa
+ 1000af4: 00e7e733     	or	a4, a5, a4
+ 1000af8: 00e6c6b3     	xor	a3, a3, a4
+ 1000afc: 0060f733     	and	a4, ra, t1
+ 1000b00: 0060c7b3     	xor	a5, ra, t1
+ 1000b04: 0057f7b3     	and	a5, a5, t0
+ 1000b08: 00e7c733     	xor	a4, a5, a4
+ 1000b0c: 00e686b3     	add	a3, a3, a4
+ 1000b10: 00a68733     	add	a4, a3, a0
+ 1000b14: 0068d513     	srli	a0, a7, 0x6
+ 1000b18: 01a89693     	slli	a3, a7, 0x1a
+ 1000b1c: 00a6e533     	or	a0, a3, a0
+ 1000b20: 00b8d693     	srli	a3, a7, 0xb
+ 1000b24: 01589793     	slli	a5, a7, 0x15
+ 1000b28: 00d7e6b3     	or	a3, a5, a3
+ 1000b2c: 00d54533     	xor	a0, a0, a3
+ 1000b30: 0198d693     	srli	a3, a7, 0x19
+ 1000b34: 00789793     	slli	a5, a7, 0x7
+ 1000b38: 00d7e6b3     	or	a3, a5, a3
+ 1000b3c: 00d54533     	xor	a0, a0, a3
+ 1000b40: 011f5693     	srli	a3, t5, 0x11
+ 1000b44: 00ff1793     	slli	a5, t5, 0xf
+ 1000b48: 00d7e6b3     	or	a3, a5, a3
+ 1000b4c: 013f5793     	srli	a5, t5, 0x13
+ 1000b50: 00df1813     	slli	a6, t5, 0xd
+ 1000b54: 00f867b3     	or	a5, a6, a5
+ 1000b58: 00f6c6b3     	xor	a3, a3, a5
+ 1000b5c: 00af5793     	srli	a5, t5, 0xa
+ 1000b60: 00f6c6b3     	xor	a3, a3, a5
+ 1000b64: 007a5793     	srli	a5, s4, 0x7
+ 1000b68: 019a1813     	slli	a6, s4, 0x19
+ 1000b6c: 00f867b3     	or	a5, a6, a5
+ 1000b70: 012a5813     	srli	a6, s4, 0x12
+ 1000b74: 00ea1f93     	slli	t6, s4, 0xe
+ 1000b78: 010fe833     	or	a6, t6, a6
+ 1000b7c: 0107c7b3     	xor	a5, a5, a6
+ 1000b80: 003a5813     	srli	a6, s4, 0x3
+ 1000b84: 0107c7b3     	xor	a5, a5, a6
+ 1000b88: 01c64833     	xor	a6, a2, t3
+ 1000b8c: 02812e83     	lw	t4, 0x28(sp)
+ 1000b90: 01d90933     	add	s2, s2, t4
+ 1000b94: 00f907b3     	add	a5, s2, a5
+ 1000b98: fccbaf83     	lw	t6, -0x34(s7)
+ 1000b9c: 0108f833     	and	a6, a7, a6
+ 1000ba0: 01c84833     	xor	a6, a6, t3
+ 1000ba4: 00f68933     	add	s2, a3, a5
+ 1000ba8: 00bf85b3     	add	a1, t6, a1
+ 1000bac: 012585b3     	add	a1, a1, s2
+ 1000bb0: 010585b3     	add	a1, a1, a6
+ 1000bb4: 00a58533     	add	a0, a1, a0
+ 1000bb8: 005502b3     	add	t0, a0, t0
+ 1000bbc: 00275593     	srli	a1, a4, 0x2
+ 1000bc0: 01e71693     	slli	a3, a4, 0x1e
+ 1000bc4: 00b6e5b3     	or	a1, a3, a1
+ 1000bc8: 00d75693     	srli	a3, a4, 0xd
+ 1000bcc: 01371793     	slli	a5, a4, 0x13
+ 1000bd0: 00d7e6b3     	or	a3, a5, a3
+ 1000bd4: 00d5c5b3     	xor	a1, a1, a3
+ 1000bd8: 01675693     	srli	a3, a4, 0x16
+ 1000bdc: 00a71793     	slli	a5, a4, 0xa
+ 1000be0: 00d7e6b3     	or	a3, a5, a3
+ 1000be4: 00d5c5b3     	xor	a1, a1, a3
+ 1000be8: 001776b3     	and	a3, a4, ra
+ 1000bec: 001747b3     	xor	a5, a4, ra
+ 1000bf0: 0067f7b3     	and	a5, a5, t1
+ 1000bf4: 00d7c6b3     	xor	a3, a5, a3
+ 1000bf8: 00d585b3     	add	a1, a1, a3
+ 1000bfc: 00a585b3     	add	a1, a1, a0
+ 1000c00: 0062d513     	srli	a0, t0, 0x6
+ 1000c04: 01a29693     	slli	a3, t0, 0x1a
+ 1000c08: 00a6e533     	or	a0, a3, a0
+ 1000c0c: 00b2d693     	srli	a3, t0, 0xb
+ 1000c10: 01529793     	slli	a5, t0, 0x15
+ 1000c14: 00d7e6b3     	or	a3, a5, a3
+ 1000c18: 00d54533     	xor	a0, a0, a3
+ 1000c1c: 0192d693     	srli	a3, t0, 0x19
+ 1000c20: 00729793     	slli	a5, t0, 0x7
+ 1000c24: 00d7e6b3     	or	a3, a5, a3
+ 1000c28: 00d54533     	xor	a0, a0, a3
+ 1000c2c: 0113d693     	srli	a3, t2, 0x11
+ 1000c30: 00f39793     	slli	a5, t2, 0xf
+ 1000c34: 00d7e6b3     	or	a3, a5, a3
+ 1000c38: 0133d793     	srli	a5, t2, 0x13
+ 1000c3c: 00d39813     	slli	a6, t2, 0xd
+ 1000c40: 00f867b3     	or	a5, a6, a5
+ 1000c44: 00f6c6b3     	xor	a3, a3, a5
+ 1000c48: 00a3d793     	srli	a5, t2, 0xa
+ 1000c4c: 00f6c6b3     	xor	a3, a3, a5
+ 1000c50: 007b5793     	srli	a5, s6, 0x7
+ 1000c54: 019b1813     	slli	a6, s6, 0x19
+ 1000c58: 00f867b3     	or	a5, a6, a5
+ 1000c5c: 012b5813     	srli	a6, s6, 0x12
+ 1000c60: 00eb1f93     	slli	t6, s6, 0xe
+ 1000c64: 010fe833     	or	a6, t6, a6
+ 1000c68: 0107c7b3     	xor	a5, a5, a6
+ 1000c6c: 003b5813     	srli	a6, s6, 0x3
+ 1000c70: 0107c7b3     	xor	a5, a5, a6
+ 1000c74: 00c8c833     	xor	a6, a7, a2
+ 1000c78: 01498a33     	add	s4, s3, s4
+ 1000c7c: 00fa07b3     	add	a5, s4, a5
+ 1000c80: fd0baf83     	lw	t6, -0x30(s7)
+ 1000c84: 0102f833     	and	a6, t0, a6
+ 1000c88: 00c84833     	xor	a6, a6, a2
+ 1000c8c: 00d78a33     	add	s4, a5, a3
+ 1000c90: 01cf8e33     	add	t3, t6, t3
+ 1000c94: 014e0e33     	add	t3, t3, s4
+ 1000c98: 010e0833     	add	a6, t3, a6
+ 1000c9c: 00a80533     	add	a0, a6, a0
+ 1000ca0: 00650333     	add	t1, a0, t1
+ 1000ca4: 0025d693     	srli	a3, a1, 0x2
+ 1000ca8: 01e59793     	slli	a5, a1, 0x1e
+ 1000cac: 00d7e6b3     	or	a3, a5, a3
+ 1000cb0: 00d5d793     	srli	a5, a1, 0xd
+ 1000cb4: 01359813     	slli	a6, a1, 0x13
+ 1000cb8: 00f867b3     	or	a5, a6, a5
+ 1000cbc: 00f6c6b3     	xor	a3, a3, a5
+ 1000cc0: 0165d793     	srli	a5, a1, 0x16
+ 1000cc4: 00a59813     	slli	a6, a1, 0xa
+ 1000cc8: 00f867b3     	or	a5, a6, a5
+ 1000ccc: 00f6c6b3     	xor	a3, a3, a5
+ 1000cd0: 00e5f7b3     	and	a5, a1, a4
+ 1000cd4: 00e5c833     	xor	a6, a1, a4
+ 1000cd8: 00187833     	and	a6, a6, ra
+ 1000cdc: 00f847b3     	xor	a5, a6, a5
+ 1000ce0: 00f686b3     	add	a3, a3, a5
+ 1000ce4: 00a68833     	add	a6, a3, a0
+ 1000ce8: 00635513     	srli	a0, t1, 0x6
+ 1000cec: 01a31693     	slli	a3, t1, 0x1a
+ 1000cf0: 00a6e533     	or	a0, a3, a0
+ 1000cf4: 00b35693     	srli	a3, t1, 0xb
+ 1000cf8: 01531793     	slli	a5, t1, 0x15
+ 1000cfc: 00d7e6b3     	or	a3, a5, a3
+ 1000d00: 00d54533     	xor	a0, a0, a3
+ 1000d04: 01935693     	srli	a3, t1, 0x19
+ 1000d08: 00731793     	slli	a5, t1, 0x7
+ 1000d0c: 00d7e6b3     	or	a3, a5, a3
+ 1000d10: 00d54533     	xor	a0, a0, a3
+ 1000d14: 01195693     	srli	a3, s2, 0x11
+ 1000d18: 00f91793     	slli	a5, s2, 0xf
+ 1000d1c: 00d7e6b3     	or	a3, a5, a3
+ 1000d20: 01395793     	srli	a5, s2, 0x13
+ 1000d24: 00d91e13     	slli	t3, s2, 0xd
+ 1000d28: 00fe67b3     	or	a5, t3, a5
+ 1000d2c: 00f6c6b3     	xor	a3, a3, a5
+ 1000d30: 00a95793     	srli	a5, s2, 0xa
+ 1000d34: 00f6c6b3     	xor	a3, a3, a5
+ 1000d38: 007c5793     	srli	a5, s8, 0x7
+ 1000d3c: 019c1e13     	slli	t3, s8, 0x19
+ 1000d40: 00fe67b3     	or	a5, t3, a5
+ 1000d44: 012c5e13     	srli	t3, s8, 0x12
+ 1000d48: 00ec1f93     	slli	t6, s8, 0xe
+ 1000d4c: 01cfee33     	or	t3, t6, t3
+ 1000d50: 01c7c7b3     	xor	a5, a5, t3
+ 1000d54: 003c5e13     	srli	t3, s8, 0x3
+ 1000d58: 01c7c7b3     	xor	a5, a5, t3
+ 1000d5c: 0112ce33     	xor	t3, t0, a7
+ 1000d60: 016a8b33     	add	s6, s5, s6
+ 1000d64: 00fb07b3     	add	a5, s6, a5
+ 1000d68: fd4baf83     	lw	t6, -0x2c(s7)
+ 1000d6c: 01c37e33     	and	t3, t1, t3
+ 1000d70: 011e4e33     	xor	t3, t3, a7
+ 1000d74: 00d78b33     	add	s6, a5, a3
+ 1000d78: 00cf8633     	add	a2, t6, a2
+ 1000d7c: 01660633     	add	a2, a2, s6
+ 1000d80: 01c60633     	add	a2, a2, t3
+ 1000d84: 00a60533     	add	a0, a2, a0
+ 1000d88: 001506b3     	add	a3, a0, ra
+ 1000d8c: 00285613     	srli	a2, a6, 0x2
+ 1000d90: 01e81793     	slli	a5, a6, 0x1e
+ 1000d94: 00c7e633     	or	a2, a5, a2
+ 1000d98: 00d85793     	srli	a5, a6, 0xd
+ 1000d9c: 01381e13     	slli	t3, a6, 0x13
+ 1000da0: 00fe67b3     	or	a5, t3, a5
+ 1000da4: 00f64633     	xor	a2, a2, a5
+ 1000da8: 01685793     	srli	a5, a6, 0x16
+ 1000dac: 00a81e13     	slli	t3, a6, 0xa
+ 1000db0: 00fe67b3     	or	a5, t3, a5
+ 1000db4: 00f64633     	xor	a2, a2, a5
+ 1000db8: 00b877b3     	and	a5, a6, a1
+ 1000dbc: 00b84e33     	xor	t3, a6, a1
+ 1000dc0: 00ee7e33     	and	t3, t3, a4
+ 1000dc4: 00fe47b3     	xor	a5, t3, a5
+ 1000dc8: 00f60633     	add	a2, a2, a5
+ 1000dcc: 00a60633     	add	a2, a2, a0
+ 1000dd0: 0066d513     	srli	a0, a3, 0x6
+ 1000dd4: 01a69793     	slli	a5, a3, 0x1a
+ 1000dd8: 00a7e533     	or	a0, a5, a0
+ 1000ddc: 00b6d793     	srli	a5, a3, 0xb
+ 1000de0: 01569e13     	slli	t3, a3, 0x15
+ 1000de4: 00fe67b3     	or	a5, t3, a5
+ 1000de8: 00f54533     	xor	a0, a0, a5
+ 1000dec: 0196d793     	srli	a5, a3, 0x19
+ 1000df0: 00769e13     	slli	t3, a3, 0x7
+ 1000df4: 00fe67b3     	or	a5, t3, a5
+ 1000df8: 00f54533     	xor	a0, a0, a5
+ 1000dfc: 011a5793     	srli	a5, s4, 0x11
+ 1000e00: 00fa1e13     	slli	t3, s4, 0xf
+ 1000e04: 00fe67b3     	or	a5, t3, a5
+ 1000e08: 013a5e13     	srli	t3, s4, 0x13
+ 1000e0c: 00da1f93     	slli	t6, s4, 0xd
+ 1000e10: 01cfee33     	or	t3, t6, t3
+ 1000e14: 01c7c7b3     	xor	a5, a5, t3
+ 1000e18: 00aa5e13     	srli	t3, s4, 0xa
+ 1000e1c: 01c7c7b3     	xor	a5, a5, t3
+ 1000e20: 007cde13     	srli	t3, s9, 0x7
+ 1000e24: 019c9f93     	slli	t6, s9, 0x19
+ 1000e28: 01cfee33     	or	t3, t6, t3
+ 1000e2c: 012cdf93     	srli	t6, s9, 0x12
+ 1000e30: 00ec9093     	slli	ra, s9, 0xe
+ 1000e34: 01f0efb3     	or	t6, ra, t6
+ 1000e38: 01fe4e33     	xor	t3, t3, t6
+ 1000e3c: 003cdf93     	srli	t6, s9, 0x3
+ 1000e40: 01fe4e33     	xor	t3, t3, t6
+ 1000e44: 00534fb3     	xor	t6, t1, t0
+ 1000e48: 03412483     	lw	s1, 0x34(sp)
+ 1000e4c: 009c0c33     	add	s8, s8, s1
+ 1000e50: 01cc0e33     	add	t3, s8, t3
+ 1000e54: fd8ba083     	lw	ra, -0x28(s7)
+ 1000e58: 01f6ffb3     	and	t6, a3, t6
+ 1000e5c: 005fcfb3     	xor	t6, t6, t0
+ 1000e60: 00fe0c33     	add	s8, t3, a5
+ 1000e64: 011088b3     	add	a7, ra, a7
+ 1000e68: 018888b3     	add	a7, a7, s8
+ 1000e6c: 01f888b3     	add	a7, a7, t6
+ 1000e70: 00a88533     	add	a0, a7, a0
+ 1000e74: 00e50733     	add	a4, a0, a4
+ 1000e78: 00265793     	srli	a5, a2, 0x2
+ 1000e7c: 01e61893     	slli	a7, a2, 0x1e
+ 1000e80: 00f8e7b3     	or	a5, a7, a5
+ 1000e84: 00d65893     	srli	a7, a2, 0xd
+ 1000e88: 01361e13     	slli	t3, a2, 0x13
+ 1000e8c: 011e68b3     	or	a7, t3, a7
+ 1000e90: 0117c7b3     	xor	a5, a5, a7
+ 1000e94: 01665893     	srli	a7, a2, 0x16
+ 1000e98: 00a61e13     	slli	t3, a2, 0xa
+ 1000e9c: 011e68b3     	or	a7, t3, a7
+ 1000ea0: 0117c7b3     	xor	a5, a5, a7
+ 1000ea4: 010678b3     	and	a7, a2, a6
+ 1000ea8: 01064e33     	xor	t3, a2, a6
+ 1000eac: 00be7e33     	and	t3, t3, a1
+ 1000eb0: 011e48b3     	xor	a7, t3, a7
+ 1000eb4: 011787b3     	add	a5, a5, a7
+ 1000eb8: 00a788b3     	add	a7, a5, a0
+ 1000ebc: 00675513     	srli	a0, a4, 0x6
+ 1000ec0: 01a71793     	slli	a5, a4, 0x1a
+ 1000ec4: 00a7e533     	or	a0, a5, a0
+ 1000ec8: 00b75793     	srli	a5, a4, 0xb
+ 1000ecc: 01571e13     	slli	t3, a4, 0x15
+ 1000ed0: 00fe67b3     	or	a5, t3, a5
+ 1000ed4: 00f54533     	xor	a0, a0, a5
+ 1000ed8: 01975793     	srli	a5, a4, 0x19
+ 1000edc: 00771e13     	slli	t3, a4, 0x7
+ 1000ee0: 00fe67b3     	or	a5, t3, a5
+ 1000ee4: 00f54533     	xor	a0, a0, a5
+ 1000ee8: 011b5793     	srli	a5, s6, 0x11
+ 1000eec: 00fb1e13     	slli	t3, s6, 0xf
+ 1000ef0: 00fe67b3     	or	a5, t3, a5
+ 1000ef4: 013b5e13     	srli	t3, s6, 0x13
+ 1000ef8: 00db1f93     	slli	t6, s6, 0xd
+ 1000efc: 01cfee33     	or	t3, t6, t3
+ 1000f00: 01c7c7b3     	xor	a5, a5, t3
+ 1000f04: 00ab5e13     	srli	t3, s6, 0xa
+ 1000f08: 01c7c7b3     	xor	a5, a5, t3
+ 1000f0c: 007dde13     	srli	t3, s11, 0x7
+ 1000f10: 019d9f93     	slli	t6, s11, 0x19
+ 1000f14: 01cfee33     	or	t3, t6, t3
+ 1000f18: 012ddf93     	srli	t6, s11, 0x12
+ 1000f1c: 00ed9093     	slli	ra, s11, 0xe
+ 1000f20: 01f0efb3     	or	t6, ra, t6
+ 1000f24: 01fe4e33     	xor	t3, t3, t6
+ 1000f28: 003ddf93     	srli	t6, s11, 0x3
+ 1000f2c: 01fe4e33     	xor	t3, t3, t6
+ 1000f30: 0066cfb3     	xor	t6, a3, t1
+ 1000f34: 03012483     	lw	s1, 0x30(sp)
+ 1000f38: 009c8cb3     	add	s9, s9, s1
+ 1000f3c: 01cc8e33     	add	t3, s9, t3
+ 1000f40: fdcba083     	lw	ra, -0x24(s7)
+ 1000f44: 01f77fb3     	and	t6, a4, t6
+ 1000f48: 006fcfb3     	xor	t6, t6, t1
+ 1000f4c: 00fe0cb3     	add	s9, t3, a5
+ 1000f50: 001282b3     	add	t0, t0, ra
+ 1000f54: 019282b3     	add	t0, t0, s9
+ 1000f58: 01f282b3     	add	t0, t0, t6
+ 1000f5c: 00a28533     	add	a0, t0, a0
+ 1000f60: 00b507b3     	add	a5, a0, a1
+ 1000f64: 0028d593     	srli	a1, a7, 0x2
+ 1000f68: 01e89293     	slli	t0, a7, 0x1e
+ 1000f6c: 00b2e5b3     	or	a1, t0, a1
+ 1000f70: 00d8d293     	srli	t0, a7, 0xd
+ 1000f74: 01389e13     	slli	t3, a7, 0x13
+ 1000f78: 005e62b3     	or	t0, t3, t0
+ 1000f7c: 0055c5b3     	xor	a1, a1, t0
+ 1000f80: 0168d293     	srli	t0, a7, 0x16
+ 1000f84: 00a89e13     	slli	t3, a7, 0xa
+ 1000f88: 005e62b3     	or	t0, t3, t0
+ 1000f8c: 0055c5b3     	xor	a1, a1, t0
+ 1000f90: 00c8f2b3     	and	t0, a7, a2
+ 1000f94: 00c8ce33     	xor	t3, a7, a2
+ 1000f98: 010e7e33     	and	t3, t3, a6
+ 1000f9c: 005e42b3     	xor	t0, t3, t0
+ 1000fa0: 005585b3     	add	a1, a1, t0
+ 1000fa4: 00a582b3     	add	t0, a1, a0
+ 1000fa8: 0067d513     	srli	a0, a5, 0x6
+ 1000fac: 01a79593     	slli	a1, a5, 0x1a
+ 1000fb0: 00a5e533     	or	a0, a1, a0
+ 1000fb4: 00b7d593     	srli	a1, a5, 0xb
+ 1000fb8: 01579e13     	slli	t3, a5, 0x15
+ 1000fbc: 00be65b3     	or	a1, t3, a1
+ 1000fc0: 00b54533     	xor	a0, a0, a1
+ 1000fc4: 0197d593     	srli	a1, a5, 0x19
+ 1000fc8: 00779e13     	slli	t3, a5, 0x7
+ 1000fcc: 00be65b3     	or	a1, t3, a1
+ 1000fd0: 00b54533     	xor	a0, a0, a1
+ 1000fd4: 011c5593     	srli	a1, s8, 0x11
+ 1000fd8: 00fc1e13     	slli	t3, s8, 0xf
+ 1000fdc: 00be65b3     	or	a1, t3, a1
+ 1000fe0: 013c5e13     	srli	t3, s8, 0x13
+ 1000fe4: 00dc1f93     	slli	t6, s8, 0xd
+ 1000fe8: 01cfee33     	or	t3, t6, t3
+ 1000fec: 01c5c5b3     	xor	a1, a1, t3
+ 1000ff0: 00ac5e13     	srli	t3, s8, 0xa
+ 1000ff4: 01c5c5b3     	xor	a1, a1, t3
+ 1000ff8: 007d5e13     	srli	t3, s10, 0x7
+ 1000ffc: 019d1f93     	slli	t6, s10, 0x19
+ 1001000: 01cfee33     	or	t3, t6, t3
+ 1001004: 012d5f93     	srli	t6, s10, 0x12
+ 1001008: 00ed1093     	slli	ra, s10, 0xe
+ 100100c: 01f0efb3     	or	t6, ra, t6
+ 1001010: 01fe4e33     	xor	t3, t3, t6
+ 1001014: 003d5f93     	srli	t6, s10, 0x3
+ 1001018: 01fe4e33     	xor	t3, t3, t6
+ 100101c: 00d74fb3     	xor	t6, a4, a3
+ 1001020: 01ed8db3     	add	s11, s11, t5
+ 1001024: 01cd8e33     	add	t3, s11, t3
+ 1001028: fe0ba083     	lw	ra, -0x20(s7)
+ 100102c: 01f7ffb3     	and	t6, a5, t6
+ 1001030: 00dfcfb3     	xor	t6, t6, a3
+ 1001034: 00be0db3     	add	s11, t3, a1
+ 1001038: 001d80b3     	add	ra, s11, ra
+ 100103c: 00608333     	add	t1, ra, t1
+ 1001040: 01f30333     	add	t1, t1, t6
+ 1001044: 00a30533     	add	a0, t1, a0
+ 1001048: 01050833     	add	a6, a0, a6
+ 100104c: 0022d593     	srli	a1, t0, 0x2
+ 1001050: 01e29313     	slli	t1, t0, 0x1e
+ 1001054: 00b365b3     	or	a1, t1, a1
+ 1001058: 00d2d313     	srli	t1, t0, 0xd
+ 100105c: 01329e13     	slli	t3, t0, 0x13
+ 1001060: 006e6333     	or	t1, t3, t1
+ 1001064: 0065c5b3     	xor	a1, a1, t1
+ 1001068: 0162d313     	srli	t1, t0, 0x16
+ 100106c: 00a29e13     	slli	t3, t0, 0xa
+ 1001070: 006e6333     	or	t1, t3, t1
+ 1001074: 0065c5b3     	xor	a1, a1, t1
+ 1001078: 0112f333     	and	t1, t0, a7
+ 100107c: 0112ce33     	xor	t3, t0, a7
+ 1001080: 00ce7e33     	and	t3, t3, a2
+ 1001084: 006e4333     	xor	t1, t3, t1
+ 1001088: 006585b3     	add	a1, a1, t1
+ 100108c: 00a58333     	add	t1, a1, a0
+ 1001090: 00685513     	srli	a0, a6, 0x6
+ 1001094: 01a81593     	slli	a1, a6, 0x1a
+ 1001098: 00a5e533     	or	a0, a1, a0
+ 100109c: 00b85593     	srli	a1, a6, 0xb
+ 10010a0: 01581e13     	slli	t3, a6, 0x15
+ 10010a4: 00be65b3     	or	a1, t3, a1
+ 10010a8: 00b54533     	xor	a0, a0, a1
+ 10010ac: 01985593     	srli	a1, a6, 0x19
+ 10010b0: 00781e13     	slli	t3, a6, 0x7
+ 10010b4: 00be65b3     	or	a1, t3, a1
+ 10010b8: 00b54533     	xor	a0, a0, a1
+ 10010bc: 011cd593     	srli	a1, s9, 0x11
+ 10010c0: 00fc9e13     	slli	t3, s9, 0xf
+ 10010c4: 00be65b3     	or	a1, t3, a1
+ 10010c8: 013cde13     	srli	t3, s9, 0x13
+ 10010cc: 00dc9f93     	slli	t6, s9, 0xd
+ 10010d0: 01cfee33     	or	t3, t6, t3
+ 10010d4: 01c5c5b3     	xor	a1, a1, t3
+ 10010d8: 00acde13     	srli	t3, s9, 0xa
+ 10010dc: 01c5c5b3     	xor	a1, a1, t3
+ 10010e0: 03812483     	lw	s1, 0x38(sp)
+ 10010e4: 0074de13     	srli	t3, s1, 0x7
+ 10010e8: 01949f93     	slli	t6, s1, 0x19
+ 10010ec: 01cfee33     	or	t3, t6, t3
+ 10010f0: 0124df93     	srli	t6, s1, 0x12
+ 10010f4: 00e49093     	slli	ra, s1, 0xe
+ 10010f8: 01f0efb3     	or	t6, ra, t6
+ 10010fc: 01fe4e33     	xor	t3, t3, t6
+ 1001100: 0034df93     	srli	t6, s1, 0x3
+ 1001104: 01fe4e33     	xor	t3, t3, t6
+ 1001108: 00e7cfb3     	xor	t6, a5, a4
+ 100110c: 01f87fb3     	and	t6, a6, t6
+ 1001110: 01ae0e33     	add	t3, t3, s10
+ 1001114: fe4ba083     	lw	ra, -0x1c(s7)
+ 1001118: 00efcfb3     	xor	t6, t6, a4
+ 100111c: 02712623     	sw	t2, 0x2c(sp)
+ 1001120: 01c38e33     	add	t3, t2, t3
+ 1001124: 00be0d33     	add	s10, t3, a1
+ 1001128: 001d00b3     	add	ra, s10, ra
+ 100112c: 00d086b3     	add	a3, ra, a3
+ 1001130: 01f686b3     	add	a3, a3, t6
+ 1001134: 00a68533     	add	a0, a3, a0
+ 1001138: 00c506b3     	add	a3, a0, a2
+ 100113c: 00235593     	srli	a1, t1, 0x2
+ 1001140: 01e31613     	slli	a2, t1, 0x1e
+ 1001144: 00b665b3     	or	a1, a2, a1
+ 1001148: 00d35613     	srli	a2, t1, 0xd
+ 100114c: 01331e13     	slli	t3, t1, 0x13
+ 1001150: 00ce6633     	or	a2, t3, a2
+ 1001154: 00c5c5b3     	xor	a1, a1, a2
+ 1001158: 01635613     	srli	a2, t1, 0x16
+ 100115c: 00a31e13     	slli	t3, t1, 0xa
+ 1001160: 00ce6633     	or	a2, t3, a2
+ 1001164: 00c5c5b3     	xor	a1, a1, a2
+ 1001168: 00537633     	and	a2, t1, t0
+ 100116c: 00534e33     	xor	t3, t1, t0
+ 1001170: 011e7e33     	and	t3, t3, a7
+ 1001174: 00ce4633     	xor	a2, t3, a2
+ 1001178: 00c585b3     	add	a1, a1, a2
+ 100117c: 00a580b3     	add	ra, a1, a0
+ 1001180: 0066d513     	srli	a0, a3, 0x6
+ 1001184: 01a69593     	slli	a1, a3, 0x1a
+ 1001188: 00a5e533     	or	a0, a1, a0
+ 100118c: 00b6d593     	srli	a1, a3, 0xb
+ 1001190: 01569613     	slli	a2, a3, 0x15
+ 1001194: 00b665b3     	or	a1, a2, a1
+ 1001198: 00b54533     	xor	a0, a0, a1
+ 100119c: 0196d593     	srli	a1, a3, 0x19
+ 10011a0: 00769613     	slli	a2, a3, 0x7
+ 10011a4: 00b665b3     	or	a1, a2, a1
+ 10011a8: 00b54533     	xor	a0, a0, a1
+ 10011ac: 011dd593     	srli	a1, s11, 0x11
+ 10011b0: 00fd9613     	slli	a2, s11, 0xf
+ 10011b4: 00b665b3     	or	a1, a2, a1
+ 10011b8: 013dd613     	srli	a2, s11, 0x13
+ 10011bc: 00dd9e13     	slli	t3, s11, 0xd
+ 10011c0: 00ce6633     	or	a2, t3, a2
+ 10011c4: 00c5c5b3     	xor	a1, a1, a2
+ 10011c8: 00add613     	srli	a2, s11, 0xa
+ 10011cc: 00c5c5b3     	xor	a1, a1, a2
+ 10011d0: 00745613     	srli	a2, s0, 0x7
+ 10011d4: 01941e13     	slli	t3, s0, 0x19
+ 10011d8: 00ce6633     	or	a2, t3, a2
+ 10011dc: 01245e13     	srli	t3, s0, 0x12
+ 10011e0: 00e41f93     	slli	t6, s0, 0xe
+ 10011e4: 01cfee33     	or	t3, t6, t3
+ 10011e8: 01c64633     	xor	a2, a2, t3
+ 10011ec: 00345e13     	srli	t3, s0, 0x3
+ 10011f0: 01c64633     	xor	a2, a2, t3
+ 10011f4: 00f84e33     	xor	t3, a6, a5
+ 10011f8: 01c6fe33     	and	t3, a3, t3
+ 10011fc: 00960633     	add	a2, a2, s1
+ 1001200: fe8baf83     	lw	t6, -0x18(s7)
+ 1001204: 00fe4e33     	xor	t3, t3, a5
+ 1001208: 01260633     	add	a2, a2, s2
+ 100120c: 00b603b3     	add	t2, a2, a1
+ 1001210: 01f38fb3     	add	t6, t2, t6
+ 1001214: 00ef8733     	add	a4, t6, a4
+ 1001218: 01c70733     	add	a4, a4, t3
+ 100121c: 00a70533     	add	a0, a4, a0
+ 1001220: 01150733     	add	a4, a0, a7
+ 1001224: 0020d593     	srli	a1, ra, 0x2
+ 1001228: 01e09613     	slli	a2, ra, 0x1e
+ 100122c: 00b665b3     	or	a1, a2, a1
+ 1001230: 00d0d613     	srli	a2, ra, 0xd
+ 1001234: 01309893     	slli	a7, ra, 0x13
+ 1001238: 00c8e633     	or	a2, a7, a2
+ 100123c: 00c5c5b3     	xor	a1, a1, a2
+ 1001240: 0160d613     	srli	a2, ra, 0x16
+ 1001244: 00a09893     	slli	a7, ra, 0xa
+ 1001248: 00c8e633     	or	a2, a7, a2
+ 100124c: 00c5c5b3     	xor	a1, a1, a2
+ 1001250: 0060f633     	and	a2, ra, t1
+ 1001254: 0060c8b3     	xor	a7, ra, t1
+ 1001258: 0058f8b3     	and	a7, a7, t0
+ 100125c: 00c8c633     	xor	a2, a7, a2
+ 1001260: 00c585b3     	add	a1, a1, a2
+ 1001264: 00a585b3     	add	a1, a1, a0
+ 1001268: 00675513     	srli	a0, a4, 0x6
+ 100126c: 01a71613     	slli	a2, a4, 0x1a
+ 1001270: 00a66533     	or	a0, a2, a0
+ 1001274: 00b75613     	srli	a2, a4, 0xb
+ 1001278: 01571893     	slli	a7, a4, 0x15
+ 100127c: 00c8e633     	or	a2, a7, a2
+ 1001280: 00c54533     	xor	a0, a0, a2
+ 1001284: 01975613     	srli	a2, a4, 0x19
+ 1001288: 00771893     	slli	a7, a4, 0x7
+ 100128c: 00c8e633     	or	a2, a7, a2
+ 1001290: 00c54533     	xor	a0, a0, a2
+ 1001294: 011d5613     	srli	a2, s10, 0x11
+ 1001298: 00fd1893     	slli	a7, s10, 0xf
+ 100129c: 00c8e633     	or	a2, a7, a2
+ 10012a0: 013d5893     	srli	a7, s10, 0x13
+ 10012a4: 00dd1e13     	slli	t3, s10, 0xd
+ 10012a8: 011e68b3     	or	a7, t3, a7
+ 10012ac: 01164633     	xor	a2, a2, a7
+ 10012b0: 00ad5893     	srli	a7, s10, 0xa
+ 10012b4: 01164633     	xor	a2, a2, a7
+ 10012b8: 007ed893     	srli	a7, t4, 0x7
+ 10012bc: 019e9e13     	slli	t3, t4, 0x19
+ 10012c0: 011e68b3     	or	a7, t3, a7
+ 10012c4: 012ede13     	srli	t3, t4, 0x12
+ 10012c8: 00ee9f93     	slli	t6, t4, 0xe
+ 10012cc: 01cfee33     	or	t3, t6, t3
+ 10012d0: 01c8c8b3     	xor	a7, a7, t3
+ 10012d4: 003ede13     	srli	t3, t4, 0x3
+ 10012d8: 01c8c8b3     	xor	a7, a7, t3
+ 10012dc: 0106ce33     	xor	t3, a3, a6
+ 10012e0: 01c77e33     	and	t3, a4, t3
+ 10012e4: 008888b3     	add	a7, a7, s0
+ 10012e8: fecbaf83     	lw	t6, -0x14(s7)
+ 10012ec: 010e4e33     	xor	t3, t3, a6
+ 10012f0: 014888b3     	add	a7, a7, s4
+ 10012f4: 00c884b3     	add	s1, a7, a2
+ 10012f8: 01f48fb3     	add	t6, s1, t6
+ 10012fc: 00ff87b3     	add	a5, t6, a5
+ 1001300: 01c787b3     	add	a5, a5, t3
+ 1001304: 00a78533     	add	a0, a5, a0
+ 1001308: 005502b3     	add	t0, a0, t0
+ 100130c: 0025d613     	srli	a2, a1, 0x2
+ 1001310: 01e59793     	slli	a5, a1, 0x1e
+ 1001314: 00c7e633     	or	a2, a5, a2
+ 1001318: 00d5d793     	srli	a5, a1, 0xd
+ 100131c: 01359893     	slli	a7, a1, 0x13
+ 1001320: 00f8e7b3     	or	a5, a7, a5
+ 1001324: 00f64633     	xor	a2, a2, a5
+ 1001328: 0165d793     	srli	a5, a1, 0x16
+ 100132c: 00a59893     	slli	a7, a1, 0xa
+ 1001330: 00f8e7b3     	or	a5, a7, a5
+ 1001334: 00f64633     	xor	a2, a2, a5
+ 1001338: 0015f7b3     	and	a5, a1, ra
+ 100133c: 0015c8b3     	xor	a7, a1, ra
+ 1001340: 0068f8b3     	and	a7, a7, t1
+ 1001344: 00f8c7b3     	xor	a5, a7, a5
+ 1001348: 00f60633     	add	a2, a2, a5
+ 100134c: 00a60633     	add	a2, a2, a0
+ 1001350: 0062d513     	srli	a0, t0, 0x6
+ 1001354: 01a29793     	slli	a5, t0, 0x1a
+ 1001358: 00a7e533     	or	a0, a5, a0
+ 100135c: 00b2d793     	srli	a5, t0, 0xb
+ 1001360: 01529893     	slli	a7, t0, 0x15
+ 1001364: 00f8e7b3     	or	a5, a7, a5
+ 1001368: 00f54533     	xor	a0, a0, a5
+ 100136c: 0192d793     	srli	a5, t0, 0x19
+ 1001370: 00729893     	slli	a7, t0, 0x7
+ 1001374: 00f8e7b3     	or	a5, a7, a5
+ 1001378: 00f54533     	xor	a0, a0, a5
+ 100137c: 0113d793     	srli	a5, t2, 0x11
+ 1001380: 00f39893     	slli	a7, t2, 0xf
+ 1001384: 00f8e7b3     	or	a5, a7, a5
+ 1001388: 0133d893     	srli	a7, t2, 0x13
+ 100138c: 00d39e13     	slli	t3, t2, 0xd
+ 1001390: 011e68b3     	or	a7, t3, a7
+ 1001394: 0117c7b3     	xor	a5, a5, a7
+ 1001398: 02712c23     	sw	t2, 0x38(sp)
+ 100139c: 00a3d893     	srli	a7, t2, 0xa
+ 10013a0: 0117c7b3     	xor	a5, a5, a7
+ 10013a4: 0079d893     	srli	a7, s3, 0x7
+ 10013a8: 01999e13     	slli	t3, s3, 0x19
+ 10013ac: 011e68b3     	or	a7, t3, a7
+ 10013b0: 0129de13     	srli	t3, s3, 0x12
+ 10013b4: 00e99f93     	slli	t6, s3, 0xe
+ 10013b8: 01cfee33     	or	t3, t6, t3
+ 10013bc: 01c8c8b3     	xor	a7, a7, t3
+ 10013c0: 0039de13     	srli	t3, s3, 0x3
+ 10013c4: 01c8c8b3     	xor	a7, a7, t3
+ 10013c8: 00d74e33     	xor	t3, a4, a3
+ 10013cc: 01c2fe33     	and	t3, t0, t3
+ 10013d0: 01d888b3     	add	a7, a7, t4
+ 10013d4: ff0baf83     	lw	t6, -0x10(s7)
+ 10013d8: 00de4e33     	xor	t3, t3, a3
+ 10013dc: 016888b3     	add	a7, a7, s6
+ 10013e0: 00f883b3     	add	t2, a7, a5
+ 10013e4: 01f38fb3     	add	t6, t2, t6
+ 10013e8: 010f8833     	add	a6, t6, a6
+ 10013ec: 01c80833     	add	a6, a6, t3
+ 10013f0: 00a80533     	add	a0, a6, a0
+ 10013f4: 00650333     	add	t1, a0, t1
+ 10013f8: 00265793     	srli	a5, a2, 0x2
+ 10013fc: 01e61813     	slli	a6, a2, 0x1e
+ 1001400: 00f867b3     	or	a5, a6, a5
+ 1001404: 00d65813     	srli	a6, a2, 0xd
+ 1001408: 01361893     	slli	a7, a2, 0x13
+ 100140c: 0108e833     	or	a6, a7, a6
+ 1001410: 0107c7b3     	xor	a5, a5, a6
+ 1001414: 01665813     	srli	a6, a2, 0x16
+ 1001418: 00a61893     	slli	a7, a2, 0xa
+ 100141c: 0108e833     	or	a6, a7, a6
+ 1001420: 0107c7b3     	xor	a5, a5, a6
+ 1001424: 00b67833     	and	a6, a2, a1
+ 1001428: 00b648b3     	xor	a7, a2, a1
+ 100142c: 0018f8b3     	and	a7, a7, ra
+ 1001430: 0108c833     	xor	a6, a7, a6
+ 1001434: 010787b3     	add	a5, a5, a6
+ 1001438: 00a787b3     	add	a5, a5, a0
+ 100143c: 00635513     	srli	a0, t1, 0x6
+ 1001440: 01a31813     	slli	a6, t1, 0x1a
+ 1001444: 00a86533     	or	a0, a6, a0
+ 1001448: 00b35813     	srli	a6, t1, 0xb
+ 100144c: 01531893     	slli	a7, t1, 0x15
+ 1001450: 0108e833     	or	a6, a7, a6
+ 1001454: 01054533     	xor	a0, a0, a6
+ 1001458: 01935813     	srli	a6, t1, 0x19
+ 100145c: 00731893     	slli	a7, t1, 0x7
+ 1001460: 0108e833     	or	a6, a7, a6
+ 1001464: 01054533     	xor	a0, a0, a6
+ 1001468: 0114d813     	srli	a6, s1, 0x11
+ 100146c: 00f49893     	slli	a7, s1, 0xf
+ 1001470: 0108e833     	or	a6, a7, a6
+ 1001474: 0134d893     	srli	a7, s1, 0x13
+ 1001478: 00d49e13     	slli	t3, s1, 0xd
+ 100147c: 011e68b3     	or	a7, t3, a7
+ 1001480: 01184833     	xor	a6, a6, a7
+ 1001484: 00a4d893     	srli	a7, s1, 0xa
+ 1001488: 01184833     	xor	a6, a6, a7
+ 100148c: 007ad893     	srli	a7, s5, 0x7
+ 1001490: 019a9e13     	slli	t3, s5, 0x19
+ 1001494: 011e68b3     	or	a7, t3, a7
+ 1001498: 012ade13     	srli	t3, s5, 0x12
+ 100149c: 00ea9f93     	slli	t6, s5, 0xe
+ 10014a0: 01cfee33     	or	t3, t6, t3
+ 10014a4: 01c8c8b3     	xor	a7, a7, t3
+ 10014a8: 003ade13     	srli	t3, s5, 0x3
+ 10014ac: 01c8c8b3     	xor	a7, a7, t3
+ 10014b0: 00e2ce33     	xor	t3, t0, a4
+ 10014b4: 01c37e33     	and	t3, t1, t3
+ 10014b8: 013888b3     	add	a7, a7, s3
+ 10014bc: ff4baf83     	lw	t6, -0xc(s7)
+ 10014c0: 00ee4e33     	xor	t3, t3, a4
+ 10014c4: 018888b3     	add	a7, a7, s8
+ 10014c8: 010889b3     	add	s3, a7, a6
+ 10014cc: 01f98fb3     	add	t6, s3, t6
+ 10014d0: 00df86b3     	add	a3, t6, a3
+ 10014d4: 01c686b3     	add	a3, a3, t3
+ 10014d8: 00a68533     	add	a0, a3, a0
+ 10014dc: 001500b3     	add	ra, a0, ra
+ 10014e0: 0027d693     	srli	a3, a5, 0x2
+ 10014e4: 01e79813     	slli	a6, a5, 0x1e
+ 10014e8: 00d866b3     	or	a3, a6, a3
+ 10014ec: 00d7d813     	srli	a6, a5, 0xd
+ 10014f0: 01379893     	slli	a7, a5, 0x13
+ 10014f4: 0108e833     	or	a6, a7, a6
+ 10014f8: 0106c6b3     	xor	a3, a3, a6
+ 10014fc: 0167d813     	srli	a6, a5, 0x16
+ 1001500: 00a79893     	slli	a7, a5, 0xa
+ 1001504: 0108e833     	or	a6, a7, a6
+ 1001508: 0106c6b3     	xor	a3, a3, a6
+ 100150c: 00c7f833     	and	a6, a5, a2
+ 1001510: 00c7c8b3     	xor	a7, a5, a2
+ 1001514: 00b8f8b3     	and	a7, a7, a1
+ 1001518: 0108c833     	xor	a6, a7, a6
+ 100151c: 010686b3     	add	a3, a3, a6
+ 1001520: 00a68833     	add	a6, a3, a0
+ 1001524: 0060d513     	srli	a0, ra, 0x6
+ 1001528: 01a09693     	slli	a3, ra, 0x1a
+ 100152c: 00a6e533     	or	a0, a3, a0
+ 1001530: 00b0d693     	srli	a3, ra, 0xb
+ 1001534: 01509893     	slli	a7, ra, 0x15
+ 1001538: 00d8e6b3     	or	a3, a7, a3
+ 100153c: 00d54533     	xor	a0, a0, a3
+ 1001540: 0190d693     	srli	a3, ra, 0x19
+ 1001544: 00709893     	slli	a7, ra, 0x7
+ 1001548: 00d8e6b3     	or	a3, a7, a3
+ 100154c: 00d54533     	xor	a0, a0, a3
+ 1001550: 0113d693     	srli	a3, t2, 0x11
+ 1001554: 00f39893     	slli	a7, t2, 0xf
+ 1001558: 00d8e6b3     	or	a3, a7, a3
+ 100155c: 0133d893     	srli	a7, t2, 0x13
+ 1001560: 00d39e13     	slli	t3, t2, 0xd
+ 1001564: 011e68b3     	or	a7, t3, a7
+ 1001568: 0116c6b3     	xor	a3, a3, a7
+ 100156c: 02712423     	sw	t2, 0x28(sp)
+ 1001570: 00a3d893     	srli	a7, t2, 0xa
+ 1001574: 0116c6b3     	xor	a3, a3, a7
+ 1001578: 03412383     	lw	t2, 0x34(sp)
+ 100157c: 0073d893     	srli	a7, t2, 0x7
+ 1001580: 01939e13     	slli	t3, t2, 0x19
+ 1001584: 011e68b3     	or	a7, t3, a7
+ 1001588: 0123de13     	srli	t3, t2, 0x12
+ 100158c: 00e39f93     	slli	t6, t2, 0xe
+ 1001590: 01cfee33     	or	t3, t6, t3
+ 1001594: 01c8c8b3     	xor	a7, a7, t3
+ 1001598: 0033de13     	srli	t3, t2, 0x3
+ 100159c: 01c8c8b3     	xor	a7, a7, t3
+ 10015a0: 00534e33     	xor	t3, t1, t0
+ 10015a4: 01c0fe33     	and	t3, ra, t3
+ 10015a8: 011a88b3     	add	a7, s5, a7
+ 10015ac: ff8baf83     	lw	t6, -0x8(s7)
+ 10015b0: 005e4e33     	xor	t3, t3, t0
+ 10015b4: 019888b3     	add	a7, a7, s9
+ 10015b8: 00d88ab3     	add	s5, a7, a3
+ 10015bc: 01fa8fb3     	add	t6, s5, t6
+ 10015c0: 00ef8733     	add	a4, t6, a4
+ 10015c4: 01c70733     	add	a4, a4, t3
+ 10015c8: 00a70533     	add	a0, a4, a0
+ 10015cc: 00b506b3     	add	a3, a0, a1
+ 10015d0: 00285593     	srli	a1, a6, 0x2
+ 10015d4: 01e81713     	slli	a4, a6, 0x1e
+ 10015d8: 00b765b3     	or	a1, a4, a1
+ 10015dc: 00d85713     	srli	a4, a6, 0xd
+ 10015e0: 01381893     	slli	a7, a6, 0x13
+ 10015e4: 00e8e733     	or	a4, a7, a4
+ 10015e8: 00e5c5b3     	xor	a1, a1, a4
+ 10015ec: 01685713     	srli	a4, a6, 0x16
+ 10015f0: 00a81893     	slli	a7, a6, 0xa
+ 10015f4: 00e8e733     	or	a4, a7, a4
+ 10015f8: 00e5c5b3     	xor	a1, a1, a4
+ 10015fc: 00f87733     	and	a4, a6, a5
+ 1001600: 00f848b3     	xor	a7, a6, a5
+ 1001604: 00c8f8b3     	and	a7, a7, a2
+ 1001608: 00e8c733     	xor	a4, a7, a4
+ 100160c: 00e585b3     	add	a1, a1, a4
+ 1001610: 00a588b3     	add	a7, a1, a0
+ 1001614: 0066d513     	srli	a0, a3, 0x6
+ 1001618: 01a69593     	slli	a1, a3, 0x1a
+ 100161c: 00a5e533     	or	a0, a1, a0
+ 1001620: 00b6d593     	srli	a1, a3, 0xb
+ 1001624: 01569713     	slli	a4, a3, 0x15
+ 1001628: 00b765b3     	or	a1, a4, a1
+ 100162c: 00b54533     	xor	a0, a0, a1
+ 1001630: 0196d593     	srli	a1, a3, 0x19
+ 1001634: 00769713     	slli	a4, a3, 0x7
+ 1001638: 00b765b3     	or	a1, a4, a1
+ 100163c: 00b54533     	xor	a0, a0, a1
+ 1001640: 0119d593     	srli	a1, s3, 0x11
+ 1001644: 00f99713     	slli	a4, s3, 0xf
+ 1001648: 00b765b3     	or	a1, a4, a1
+ 100164c: 0139d713     	srli	a4, s3, 0x13
+ 1001650: 00d99e13     	slli	t3, s3, 0xd
+ 1001654: 00ee6733     	or	a4, t3, a4
+ 1001658: 00e5c5b3     	xor	a1, a1, a4
+ 100165c: 00a9d713     	srli	a4, s3, 0xa
+ 1001660: 00e5c5b3     	xor	a1, a1, a4
+ 1001664: 03012403     	lw	s0, 0x30(sp)
+ 1001668: 00745713     	srli	a4, s0, 0x7
+ 100166c: 01941e13     	slli	t3, s0, 0x19
+ 1001670: 00ee6733     	or	a4, t3, a4
+ 1001674: 01245e13     	srli	t3, s0, 0x12
+ 1001678: 00e41f93     	slli	t6, s0, 0xe
+ 100167c: 01cfee33     	or	t3, t6, t3
+ 1001680: 01c74733     	xor	a4, a4, t3
+ 1001684: 00345e13     	srli	t3, s0, 0x3
+ 1001688: 01c74733     	xor	a4, a4, t3
+ 100168c: 0060ce33     	xor	t3, ra, t1
+ 1001690: 01c6fe33     	and	t3, a3, t3
+ 1001694: 00770733     	add	a4, a4, t2
+ 1001698: ffcbaf83     	lw	t6, -0x4(s7)
+ 100169c: 006e4e33     	xor	t3, t3, t1
+ 10016a0: 01b70733     	add	a4, a4, s11
+ 10016a4: 00b705b3     	add	a1, a4, a1
+ 10016a8: 00058393     	mv	t2, a1
+ 10016ac: 01f58fb3     	add	t6, a1, t6
+ 10016b0: 005f82b3     	add	t0, t6, t0
+ 10016b4: 01c282b3     	add	t0, t0, t3
+ 10016b8: 00a28533     	add	a0, t0, a0
+ 10016bc: 00c505b3     	add	a1, a0, a2
+ 10016c0: 0028d613     	srli	a2, a7, 0x2
+ 10016c4: 01e89713     	slli	a4, a7, 0x1e
+ 10016c8: 00c76633     	or	a2, a4, a2
+ 10016cc: 00d8d713     	srli	a4, a7, 0xd
+ 10016d0: 01389293     	slli	t0, a7, 0x13
+ 10016d4: 00e2e733     	or	a4, t0, a4
+ 10016d8: 00e64633     	xor	a2, a2, a4
+ 10016dc: 0168d713     	srli	a4, a7, 0x16
+ 10016e0: 00a89293     	slli	t0, a7, 0xa
+ 10016e4: 00e2e733     	or	a4, t0, a4
+ 10016e8: 00e64633     	xor	a2, a2, a4
+ 10016ec: 0108f733     	and	a4, a7, a6
+ 10016f0: 0108c2b3     	xor	t0, a7, a6
+ 10016f4: 00f2f2b3     	and	t0, t0, a5
+ 10016f8: 00e2c733     	xor	a4, t0, a4
+ 10016fc: 00e60633     	add	a2, a2, a4
+ 1001700: 00a602b3     	add	t0, a2, a0
+ 1001704: 0065d513     	srli	a0, a1, 0x6
+ 1001708: 01a59613     	slli	a2, a1, 0x1a
+ 100170c: 00a66533     	or	a0, a2, a0
+ 1001710: 00b5d613     	srli	a2, a1, 0xb
+ 1001714: 01559713     	slli	a4, a1, 0x15
+ 1001718: 00c76633     	or	a2, a4, a2
+ 100171c: 00c54533     	xor	a0, a0, a2
+ 1001720: 0195d613     	srli	a2, a1, 0x19
+ 1001724: 00759713     	slli	a4, a1, 0x7
+ 1001728: 00c76633     	or	a2, a4, a2
+ 100172c: 00c54533     	xor	a0, a0, a2
+ 1001730: 011ad613     	srli	a2, s5, 0x11
+ 1001734: 00fa9713     	slli	a4, s5, 0xf
+ 1001738: 00c76633     	or	a2, a4, a2
+ 100173c: 013ad713     	srli	a4, s5, 0x13
+ 1001740: 00da9e13     	slli	t3, s5, 0xd
+ 1001744: 00ee6733     	or	a4, t3, a4
+ 1001748: 00e64633     	xor	a2, a2, a4
+ 100174c: 00aad713     	srli	a4, s5, 0xa
+ 1001750: 00e64633     	xor	a2, a2, a4
+ 1001754: 007f5713     	srli	a4, t5, 0x7
+ 1001758: 019f1e13     	slli	t3, t5, 0x19
+ 100175c: 00ee6733     	or	a4, t3, a4
+ 1001760: 012f5e13     	srli	t3, t5, 0x12
+ 1001764: 00ef1f93     	slli	t6, t5, 0xe
+ 1001768: 01cfee33     	or	t3, t6, t3
+ 100176c: 01c74733     	xor	a4, a4, t3
+ 1001770: 000f0e93     	mv	t4, t5
+ 1001774: 003f5e13     	srli	t3, t5, 0x3
+ 1001778: 01c74733     	xor	a4, a4, t3
+ 100177c: 00870733     	add	a4, a4, s0
+ 1001780: 00048413     	mv	s0, s1
+ 1001784: 000bae03     	lw	t3, 0x0(s7)
+ 1001788: 01a70733     	add	a4, a4, s10
+ 100178c: 00c70f33     	add	t5, a4, a2
+ 1001790: 0016c633     	xor	a2, a3, ra
+ 1001794: 00c5f633     	and	a2, a1, a2
+ 1001798: 00164633     	xor	a2, a2, ra
+ 100179c: 01cf0e33     	add	t3, t5, t3
+ 10017a0: 006e0333     	add	t1, t3, t1
+ 10017a4: 00c30633     	add	a2, t1, a2
+ 10017a8: 00a60533     	add	a0, a2, a0
+ 10017ac: 0022d613     	srli	a2, t0, 0x2
+ 10017b0: 01e29713     	slli	a4, t0, 0x1e
+ 10017b4: 00c76633     	or	a2, a4, a2
+ 10017b8: 00d2d713     	srli	a4, t0, 0xd
+ 10017bc: 01329313     	slli	t1, t0, 0x13
+ 10017c0: 00e36733     	or	a4, t1, a4
+ 10017c4: 00e64633     	xor	a2, a2, a4
+ 10017c8: 0162d713     	srli	a4, t0, 0x16
+ 10017cc: 00a29313     	slli	t1, t0, 0xa
+ 10017d0: 00e36733     	or	a4, t1, a4
+ 10017d4: 00e64633     	xor	a2, a2, a4
+ 10017d8: 0112f733     	and	a4, t0, a7
+ 10017dc: 0112c333     	xor	t1, t0, a7
+ 10017e0: 01037333     	and	t1, t1, a6
+ 10017e4: 00e34733     	xor	a4, t1, a4
+ 10017e8: 00e60633     	add	a2, a2, a4
+ 10017ec: 00f50e33     	add	t3, a0, a5
+ 10017f0: 040b8b93     	addi	s7, s7, 0x40
+ 10017f4: 00a60333     	add	t1, a2, a0
+ 10017f8: 02412503     	lw	a0, 0x24(sp)
+ 10017fc: 92ab9a63     	bne	s7, a0, 0x1000930 <_nettle_sha256_compress+0x5f4>
+</code></pre>
+<h2>Choice 1</h2>
+<table>
+<tr><th>func_name</th><th>bb_name</th><th>rel_weight</th><th>num_instrs</th><th>freq</th><th>start</th><th>end</th></tr>
+<tr><td>_nettle_sha256_compress</td><td>%bb.4</td><td>0.155469</td><td>309</td><td>1900.0</td><td>0x1000404</td><td>0x10008d8</td></tr>
+</table>
+<pre><code class='asm'>
+ 1000404: 006e5513     	srli	a0, t3, 0x6
+ 1000408: 01ae1713     	slli	a4, t3, 0x1a
+ 100040c: 00a76533     	or	a0, a4, a0
+ 1000410: 00be5713     	srli	a4, t3, 0xb
+ 1000414: 015e1f13     	slli	t5, t3, 0x15
+ 1000418: 00ef6733     	or	a4, t5, a4
+ 100041c: 00e54533     	xor	a0, a0, a4
+ 1000420: 019e5713     	srli	a4, t3, 0x19
+ 1000424: 007e1f13     	slli	t5, t3, 0x7
+ 1000428: 00ef6733     	or	a4, t5, a4
+ 100042c: 00e54533     	xor	a0, a0, a4
+ 1000430: 00b6c733     	xor	a4, a3, a1
+ 1000434: 01c77733     	and	a4, a4, t3
+ 1000438: 000eaf03     	lw	t5, 0x0(t4)
+ 100043c: 0003af83     	lw	t6, 0x0(t2)
+ 1000440: 00d74733     	xor	a4, a4, a3
+ 1000444: 00e08733     	add	a4, ra, a4
+ 1000448: 00a70533     	add	a0, a4, a0
+ 100044c: 01ff0f33     	add	t5, t5, t6
+ 1000450: 01e50533     	add	a0, a0, t5
+ 1000454: 01050833     	add	a6, a0, a6
+ 1000458: 00235713     	srli	a4, t1, 0x2
+ 100045c: 01e31f13     	slli	t5, t1, 0x1e
+ 1000460: 00ef6733     	or	a4, t5, a4
+ 1000464: 00d35f13     	srli	t5, t1, 0xd
+ 1000468: 01331f93     	slli	t6, t1, 0x13
+ 100046c: 01efef33     	or	t5, t6, t5
+ 1000470: 01e74733     	xor	a4, a4, t5
+ 1000474: 01635f13     	srli	t5, t1, 0x16
+ 1000478: 00a31f93     	slli	t6, t1, 0xa
+ 100047c: 01efef33     	or	t5, t6, t5
+ 1000480: 01e74733     	xor	a4, a4, t5
+ 1000484: 0062ff33     	and	t5, t0, t1
+ 1000488: 0062cfb3     	xor	t6, t0, t1
+ 100048c: 01f8ffb3     	and	t6, a7, t6
+ 1000490: 01efcf33     	xor	t5, t6, t5
+ 1000494: 00ef0733     	add	a4, t5, a4
+ 1000498: 00a700b3     	add	ra, a4, a0
+ 100049c: 00685513     	srli	a0, a6, 0x6
+ 10004a0: 01a81713     	slli	a4, a6, 0x1a
+ 10004a4: 00a76533     	or	a0, a4, a0
+ 10004a8: 00b85713     	srli	a4, a6, 0xb
+ 10004ac: 01581f13     	slli	t5, a6, 0x15
+ 10004b0: 00ef6733     	or	a4, t5, a4
+ 10004b4: 00e54533     	xor	a0, a0, a4
+ 10004b8: 01985713     	srli	a4, a6, 0x19
+ 10004bc: 00781f13     	slli	t5, a6, 0x7
+ 10004c0: 00ef6733     	or	a4, t5, a4
+ 10004c4: 00e54533     	xor	a0, a0, a4
+ 10004c8: 01c5c733     	xor	a4, a1, t3
+ 10004cc: 004eaf03     	lw	t5, 0x4(t4)
+ 10004d0: 0043af83     	lw	t6, 0x4(t2)
+ 10004d4: 00e87733     	and	a4, a6, a4
+ 10004d8: 00b74733     	xor	a4, a4, a1
+ 10004dc: 00df06b3     	add	a3, t5, a3
+ 10004e0: 01f686b3     	add	a3, a3, t6
+ 10004e4: 00e686b3     	add	a3, a3, a4
+ 10004e8: 00a68533     	add	a0, a3, a0
+ 10004ec: 011508b3     	add	a7, a0, a7
+ 10004f0: 0020d693     	srli	a3, ra, 0x2
+ 10004f4: 01e09713     	slli	a4, ra, 0x1e
+ 10004f8: 00d766b3     	or	a3, a4, a3
+ 10004fc: 00d0d713     	srli	a4, ra, 0xd
+ 1000500: 01309f13     	slli	t5, ra, 0x13
+ 1000504: 00ef6733     	or	a4, t5, a4
+ 1000508: 00e6c6b3     	xor	a3, a3, a4
+ 100050c: 0160d713     	srli	a4, ra, 0x16
+ 1000510: 00a09f13     	slli	t5, ra, 0xa
+ 1000514: 00ef6733     	or	a4, t5, a4
+ 1000518: 00e6c6b3     	xor	a3, a3, a4
+ 100051c: 0060f733     	and	a4, ra, t1
+ 1000520: 0060cf33     	xor	t5, ra, t1
+ 1000524: 005f7f33     	and	t5, t5, t0
+ 1000528: 00ef4733     	xor	a4, t5, a4
+ 100052c: 00e686b3     	add	a3, a3, a4
+ 1000530: 00a686b3     	add	a3, a3, a0
+ 1000534: 0068d513     	srli	a0, a7, 0x6
+ 1000538: 01a89713     	slli	a4, a7, 0x1a
+ 100053c: 00a76533     	or	a0, a4, a0
+ 1000540: 00b8d713     	srli	a4, a7, 0xb
+ 1000544: 01589f13     	slli	t5, a7, 0x15
+ 1000548: 00ef6733     	or	a4, t5, a4
+ 100054c: 00e54533     	xor	a0, a0, a4
+ 1000550: 0198d713     	srli	a4, a7, 0x19
+ 1000554: 00789f13     	slli	t5, a7, 0x7
+ 1000558: 00ef6733     	or	a4, t5, a4
+ 100055c: 00e54533     	xor	a0, a0, a4
+ 1000560: 01c84733     	xor	a4, a6, t3
+ 1000564: 008eaf03     	lw	t5, 0x8(t4)
+ 1000568: 0083af83     	lw	t6, 0x8(t2)
+ 100056c: 00e8f733     	and	a4, a7, a4
+ 1000570: 01c74733     	xor	a4, a4, t3
+ 1000574: 00bf05b3     	add	a1, t5, a1
+ 1000578: 01f585b3     	add	a1, a1, t6
+ 100057c: 00e585b3     	add	a1, a1, a4
+ 1000580: 00a58533     	add	a0, a1, a0
+ 1000584: 005502b3     	add	t0, a0, t0
+ 1000588: 0026d593     	srli	a1, a3, 0x2
+ 100058c: 01e69713     	slli	a4, a3, 0x1e
+ 1000590: 00b765b3     	or	a1, a4, a1
+ 1000594: 00d6d713     	srli	a4, a3, 0xd
+ 1000598: 01369f13     	slli	t5, a3, 0x13
+ 100059c: 00ef6733     	or	a4, t5, a4
+ 10005a0: 00e5c5b3     	xor	a1, a1, a4
+ 10005a4: 0166d713     	srli	a4, a3, 0x16
+ 10005a8: 00a69f13     	slli	t5, a3, 0xa
+ 10005ac: 00ef6733     	or	a4, t5, a4
+ 10005b0: 00e5c5b3     	xor	a1, a1, a4
+ 10005b4: 0016f733     	and	a4, a3, ra
+ 10005b8: 0016cf33     	xor	t5, a3, ra
+ 10005bc: 006f7f33     	and	t5, t5, t1
+ 10005c0: 00ef4733     	xor	a4, t5, a4
+ 10005c4: 00e585b3     	add	a1, a1, a4
+ 10005c8: 00a585b3     	add	a1, a1, a0
+ 10005cc: 0062d513     	srli	a0, t0, 0x6
+ 10005d0: 01a29713     	slli	a4, t0, 0x1a
+ 10005d4: 00a76533     	or	a0, a4, a0
+ 10005d8: 00b2d713     	srli	a4, t0, 0xb
+ 10005dc: 01529f13     	slli	t5, t0, 0x15
+ 10005e0: 00ef6733     	or	a4, t5, a4
+ 10005e4: 00e54533     	xor	a0, a0, a4
+ 10005e8: 0192d713     	srli	a4, t0, 0x19
+ 10005ec: 00729f13     	slli	t5, t0, 0x7
+ 10005f0: 00ef6733     	or	a4, t5, a4
+ 10005f4: 00e54533     	xor	a0, a0, a4
+ 10005f8: 0108c733     	xor	a4, a7, a6
+ 10005fc: 00ceaf03     	lw	t5, 0xc(t4)
+ 1000600: 00c3af83     	lw	t6, 0xc(t2)
+ 1000604: 00e2f733     	and	a4, t0, a4
+ 1000608: 01074733     	xor	a4, a4, a6
+ 100060c: 01cf07b3     	add	a5, t5, t3
+ 1000610: 01f787b3     	add	a5, a5, t6
+ 1000614: 00e78733     	add	a4, a5, a4
+ 1000618: 00a70533     	add	a0, a4, a0
+ 100061c: 00650333     	add	t1, a0, t1
+ 1000620: 0025d713     	srli	a4, a1, 0x2
+ 1000624: 01e59793     	slli	a5, a1, 0x1e
+ 1000628: 00e7e733     	or	a4, a5, a4
+ 100062c: 00d5d793     	srli	a5, a1, 0xd
+ 1000630: 01359f13     	slli	t5, a1, 0x13
+ 1000634: 00ff67b3     	or	a5, t5, a5
+ 1000638: 00f74733     	xor	a4, a4, a5
+ 100063c: 0165d793     	srli	a5, a1, 0x16
+ 1000640: 00a59f13     	slli	t5, a1, 0xa
+ 1000644: 00ff67b3     	or	a5, t5, a5
+ 1000648: 00f74733     	xor	a4, a4, a5
+ 100064c: 00d5f7b3     	and	a5, a1, a3
+ 1000650: 00d5cf33     	xor	t5, a1, a3
+ 1000654: 001f7f33     	and	t5, t5, ra
+ 1000658: 00ff47b3     	xor	a5, t5, a5
+ 100065c: 00f70733     	add	a4, a4, a5
+ 1000660: 00a707b3     	add	a5, a4, a0
+ 1000664: 00635513     	srli	a0, t1, 0x6
+ 1000668: 01a31713     	slli	a4, t1, 0x1a
+ 100066c: 00a76533     	or	a0, a4, a0
+ 1000670: 00b35713     	srli	a4, t1, 0xb
+ 1000674: 01531f13     	slli	t5, t1, 0x15
+ 1000678: 00ef6733     	or	a4, t5, a4
+ 100067c: 00e54533     	xor	a0, a0, a4
+ 1000680: 01935713     	srli	a4, t1, 0x19
+ 1000684: 00731f13     	slli	t5, t1, 0x7
+ 1000688: 00ef6733     	or	a4, t5, a4
+ 100068c: 00e54533     	xor	a0, a0, a4
+ 1000690: 010ea703     	lw	a4, 0x10(t4)
+ 1000694: 0103af03     	lw	t5, 0x10(t2)
+ 1000698: 0112cfb3     	xor	t6, t0, a7
+ 100069c: 01f37fb3     	and	t6, t1, t6
+ 10006a0: 011fcfb3     	xor	t6, t6, a7
+ 10006a4: 01e70733     	add	a4, a4, t5
+ 10006a8: 01070733     	add	a4, a4, a6
+ 10006ac: 01f70733     	add	a4, a4, t6
+ 10006b0: 00a70533     	add	a0, a4, a0
+ 10006b4: 001500b3     	add	ra, a0, ra
+ 10006b8: 0027d713     	srli	a4, a5, 0x2
+ 10006bc: 01e79813     	slli	a6, a5, 0x1e
+ 10006c0: 00e86733     	or	a4, a6, a4
+ 10006c4: 00d7d813     	srli	a6, a5, 0xd
+ 10006c8: 01379f13     	slli	t5, a5, 0x13
+ 10006cc: 010f6833     	or	a6, t5, a6
+ 10006d0: 01074733     	xor	a4, a4, a6
+ 10006d4: 0167d813     	srli	a6, a5, 0x16
+ 10006d8: 00a79f13     	slli	t5, a5, 0xa
+ 10006dc: 010f6833     	or	a6, t5, a6
+ 10006e0: 01074733     	xor	a4, a4, a6
+ 10006e4: 00b7f833     	and	a6, a5, a1
+ 10006e8: 00b7cf33     	xor	t5, a5, a1
+ 10006ec: 00df7f33     	and	t5, t5, a3
+ 10006f0: 010f4833     	xor	a6, t5, a6
+ 10006f4: 01070733     	add	a4, a4, a6
+ 10006f8: 00a70833     	add	a6, a4, a0
+ 10006fc: 0060d513     	srli	a0, ra, 0x6
+ 1000700: 01a09713     	slli	a4, ra, 0x1a
+ 1000704: 00a76533     	or	a0, a4, a0
+ 1000708: 00b0d713     	srli	a4, ra, 0xb
+ 100070c: 01509f13     	slli	t5, ra, 0x15
+ 1000710: 00ef6733     	or	a4, t5, a4
+ 1000714: 00e54533     	xor	a0, a0, a4
+ 1000718: 0190d713     	srli	a4, ra, 0x19
+ 100071c: 00709f13     	slli	t5, ra, 0x7
+ 1000720: 00ef6733     	or	a4, t5, a4
+ 1000724: 00e54533     	xor	a0, a0, a4
+ 1000728: 014ea703     	lw	a4, 0x14(t4)
+ 100072c: 0143af03     	lw	t5, 0x14(t2)
+ 1000730: 00534fb3     	xor	t6, t1, t0
+ 1000734: 01f0ffb3     	and	t6, ra, t6
+ 1000738: 005fcfb3     	xor	t6, t6, t0
+ 100073c: 00ef0733     	add	a4, t5, a4
+ 1000740: 01170733     	add	a4, a4, a7
+ 1000744: 01f70733     	add	a4, a4, t6
+ 1000748: 00a70533     	add	a0, a4, a0
+ 100074c: 00d506b3     	add	a3, a0, a3
+ 1000750: 00285713     	srli	a4, a6, 0x2
+ 1000754: 01e81893     	slli	a7, a6, 0x1e
+ 1000758: 00e8e733     	or	a4, a7, a4
+ 100075c: 00d85893     	srli	a7, a6, 0xd
+ 1000760: 01381f13     	slli	t5, a6, 0x13
+ 1000764: 011f68b3     	or	a7, t5, a7
+ 1000768: 01174733     	xor	a4, a4, a7
+ 100076c: 01685893     	srli	a7, a6, 0x16
+ 1000770: 00a81f13     	slli	t5, a6, 0xa
+ 1000774: 011f68b3     	or	a7, t5, a7
+ 1000778: 01174733     	xor	a4, a4, a7
+ 100077c: 00f878b3     	and	a7, a6, a5
+ 1000780: 00f84f33     	xor	t5, a6, a5
+ 1000784: 00bf7f33     	and	t5, t5, a1
+ 1000788: 011f48b3     	xor	a7, t5, a7
+ 100078c: 01170733     	add	a4, a4, a7
+ 1000790: 00a708b3     	add	a7, a4, a0
+ 1000794: 0066d513     	srli	a0, a3, 0x6
+ 1000798: 01a69713     	slli	a4, a3, 0x1a
+ 100079c: 00a76533     	or	a0, a4, a0
+ 10007a0: 00b6d713     	srli	a4, a3, 0xb
+ 10007a4: 01569f13     	slli	t5, a3, 0x15
+ 10007a8: 00ef6733     	or	a4, t5, a4
+ 10007ac: 00e54533     	xor	a0, a0, a4
+ 10007b0: 0196d713     	srli	a4, a3, 0x19
+ 10007b4: 00769f13     	slli	t5, a3, 0x7
+ 10007b8: 00ef6733     	or	a4, t5, a4
+ 10007bc: 00e54533     	xor	a0, a0, a4
+ 10007c0: 018ea703     	lw	a4, 0x18(t4)
+ 10007c4: 0183af03     	lw	t5, 0x18(t2)
+ 10007c8: 0060cfb3     	xor	t6, ra, t1
+ 10007cc: 01f6ffb3     	and	t6, a3, t6
+ 10007d0: 006fcfb3     	xor	t6, t6, t1
+ 10007d4: 00ef0733     	add	a4, t5, a4
+ 10007d8: 00570733     	add	a4, a4, t0
+ 10007dc: 01f70733     	add	a4, a4, t6
+ 10007e0: 00a70533     	add	a0, a4, a0
+ 10007e4: 00b505b3     	add	a1, a0, a1
+ 10007e8: 0028d713     	srli	a4, a7, 0x2
+ 10007ec: 01e89293     	slli	t0, a7, 0x1e
+ 10007f0: 00e2e733     	or	a4, t0, a4
+ 10007f4: 00d8d293     	srli	t0, a7, 0xd
+ 10007f8: 01389f13     	slli	t5, a7, 0x13
+ 10007fc: 005f62b3     	or	t0, t5, t0
+ 1000800: 00574733     	xor	a4, a4, t0
+ 1000804: 0168d293     	srli	t0, a7, 0x16
+ 1000808: 00a89f13     	slli	t5, a7, 0xa
+ 100080c: 005f62b3     	or	t0, t5, t0
+ 1000810: 00574733     	xor	a4, a4, t0
+ 1000814: 0108f2b3     	and	t0, a7, a6
+ 1000818: 0108cf33     	xor	t5, a7, a6
+ 100081c: 00ff7f33     	and	t5, t5, a5
+ 1000820: 005f42b3     	xor	t0, t5, t0
+ 1000824: 00570733     	add	a4, a4, t0
+ 1000828: 00a702b3     	add	t0, a4, a0
+ 100082c: 0065d513     	srli	a0, a1, 0x6
+ 1000830: 01a59713     	slli	a4, a1, 0x1a
+ 1000834: 00a76533     	or	a0, a4, a0
+ 1000838: 00b5d713     	srli	a4, a1, 0xb
+ 100083c: 01559f13     	slli	t5, a1, 0x15
+ 1000840: 00ef6733     	or	a4, t5, a4
+ 1000844: 00e54533     	xor	a0, a0, a4
+ 1000848: 0195d713     	srli	a4, a1, 0x19
+ 100084c: 00759f13     	slli	t5, a1, 0x7
+ 1000850: 00ef6733     	or	a4, t5, a4
+ 1000854: 00e54533     	xor	a0, a0, a4
+ 1000858: 01cea703     	lw	a4, 0x1c(t4)
+ 100085c: 01c3af03     	lw	t5, 0x1c(t2)
+ 1000860: 0016cfb3     	xor	t6, a3, ra
+ 1000864: 01f5ffb3     	and	t6, a1, t6
+ 1000868: 001fcfb3     	xor	t6, t6, ra
+ 100086c: 00ef0733     	add	a4, t5, a4
+ 1000870: 00670733     	add	a4, a4, t1
+ 1000874: 01f70733     	add	a4, a4, t6
+ 1000878: 00a70533     	add	a0, a4, a0
+ 100087c: 00f50e33     	add	t3, a0, a5
+ 1000880: 0022d713     	srli	a4, t0, 0x2
+ 1000884: 01e29313     	slli	t1, t0, 0x1e
+ 1000888: 00e36733     	or	a4, t1, a4
+ 100088c: 00d2d313     	srli	t1, t0, 0xd
+ 1000890: 01329f13     	slli	t5, t0, 0x13
+ 1000894: 006f6333     	or	t1, t5, t1
+ 1000898: 00674733     	xor	a4, a4, t1
+ 100089c: 0162d313     	srli	t1, t0, 0x16
+ 10008a0: 00a29f13     	slli	t5, t0, 0xa
+ 10008a4: 006f6333     	or	t1, t5, t1
+ 10008a8: 00674733     	xor	a4, a4, t1
+ 10008ac: 0112f333     	and	t1, t0, a7
+ 10008b0: 0112cf33     	xor	t5, t0, a7
+ 10008b4: 010f7f33     	and	t5, t5, a6
+ 10008b8: 006f4333     	xor	t1, t5, t1
+ 10008bc: 00670733     	add	a4, a4, t1
+ 10008c0: 00a70333     	add	t1, a4, a0
+ 10008c4: 020e8e93     	addi	t4, t4, 0x20
+ 10008c8: 00147513     	andi	a0, s0, 0x1
+ 10008cc: 02038393     	addi	t2, t2, 0x20
+ 10008d0: 00000413     	li	s0, 0x0
+ 10008d4: b20518e3     	bnez	a0, 0x1000404 <_nettle_sha256_compress+0xc8>
+</code></pre>
+<h2>Choice 2</h2>
+<table>
+<tr><th>func_name</th><th>bb_name</th><th>rel_weight</th><th>num_instrs</th><th>freq</th><th>start</th><th>end</th></tr>
+<tr><td>_nettle_sha256_compress</td><td>%bb.1</td><td>0.056351</td><td>14</td><td>15200.0</td><td>0x100037c</td><td>0x10003b4</td></tr>
+</table>
+<pre><code class='asm'>
+ 100037c: 0005c703     	lbu	a4, 0x0(a1)
+ 1000380: 0015c783     	lbu	a5, 0x1(a1)
+ 1000384: 01871713     	slli	a4, a4, 0x18
+ 1000388: 0025c803     	lbu	a6, 0x2(a1)
+ 100038c: 0035c883     	lbu	a7, 0x3(a1)
+ 1000390: 01079793     	slli	a5, a5, 0x10
+ 1000394: 00e7e733     	or	a4, a5, a4
+ 1000398: 00881813     	slli	a6, a6, 0x8
+ 100039c: 011867b3     	or	a5, a6, a7
+ 10003a0: 00f76733     	or	a4, a4, a5
+ 10003a4: 00e6a023     	sw	a4, 0x0(a3)
+ 10003a8: 00458593     	addi	a1, a1, 0x4
+ 10003ac: 00468693     	addi	a3, a3, 0x4
+ 10003b0: fc5596e3     	bne	a1, t0, 0x100037c <_nettle_sha256_compress+0x40>
+</code></pre>
+
+</details>
+
+### Queries
+<details>
+<summary>Metrics</summary>
+
+|   num_rows |   num_nodes |   num_edges | func                    | basic_block   |
+|-----------:|------------:|------------:|:------------------------|:--------------|
+|  132869451 |     5110487 |     7612982 | _nettle_sha256_compress | %bb.5         |
+|   32558415 |     1276330 |     1813282 | _nettle_sha256_compress | %bb.4         |
+|       1275 |         345 |         295 | _nettle_sha256_compress | %bb.1         |
+
+</details>
+
+### Sankeys
+<details>
+<summary>Merge Query Results</summary>
+
+
+```mermaid
+---
+config:
+  sankey:
+    showValues: true
+---
+sankey-beta
+
+%% source,target,value
+Set0,Merged,47
+Set1,Merged,0
+Set2,Merged,0
+Merged,Duplicates,1
+Merged,NameIsos,0
+Merged,Unique,46
+Unique,Topk,46
+
+```
+
+
+</details>
+
+<details>
+<summary>Filtered Candidates</summary>
+
+
+```mermaid
+---
+config:
+  sankey:
+    showValues: true
+---
+sankey-beta
+
+%% source,target,value
+Candidates,Kept,32
+Candidates,Filtered(min_runtime_reduction_rel),14
+
+```
+
+
+</details>
+
+<details>
+<summary>_nettle_sha256_compress_%bb.5_0</summary>
+
+```mermaid
+---
+config:
+  sankey:
+    showValues: true
+---
+sankey-beta
+
+%% source,target,value
+query,temp1,11457
+temp1,Filtered (I/O),10959
+temp1,temp2,498
+temp2,Filtered (Operands),331
+temp2,temp3,167
+temp3,Filtered (Enc),84
+temp3,temp4,83
+temp4,Filtered (Weights),36
+temp4,temp5,47
+temp5,temp6,47
+temp6,Selected,47
+```
+
+</details>
+
+<details>
+<summary>_nettle_sha256_compress_%bb.4_0</summary>
+
+```mermaid
+---
+config:
+  sankey:
+    showValues: true
+---
+sankey-beta
+
+%% source,target,value
+query,temp1,6211
+temp1,Filtered (I/O),5930
+temp1,temp2,281
+temp2,Filtered (Operands),186
+temp2,temp3,95
+temp3,Filtered (Enc),48
+temp3,temp4,47
+temp4,Filtered (Weights),47
+```
+
+</details>
+
+<details>
+<summary>_nettle_sha256_compress_%bb.1_0</summary>
+
+```mermaid
+---
+config:
+  sankey:
+    showValues: true
+---
+sankey-beta
+
+%% source,target,value
+query,temp1,50
+temp1,Filtered (I/O),7
+temp1,Filtered (Mem),3
+temp1,temp2,40
+temp2,Filtered (Operands),26
+temp2,temp3,14
+temp3,Filtered (Enc),6
+temp3,temp4,8
+temp4,Filtered (Weights),8
+```
+
+</details>
+
+### Compare DF
+| Model         | Arch                         |   Run Instructions |   Run Instructions (rel.) |   Total ROM |   Total RAM |   ROM code |   ROM code (rel.) |
+|:--------------|:-----------------------------|-------------------:|--------------------------:|------------:|------------:|-----------:|------------------:|
+| nettle-sha256 | rv32im_zicsr_zifencei        |            3776360 |                  1        |        9904 |        1336 |       9572 |          1        |
+| nettle-sha256 | rv32im_zicsr_zifencei_xisaac |            2345660 |                  0.621143 |        7760 |        1336 |       7428 |          0.776013 |
+
+### CoreDSL
+<details>
+<summary>gen/XIsaac.core_desc</summary>
+
+```c
+import "/var/tmp/ga87puy/isaac-demo/etiss_arch_riscv/rv_base/RVI.core_desc"
+
+InstructionSet XIsaac extends RV32I {
+    instructions {
+        CUSTOM0 {
+            encoding: 7'b0000000 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom0", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)(rs1_val) ^ (unsigned<32>)((unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) << (unsigned<32>)((21)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) >> (unsigned<32>)((11)))))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM1 {
+            encoding: 7'b0000001 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom1", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) << (unsigned<32>)((26)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) >> (unsigned<32>)((6)))))))))) ^ (unsigned<32>)(rs1_val))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM2 {
+            encoding: 7'b0000010 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom2", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)(rs1_val) ^ (unsigned<32>)((unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) << (unsigned<32>)((7)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) >> (unsigned<32>)((25)))))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM3 {
+            encoding: 2'b00 :: uimm5[4:0] :: rs2[4:0] :: rs1[4:0] :: 3'b001 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom3", "{name(rd)}, {name(rs1)}, {name(rs2)}, {uimm5}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)(rs1_val) ^ (unsigned<32>)((unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) << (unsigned<32>)((21)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) >> (unsigned<32>)((unsigned<5>)((uimm5))))))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM4 {
+            encoding: 2'b01 :: uimm4[4:0] :: rs2[4:0] :: rs1[4:0] :: 3'b001 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom4", "{name(rd)}, {name(rs1)}, {name(rs2)}, {uimm4}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) << (unsigned<32>)((26)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) >> (unsigned<32>)((unsigned<4>)((uimm4))))))))))) ^ (unsigned<32>)(rs1_val))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM5 {
+            encoding: 2'b10 :: uimm5[4:0] :: rs2[4:0] :: rs1[4:0] :: 3'b001 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom5", "{name(rd)}, {name(rs1)}, {name(rs2)}, {uimm5}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) << (unsigned<32>)((26)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) >> (unsigned<32>)((unsigned<5>)((uimm5))))))))))) ^ (unsigned<32>)(rs1_val))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM6 {
+            encoding: 7'b0000011 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom6", "{name(rd)}, {name(rs1)}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) << (unsigned<32>)((21)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) >> (unsigned<32>)((11)))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM7 {
+            encoding: 7'b0000100 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom7", "{name(rd)}, {name(rs1)}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) << (unsigned<32>)((7)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) >> (unsigned<32>)((25)))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM8 {
+            encoding: 7'b0000101 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom8", "{name(rd)}, {name(rs1)}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) << (unsigned<32>)((26)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) >> (unsigned<32>)((6)))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM9 {
+            encoding: 7'b0000110 :: uimm5[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom9", "{name(rd)}, {name(rs1)}, {uimm5}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) << (unsigned<32>)((21)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) >> (unsigned<32>)((unsigned<5>)((uimm5))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM10 {
+            encoding: uimm6[11:0] :: rs1[4:0] :: 3'b010 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom10", "{name(rd)}, {name(rs1)}, {uimm6}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) << (unsigned<32>)((7)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) >> (unsigned<32>)((unsigned<6>)((uimm6))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM11 {
+            encoding: uimm7[11:0] :: rs1[4:0] :: 3'b011 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom11", "{name(rd)}, {name(rs1)}, {uimm7}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) << (unsigned<32>)((7)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) >> (unsigned<32>)((unsigned<7>)((uimm7))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM12 {
+            encoding: 7'b0000111 :: uimm4[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom12", "{name(rd)}, {name(rs1)}, {uimm4}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) << (unsigned<32>)((26)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) >> (unsigned<32>)((unsigned<4>)((uimm4))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM13 {
+            encoding: 7'b0001000 :: uimm5[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom13", "{name(rd)}, {name(rs1)}, {uimm5}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) << (unsigned<32>)((26)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) >> (unsigned<32>)((unsigned<5>)((uimm5))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM14 {
+            encoding: 7'b0001001 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom14", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) << (unsigned<32>)((26)))))) | (unsigned<32>)(rs1_val))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM15 {
+            encoding: 7'b0001010 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom15", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)(rs1_val) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) >> (unsigned<32>)((25)))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM16 {
+            encoding: 7'b0001011 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom16", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) << (unsigned<32>)((7)))))) | (unsigned<32>)(rs1_val))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM17 {
+            encoding: 7'b0001100 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom17", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)(rs1_val) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) >> (unsigned<32>)((11)))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM18 {
+            encoding: 7'b0001101 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom18", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)(rs1_val) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) >> (unsigned<32>)((6)))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM19 {
+            encoding: 7'b0001110 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom19", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) << (unsigned<32>)((21)))))) | (unsigned<32>)(rs1_val))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM20 {
+            encoding: 2'b11 :: uimm4[4:0] :: rs2[4:0] :: rs1[4:0] :: 3'b001 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom20", "{name(rd)}, {name(rs1)}, {name(rs2)}, {uimm4}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) << (unsigned<32>)((unsigned<4>)((uimm4))))))) | (unsigned<32>)(rs1_val))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM21 {
+            encoding: 2'b00 :: uimm5[4:0] :: rs2[4:0] :: rs1[4:0] :: 3'b100 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom21", "{name(rd)}, {name(rs1)}, {name(rs2)}, {uimm5}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) << (unsigned<32>)((unsigned<5>)((uimm5))))))) | (unsigned<32>)(rs1_val))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM22 {
+            encoding: 2'b01 :: uimm5[4:0] :: rs2[4:0] :: rs1[4:0] :: 3'b100 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom22", "{name(rd)}, {name(rs1)}, {name(rs2)}, {uimm5}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)(rs1_val) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) >> (unsigned<32>)((unsigned<5>)((uimm5))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM23 {
+            encoding: 2'b10 :: uimm4[4:0] :: rs2[4:0] :: rs1[4:0] :: 3'b100 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom23", "{name(rd)}, {name(rs1)}, {name(rs2)}, {uimm4}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)(rs1_val) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) >> (unsigned<32>)((unsigned<4>)((uimm4))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM24 {
+            encoding: 7'b0001111 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom24", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)(rs1_val) ^ (unsigned<32>)((unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) << (unsigned<32>)((13)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) >> (unsigned<32>)((19)))))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM25 {
+            encoding: 7'b0010000 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom25", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) << (unsigned<32>)((25)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) >> (unsigned<32>)((7)))))))))) ^ (unsigned<32>)(rs1_val))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM26 {
+            encoding: 7'b0010001 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom26", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)(rs1_val) ^ (unsigned<32>)((unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) << (unsigned<32>)((14)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) >> (unsigned<32>)((18)))))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM27 {
+            encoding: 7'b0010010 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom27", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) << (unsigned<32>)((15)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) >> (unsigned<32>)((17)))))))))) ^ (unsigned<32>)(rs1_val))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM28 {
+            encoding: 2'b11 :: uimm4[4:0] :: rs2[4:0] :: rs1[4:0] :: 3'b100 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom28", "{name(rd)}, {name(rs1)}, {name(rs2)}, {uimm4}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) << (unsigned<32>)((25)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) >> (unsigned<32>)((unsigned<4>)((uimm4))))))))))) ^ (unsigned<32>)(rs1_val))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM29 {
+            encoding: 2'b00 :: uimm5[4:0] :: rs2[4:0] :: rs1[4:0] :: 3'b101 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom29", "{name(rd)}, {name(rs1)}, {name(rs2)}, {uimm5}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) << (unsigned<32>)((25)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) >> (unsigned<32>)((unsigned<5>)((uimm5))))))))))) ^ (unsigned<32>)(rs1_val))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM30 {
+            encoding: 7'b0010011 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom30", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) << (unsigned<32>)((30)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) >> (unsigned<32>)((2)))))))))) ^ (unsigned<32>)(rs1_val))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM31 {
+            encoding: 7'b0010100 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom31", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)(rs1_val) ^ (unsigned<32>)((unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) << (unsigned<32>)((10)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) >> (unsigned<32>)((22)))))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM32 {
+            encoding: 7'b0010101 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom32", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)(rs1_val) ^ (unsigned<32>)((unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) << (unsigned<32>)((19)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) >> (unsigned<32>)((13)))))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM33 {
+            encoding: 2'b01 :: uimm5[4:0] :: rs2[4:0] :: rs1[4:0] :: 3'b101 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom33", "{name(rd)}, {name(rs1)}, {name(rs2)}, {uimm5}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)(rs1_val) ^ (unsigned<32>)((unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) << (unsigned<32>)((19)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs2_val) >> (unsigned<32>)((unsigned<5>)((uimm5))))))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM34 {
+            encoding: 7'b0010110 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom34", "{name(rd)}, {name(rs1)}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) << (unsigned<32>)((15)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) >> (unsigned<32>)((17)))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM35 {
+            encoding: 7'b0010111 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom35", "{name(rd)}, {name(rs1)}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) << (unsigned<32>)((14)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) >> (unsigned<32>)((18)))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM36 {
+            encoding: 7'b0011000 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom36", "{name(rd)}, {name(rs1)}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) << (unsigned<32>)((25)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) >> (unsigned<32>)((7)))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM37 {
+            encoding: 7'b0011001 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom37", "{name(rd)}, {name(rs1)}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) << (unsigned<32>)((13)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) >> (unsigned<32>)((19)))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM38 {
+            encoding: uimm6[11:0] :: rs1[4:0] :: 3'b110 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom38", "{name(rd)}, {name(rs1)}, {uimm6}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) << (unsigned<32>)((15)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) >> (unsigned<32>)((unsigned<6>)((uimm6))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM39 {
+            encoding: uimm7[11:0] :: rs1[4:0] :: 3'b111 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom39", "{name(rd)}, {name(rs1)}, {uimm7}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) << (unsigned<32>)((15)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) >> (unsigned<32>)((unsigned<7>)((uimm7))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM40 {
+            encoding: uimm6[11:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1011011;
+            assembly: {"custom40", "{name(rd)}, {name(rs1)}, {uimm6}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) << (unsigned<32>)((14)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) >> (unsigned<32>)((unsigned<6>)((uimm6))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM41 {
+            encoding: uimm7[11:0] :: rs1[4:0] :: 3'b001 :: rd[4:0] :: 7'b1011011;
+            assembly: {"custom41", "{name(rd)}, {name(rs1)}, {uimm7}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) << (unsigned<32>)((14)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) >> (unsigned<32>)((unsigned<7>)((uimm7))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM42 {
+            encoding: 7'b0011010 :: uimm4[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom42", "{name(rd)}, {name(rs1)}, {uimm4}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) << (unsigned<32>)((25)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) >> (unsigned<32>)((unsigned<4>)((uimm4))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM43 {
+            encoding: 7'b0011011 :: uimm5[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom43", "{name(rd)}, {name(rs1)}, {uimm5}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) << (unsigned<32>)((25)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) >> (unsigned<32>)((unsigned<5>)((uimm5))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM44 {
+            encoding: uimm6[11:0] :: rs1[4:0] :: 3'b010 :: rd[4:0] :: 7'b1011011;
+            assembly: {"custom44", "{name(rd)}, {name(rs1)}, {uimm6}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) << (unsigned<32>)((13)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) >> (unsigned<32>)((unsigned<6>)((uimm6))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM45 {
+            encoding: uimm7[11:0] :: rs1[4:0] :: 3'b011 :: rd[4:0] :: 7'b1011011;
+            assembly: {"custom45", "{name(rd)}, {name(rs1)}, {uimm7}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) << (unsigned<32>)((13)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) >> (unsigned<32>)((unsigned<7>)((uimm7))))))))));
+                X[rd] = outp0;
+            }
+        }
+    }
+}
+
+
+```
+
+</details>
+
+<details>
+<summary>gen_filtered/XIsaac.core_desc</summary>
+
+```c
+import "/var/tmp/ga87puy/isaac-demo/etiss_arch_riscv/rv_base/RVI.core_desc"
+
+InstructionSet XIsaac extends RV32I {
+    instructions {
+        CUSTOM0 {
+            encoding: 7'b0000000 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom0", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)((rs1_val)) ^ (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) << (unsigned<32>)(((21))))))))) | (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) >> (unsigned<32>)(((11)))))))))))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM1 {
+            encoding: 7'b0000001 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom1", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) << (unsigned<32>)(((26))))))))) | (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) >> (unsigned<32>)(((6))))))))))))))) ^ (unsigned<32>)((rs1_val))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM2 {
+            encoding: 7'b0000010 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom2", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)((rs1_val)) ^ (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) << (unsigned<32>)(((7))))))))) | (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) >> (unsigned<32>)(((25)))))))))))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM3 {
+            encoding: 2'b00 :: uimm5[4:0] :: rs2[4:0] :: rs1[4:0] :: 3'b001 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom3", "{name(rd)}, {name(rs1)}, {name(rs2)}, {uimm5}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)((rs1_val)) ^ (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) << (unsigned<32>)(((21))))))))) | (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) >> (unsigned<32>)(((unsigned<5>)(((uimm5)))))))))))))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM5 {
+            encoding: 2'b10 :: uimm5[4:0] :: rs2[4:0] :: rs1[4:0] :: 3'b001 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom5", "{name(rd)}, {name(rs1)}, {name(rs2)}, {uimm5}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) << (unsigned<32>)(((26))))))))) | (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) >> (unsigned<32>)(((unsigned<5>)(((uimm5))))))))))))))))) ^ (unsigned<32>)((rs1_val))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM6 {
+            encoding: 7'b0000011 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom6", "{name(rd)}, {name(rs1)}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs1_val)) << (unsigned<32>)(((21))))))))) | (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs1_val)) >> (unsigned<32>)(((11)))))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM7 {
+            encoding: 7'b0000100 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom7", "{name(rd)}, {name(rs1)}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs1_val)) << (unsigned<32>)(((7))))))))) | (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs1_val)) >> (unsigned<32>)(((25)))))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM8 {
+            encoding: 7'b0000101 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom8", "{name(rd)}, {name(rs1)}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs1_val)) << (unsigned<32>)(((26))))))))) | (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs1_val)) >> (unsigned<32>)(((6)))))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM9 {
+            encoding: 7'b0000110 :: uimm5[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom9", "{name(rd)}, {name(rs1)}, {uimm5}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs1_val)) << (unsigned<32>)(((21))))))))) | (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs1_val)) >> (unsigned<32>)(((unsigned<5>)(((uimm5)))))))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM13 {
+            encoding: 7'b0001000 :: uimm5[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom13", "{name(rd)}, {name(rs1)}, {uimm5}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs1_val)) << (unsigned<32>)(((26))))))))) | (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs1_val)) >> (unsigned<32>)(((unsigned<5>)(((uimm5)))))))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM14 {
+            encoding: 7'b0001001 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom14", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) << (unsigned<32>)(((26))))))))) | (unsigned<32>)((rs1_val))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM15 {
+            encoding: 7'b0001010 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom15", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)((rs1_val)) | (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) >> (unsigned<32>)(((25)))))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM16 {
+            encoding: 7'b0001011 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom16", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) << (unsigned<32>)(((7))))))))) | (unsigned<32>)((rs1_val))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM17 {
+            encoding: 7'b0001100 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom17", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)((rs1_val)) | (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) >> (unsigned<32>)(((11)))))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM18 {
+            encoding: 7'b0001101 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom18", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)((rs1_val)) | (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) >> (unsigned<32>)(((6)))))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM19 {
+            encoding: 7'b0001110 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom19", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) << (unsigned<32>)(((21))))))))) | (unsigned<32>)((rs1_val))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM21 {
+            encoding: 2'b00 :: uimm5[4:0] :: rs2[4:0] :: rs1[4:0] :: 3'b100 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom21", "{name(rd)}, {name(rs1)}, {name(rs2)}, {uimm5}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) << (unsigned<32>)(((unsigned<5>)(((uimm5))))))))))) | (unsigned<32>)((rs1_val))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM22 {
+            encoding: 2'b01 :: uimm5[4:0] :: rs2[4:0] :: rs1[4:0] :: 3'b100 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom22", "{name(rd)}, {name(rs1)}, {name(rs2)}, {uimm5}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)((rs1_val)) | (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) >> (unsigned<32>)(((unsigned<5>)(((uimm5)))))))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM24 {
+            encoding: 7'b0001111 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom24", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)((rs1_val)) ^ (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) << (unsigned<32>)(((13))))))))) | (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) >> (unsigned<32>)(((19)))))))))))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM25 {
+            encoding: 7'b0010000 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom25", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) << (unsigned<32>)(((25))))))))) | (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) >> (unsigned<32>)(((7))))))))))))))) ^ (unsigned<32>)((rs1_val))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM26 {
+            encoding: 7'b0010001 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom26", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)((rs1_val)) ^ (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) << (unsigned<32>)(((14))))))))) | (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) >> (unsigned<32>)(((18)))))))))))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM27 {
+            encoding: 7'b0010010 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom27", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) << (unsigned<32>)(((15))))))))) | (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) >> (unsigned<32>)(((17))))))))))))))) ^ (unsigned<32>)((rs1_val))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM29 {
+            encoding: 2'b00 :: uimm5[4:0] :: rs2[4:0] :: rs1[4:0] :: 3'b101 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom29", "{name(rd)}, {name(rs1)}, {name(rs2)}, {uimm5}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) << (unsigned<32>)(((25))))))))) | (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) >> (unsigned<32>)(((unsigned<5>)(((uimm5))))))))))))))))) ^ (unsigned<32>)((rs1_val))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM30 {
+            encoding: 7'b0010011 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom30", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) << (unsigned<32>)(((30))))))))) | (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) >> (unsigned<32>)(((2))))))))))))))) ^ (unsigned<32>)((rs1_val))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM31 {
+            encoding: 7'b0010100 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom31", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)((rs1_val)) ^ (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) << (unsigned<32>)(((10))))))))) | (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) >> (unsigned<32>)(((22)))))))))))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM32 {
+            encoding: 7'b0010101 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom32", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)((rs1_val)) ^ (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) << (unsigned<32>)(((19))))))))) | (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) >> (unsigned<32>)(((13)))))))))))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM33 {
+            encoding: 2'b01 :: uimm5[4:0] :: rs2[4:0] :: rs1[4:0] :: 3'b101 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom33", "{name(rd)}, {name(rs1)}, {name(rs2)}, {uimm5}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)((rs1_val)) ^ (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) << (unsigned<32>)(((19))))))))) | (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs2_val)) >> (unsigned<32>)(((unsigned<5>)(((uimm5)))))))))))))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM34 {
+            encoding: 7'b0010110 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom34", "{name(rd)}, {name(rs1)}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs1_val)) << (unsigned<32>)(((15))))))))) | (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs1_val)) >> (unsigned<32>)(((17)))))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM35 {
+            encoding: 7'b0010111 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom35", "{name(rd)}, {name(rs1)}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs1_val)) << (unsigned<32>)(((14))))))))) | (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs1_val)) >> (unsigned<32>)(((18)))))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM36 {
+            encoding: 7'b0011000 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom36", "{name(rd)}, {name(rs1)}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs1_val)) << (unsigned<32>)(((25))))))))) | (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs1_val)) >> (unsigned<32>)(((7)))))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM37 {
+            encoding: 7'b0011001 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom37", "{name(rd)}, {name(rs1)}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs1_val)) << (unsigned<32>)(((13))))))))) | (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs1_val)) >> (unsigned<32>)(((19)))))))))))));
+                X[rd] = outp0;
+            }
+        }
+        CUSTOM43 {
+            encoding: 7'b0011011 :: uimm5[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom43", "{name(rd)}, {name(rs1)}, {uimm5}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs1_val)) << (unsigned<32>)(((25))))))))) | (unsigned<32>)(((unsigned<32>)(((((unsigned<32>)((rs1_val)) >> (unsigned<32>)(((unsigned<5>)(((uimm5)))))))))))))));
+                X[rd] = outp0;
+            }
+        }
+    }
+}
+
+
+```
+
+</details>
+
+

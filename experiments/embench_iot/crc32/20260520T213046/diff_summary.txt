@@ -1,0 +1,56 @@
+=== DIFFS ===
+0) <rand_beebs-%bb.0>
+rel_weight [old] : 0.5649961252386773
+rel_weight [new] : 0.47807388314692695
+rel_weight [diff]: -0.08692
+rel_weight [rel] : -15.38%
+num_instrs [old] : 13
+num_instrs [new] : 11
+num_instrs [diff]: -2
+num_instrs [rel] : -15.38%
+diff --git a/old b/new
+index 4aec9ad..07617a0 100644
+--- a/old
++++ b/new
+@@ -5,9 +5,7 @@ addi     a2, a2, -0x193
+ mul      a0, a0, a2    
+ lui      a2, 0x3       
+ addi     a2, a2, 0x39  
+-add      a0, a0, a2    
+-slli     a0, a0, 0x1   
+-srli     a2, a0, 0x1   
++custom4  a2, a2, a0    
+ srli     a0, a2, 0x10  
+ sw       a2, 0x6bc(a1) 
+ ret                    
+
+1) <benchmark_body-%bb.3>
+rel_weight [old] : 0.43461240402975176
+rel_weight [new] : 0.3042288347298626
+rel_weight [diff]: -0.13038
+rel_weight [rel] : -30.00%
+num_instrs [old] : 10
+num_instrs [new] : 7
+num_instrs [diff]: -3
+num_instrs [rel] : -30.00%
+diff --git a/old b/new
+index b540f4d..287f39d 100644
+--- a/old
++++ b/new
+@@ -1,10 +1,7 @@
+-jal       0x1000404 <rand_beebs>             
+-xor       a0, a0, s3                         
+-andi      a0, a0, 0xff                       
+-slli      a0, a0, 0x2                        
+-add       a0, s2, a0                         
++jal       0x10003f0 <rand_beebs>             
++custom6   a0, a0, s3                         
++custom10  a0, a0, s2, 0x2                    
+ lw        a0, 0x0(a0)                        
+-srli      a1, s3, 0x8                        
+ addi      s4, s4, -0x1                       
+-xor       s3, a0, a1                         
+-bnez      s4, 0x1000384 <benchmark_body+0x40>
++custom12  s3, a0, s3, 0x8                    
++bnez      s4, 0x100037c <benchmark_body+0x40>
+

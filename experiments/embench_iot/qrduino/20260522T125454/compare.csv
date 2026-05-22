@@ -1,0 +1,3 @@
+,Model,Arch,Run Instructions,Run Instructions (rel.),Total ROM,Total RAM,ROM code,ROM code (rel.)
+0,qrduino,rv32im_zicsr_zifencei,2828818,1.0,16244,9460,14632,1.0
+1,qrduino,rv32im_zicsr_zifencei_xisaac,2392578,0.8457871803700344,15604,9460,13992,0.956260251503554

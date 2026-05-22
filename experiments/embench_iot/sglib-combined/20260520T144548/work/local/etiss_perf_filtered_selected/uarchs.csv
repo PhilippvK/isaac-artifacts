@@ -1,0 +1,4 @@
+,uarch,uarch_lower,variant,description,details,total_area_estimate
+0,CV32E40PXISAACV0,cv32e40pxisaacv0,V0,all:0,"SG1(II=1, lats={CUSTOM5: 1}, full_lats={CUSTOM5: 3})",123.0
+1,CV32E40PXISAACV1,cv32e40pxisaacv1,V1,all:1,"SG1(II=1, lats={CUSTOM5: 2}, full_lats={CUSTOM5: 4})",123.0
+2,CV32E40PXISAACV2,cv32e40pxisaacv2,V2,all:2,"SG1(II=2, lats={CUSTOM5: 2}, full_lats={CUSTOM5: 4})",123.0

@@ -1,0 +1,38 @@
+=== DIFFS ===
+0) <malloc_beebs-%bb.1>
+Not found!
+1) <benchmark_body-%bb.76>
+rel_weight [old] : 0.060656586839859604
+rel_weight [new] : 0.050719096052683335
+rel_weight [diff]: -0.00994
+rel_weight [rel] : -16.39%
+num_instrs [old] : 13
+num_instrs [new] : 11
+num_instrs [diff]: -2
+num_instrs [rel] : -15.38%
+diff --git a/old b/new
+index 236b877..c626357 100644
+--- a/old
++++ b/new
+@@ -1,13 +1,11 @@
+-slli     a4, a3, 0x2                             
+-add      a4, s11, a4                             
++custom5  a4, s11, a3, 0x2                        
+ lw       a5, 0x0(a4)                             
+-slli     a2, a2, 0x2                             
+-add      a2, s11, a2                             
++custom5  a2, s11, a2, 0x2                        
+ sw       a5, 0x0(a2)                             
+ sw       a1, 0x0(a4)                             
+-slli     a4, a3, 0x1                             
+-addi     a5, a4, 0x1                             
+-addi     a4, a4, 0x2                             
++slli     a5, a3, 0x1                             
++addi     a5, a5, 0x1                             
++custom5  a4, s7, a3, 0x1                         
+ mv       a2, a3                                  
+-blt      a5, a0, 0x1000eac <benchmark_body+0x550>
+-j        0x1000e70 <benchmark_body+0x514>        
++blt      a5, a0, 0x1000e44 <benchmark_body+0x504>
++j        0x1000e0c <benchmark_body+0x4cc>        
+

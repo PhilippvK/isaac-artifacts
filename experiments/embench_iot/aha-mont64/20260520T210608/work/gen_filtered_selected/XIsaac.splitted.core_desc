@@ -1,0 +1,37 @@
+import "/var/tmp/ga87puy/isaac-demo/etiss_arch_riscv/rv_base/RVI.core_desc"
+
+InstructionSet XIsaacCUSTOM0single extends RV32I {
+    instructions {
+        CUSTOM0 {
+            encoding: 7'b0000000 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom0", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)(((unsigned<32>)((((rs1_val < (1) ? 1 : 0)))))) & (unsigned<32>)(((unsigned<32>)((((rs2_val < (64) ? 1 : 0))))))))));
+                X[rd] = outp0;
+            }
+        }
+    }
+}
+
+InstructionSet XIsaacCUSTOM4single extends RV32I {
+    instructions {
+        CUSTOM4 {
+            encoding: 7'b0000100 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom4", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> outp0 = (unsigned<32>)(((((signed<32>)((rs2_val)) + (signed<32>)(((unsigned<32>)((((rs1_val < (1) ? 1 : 0))))))))));
+                X[rd] = outp0;
+            }
+        }
+    }
+}
+
+InstructionSet XIsaac extends XIsaacCUSTOM0single, XIsaacCUSTOM4single {
+    instructions {
+    }
+}
+

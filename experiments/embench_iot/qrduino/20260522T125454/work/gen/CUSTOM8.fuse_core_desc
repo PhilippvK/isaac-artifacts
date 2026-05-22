@@ -1,0 +1,25 @@
+// DateTime: 20260522T125728, Sub: 8, Name: CUSTOM8, Inputs: 1, Outputs: 1
+
+import "RV32I.core_desc"
+
+InstructionSet MySet extends RV32I {
+    instructions {
+        CUSTOM8 {
+            operands: {
+                unsigned<5> rd [[is_reg]] [[reg_class="GPR"]] [[reg_type="s32"]] [[out]];
+                unsigned<5> rs1 [[is_reg]] [[reg_class="GPR"]] [[reg_type="s32"]] [[in]];
+                signed<1> simm1 [[is_imm]] [[in]];
+            }
+            encoding: auto;
+            assembly: {"custom8", "{name(rd)}, {name(rs1)}, {simm1}"};
+            behavior: {
+                unsigned<32> rs1_val=X[rs1];
+                unsigned<32> outp0=(unsigned<32>)(ANDI((unsigned<32>)(XORI(rs1_val,(unsigned<1>)(simm1))),(7)));
+                X[rd]=outp0;
+                
+            }
+        }
+        
+
+    }
+}

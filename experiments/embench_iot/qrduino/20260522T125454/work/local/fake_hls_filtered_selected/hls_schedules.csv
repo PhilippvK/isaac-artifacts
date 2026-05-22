@@ -1,0 +1,27 @@
+,config,idx,II,Fallback,Instruction latencies,Allocation,Overall latency,Area estimate w/o lifetimes,Area estimate w/ lifetimes,Total lifetime,Total decoupled ops
+0,SG_1_SOL_IDX_0,0,1,False,{'CUSTOM2': 3},{},2,1.0,1.0,0.0,0
+1,SG_1_SOL_IDX_1,1,1,False,{'CUSTOM2': 4},{},2,1.0,1.0,0.0,0
+2,SG_1_SOL_IDX_2,2,2,False,{'CUSTOM2': 4},{},2,1.0,1.0,0.0,0
+3,SG_1_SOL_IDX_3,3,1,False,{'CUSTOM2': 5},{},2,1.0,1.0,0.0,0
+4,SG_1_SOL_IDX_4,4,3,False,{'CUSTOM2': 5},{},2,1.0,1.0,0.0,0
+5,SG_1_SOL_IDX_5,5,2,False,{'CUSTOM2': 6},{},2,1.0,1.0,0.0,0
+6,SG_1_SOL_IDX_6,6,4,False,{'CUSTOM2': 6},{},2,1.0,1.0,0.0,0
+7,SG_2_SOL_IDX_0,0,1,False,{'CUSTOM7': 3},{},2,1.0,1.0,0.0,0
+8,SG_2_SOL_IDX_1,1,1,False,{'CUSTOM7': 4},{},2,1.0,1.0,0.0,0
+9,SG_2_SOL_IDX_2,2,2,False,{'CUSTOM7': 4},{},2,1.0,1.0,0.0,0
+10,SG_3_SOL_IDX_0,0,1,False,{'CUSTOM18': 3},{},2,1.0,1.0,0.0,0
+11,SG_3_SOL_IDX_1,1,1,False,{'CUSTOM18': 4},{},2,1.0,1.0,0.0,0
+12,SG_3_SOL_IDX_2,2,2,False,{'CUSTOM18': 4},{},2,1.0,1.0,0.0,0
+13,SG_3_SOL_IDX_3,3,1,False,{'CUSTOM18': 5},{},2,1.0,1.0,0.0,0
+14,SG_3_SOL_IDX_4,4,3,False,{'CUSTOM18': 5},{},2,1.0,1.0,0.0,0
+15,SG_4_SOL_IDX_0,0,1,False,{'CUSTOM21': 3},{},2,1.0,1.0,0.0,0
+16,SG_4_SOL_IDX_1,1,1,False,{'CUSTOM21': 4},{},2,1.0,1.0,0.0,0
+17,SG_4_SOL_IDX_2,2,2,False,{'CUSTOM21': 4},{},2,1.0,1.0,0.0,0
+18,SG_4_SOL_IDX_3,3,1,False,{'CUSTOM21': 5},{},2,1.0,1.0,0.0,0
+19,SG_4_SOL_IDX_4,4,3,False,{'CUSTOM21': 5},{},2,1.0,1.0,0.0,0
+20,SG_5_SOL_IDX_0,0,1,False,{'CUSTOM29': 3},{},2,1.0,1.0,0.0,0
+21,SG_5_SOL_IDX_1,1,1,False,{'CUSTOM29': 4},{},2,1.0,1.0,0.0,0
+22,SG_5_SOL_IDX_2,2,2,False,{'CUSTOM29': 4},{},2,1.0,1.0,0.0,0
+23,SG_6_SOL_IDX_0,0,1,False,{'CUSTOM31': 3},{},2,1.0,1.0,0.0,0
+24,SG_6_SOL_IDX_1,1,1,False,{'CUSTOM31': 4},{},2,1.0,1.0,0.0,0
+25,SG_6_SOL_IDX_2,2,2,False,{'CUSTOM31': 4},{},2,1.0,1.0,0.0,0

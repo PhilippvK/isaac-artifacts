@@ -1,0 +1,372 @@
+candidates:
+- artifacts:
+    cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/md5sum/20260520T152546/work/gen_filtered/CUSTOM0.core_desc
+    cdsl_encoded: /var/tmp/ga87puy/isaac-demo/out/embench_iot/md5sum/20260520T152546/work/gen/CUSTOM0.encoded.core_desc
+    flat: /var/tmp/ga87puy/isaac-demo/out/embench_iot/md5sum/20260520T152546/work/gen_filtered/CUSTOM0.flat
+    fuse_cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/md5sum/20260520T152546/work/gen_filtered/CUSTOM0.fuse_core_desc
+    io_sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/md5sum/20260520T152546/work/md5_%bb.10_0/io_sub521.pkl
+    sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/md5sum/20260520T152546/work/md5_%bb.10_0/sub521.pkl
+    tree: /var/tmp/ga87puy/isaac-demo/out/embench_iot/md5sum/20260520T152546/work/md5_%bb.10_0/tree521.pkl
+  id: 0
+  metrics:
+    code_size_reduction_rel: 0.0009354536950419989
+    enc_score: 0.9990234375
+    enc_weight: 0.0009765625
+    hls_area: 1.0
+    hls_area_scaled: 1.0
+    hls_ii: 1
+    hls_latency: 3
+    hls_num_shared: 1
+    runtime_reduction_rel: 0.025870524524091998
+    seal5_score: 1.0
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 1.0
+    '#InputNodes': 2.0
+    '#Instrs': 2.0
+    '#Isos': 0.0
+    '#IsosNO': 0.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 2.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 2.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 2
+    ConstantNodes:
+    - 160
+    ConstantSigns:
+    - false
+    ConstantValues:
+    - 2
+    Constraints: []
+    DateTime: 20260520T152630
+    EncodingBitsLeft (32 bits): 10.0
+    EncodingFootprint (32 bits): 0.6
+    EncodingWeight (32 bits): 0.0009765625
+    Freq: 52224.0
+    FullHash: b800d32ea77f8a1114faf904b286162f8531a982
+    GlobalHash: 5e81cd3e104730b74a08cede3ccad9bf510b6cd6
+    IOSubHash: 7425edf13ec9ddc5022bf254cc444efb
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 202
+    - 280
+    InstrName: CUSTOM0
+    Instrs:
+    - ADD
+    - SLLI
+    IsoNodes:
+    - 81
+    - 39
+    IsoWeight: 0.05174199742300598
+    Isos: []
+    IsosNO: []
+    LoadNodes: []
+    Nodes:
+    - 39
+    - 81
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 15.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    OperandNodes:
+    - 1154
+    - 202
+    - 280
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 1154
+    Parent: .nan
+    Predicates: 256
+    Predicates (str): '256'
+    Registers: 2
+    ScheduleLength: 3.0
+    Status: 1
+    Status (str): '1'
+    StoreNodes: []
+    SubHash: 4ddafd00eac0b15eb2d99c2af4e9e14b
+    TerminatorNodes: []
+    UniqueInstrs:
+    - ADD
+    - SLLI
+    Variations: 0
+    Weight: 0.05174199742300598
+    result: 521
+- artifacts:
+    cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/md5sum/20260520T152546/work/gen_filtered/CUSTOM2.core_desc
+    cdsl_encoded: /var/tmp/ga87puy/isaac-demo/out/embench_iot/md5sum/20260520T152546/work/gen/CUSTOM2.encoded.core_desc
+    flat: /var/tmp/ga87puy/isaac-demo/out/embench_iot/md5sum/20260520T152546/work/gen_filtered/CUSTOM2.flat
+    fuse_cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/md5sum/20260520T152546/work/gen_filtered/CUSTOM2.fuse_core_desc
+    io_sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/md5sum/20260520T152546/work/md5_%bb.10_0/io_sub530.pkl
+    sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/md5sum/20260520T152546/work/md5_%bb.10_0/sub530.pkl
+    tree: /var/tmp/ga87puy/isaac-demo/out/embench_iot/md5sum/20260520T152546/work/md5_%bb.10_0/tree530.pkl
+  id: 2
+  metrics:
+    code_size_reduction_rel: 0.004677268475210439
+    enc_score: 0.96875
+    enc_weight: 0.03125
+    hls_area: 1.0
+    hls_area_scaled: 1.0
+    hls_ii: 1
+    hls_latency: 3
+    hls_num_shared: 1
+    runtime_reduction_rel: 0.025871019900251202
+    seal5_score: 1.0
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 0.0
+    '#InputNodes': 2.0
+    '#Instrs': 2.0
+    '#Isos': 0.0
+    '#IsosNO': 0.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 2.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 2.0
+    BranchNodes: []
+    ConstantMinBits: []
+    ConstantNodes: []
+    ConstantSigns:
+    - false
+    ConstantValues: []
+    Constraints: []
+    DateTime: 20260520T152630
+    EncodingBitsLeft (32 bits): 5.0
+    EncodingFootprint (32 bits): 0.8
+    EncodingWeight (32 bits): 0.03125
+    Freq: 52224.0
+    FullHash: 42eccf2f104810a6240b79bb3b85c8ab52e492b2
+    GlobalHash: 5e81cd3e104730b74a08cede3ccad9bf510b6cd6
+    IOSubHash: 7425edf13ec9ddc5022bf254cc444efb
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 202
+    - 280
+    InstrName: CUSTOM2
+    Instrs:
+    - ADD
+    - SLLI
+    IsoNodes:
+    - 81
+    - 39
+    IsoWeight: 0.05174199742300598
+    Isos: []
+    IsosNO: []
+    LoadNodes: []
+    Nodes:
+    - 39
+    - 81
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 20.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    - uimm5
+    OperandNodes:
+    - 1154
+    - 202
+    - 280
+    - 1166
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    - null
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    - IMM
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 1154
+    Parent: 521.0
+    Predicates: 256
+    Predicates (str): '256'
+    Registers: 2
+    ScheduleLength: 3.0
+    Status: 1
+    Status (str): '1'
+    StoreNodes: []
+    SubHash: 4ddafd00eac0b15eb2d99c2af4e9e14b
+    TerminatorNodes: []
+    UniqueInstrs:
+    - ADD
+    - SLLI
+    Variations: 16
+    Weight: 0.05174199742300598
+    result: 530
+global:
+  artifacts:
+    ETISS_INSTALL_DIR: /var/tmp/ga87puy/isaac-demo/out/embench_iot/md5sum/20260520T152546/work/local//etiss//etiss_install
+    HLS_DIR: /var/tmp/ga87puy/isaac-demo/out/embench_iot/md5sum/20260520T152546/work/local/fake_hls_filtered
+    LLVM_INSTALL_DIR: /var/tmp/ga87puy/isaac-demo/out/embench_iot/md5sum/20260520T152546/work/local//seal5//llvm_install
+  properties:
+  - allowed_enc_sizes:
+    - 32
+    bb: '%bb.10'
+    candidate_count: 3
+    func: md5
+    ignore_names:
+    - G_PHI
+    - PHI
+    - COPY
+    - PseudoCALLIndirect
+    - PseudoLGA
+    - Select_GPR_Using_CC_GPR
+    - LUI
+    - PseudoMovAddr
+    - IMPLICIT_DEF
+    ignore_op_types:
+    - input
+    - constant
+    - label
+    instr_predicates: 511
+    limit_results: null
+    max_branches: 1
+    max_enc_footprint: 1.0
+    max_enc_weight: 1.0
+    max_inputs: 4
+    max_loads: 1
+    max_mems: 0
+    max_nodes: 1000
+    max_outputs: 2
+    max_path_len: 9
+    max_path_width: 2
+    max_stores: 1
+    min_enc_bits_left: 5
+    min_inputs: 1
+    min_iso_weight: 0.02845809858265329
+    min_nodes: 1
+    min_outputs: 1
+    min_path_len: 1
+    session: isaac-demo-md5sum-20260520T152546
+    stage: 32
+    timestamp: 20260520T152630
+    xlen: 32
+  - allowed_enc_sizes:
+    - 32
+    bb: '%bb.3'
+    candidate_count: 0
+    func: md5
+    ignore_names:
+    - G_PHI
+    - PHI
+    - COPY
+    - PseudoCALLIndirect
+    - PseudoLGA
+    - Select_GPR_Using_CC_GPR
+    - LUI
+    - PseudoMovAddr
+    - IMPLICIT_DEF
+    ignore_op_types:
+    - input
+    - constant
+    - label
+    instr_predicates: 511
+    limit_results: null
+    max_branches: 1
+    max_enc_footprint: 1.0
+    max_enc_weight: 1.0
+    max_inputs: 4
+    max_loads: 1
+    max_mems: 0
+    max_nodes: 1000
+    max_outputs: 2
+    max_path_len: 9
+    max_path_width: 2
+    max_stores: 1
+    min_enc_bits_left: 5
+    min_inputs: 1
+    min_iso_weight: 0.016197267498800266
+    min_nodes: 1
+    min_outputs: 1
+    min_path_len: 1
+    session: isaac-demo-md5sum-20260520T152546
+    stage: 32
+    timestamp: 20260520T152638
+    xlen: 32
+  - allowed_enc_sizes:
+    - 32
+    bb: '%bb.3'
+    candidate_count: 0
+    func: benchmark_body
+    ignore_names:
+    - G_PHI
+    - PHI
+    - COPY
+    - PseudoCALLIndirect
+    - PseudoLGA
+    - Select_GPR_Using_CC_GPR
+    - LUI
+    - PseudoMovAddr
+    - IMPLICIT_DEF
+    ignore_op_types:
+    - input
+    - constant
+    - label
+    instr_predicates: 511
+    limit_results: null
+    max_branches: 1
+    max_enc_footprint: 1.0
+    max_enc_weight: 1.0
+    max_inputs: 4
+    max_loads: 1
+    max_mems: 0
+    max_nodes: 1000
+    max_outputs: 2
+    max_path_len: 9
+    max_path_width: 2
+    max_stores: 1
+    min_enc_bits_left: 5
+    min_inputs: 1
+    min_iso_weight: 0.009218868705009282
+    min_nodes: 1
+    min_outputs: 1
+    min_path_len: 1
+    session: isaac-demo-md5sum-20260520T152546
+    stage: 32
+    timestamp: 20260520T152642
+    xlen: 32

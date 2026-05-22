@@ -1,0 +1,1753 @@
+candidates:
+- artifacts:
+    cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM0.core_desc
+    cdsl_encoded: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen/CUSTOM0.encoded.core_desc
+    flat: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM0.flat
+    fuse_cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM0.fuse_core_desc
+    io_sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/io_sub2113.pkl
+    sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/sub2113.pkl
+    tree: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/tree2113.pkl
+  id: 4
+  metrics:
+    code_size_reduction_rel: 0.012217470983506451
+    enc_score: 0.9990234375
+    enc_weight: 0.0009765625
+    hls_area: 1.0
+    hls_area_scaled: 1.0
+    hls_ii: 1
+    hls_latency: 3
+    hls_num_shared: 1
+    runtime_reduction_rel: 0.1120004242947844
+    seal5_score: 1.0
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 1.0
+    '#InputNodes': 2.0
+    '#Instrs': 2.0
+    '#Isos': 7.0
+    '#IsosNO': 7.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 2.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 2.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 11
+    ConstantNodes:
+    - 346
+    ConstantSigns:
+    - false
+    ConstantValues:
+    - 1020
+    Constraints: []
+    DateTime: 20260520T232327
+    EncodingBitsLeft (32 bits): 10.0
+    EncodingFootprint (32 bits): 0.6
+    EncodingWeight (32 bits): 0.0009765625
+    Freq: 16224.0
+    FullHash: ce2122923bf72dfd82d2ae0c44d05a4fd0529a00
+    GlobalHash: ac207dd466fd0efca85028970a5828c7d55716d5
+    IOSubHash: f1f8390b253069908fea9ecd883df98b
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 247
+    - 350
+    InstrName: CUSTOM0
+    Instrs:
+    - ADD
+    - ANDI
+    IsoNodes:
+    - 128
+    - 129
+    - 191
+    - 133
+    - 141
+    - 110
+    - 175
+    - 176
+    - 111
+    - 177
+    - 143
+    - 181
+    - 151
+    - 152
+    - 189
+    - 127
+    IsoWeight: 0.07246136504857946
+    Isos:
+    - 2183
+    - 2151
+    - 2191
+    - 2163
+    - 2166
+    - 2139
+    - 2174
+    IsosNO:
+    - 2183
+    - 2151
+    - 2191
+    - 2163
+    - 2166
+    - 2139
+    - 2174
+    LoadNodes: []
+    Nodes:
+    - 128
+    - 176
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 15.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    OperandNodes:
+    - 2516
+    - 247
+    - 350
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 2516
+    Parent: .nan
+    Predicates: 256
+    Predicates (str): '256'
+    Registers: 2
+    ScheduleLength: 3.0
+    Status: 1
+    Status (str): '1'
+    StoreNodes: []
+    SubHash: 6ce2b332f815edcac74c8441ebc75452
+    TerminatorNodes: []
+    UniqueInstrs:
+    - ADD
+    - ANDI
+    Variations: 0
+    Weight: 0.009057670631072432
+    result: 2113
+- artifacts:
+    cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM1.core_desc
+    cdsl_encoded: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen/CUSTOM1.encoded.core_desc
+    flat: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM1.flat
+    fuse_cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM1.fuse_core_desc
+    io_sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/io_sub2115.pkl
+    sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/sub2115.pkl
+    tree: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/tree2115.pkl
+  id: 5
+  metrics:
+    code_size_reduction_rel: 0.005497861942577842
+    enc_score: 0.9990234375
+    enc_weight: 0.0009765625
+    hls_area: 1.0
+    hls_area_scaled: 1.0
+    hls_ii: 1
+    hls_latency: 3
+    hls_num_shared: 1
+    runtime_reduction_rel: 0.037362505460701634
+    seal5_score: 1.0
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 1.0
+    '#InputNodes': 2.0
+    '#Instrs': 2.0
+    '#Isos': 7.0
+    '#IsosNO': 7.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 2.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 2.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 2
+    ConstantNodes:
+    - 308
+    ConstantSigns:
+    - false
+    ConstantValues:
+    - 2
+    Constraints: []
+    DateTime: 20260520T232327
+    EncodingBitsLeft (32 bits): 10.0
+    EncodingFootprint (32 bits): 0.6
+    EncodingWeight (32 bits): 0.0009765625
+    Freq: 16224.0
+    FullHash: e92e8be328c8df97cb8fe7001b3df6c40831fa04
+    GlobalHash: ac207dd466fd0efca85028970a5828c7d55716d5
+    IOSubHash: 7425edf13ec9ddc5022bf254cc444efb
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 261
+    - 400
+    InstrName: CUSTOM1
+    Instrs:
+    - SLLI
+    - ADD
+    IsoNodes:
+    - 192
+    - 193
+    - 134
+    - 135
+    - 108
+    - 109
+    - 140
+    - 142
+    - 144
+    - 145
+    - 149
+    - 182
+    - 183
+    - 150
+    - 188
+    - 190
+    IsoWeight: 0.07246136504857946
+    Isos:
+    - 2176
+    - 2149
+    - 2150
+    - 2152
+    - 2121
+    - 2132
+    - 2134
+    IsosNO:
+    - 2176
+    - 2149
+    - 2150
+    - 2152
+    - 2121
+    - 2132
+    - 2134
+    LoadNodes: []
+    Nodes:
+    - 183
+    - 135
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 15.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    OperandNodes:
+    - 2518
+    - 261
+    - 400
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 2518
+    Parent: .nan
+    Predicates: 256
+    Predicates (str): '256'
+    Registers: 2
+    ScheduleLength: 3.0
+    Status: 1
+    Status (str): '1'
+    StoreNodes: []
+    SubHash: 4ddafd00eac0b15eb2d99c2af4e9e14b
+    TerminatorNodes: []
+    UniqueInstrs:
+    - SLLI
+    - ADD
+    Variations: 0
+    Weight: 0.009057670631072432
+    result: 2115
+- artifacts:
+    cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM3.core_desc
+    cdsl_encoded: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen/CUSTOM3.encoded.core_desc
+    flat: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM3.flat
+    fuse_cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM3.fuse_core_desc
+    io_sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/io_sub2210.pkl
+    sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/sub2210.pkl
+    tree: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/tree2210.pkl
+  id: 15
+  metrics:
+    code_size_reduction_rel: 0.007941356139279154
+    enc_score: 0.96875
+    enc_weight: 0.03125
+    hls_area: 1.0
+    hls_area_scaled: 1.0
+    hls_ii: 1
+    hls_latency: 3
+    hls_num_shared: 1
+    runtime_reduction_rel: 0.038233705475217206
+    seal5_score: 1.0
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 0.0
+    '#InputNodes': 2.0
+    '#Instrs': 2.0
+    '#Isos': 7.0
+    '#IsosNO': 7.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 2.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 2.0
+    BranchNodes: []
+    ConstantMinBits: []
+    ConstantNodes: []
+    ConstantSigns:
+    - false
+    ConstantValues: []
+    Constraints: []
+    DateTime: 20260520T232327
+    EncodingBitsLeft (32 bits): 5.0
+    EncodingFootprint (32 bits): 0.8
+    EncodingWeight (32 bits): 0.03125
+    Freq: 16224.0
+    FullHash: 15d8c1dc7cc66cf3e66681dfc36d51bf459ce17e
+    GlobalHash: ac207dd466fd0efca85028970a5828c7d55716d5
+    IOSubHash: 7425edf13ec9ddc5022bf254cc444efb
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 261
+    - 400
+    InstrName: CUSTOM3
+    Instrs:
+    - SLLI
+    - ADD
+    IsoNodes:
+    - 192
+    - 193
+    - 134
+    - 135
+    - 108
+    - 109
+    - 140
+    - 142
+    - 144
+    - 145
+    - 149
+    - 182
+    - 183
+    - 150
+    - 188
+    - 190
+    IsoWeight: 0.07246136504857946
+    Isos:
+    - 2176
+    - 2149
+    - 2150
+    - 2152
+    - 2121
+    - 2132
+    - 2134
+    IsosNO:
+    - 2176
+    - 2149
+    - 2150
+    - 2152
+    - 2121
+    - 2132
+    - 2134
+    LoadNodes: []
+    Nodes:
+    - 183
+    - 135
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 20.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    - uimm5
+    OperandNodes:
+    - 2518
+    - 261
+    - 400
+    - 2614
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    - null
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    - IMM
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 2518
+    Parent: 2115.0
+    Predicates: 256
+    Predicates (str): '256'
+    Registers: 2
+    ScheduleLength: 3.0
+    Status: 1
+    Status (str): '1'
+    StoreNodes: []
+    SubHash: 4ddafd00eac0b15eb2d99c2af4e9e14b
+    TerminatorNodes: []
+    UniqueInstrs:
+    - SLLI
+    - ADD
+    Variations: 16
+    Weight: 0.009057670631072432
+    result: 2210
+- artifacts:
+    cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM4.core_desc
+    cdsl_encoded: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen/CUSTOM4.encoded.core_desc
+    flat: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM4.flat
+    fuse_cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM4.fuse_core_desc
+    io_sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/io_sub1962.pkl
+    sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/sub1962.pkl
+    tree: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/tree1962.pkl
+  id: 1
+  metrics:
+    code_size_reduction_rel: 0.00977397678680525
+    enc_score: 0.9990234375
+    enc_weight: 0.0009765625
+    hls_area: 1.0
+    hls_area_scaled: 1.0
+    hls_ii: 1
+    hls_latency: 3
+    hls_num_shared: 1
+    runtime_reduction_rel: 0.0747250109214036
+    seal5_score: 1.0
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 2.0
+    '#InputNodes': 2.0
+    '#Instrs': 3.0
+    '#Isos': 7.0
+    '#IsosNO': 6.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 3.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 3.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 6
+    - 2
+    ConstantNodes:
+    - 396
+    - 308
+    ConstantSigns:
+    - false
+    - false
+    ConstantValues:
+    - 24
+    - 2
+    Constraints: []
+    DateTime: 20260520T232327
+    EncodingBitsLeft (32 bits): 10.0
+    EncodingFootprint (32 bits): 0.6
+    EncodingWeight (32 bits): 0.0009765625
+    Freq: 16224.0
+    FullHash: 6d54ed99b17ffcdca4722d04936ebfb4425a6387
+    GlobalHash: ac207dd466fd0efca85028970a5828c7d55716d5
+    IOSubHash: 0ee949c9fbb4cad13b3528d19768910c
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 347
+    - 400
+    InstrName: CUSTOM4
+    Instrs:
+    - SRLI
+    - SLLI
+    - ADD
+    IsoNodes:
+    - 193
+    - 261
+    - 135
+    - 266
+    - 202
+    - 140
+    - 109
+    - 271
+    - 145
+    - 150
+    - 183
+    - 188
+    IsoWeight: 0.05434602378643459
+    Isos:
+    - 2055
+    - 2092
+    - 1966
+    - 2073
+    - 2042
+    - 2009
+    - 1982
+    IsosNO:
+    - 2055
+    - 2092
+    - 1966
+    - 2073
+    - 2042
+    - 2009
+    LoadNodes: []
+    Nodes:
+    - 261
+    - 183
+    - 135
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 15.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    OperandNodes:
+    - 2365
+    - 347
+    - 400
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 2365
+    Parent: .nan
+    Predicates: 256
+    Predicates (str): '256'
+    Registers: 2
+    ScheduleLength: 4.0
+    Status: 1
+    Status (str): '1'
+    StoreNodes: []
+    SubHash: 2bff980a00f2c5034d75e11ca2091680
+    TerminatorNodes: []
+    UniqueInstrs:
+    - SLLI
+    - ADD
+    - SRLI
+    Variations: 0
+    Weight: 0.013586505946608648
+    result: 1962
+- artifacts:
+    cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM5.core_desc
+    cdsl_encoded: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen/CUSTOM5.encoded.core_desc
+    flat: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM5.flat
+    fuse_cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM5.fuse_core_desc
+    io_sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/io_sub1956.pkl
+    sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/sub1956.pkl
+    tree: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/tree1956.pkl
+  id: 0
+  metrics:
+    code_size_reduction_rel: 0.00977397678680525
+    enc_score: 0.9990234375
+    enc_weight: 0.0009765625
+    hls_area: 1.0
+    hls_area_scaled: 1.0
+    hls_ii: 1
+    hls_latency: 3
+    hls_num_shared: 1
+    runtime_reduction_rel: 0.0747250109214036
+    seal5_score: 1.0
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 2.0
+    '#InputNodes': 2.0
+    '#Instrs': 3.0
+    '#Isos': 5.0
+    '#IsosNO': 4.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 3.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 3.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 4
+    - 11
+    ConstantNodes:
+    - 355
+    - 346
+    ConstantSigns:
+    - false
+    - false
+    ConstantValues:
+    - 6
+    - 1020
+    Constraints: []
+    DateTime: 20260520T232327
+    EncodingBitsLeft (32 bits): 10.0
+    EncodingFootprint (32 bits): 0.6
+    EncodingWeight (32 bits): 0.0009765625
+    Freq: 16224.0
+    FullHash: 1e24a1f5377cf394e77ab4e6f1c52168afdb3e9d
+    GlobalHash: ac207dd466fd0efca85028970a5828c7d55716d5
+    IOSubHash: 1e7c4ce559ae118605b4ac356ba3d112
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 327
+    - 354
+    InstrName: CUSTOM5
+    Instrs:
+    - SRLI
+    - ANDI
+    - ADD
+    IsoNodes:
+    - 259
+    - 133
+    - 267
+    - 269
+    - 141
+    - 143
+    - 181
+    - 189
+    - 191
+    IsoWeight: 0.04075951783982595
+    Isos:
+    - 2049
+    - 1963
+    - 2036
+    - 2010
+    - 2014
+    IsosNO:
+    - 2049
+    - 2010
+    - 2036
+    - 2014
+    LoadNodes: []
+    Nodes:
+    - 269
+    - 191
+    - 143
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 15.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    OperandNodes:
+    - 2359
+    - 327
+    - 354
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 2359
+    Parent: .nan
+    Predicates: 256
+    Predicates (str): '256'
+    Registers: 2
+    ScheduleLength: 4.0
+    Status: 1
+    Status (str): '1'
+    StoreNodes: []
+    SubHash: 32a502ad0021a4d228806460d5b6c1e6
+    TerminatorNodes: []
+    UniqueInstrs:
+    - ADD
+    - ANDI
+    - SRLI
+    Variations: 0
+    Weight: 0.013586505946608648
+    result: 1956
+- artifacts:
+    cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM8.core_desc
+    cdsl_encoded: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen/CUSTOM8.encoded.core_desc
+    flat: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM8.flat
+    fuse_cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM8.fuse_core_desc
+    io_sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/io_sub2194.pkl
+    sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/sub2194.pkl
+    tree: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/tree2194.pkl
+  id: 11
+  metrics:
+    code_size_reduction_rel: 0.03665241295051924
+    enc_score: 0.96875
+    enc_weight: 0.03125
+    hls_area: 1.0
+    hls_area_scaled: 1.0
+    hls_ii: 1
+    hls_latency: 3
+    hls_num_shared: 1
+    runtime_reduction_rel: 0.22434921693885268
+    seal5_score: 1.0
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 1.0
+    '#InputNodes': 2.0
+    '#Instrs': 3.0
+    '#Isos': 5.0
+    '#IsosNO': 4.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 3.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 3.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 11
+    ConstantNodes:
+    - 346
+    ConstantSigns:
+    - false
+    - false
+    ConstantValues:
+    - 1020
+    Constraints: []
+    DateTime: 20260520T232327
+    EncodingBitsLeft (32 bits): 5.0
+    EncodingFootprint (32 bits): 0.8
+    EncodingWeight (32 bits): 0.03125
+    Freq: 16224.0
+    FullHash: 543c95eb3726b4efbd1a91fd9ba04ab95c2d6b98
+    GlobalHash: ac207dd466fd0efca85028970a5828c7d55716d5
+    IOSubHash: 1e7c4ce559ae118605b4ac356ba3d112
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 327
+    - 354
+    InstrName: CUSTOM8
+    Instrs:
+    - SRLI
+    - ANDI
+    - ADD
+    IsoNodes:
+    - 259
+    - 133
+    - 267
+    - 269
+    - 141
+    - 143
+    - 181
+    - 189
+    - 191
+    IsoWeight: 0.04075951783982595
+    Isos:
+    - 2049
+    - 1963
+    - 2036
+    - 2010
+    - 2014
+    IsosNO:
+    - 2049
+    - 2010
+    - 2036
+    - 2014
+    LoadNodes: []
+    Nodes:
+    - 269
+    - 191
+    - 143
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 20.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    - uimm5
+    OperandNodes:
+    - 2359
+    - 327
+    - 354
+    - 2598
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    - null
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    - IMM
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 2359
+    Parent: 1956.0
+    Predicates: 256
+    Predicates (str): '256'
+    Registers: 2
+    ScheduleLength: 4.0
+    Status: 1
+    Status (str): '1'
+    StoreNodes: []
+    SubHash: 32a502ad0021a4d228806460d5b6c1e6
+    TerminatorNodes: []
+    UniqueInstrs:
+    - ADD
+    - ANDI
+    - SRLI
+    Variations: 16
+    Weight: 0.013586505946608648
+    result: 2194
+- artifacts:
+    cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM10.core_desc
+    cdsl_encoded: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen/CUSTOM10.encoded.core_desc
+    flat: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM10.flat
+    fuse_cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM10.fuse_core_desc
+    io_sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/io_sub2202.pkl
+    sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/sub2202.pkl
+    tree: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/tree2202.pkl
+  id: 13
+  metrics:
+    code_size_reduction_rel: 0.00977397678680525
+    enc_score: 0.96875
+    enc_weight: 0.03125
+    hls_area: 1.0
+    hls_area_scaled: 1.0
+    hls_ii: 1
+    hls_latency: 3
+    hls_num_shared: 1
+    runtime_reduction_rel: 0.0747250109214036
+    seal5_score: 1.0
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 1.0
+    '#InputNodes': 2.0
+    '#Instrs': 3.0
+    '#Isos': 5.0
+    '#IsosNO': 4.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 3.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 3.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 9
+    ConstantNodes:
+    - 386
+    ConstantSigns:
+    - false
+    - false
+    ConstantValues:
+    - 255
+    Constraints: []
+    DateTime: 20260520T232327
+    EncodingBitsLeft (32 bits): 5.0
+    EncodingFootprint (32 bits): 0.8
+    EncodingWeight (32 bits): 0.03125
+    Freq: 16224.0
+    FullHash: 8949a4bc241de0bba0c331bcdf560b9c2d4ba721
+    GlobalHash: ac207dd466fd0efca85028970a5828c7d55716d5
+    IOSubHash: 11203c856cb03ca49bde7b945559c7e4
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 345
+    - 354
+    InstrName: CUSTOM10
+    Instrs:
+    - SLLI
+    - ADD
+    - ANDI
+    IsoNodes:
+    - 192
+    - 260
+    - 134
+    - 268
+    - 142
+    - 270
+    - 144
+    - 182
+    - 190
+    IsoWeight: 0.04075951783982595
+    Isos:
+    - 1990
+    - 2025
+    - 2026
+    - 1999
+    - 2099
+    IsosNO:
+    - 2025
+    - 2026
+    - 2099
+    - 1990
+    LoadNodes: []
+    Nodes:
+    - 192
+    - 144
+    - 270
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 20.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    - uimm5
+    OperandNodes:
+    - 2387
+    - 345
+    - 354
+    - 2606
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    - null
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    - IMM
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 2387
+    Parent: 1984.0
+    Predicates: 256
+    Predicates (str): '256'
+    Registers: 2
+    ScheduleLength: 4.0
+    Status: 1
+    Status (str): '1'
+    StoreNodes: []
+    SubHash: f408ccb298359cac95a173cc242bff50
+    TerminatorNodes: []
+    UniqueInstrs:
+    - SLLI
+    - ADD
+    - ANDI
+    Variations: 16
+    Weight: 0.013586505946608648
+    result: 2202
+- artifacts:
+    cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM11.core_desc
+    cdsl_encoded: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen/CUSTOM11.encoded.core_desc
+    flat: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM11.flat
+    fuse_cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM11.fuse_core_desc
+    io_sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/io_sub2124.pkl
+    sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/sub2124.pkl
+    tree: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/tree2124.pkl
+  id: 6
+  metrics:
+    code_size_reduction_rel: 0.004886988393402403
+    enc_score: 0.999969482421875
+    enc_weight: 3.0517578125e-05
+    hls_area: 1.0
+    hls_area_scaled: 1.0
+    hls_ii: 1
+    hls_latency: 3
+    hls_num_shared: 1
+    runtime_reduction_rel: 0.037362505460701634
+    seal5_score: 1.0
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 2.0
+    '#InputNodes': 1.0
+    '#Instrs': 2.0
+    '#Isos': 3.0
+    '#IsosNO': 3.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 2.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 2.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 5
+    - 11
+    ConstantNodes:
+    - 331
+    - 346
+    ConstantSigns:
+    - false
+    - false
+    ConstantValues:
+    - 14
+    - 1020
+    Constraints: []
+    DateTime: 20260520T232327
+    EncodingBitsLeft (32 bits): 15.0
+    EncodingFootprint (32 bits): 0.4
+    EncodingWeight (32 bits): 3.0517578125e-05
+    Freq: 16224.0
+    FullHash: 92a6f12b74876aecd4f1ff9a48f8c55169f5e9a3
+    GlobalHash: ac207dd466fd0efca85028970a5828c7d55716d5
+    IOSubHash: e66fea103e7264d17a2e6e70bc08780b
+    InputNames:
+    - inp0
+    InputNodes:
+    - 287
+    InstrName: CUSTOM11
+    Instrs:
+    - SRLI
+    - ANDI
+    IsoNodes:
+    - 176
+    - 177
+    - 246
+    - 151
+    - 248
+    - 247
+    - 203
+    - 175
+    IsoWeight: 0.03623068252428973
+    Isos:
+    - 2184
+    - 2178
+    - 2187
+    IsosNO:
+    - 2184
+    - 2178
+    - 2187
+    LoadNodes: []
+    Nodes:
+    - 203
+    - 151
+    OperandDirs:
+    - OUT
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    OperandEncBitsSum: 10.0
+    OperandNames:
+    - rd
+    - rs1
+    OperandNodes:
+    - 2527
+    - 287
+    OperandRegClasses:
+    - GPR
+    - GPR
+    OperandTypes:
+    - REG
+    - REG
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 2527
+    Parent: .nan
+    Predicates: 0
+    Predicates (str): '0'
+    Registers: 2
+    ScheduleLength: 3.0
+    Status: 1
+    Status (str): '1'
+    StoreNodes: []
+    SubHash: d2511e9e51b4388755d9a40c7ab9c9da
+    TerminatorNodes: []
+    UniqueInstrs:
+    - ANDI
+    - SRLI
+    Variations: 0
+    Weight: 0.009057670631072432
+    result: 2124
+- artifacts:
+    cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM13.core_desc
+    cdsl_encoded: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen/CUSTOM13.encoded.core_desc
+    flat: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM13.flat
+    fuse_cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM13.fuse_core_desc
+    io_sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/io_sub2129.pkl
+    sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/sub2129.pkl
+    tree: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/tree2129.pkl
+  id: 8
+  metrics:
+    code_size_reduction_rel: 0.004886988393402403
+    enc_score: 0.999969482421875
+    enc_weight: 3.0517578125e-05
+    hls_area: 1.0
+    hls_area_scaled: 1.0
+    hls_ii: 1
+    hls_latency: 3
+    hls_num_shared: 1
+    runtime_reduction_rel: 0.037362505460701634
+    seal5_score: 1.0
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 2.0
+    '#InputNodes': 1.0
+    '#Instrs': 2.0
+    '#Isos': 3.0
+    '#IsosNO': 3.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 2.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 2.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 11
+    - 4
+    ConstantNodes:
+    - 346
+    - 355
+    ConstantSigns:
+    - false
+    - false
+    ConstantValues:
+    - 1020
+    - 6
+    Constraints: []
+    DateTime: 20260520T232327
+    EncodingBitsLeft (32 bits): 15.0
+    EncodingFootprint (32 bits): 0.4
+    EncodingWeight (32 bits): 3.0517578125e-05
+    Freq: 16224.0
+    FullHash: ce696f9615a3083728827cfd0132c1d4e6f52d99
+    GlobalHash: ac207dd466fd0efca85028970a5828c7d55716d5
+    IOSubHash: a25d6ed8e010b3f7cc2e5dbe767338ae
+    InputNames:
+    - inp0
+    InputNodes:
+    - 347
+    InstrName: CUSTOM13
+    Instrs:
+    - ANDI
+    - SRLI
+    IsoNodes:
+    - 259
+    - 181
+    - 152
+    - 269
+    - 267
+    - 204
+    - 189
+    - 191
+    IsoWeight: 0.03623068252428973
+    Isos:
+    - 2168
+    - 2130
+    - 2140
+    IsosNO:
+    - 2168
+    - 2130
+    - 2140
+    LoadNodes: []
+    Nodes:
+    - 181
+    - 259
+    OperandDirs:
+    - OUT
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    OperandEncBitsSum: 10.0
+    OperandNames:
+    - rd
+    - rs1
+    OperandNodes:
+    - 2532
+    - 347
+    OperandRegClasses:
+    - GPR
+    - GPR
+    OperandTypes:
+    - REG
+    - REG
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 2532
+    Parent: .nan
+    Predicates: 0
+    Predicates (str): '0'
+    Registers: 2
+    ScheduleLength: 3.0
+    Status: 1
+    Status (str): '1'
+    StoreNodes: []
+    SubHash: d2511e9e51b4388755d9a40c7ab9c9da
+    TerminatorNodes: []
+    UniqueInstrs:
+    - ANDI
+    - SRLI
+    Variations: 0
+    Weight: 0.009057670631072432
+    result: 2129
+- artifacts:
+    cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM15.core_desc
+    cdsl_encoded: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen/CUSTOM15.encoded.core_desc
+    flat: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM15.flat
+    fuse_cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM15.fuse_core_desc
+    io_sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/io_sub2212.pkl
+    sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/sub2212.pkl
+    tree: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/tree2212.pkl
+  id: 16
+  metrics:
+    code_size_reduction_rel: 0.007330482590103826
+    enc_score: 0.9990234375
+    enc_weight: 0.0009765625
+    hls_area: 1.0
+    hls_area_scaled: 1.0
+    hls_ii: 1
+    hls_latency: 3
+    hls_num_shared: 1
+    runtime_reduction_rel: 0.07463791883408255
+    seal5_score: 1.0
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 1.0
+    '#InputNodes': 1.0
+    '#Instrs': 2.0
+    '#Isos': 3.0
+    '#IsosNO': 3.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 2.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 2.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 11
+    ConstantNodes:
+    - 346
+    ConstantSigns:
+    - false
+    - false
+    ConstantValues:
+    - 1020
+    Constraints: []
+    DateTime: 20260520T232327
+    EncodingBitsLeft (32 bits): 10.0
+    EncodingFootprint (32 bits): 0.6
+    EncodingWeight (32 bits): 0.0009765625
+    Freq: 16224.0
+    FullHash: 3f2ca15c07496763410abeac724a7ac2bb9ff950
+    GlobalHash: ac207dd466fd0efca85028970a5828c7d55716d5
+    IOSubHash: e66fea103e7264d17a2e6e70bc08780b
+    InputNames:
+    - inp0
+    InputNodes:
+    - 287
+    InstrName: CUSTOM15
+    Instrs:
+    - SRLI
+    - ANDI
+    IsoNodes:
+    - 176
+    - 177
+    - 246
+    - 151
+    - 248
+    - 247
+    - 203
+    - 175
+    IsoWeight: 0.03623068252428973
+    Isos:
+    - 2184
+    - 2178
+    - 2187
+    IsosNO:
+    - 2184
+    - 2178
+    - 2187
+    LoadNodes: []
+    Nodes:
+    - 203
+    - 151
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 15.0
+    OperandNames:
+    - rd
+    - rs1
+    - uimm5
+    OperandNodes:
+    - 2527
+    - 287
+    - 2616
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - null
+    OperandTypes:
+    - REG
+    - REG
+    - IMM
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 2527
+    Parent: 2124.0
+    Predicates: 0
+    Predicates (str): '0'
+    Registers: 2
+    ScheduleLength: 3.0
+    Status: 1
+    Status (str): '1'
+    StoreNodes: []
+    SubHash: d2511e9e51b4388755d9a40c7ab9c9da
+    TerminatorNodes: []
+    UniqueInstrs:
+    - ANDI
+    - SRLI
+    Variations: 16
+    Weight: 0.009057670631072432
+    result: 2212
+- artifacts:
+    cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM17.core_desc
+    cdsl_encoded: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen/CUSTOM17.encoded.core_desc
+    flat: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM17.flat
+    fuse_cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM17.fuse_core_desc
+    io_sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/io_sub2216.pkl
+    sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/sub2216.pkl
+    tree: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/tree2216.pkl
+  id: 18
+  metrics:
+    code_size_reduction_rel: 0.004886988393402403
+    enc_score: 0.9990234375
+    enc_weight: 0.0009765625
+    hls_area: 1.0
+    hls_area_scaled: 1.0
+    hls_ii: 1
+    hls_latency: 3
+    hls_num_shared: 1
+    runtime_reduction_rel: 0.037362505460701634
+    seal5_score: 1.0
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 1.0
+    '#InputNodes': 1.0
+    '#Instrs': 2.0
+    '#Isos': 3.0
+    '#IsosNO': 3.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 2.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 2.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 9
+    ConstantNodes:
+    - 386
+    ConstantSigns:
+    - false
+    - false
+    ConstantValues:
+    - 255
+    Constraints: []
+    DateTime: 20260520T232327
+    EncodingBitsLeft (32 bits): 10.0
+    EncodingFootprint (32 bits): 0.6
+    EncodingWeight (32 bits): 0.0009765625
+    Freq: 16224.0
+    FullHash: 52798294dcf4b82499eaaaf9a92019da08d51132
+    GlobalHash: ac207dd466fd0efca85028970a5828c7d55716d5
+    IOSubHash: b15192c480341381e6f94fc2e428d8cf
+    InputNames:
+    - inp0
+    InputNodes:
+    - 354
+    InstrName: CUSTOM17
+    Instrs:
+    - SLLI
+    - ANDI
+    IsoNodes:
+    - 192
+    - 260
+    - 149
+    - 182
+    - 201
+    - 268
+    - 190
+    - 270
+    IsoWeight: 0.03623068252428973
+    Isos:
+    - 2185
+    - 2171
+    - 2158
+    IsosNO:
+    - 2185
+    - 2171
+    - 2158
+    LoadNodes: []
+    Nodes:
+    - 192
+    - 270
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 15.0
+    OperandNames:
+    - rd
+    - rs1
+    - uimm5
+    OperandNodes:
+    - 2530
+    - 354
+    - 2620
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - null
+    OperandTypes:
+    - REG
+    - REG
+    - IMM
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 2530
+    Parent: 2127.0
+    Predicates: 0
+    Predicates (str): '0'
+    Registers: 2
+    ScheduleLength: 3.0
+    Status: 1
+    Status (str): '1'
+    StoreNodes: []
+    SubHash: 9908de1122f4cc5e49b9b4edf3c74054
+    TerminatorNodes: []
+    UniqueInstrs:
+    - SLLI
+    - ANDI
+    Variations: 16
+    Weight: 0.009057670631072432
+    result: 2216
+- artifacts:
+    cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM23.core_desc
+    cdsl_encoded: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen/CUSTOM23.encoded.core_desc
+    flat: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM23.flat
+    fuse_cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/gen_filtered/CUSTOM23.fuse_core_desc
+    io_sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/io_sub1968.pkl
+    sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/sub1968.pkl
+    tree: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/_nettle_aes_decrypt_%bb.6_0/tree1968.pkl
+  id: 2
+  metrics:
+    code_size_reduction_rel: 0.00977397678680525
+    enc_score: 0.9990234375
+    enc_weight: 0.0009765625
+    hls_area: 1.0
+    hls_area_scaled: 1.0
+    hls_ii: 1
+    hls_latency: 3
+    hls_num_shared: 1
+    runtime_reduction_rel: 0.0747250109214036
+    seal5_score: 1.0
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 2.0
+    '#InputNodes': 2.0
+    '#Instrs': 3.0
+    '#Isos': 3.0
+    '#IsosNO': 2.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 3.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 3.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 11
+    - 5
+    ConstantNodes:
+    - 346
+    - 331
+    ConstantSigns:
+    - false
+    - false
+    ConstantValues:
+    - 1020
+    - 14
+    Constraints: []
+    DateTime: 20260520T232327
+    EncodingBitsLeft (32 bits): 10.0
+    EncodingFootprint (32 bits): 0.6
+    EncodingWeight (32 bits): 0.0009765625
+    Freq: 16224.0
+    FullHash: 6fa817f953067f77b59076a8300367aef50e8830
+    GlobalHash: ac207dd466fd0efca85028970a5828c7d55716d5
+    IOSubHash: 317cd50067df0e0fb329a92e26e2cd93
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 347
+    - 350
+    InstrName: CUSTOM23
+    Instrs:
+    - ANDI
+    - ADD
+    - SRLI
+    IsoNodes:
+    - 129
+    - 203
+    - 110
+    - 177
+    - 151
+    - 248
+    IsoWeight: 0.027173011893217296
+    Isos:
+    - 2013
+    - 2109
+    - 2039
+    IsosNO:
+    - 2013
+    - 2039
+    LoadNodes: []
+    Nodes:
+    - 177
+    - 129
+    - 248
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 15.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    OperandNodes:
+    - 2371
+    - 347
+    - 350
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 2371
+    Parent: .nan
+    Predicates: 256
+    Predicates (str): '256'
+    Registers: 2
+    ScheduleLength: 4.0
+    Status: 1
+    Status (str): '1'
+    StoreNodes: []
+    SubHash: 32a502ad0021a4d228806460d5b6c1e6
+    TerminatorNodes: []
+    UniqueInstrs:
+    - ADD
+    - ANDI
+    - SRLI
+    Variations: 0
+    Weight: 0.013586505946608648
+    result: 1968
+global:
+  artifacts:
+    ETISS_INSTALL_DIR: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/local//etiss//etiss_install
+    HLS_DIR: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/local/fake_hls_filtered
+    LLVM_INSTALL_DIR: /var/tmp/ga87puy/isaac-demo/out/embench_iot/nettle-aes/20260520T232207/work/local//seal5//llvm_install
+  properties:
+  - allowed_enc_sizes:
+    - 32
+    bb: '%bb.6'
+    candidate_count: 23
+    func: _nettle_aes_decrypt
+    ignore_names:
+    - G_PHI
+    - PHI
+    - COPY
+    - PseudoCALLIndirect
+    - PseudoLGA
+    - Select_GPR_Using_CC_GPR
+    - LUI
+    - PseudoMovAddr
+    - IMPLICIT_DEF
+    ignore_op_types:
+    - input
+    - constant
+    - label
+    instr_predicates: 511
+    limit_results: null
+    max_branches: 1
+    max_enc_footprint: 1.0
+    max_enc_weight: 1.0
+    max_inputs: 4
+    max_loads: 1
+    max_mems: 0
+    max_nodes: 1000
+    max_outputs: 2
+    max_path_len: 9
+    max_path_width: 2
+    max_stores: 1
+    min_enc_bits_left: 5
+    min_inputs: 1
+    min_iso_weight: 0.019700433622582544
+    min_nodes: 1
+    min_outputs: 1
+    min_path_len: 1
+    session: isaac-demo-nettle-aes-20260520T232207
+    stage: 32
+    timestamp: 20260520T232327
+    xlen: 32
+  - allowed_enc_sizes:
+    - 32
+    bb: '%bb.6'
+    candidate_count: 26
+    func: _nettle_aes_encrypt
+    ignore_names:
+    - G_PHI
+    - PHI
+    - COPY
+    - PseudoCALLIndirect
+    - PseudoLGA
+    - Select_GPR_Using_CC_GPR
+    - LUI
+    - PseudoMovAddr
+    - IMPLICIT_DEF
+    ignore_op_types:
+    - input
+    - constant
+    - label
+    instr_predicates: 511
+    limit_results: null
+    max_branches: 1
+    max_enc_footprint: 1.0
+    max_enc_weight: 1.0
+    max_inputs: 4
+    max_loads: 1
+    max_mems: 0
+    max_nodes: 1000
+    max_outputs: 2
+    max_path_len: 9
+    max_path_width: 2
+    max_stores: 1
+    min_enc_bits_left: 5
+    min_inputs: 1
+    min_iso_weight: 0.007762141698355615
+    min_nodes: 1
+    min_outputs: 1
+    min_path_len: 1
+    session: isaac-demo-nettle-aes-20260520T232207
+    stage: 32
+    timestamp: 20260520T232351
+    xlen: 32

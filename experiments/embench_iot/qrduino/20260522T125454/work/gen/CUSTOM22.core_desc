@@ -1,0 +1,27 @@
+// DateTime: 20260522T125728, Sub: 22, Name: CUSTOM22, Inputs: 2, Outputs: 1
+
+import "RV32I.core_desc"
+
+InstructionSet MySet extends RV32I {
+    instructions {
+        CUSTOM22 {
+            operands: {
+                unsigned<5> rd [[is_reg]] [[reg_class="GPR"]] [[reg_type="s32"]] [[out]];
+                unsigned<5> rs1 [[is_reg]] [[reg_class="GPR"]] [[reg_type="s32"]] [[in]];
+                unsigned<5> rs2 [[is_reg]] [[reg_class="GPR"]] [[reg_type="s32"]] [[in]];
+                signed<1> simm1 [[is_imm]] [[in]];
+            }
+            encoding: auto;
+            assembly: {"custom22", "{name(rd)}, {name(rs1)}, {name(rs2)}, {simm1}"};
+            behavior: {
+                unsigned<32> rs2_val=X[rs2];
+                unsigned<32> rs1_val=X[rs1];
+                unsigned<32> outp0=(unsigned<32>)(((unsigned<32>)rs1_val<<(unsigned<32>)(unsigned<32>)(((unsigned<32>)(unsigned<32>)(((unsigned<32>)rs2_val^(unsigned<32>)(unsigned<1>)(simm1)))&(unsigned<32>)(7)))));
+                X[rd]=outp0;
+                
+            }
+        }
+        
+
+    }
+}

@@ -1,0 +1,3 @@
+,Model,Arch,Run Instructions,Run Instructions (rel.),Total ROM,Total RAM,ROM code,ROM code (rel.)
+0,md5sum,rv32im_zicsr_zifencei,2018668,1.0,4864,4328,4276,1.0
+1,md5sum,rv32im_zicsr_zifencei_xisaaccustom2single,1966443,0.9741289800997488,4844,4328,4256,0.9953227315247896

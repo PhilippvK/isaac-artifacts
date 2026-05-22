@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Choices Summary</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<style>
+  body { font-family: sans-serif; margin: 2em; background: #fafafa; }
+  h1 { border-bottom: 3px solid #ccc; padding-bottom: .2em; }
+  h2 { margin-top: 2em; }
+  table { border-collapse: collapse; margin: 1em 0; width: 100%; }
+  th, td { border: 1px solid #ccc; padding: 0.5em 1em; text-align: left; }
+  th { background: #eee; }
+  pre { padding: 1em; background: #f0f0f0; border-radius: 8px; overflow-x: auto; }
+</style>
+</head>
+<body>
+<h1>Choices Summary</h1>
+
+<h2>Choice 0</h2>
+<table>
+<tr><th>func_name</th><th>bb_name</th><th>rel_weight</th><th>num_instrs</th><th>freq</th><th>start</th><th>end</th></tr>
+<tr><td>pjpeg_decode_mcu</td><td>%bb.131</td><td>0.162806</td><td>9</td><td>60174.0</td><td>0x1000fd8</td><td>0x1000ffc</td></tr>
+</table>
+<pre><code class='asm'>
+ 1000fd8: 00050603     	lb	a2, 0x0(a0)
+ 1000fdc: 00161613     	slli	a2, a2, 0x1
+ 1000fe0: 00cd8633     	add	a2, s11, a2
+ 1000fe4: 00061023     	sh	zero, 0x0(a2)
+ 1000fe8: 0ff5f613     	andi	a2, a1, 0xff
+ 1000fec: 00150513     	addi	a0, a0, 0x1
+ 1000ff0: 00158593     	addi	a1, a1, 0x1
+ 1000ff4: 04000693     	li	a3, 0x40
+ 1000ff8: fed610e3     	bne	a2, a3, 0x1000fd8 <pjpeg_decode_mcu+0xaf4>
+</code></pre>
+<h2>Choice 1</h2>
+<table>
+<tr><th>func_name</th><th>bb_name</th><th>rel_weight</th><th>num_instrs</th><th>freq</th><th>start</th><th>end</th></tr>
+<tr><td>pjpeg_decode_mcu</td><td>%bb.149</td><td>0.071211</td><td>12</td><td>19740.0</td><td>0x1001e88</td><td>0x1001eb8</td></tr>
+</table>
+<pre><code class='asm'>
+ 1001e88: 0006c703     	lbu	a4, 0x0(a3)
+ 1001e8c: 00268693     	addi	a3, a3, 0x2
+ 1001e90: 00158793     	addi	a5, a1, 0x1
+ 1001e94: 00e60023     	sb	a4, 0x0(a2)
+ 1001e98: 00160613     	addi	a2, a2, 0x1
+ 1001e9c: 00e50023     	sb	a4, 0x0(a0)
+ 1001ea0: 00150513     	addi	a0, a0, 0x1
+ 1001ea4: 040c0813     	addi	a6, s8, 0x40
+ 1001ea8: 00e58023     	sb	a4, 0x0(a1)
+ 1001eac: 00078593     	mv	a1, a5
+ 1001eb0: fd079ce3     	bne	a5, a6, 0x1001e88 <pjpeg_decode_mcu+0x19a4>
+ 1001eb4: f00fe06f     	j	0x10005b4 <pjpeg_decode_mcu+0xd0>
+</code></pre>
+<h2>Choice 2</h2>
+<table>
+<tr><th>func_name</th><th>bb_name</th><th>rel_weight</th><th>num_instrs</th><th>freq</th><th>start</th><th>end</th></tr>
+<tr><td>pjpeg_decode_mcu</td><td>%bb.151</td><td>0.058181</td><td>9</td><td>21504.0</td><td>0x1001848</td><td>0x100186c</td></tr>
+</table>
+<pre><code class='asm'>
+ 1001848: 0006c703     	lbu	a4, 0x0(a3)
+ 100184c: 0005c783     	lbu	a5, 0x0(a1)
+ 1001850: 06700813     	li	a6, 0x67
+ 1001854: 03070833     	mul	a6, a4, a6
+ 1001858: 00885813     	srli	a6, a6, 0x8
+ 100185c: 00f707b3     	add	a5, a4, a5
+ 1001860: 010787b3     	add	a5, a5, a6
+ 1001864: f4d78793     	addi	a5, a5, -0xb3
+ 1001868: 00fbf663     	bgeu	s7, a5, 0x1001874 <pjpeg_decode_mcu+0x1390>
+</code></pre>
+<h2>Choice 3</h2>
+<table>
+<tr><th>func_name</th><th>bb_name</th><th>rel_weight</th><th>num_instrs</th><th>freq</th><th>start</th><th>end</th></tr>
+<tr><td>pjpeg_decode_mcu</td><td>%bb.337</td><td>0.051716</td><td>8</td><td>21504.0</td><td>0x1001e44</td><td>0x1001e64</td></tr>
+</table>
+<pre><code class='asm'>
+ 1001e44: 00064803     	lbu	a6, 0x0(a2)
+ 1001e48: 03a708b3     	mul	a7, a4, s10
+ 1001e4c: 0088d893     	srli	a7, a7, 0x8
+ 1001e50: 01070733     	add	a4, a4, a6
+ 1001e54: 01170733     	add	a4, a4, a7
+ 1001e58: f1d70713     	addi	a4, a4, -0xe3
+ 1001e5c: 00f58023     	sb	a5, 0x0(a1)
+ 1001e60: faebf4e3     	bgeu	s7, a4, 0x1001e08 <pjpeg_decode_mcu+0x1924>
+</code></pre>
+</body></html>

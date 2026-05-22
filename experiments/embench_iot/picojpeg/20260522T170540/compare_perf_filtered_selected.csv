@@ -1,0 +1,3 @@
+,Model,Arch,uArch,Run Instructions,Run Instructions (rel.),Run Cycles,Run Cycles (rel.),Run CPI,Total ROM,Total RAM,ROM code,ROM code (rel.)
+0,picojpeg,rv32im_zicsr_zifencei,CV32E40PXISAAC,3326490,1.0,4021458,1.0,1.2089193113461938,26976,3624,24740,1.0
+1,picojpeg,rv32im_zicsr_zifencei_xisaaccustom0single_xisaaccustom4single_xisaaccustom11single_xisaaccustom21single_xisaaccustom24single_xisaaccustom28single,CV32E40PXISAAC,3066054,0.921708467483744,3825534,0.9512803565274088,1.2477060090918164,26672,3624,24436,0.987712206952304

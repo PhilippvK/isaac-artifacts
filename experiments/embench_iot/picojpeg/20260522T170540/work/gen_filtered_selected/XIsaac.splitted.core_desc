@@ -1,0 +1,97 @@
+import "/var/tmp/ga87puy/isaac-demo/etiss_arch_riscv/rv_base/RVI.core_desc"
+
+InstructionSet XIsaacCUSTOM0single extends RV32I {
+    instructions {
+        CUSTOM0 {
+            encoding: 7'b0000000 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom0", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> outp0 = (unsigned<32>)(((((signed<32>)((rs2_val)) + (signed<32>)(((unsigned<32>)(((((unsigned<32>)((rs1_val)) << (unsigned<32>)(((1)))))))))))));
+                X[rd] = outp0;
+            }
+        }
+    }
+}
+
+InstructionSet XIsaacCUSTOM4single extends RV32I {
+    instructions {
+        CUSTOM4 {
+            encoding: 7'b0000010 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom4", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> outp0 = (unsigned<32>)(((((signed<32>)(((unsigned<32>)(((((signed<32>)((rs2_val)) + (signed<32>)(((unsigned<32>)(((((unsigned<32>)((rs1_val)) >> (unsigned<32>)(((8))))))))))))))) + (signed<32>)(((-179)))))));
+                X[rd] = outp0;
+            }
+        }
+    }
+}
+
+InstructionSet XIsaacCUSTOM11single extends RV32I {
+    instructions {
+        CUSTOM11 {
+            encoding: 7'b0000101 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom11", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((signed<32>)((rs2_val)) * (signed<32>)((rs1_val)))))))) >> (unsigned<32>)(((8)))))));
+                X[rd] = outp0;
+            }
+        }
+    }
+}
+
+InstructionSet XIsaacCUSTOM21single extends RV32I {
+    instructions {
+        CUSTOM21 {
+            encoding: 7'b0001011 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom21", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> outp0 = (unsigned<32>)(((((signed<32>)((rs2_val)) + (signed<32>)(((unsigned<32>)(((((unsigned<32>)(((unsigned<32>)(((((signed<32>)((rs2_val)) * (signed<32>)((rs1_val)))))))) >> (unsigned<32>)(((8)))))))))))));
+                X[rd] = outp0;
+            }
+        }
+    }
+}
+
+InstructionSet XIsaacCUSTOM24single extends RV32I {
+    instructions {
+        CUSTOM24 {
+            encoding: 7'b0001110 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom24", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)(((((signed<32>)(((unsigned<32>)(((((signed<32>)((rs1_val)) + (signed<32>)((rs2_val)))))))) + (signed<32>)(((-227)))))));
+                X[rd] = outp0;
+            }
+        }
+    }
+}
+
+InstructionSet XIsaacCUSTOM28single extends RV32I {
+    instructions {
+        CUSTOM28 {
+            encoding: 2'b01 :: uimm5[4:0] :: rs2[4:0] :: rs1[4:0] :: 3'b100 :: rd[4:0] :: 7'b1111011;
+            assembly: {"custom28", "{name(rd)}, {name(rs1)}, {name(rs2)}, {uimm5}"};
+            behavior: {
+                unsigned<32> rs2_val = X[rs2];
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)(((((signed<32>)((rs2_val)) + (signed<32>)(((unsigned<32>)(((((unsigned<32>)((rs1_val)) >> (unsigned<32>)(((unsigned<5>)(((uimm5)))))))))))))));
+                X[rd] = outp0;
+            }
+        }
+    }
+}
+
+InstructionSet XIsaac extends XIsaacCUSTOM0single, XIsaacCUSTOM4single, XIsaacCUSTOM11single, XIsaacCUSTOM21single, XIsaacCUSTOM24single, XIsaacCUSTOM28single {
+    instructions {
+    }
+}
+

@@ -1,0 +1,80 @@
+=== DIFFS ===
+0) <pjpeg_decode_mcu-%bb.131>
+rel_weight [old] : 0.1628058475499278
+rel_weight [new] : 0.14471639594270289
+rel_weight [diff]: -0.01809
+rel_weight [rel] : -11.11%
+num_instrs [old] : 9
+num_instrs [new] : 8
+num_instrs [diff]: -1
+num_instrs [rel] : -11.11%
+diff --git a/old b/new
+index ee90852..c6e8771 100644
+--- a/old
++++ b/new
+@@ -1,9 +1,8 @@
+ lb       a2, 0x0(a0)                               
+-slli     a2, a2, 0x1                               
+-add      a2, s11, a2                               
++custom0  a2, a2, s11                               
+ sh       zero, 0x0(a2)                             
+ andi     a2, a1, 0xff                              
+ addi     a0, a0, 0x1                               
+ addi     a1, a1, 0x1                               
+ li       a3, 0x40                                  
+-bne      a2, a3, 0x1000fd8 <pjpeg_decode_mcu+0xaf4>
++bne      a2, a3, 0x1000fc4 <pjpeg_decode_mcu+0xadc>
+
+1) <pjpeg_decode_mcu-%bb.149>
+Not found!
+2) <pjpeg_decode_mcu-%bb.151>
+rel_weight [old] : 0.05818089117747943
+rel_weight [new] : 0.04525183145640804
+rel_weight [diff]: -0.01293
+rel_weight [rel] : -22.22%
+num_instrs [old] : 9
+num_instrs [new] : 7
+num_instrs [diff]: -2
+num_instrs [rel] : -22.22%
+diff --git a/old b/new
+index c3c47f6..29a33a2 100644
+--- a/old
++++ b/new
+@@ -2,8 +2,6 @@ lbu      a4, 0x0(a3)
+ lbu      a5, 0x0(a1)                                
+ li       a6, 0x67                                   
+ mul      a6, a4, a6                                 
+-srli     a6, a6, 0x8                                
+ add      a5, a4, a5                                 
+-add      a5, a5, a6                                 
+-addi     a5, a5, -0xb3                              
+-bgeu     s7, a5, 0x1001874 <pjpeg_decode_mcu+0x1390>
++custom4  a5, a6, a5                                 
++bgeu     s1, a5, 0x100182c <pjpeg_decode_mcu+0x1344>
+
+3) <pjpeg_decode_mcu-%bb.337>
+rel_weight [old] : 0.051716347713315056
+rel_weight [new] : 0.032322736754577176
+rel_weight [diff]: -0.01939
+rel_weight [rel] : -37.49%
+num_instrs [old] : 8
+num_instrs [new] : 5
+num_instrs [diff]: -3
+num_instrs [rel] : -37.50%
+diff --git a/old b/new
+index ab505c3..e9d9542 100644
+--- a/old
++++ b/new
+@@ -1,8 +1,5 @@
+ lbu       a6, 0x0(a2)                                
+-mul       a7, a4, s10                                
+-srli      a7, a7, 0x8                                
+-add       a4, a4, a6                                 
+-add       a4, a4, a7                                 
+-addi      a4, a4, -0xe3                              
++custom21  a4, a7, a4                                 
++custom24  a4, a6, a4                                 
+ sb        a5, 0x0(a1)                                
+-bgeu      s7, a4, 0x1001e08 <pjpeg_decode_mcu+0x1924>
++bgeu      s1, a4, 0x1001d54 <pjpeg_decode_mcu+0x186c>
+

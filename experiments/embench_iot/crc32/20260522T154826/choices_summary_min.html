@@ -1,0 +1,37 @@
+<h2>Choice 0</h2>
+<table>
+<tr><th>func_name</th><th>bb_name</th><th>rel_weight</th><th>num_instrs</th><th>freq</th><th>start</th><th>end</th></tr>
+<tr><td>rand_beebs</td><td>%bb.0</td><td>0.564996</td><td>13</td><td>174080.0</td><td>0x1000404</td><td>0x1000438</td></tr>
+</table>
+<pre><code class='asm'>
+ 1000404: 018005b7     	lui	a1, 0x1800
+ 1000408: 6bc5a503     	lw	a0, 0x6bc(a1)
+ 100040c: 41c65637     	lui	a2, 0x41c65
+ 1000410: e6d60613     	addi	a2, a2, -0x193
+ 1000414: 02c50533     	mul	a0, a0, a2
+ 1000418: 00003637     	lui	a2, 0x3
+ 100041c: 03960613     	addi	a2, a2, 0x39
+ 1000420: 00c50533     	add	a0, a0, a2
+ 1000424: 00151513     	slli	a0, a0, 0x1
+ 1000428: 00155613     	srli	a2, a0, 0x1
+ 100042c: 01065513     	srli	a0, a2, 0x10
+ 1000430: 6ac5ae23     	sw	a2, 0x6bc(a1)
+ 1000434: 00008067     	ret
+</code></pre>
+<h2>Choice 1</h2>
+<table>
+<tr><th>func_name</th><th>bb_name</th><th>rel_weight</th><th>num_instrs</th><th>freq</th><th>start</th><th>end</th></tr>
+<tr><td>benchmark_body</td><td>%bb.3</td><td>0.434612</td><td>10</td><td>174080.0</td><td>0x1000384</td><td>0x10003ac</td></tr>
+</table>
+<pre><code class='asm'>
+ 1000384: 080000ef     	jal	0x1000404 <rand_beebs>
+ 1000388: 01354533     	xor	a0, a0, s3
+ 100038c: 0ff57513     	andi	a0, a0, 0xff
+ 1000390: 00251513     	slli	a0, a0, 0x2
+ 1000394: 00a90533     	add	a0, s2, a0
+ 1000398: 00052503     	lw	a0, 0x0(a0)
+ 100039c: 0089d593     	srli	a1, s3, 0x8
+ 10003a0: fffa0a13     	addi	s4, s4, -0x1
+ 10003a4: 00b549b3     	xor	s3, a0, a1
+ 10003a8: fc0a1ee3     	bnez	s4, 0x1000384 <benchmark_body+0x40>
+</code></pre>

@@ -1,0 +1,3 @@
+,Model,Arch,uArch,Run Instructions,Run Instructions (rel.),Run Cycles,Run Cycles (rel.),Run CPI,Total ROM,Total RAM,ROM code,ROM code (rel.)
+0,ud,rv32im_zicsr_zifencei,CV32E40PXISAAC,2520073,1.0,3977391,1.0,1.5782840417718058,4176,2980,4100,1.0
+1,ud,rv32im_zicsr_zifencei_xisaaccustom0single_xisaaccustom2single,CV32E40PXISAAC,2404789,0.9542537061426396,3862107,0.971015170497444,1.6060065976682365,4140,2980,4064,0.991219512195122

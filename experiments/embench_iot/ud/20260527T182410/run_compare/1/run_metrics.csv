@@ -1,0 +1,2 @@
+_Setup Cycles_,_Setup Instructions_,_Run Cycles_,_Run Instructions_,_Deinit Cycles_,_Deinit Instructions_,Total Cycles,Total Instructions,_Setup CPI_,_Run CPI_,Total CPI,_Simulated Instructions_,_MIPS_,_Runtime [s]_,Validation,_Run Stage Time [s]_
+55,55,2404788,2404788,42,42,2405332,2405332,1.0,1.0,1.0,2423110,4.14958,0.02405332,True,0.6218085289001465

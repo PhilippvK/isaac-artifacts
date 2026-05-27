@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Choices Summary</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<style>
+  body { font-family: sans-serif; margin: 2em; background: #fafafa; }
+  h1 { border-bottom: 3px solid #ccc; padding-bottom: .2em; }
+  h2 { margin-top: 2em; }
+  table { border-collapse: collapse; margin: 1em 0; width: 100%; }
+  th, td { border: 1px solid #ccc; padding: 0.5em 1em; text-align: left; }
+  th { background: #eee; }
+  pre { padding: 1em; background: #f0f0f0; border-radius: 8px; overflow-x: auto; }
+</style>
+</head>
+<body>
+<h1>Choices Summary</h1>
+
+<h2>Choice 0</h2>
+<table>
+<tr><th>func_name</th><th>bb_name</th><th>rel_weight</th><th>num_instrs</th><th>freq</th><th>start</th><th>end</th></tr>
+<tr><td>benchmark_body</td><td>%bb.4</td><td>0.168912</td><td>8</td><td>53208.0</td><td>0x1000420</td><td>0x1000440</td></tr>
+</table>
+<pre><code class='asm'>
+ 1000420: 0012b313     	seqz	t1, t0
+ 1000424: 00689333     	sll	t1, a7, t1
+ 1000428: 00682023     	sw	t1, 0x0(a6)
+ 100042c: 00e30733     	add	a4, t1, a4
+ 1000430: fff28293     	addi	t0, t0, -0x1
+ 1000434: 00480813     	addi	a6, a6, 0x4
+ 1000438: 00188893     	addi	a7, a7, 0x1
+ 100043c: fef812e3     	bne	a6, a5, 0x1000420 <benchmark_body+0x78>
+</code></pre>
+<h2>Choice 1</h2>
+<table>
+<tr><th>func_name</th><th>bb_name</th><th>rel_weight</th><th>num_instrs</th><th>freq</th><th>start</th><th>end</th></tr>
+<tr><td>ludcmp</td><td>%bb.13</td><td>0.143692</td><td>7</td><td>51730.0</td><td>0x10005e0</td><td>0x10005fc</td></tr>
+</table>
+<pre><code class='asm'>
+ 10005e0: 00092983     	lw	s3, 0x0(s2)
+ 10005e4: 0004aa03     	lw	s4, 0x0(s1)
+ 10005e8: 033a09b3     	mul	s3, s4, s3
+ 10005ec: 41340433     	sub	s0, s0, s3
+ 10005f0: 00490913     	addi	s2, s2, 0x4
+ 10005f4: 05048493     	addi	s1, s1, 0x50
+ 10005f8: fe7914e3     	bne	s2, t2, 0x10005e0 <ludcmp+0x138>
+</code></pre>
+<h2>Choice 2</h2>
+<table>
+<tr><th>func_name</th><th>bb_name</th><th>rel_weight</th><th>num_instrs</th><th>freq</th><th>start</th><th>end</th></tr>
+<tr><td>ludcmp</td><td>%bb.9</td><td>0.082110</td><td>7</td><td>29560.0</td><td>0x1000558</td><td>0x1000574</td></tr>
+</table>
+<pre><code class='asm'>
+ 1000558: 000b2b83     	lw	s7, 0x0(s6)
+ 100055c: 000aac03     	lw	s8, 0x0(s5)
+ 1000560: 037c0bb3     	mul	s7, s8, s7
+ 1000564: 417989b3     	sub	s3, s3, s7
+ 1000568: 004b0b13     	addi	s6, s6, 0x4
+ 100056c: 050a8a93     	addi	s5, s5, 0x50
+ 1000570: ff4b14e3     	bne	s6, s4, 0x1000558 <ludcmp+0xb0>
+</code></pre>
+<h2>Choice 3</h2>
+<table>
+<tr><th>func_name</th><th>bb_name</th><th>rel_weight</th><th>num_instrs</th><th>freq</th><th>start</th><th>end</th></tr>
+<tr><td>ludcmp</td><td>%bb.23</td><td>0.073310</td><td>9</td><td>20527.0</td><td>0x1000758</td><td>0x100077c</td></tr>
+</table>
+<pre><code class='asm'>
+ 1000758: 000f2483     	lw	s1, 0x0(t5)
+ 100075c: 000fa903     	lw	s2, 0x0(t6)
+ 1000760: 029904b3     	mul	s1, s2, s1
+ 1000764: 409e8eb3     	sub	t4, t4, s1
+ 1000768: fff40413     	addi	s0, s0, -0x1
+ 100076c: 004f8f93     	addi	t6, t6, 0x4
+ 1000770: 004f0f13     	addi	t5, t5, 0x4
+ 1000774: fe0412e3     	bnez	s0, 0x1000758 <ludcmp+0x2b0>
+ 1000778: f91ff06f     	j	0x1000708 <ludcmp+0x260>
+</code></pre>
+<h2>Choice 4</h2>
+<table>
+<tr><th>func_name</th><th>bb_name</th><th>rel_weight</th><th>num_instrs</th><th>freq</th><th>start</th><th>end</th></tr>
+<tr><td>ludcmp</td><td>%bb.17</td><td>0.061582</td><td>7</td><td>22170.0</td><td>0x1000668</td><td>0x1000684</td></tr>
+</table>
+<pre><code class='asm'>
+ 1000668: 0003ae83     	lw	t4, 0x0(t2)
+ 100066c: 000e2f03     	lw	t5, 0x0(t3)
+ 1000670: 03df0eb3     	mul	t4, t5, t4
+ 1000674: 41d282b3     	sub	t0, t0, t4
+ 1000678: 004e0e13     	addi	t3, t3, 0x4
+ 100067c: 00438393     	addi	t2, t2, 0x4
+ 1000680: fe6e14e3     	bne	t3, t1, 0x1000668 <ludcmp+0x1c0>
+</code></pre>
+<h2>Choice 5</h2>
+<table>
+<tr><th>func_name</th><th>bb_name</th><th>rel_weight</th><th>num_instrs</th><th>freq</th><th>start</th><th>end</th></tr>
+<tr><td>ludcmp</td><td>%bb.8</td><td>0.058650</td><td>10</td><td>14780.0</td><td>0x1000530</td><td>0x1000558</td></tr>
+</table>
+<pre><code class='asm'>
+ 1000530: 00090493     	mv	s1, s2
+ 1000534: 02c90933     	mul	s2, s2, a2
+ 1000538: 01250933     	add	s2, a0, s2
+ 100053c: 01d90933     	add	s2, s2, t4
+ 1000540: 00092983     	lw	s3, 0x0(s2)
+ 1000544: 02cf0a33     	mul	s4, t5, a2
+ 1000548: 014f8a33     	add	s4, t6, s4
+ 100054c: 01450a33     	add	s4, a0, s4
+ 1000550: 00028a93     	mv	s5, t0
+ 1000554: 00040b13     	mv	s6, s0
+</code></pre>
+<h2>Choice 6</h2>
+<table>
+<tr><th>func_name</th><th>bb_name</th><th>rel_weight</th><th>num_instrs</th><th>freq</th><th>start</th><th>end</th></tr>
+<tr><td>ludcmp</td><td>%bb.12</td><td>0.052785</td><td>6</td><td>22170.0</td><td>0x10005c8</td><td>0x10005e0</td></tr>
+</table>
+<pre><code class='asm'>
+ 10005c8: 000f8f13     	mv	t5, t6
+ 10005cc: 002f9f93     	slli	t6, t6, 0x2
+ 10005d0: 01fe0fb3     	add	t6, t3, t6
+ 10005d4: 000fa403     	lw	s0, 0x0(t6)
+ 10005d8: 000e8493     	mv	s1, t4
+ 10005dc: 00030913     	mv	s2, t1
+</code></pre>
+</body></html>

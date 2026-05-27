@@ -1,0 +1,55 @@
+=== DIFFS ===
+0) <benchmark_body-%bb.4>
+rel_weight [old] : 0.16891187268753305
+rel_weight [new] : 0.1477980058999204
+rel_weight [diff]: -0.02111
+rel_weight [rel] : -12.50%
+num_instrs [old] : 8
+num_instrs [new] : 7
+num_instrs [diff]: -1
+num_instrs [rel] : -12.50%
+diff --git a/old b/new
+index b169b68..4c09be5 100644
+--- a/old
++++ b/new
+@@ -1,5 +1,4 @@
+-seqz     t1, t0                                 
+-sll      t1, a7, t1                             
++custom0  t1, a7, t0                             
+ sw       t1, 0x0(a6)                            
+ add      a4, t1, a4                             
+ addi     t0, t0, -0x1                           
+
+1) <ludcmp-%bb.13>
+Not found!
+2) <ludcmp-%bb.9>
+Not found!
+3) <ludcmp-%bb.23>
+Not found!
+4) <ludcmp-%bb.17>
+Not found!
+5) <ludcmp-%bb.8>
+Not found!
+6) <ludcmp-%bb.12>
+rel_weight [old] : 0.05278496021485407
+rel_weight [new] : 0.04398750175592869
+rel_weight [diff]: -0.0088
+rel_weight [rel] : -16.67%
+num_instrs [old] : 6
+num_instrs [new] : 5
+num_instrs [diff]: -1
+num_instrs [rel] : -16.67%
+diff --git a/old b/new
+index b50e2ae..824f450 100644
+--- a/old
++++ b/new
+@@ -1,6 +1,5 @@
+ mv       t5, t6     
+-slli     t6, t6, 0x2
+-add      t6, t3, t6 
++custom2  t6, t3, t6 
+ lw       s0, 0x0(t6)
+ mv       s1, t4     
+-mv       s2, t1     
++mv       s2, t0     
+

@@ -1,0 +1,5 @@
+// DateTime: 20260527T155310, Sub: 22, Name: CUSTOM22, Inputs: 2, Outputs: 1
+unsigned<XLEN> rs2_val=X[rs2];
+unsigned<32> rs1_val=X[rs1];
+unsigned<32> outp0=(unsigned<32>)(SUB((unsigned<32>)(ADDI(rs2_val,(unsigned<5>)(uimm5))),rs1_val));
+X[rd]=outp0;

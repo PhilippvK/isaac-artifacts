@@ -1,0 +1,6 @@
+// DateTime: 20260527T155310, Sub: 0, Name: CUSTOM0, Inputs: 2, Outputs: 2
+unsigned<XLEN> rs2_val=X[rs2];
+unsigned<32> rs1_val=X[rs1];
+unsigned<32> temp0=(unsigned<32>)(ANDI(rs1_val,(3)));
+unsigned<32> outp0=(unsigned<32>)(AND((unsigned<32>)(ADDI((unsigned<32>)(SLTIU(temp0,(1))),(-1))),(unsigned<32>)(SUB((unsigned<32>)(ADDI(rs2_val,(4))),temp0))));
+X[rd]=outp0;

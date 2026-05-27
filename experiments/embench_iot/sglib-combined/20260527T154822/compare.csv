@@ -1,0 +1,3 @@
+,Model,Arch,Run Instructions,Run Instructions (rel.),Total ROM,Total RAM,ROM code,ROM code (rel.)
+0,sglib-combined,rv32im_zicsr_zifencei,2415224,1.0,8144,9908,7268,1.0
+1,sglib-combined,rv32im_zicsr_zifencei_xisaac,2286985,0.946903889659924,7980,9908,7104,0.977435332966428

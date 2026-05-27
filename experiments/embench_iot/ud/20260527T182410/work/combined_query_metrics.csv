@@ -1,0 +1,8 @@
+num_rows,num_nodes,num_edges,func,basic_block
+36,48,32,benchmark_body,%bb.4
+55,60,40,ludcmp,%bb.13
+55,60,40,ludcmp,%bb.9
+55,60,40,ludcmp,%bb.23
+55,60,40,ludcmp,%bb.17
+780,351,312,ludcmp,%bb.8
+435,174,145,ludcmp,%bb.12

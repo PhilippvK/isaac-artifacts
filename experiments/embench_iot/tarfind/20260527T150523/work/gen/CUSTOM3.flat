@@ -1,0 +1,5 @@
+// DateTime: 20260527T150642, Sub: 3, Name: CUSTOM3, Inputs: 2, Outputs: 1
+unsigned<32> rs1_val=X[rs1];
+unsigned<32> rs2_val=X[rs2];
+unsigned<32> outp0=(unsigned<32>)(MUL((unsigned<32>)(ADD((unsigned<32>)(SRLI(rs1_val,(3))),(unsigned<32>)(SRLI(rs1_val,(31))))),rs2_val));
+X[rd]=outp0;

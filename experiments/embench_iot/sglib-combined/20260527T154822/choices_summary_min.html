@@ -1,0 +1,46 @@
+<h2>Choice 0</h2>
+<table>
+<tr><th>func_name</th><th>bb_name</th><th>rel_weight</th><th>num_instrs</th><th>freq</th><th>start</th><th>end</th></tr>
+<tr><td>malloc_beebs</td><td>%bb.1</td><td>0.068442</td><td>19</td><td>8700.0</td><td>0x100128c</td><td>0x10012d8</td></tr>
+</table>
+<pre><code class='asm'>
+ 100128c: 00050593     	mv	a1, a0
+ 1001290: 01800637     	lui	a2, 0x1800
+ 1001294: 6c462503     	lw	a0, 0x6c4(a2)
+ 1001298: 018006b7     	lui	a3, 0x1800
+ 100129c: 6cc6a703     	lw	a4, 0x6cc(a3)
+ 10012a0: 00b507b3     	add	a5, a0, a1
+ 10012a4: 00b705b3     	add	a1, a4, a1
+ 10012a8: 0037f713     	andi	a4, a5, 0x3
+ 10012ac: 00173813     	seqz	a6, a4
+ 10012b0: 00400893     	li	a7, 0x4
+ 10012b4: 40e88733     	sub	a4, a7, a4
+ 10012b8: fff80813     	addi	a6, a6, -0x1
+ 10012bc: 018008b7     	lui	a7, 0x1800
+ 10012c0: 6c88a883     	lw	a7, 0x6c8(a7)
+ 10012c4: 00e87733     	and	a4, a6, a4
+ 10012c8: 00e58833     	add	a6, a1, a4
+ 10012cc: 00e785b3     	add	a1, a5, a4
+ 10012d0: 6d06a623     	sw	a6, 0x6cc(a3)
+ 10012d4: 00b8f663     	bgeu	a7, a1, 0x10012e0 <malloc_beebs+0x58>
+</code></pre>
+<h2>Choice 1</h2>
+<table>
+<tr><th>func_name</th><th>bb_name</th><th>rel_weight</th><th>num_instrs</th><th>freq</th><th>start</th><th>end</th></tr>
+<tr><td>benchmark_body</td><td>%bb.76</td><td>0.060657</td><td>13</td><td>11269.0</td><td>0x1000efc</td><td>0x1000f30</td></tr>
+</table>
+<pre><code class='asm'>
+ 1000efc: 00269713     	slli	a4, a3, 0x2
+ 1000f00: 00ed8733     	add	a4, s11, a4
+ 1000f04: 00072783     	lw	a5, 0x0(a4)
+ 1000f08: 00261613     	slli	a2, a2, 0x2
+ 1000f0c: 00cd8633     	add	a2, s11, a2
+ 1000f10: 00f62023     	sw	a5, 0x0(a2)
+ 1000f14: 00b72023     	sw	a1, 0x0(a4)
+ 1000f18: 00169713     	slli	a4, a3, 0x1
+ 1000f1c: 00170793     	addi	a5, a4, 0x1
+ 1000f20: 00270713     	addi	a4, a4, 0x2
+ 1000f24: 00068613     	mv	a2, a3
+ 1000f28: f8a7c2e3     	blt	a5, a0, 0x1000eac <benchmark_body+0x550>
+ 1000f2c: f45ff06f     	j	0x1000e70 <benchmark_body+0x514>
+</code></pre>

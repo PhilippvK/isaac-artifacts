@@ -1,0 +1,1849 @@
+=== DIFFS ===
+0) <_nettle_sha256_compress-%bb.5>
+rel_weight [old] : 0.7154578673487411
+rel_weight [new] : 0.4060301017842498
+rel_weight [diff]: -0.30943
+rel_weight [rel] : -43.25%
+num_instrs [old] : 948
+num_instrs [new] : 538
+num_instrs [diff]: -410
+num_instrs [rel] : -43.25%
+diff --git a/old b/new
+index 36b059c..aca8504 100644
+--- a/old
++++ b/new
+@@ -1,948 +1,538 @@
+-srli      a2, t3, 0x6                                      
+-slli      a4, t3, 0x1a                                     
+-or        a2, a4, a2                                       
+-srli      a4, t3, 0xb                                      
+-slli      a5, t3, 0x15                                     
+-or        a4, a5, a4                                       
++sw        t3, 0x38(sp)                                     
++custom41  a2, t3                                           
++custom27  a2, a2, t3                                       
++srli      a4, t3, 0xa                                      
+ xor       a2, a2, a4                                       
+-srli      a4, t3, 0x19                                     
+-slli      a5, t3, 0x7                                      
+-or        a4, a5, a4                                       
+-xor       a2, a2, a4                                       
+-sw        t2, 0x34(sp)                                     
+-srli      a4, t2, 0x11                                     
+-slli      a5, t2, 0xf                                      
+-or        a4, a5, a4                                       
+-srli      a5, t2, 0x13                                     
+-slli      a0, t2, 0xd                                      
+-or        a0, a0, a5                                       
++custom38  a4, t5                                           
++custom25  a4, a4, t5                                       
++srli      a0, t5, 0x3                                      
+ xor       a0, a4, a0                                       
+-srli      a4, t2, 0xa                                      
+-xor       a0, a0, a4                                       
+-lw        t2, 0x2c(sp)                                     
+-srli      a4, t2, 0x7                                      
+-slli      a5, t2, 0x19                                     
+-or        a4, a5, a4                                       
+-srli      a5, t2, 0x12                                     
+-mv        s1, t5                                           
+-slli      t6, t2, 0xe                                      
+-or        a5, t6, a5                                       
+-xor       a4, a4, a5                                       
+-srli      a5, t2, 0x3                                      
+-xor       a4, a4, a5                                       
+-xor       a5, a3, a1                                       
+-and       a5, a5, t3                                       
+-xor       a5, a5, a3                                       
+-lw        t6, 0x38(sp)                                     
+-add       t6, t6, t4                                       
+-add       a0, a0, t6                                       
+-lw        t6, -0x3c(s7)                                    
+-add       t5, a0, a4                                       
+-add       a5, ra, a5                                       
+-add       a2, a5, a2                                       
+-add       a2, a2, t6                                       
+-add       ra, a2, t5                                       
+-add       a2, ra, a6                                       
+-srli      a0, t1, 0x2                                      
+-slli      a4, t1, 0x1e                                     
+-or        a0, a4, a0                                       
++custom7   a4, a5                                           
++custom1   a4, a4, a5                                       
++custom2   a4, a4, a5                                       
++add       t3, t4, t2                                       
++add       a2, a2, t3                                       
++xor       t3, a3, a1                                       
++and       t2, t3, a5                                       
++add       t3, a2, a0                                       
++lw        a0, -0x3c(s8)                                    
++xor       a2, t2, a3                                       
++add       a4, ra, a4                                       
++add       a2, a4, a2                                       
++add       a0, a2, a0                                       
++add       a0, a0, t3                                       
++add       a2, a0, a6                                       
+ srli      a4, t1, 0xd                                      
+-slli      a5, t1, 0x13                                     
+-or        a4, a5, a4                                       
+-xor       a0, a0, a4                                       
+-srli      a4, t1, 0x16                                     
+-slli      a5, t1, 0xa                                      
+-or        a4, a5, a4                                       
++custom23  a4, a4, t1, 0x13                                 
++custom33  a4, a4, t1                                       
++custom32  a4, a4, t1                                       
++and       a6, t0, t1                                       
++xor       t2, t0, t1                                       
++and       t2, a7, t2                                       
++xor       a6, t2, a6                                       
++add       a4, a6, a4                                       
++add       ra, a4, a0                                       
++custom41  a0, t6                                           
++custom27  a0, a0, t6                                       
++srli      a4, t6, 0xa                                      
+ xor       a0, a0, a4                                       
+-and       a4, t0, t1                                       
+-xor       a5, t0, t1                                       
+-and       a5, a7, a5                                       
+-xor       a4, a5, a4                                       
+-add       a0, a4, a0                                       
+-add       ra, a0, ra                                       
+-srli      a0, a2, 0x6                                      
+-slli      a4, a2, 0x1a                                     
+-or        a0, a4, a0                                       
+-srli      a4, a2, 0xb                                      
+-slli      a5, a2, 0x15                                     
+-or        a4, a5, a4                                       
+-xor       a0, a0, a4                                       
+-srli      a4, a2, 0x19                                     
+-slli      a5, a2, 0x7                                      
+-or        a4, a5, a4                                       
+-xor       a0, a0, a4                                       
+-sw        s1, 0x30(sp)                                     
+-srli      a4, s1, 0x11                                     
+-slli      a5, s1, 0xf                                      
+-or        a4, a5, a4                                       
+-srli      a5, s1, 0x13                                     
+-slli      a6, s1, 0xd                                      
+-or        a5, a6, a5                                       
+-xor       a4, a4, a5                                       
+-srli      a5, s1, 0xa                                      
+-xor       a4, a4, a5                                       
+-srli      a5, s2, 0x7                                      
+-slli      a6, s2, 0x19                                     
+-or        a5, a6, a5                                       
+-srli      a6, s2, 0x12                                     
+-slli      t6, s2, 0xe                                      
+-or        a6, t6, a6                                       
+-xor       a5, a5, a6                                       
+-srli      a6, s2, 0x3                                      
+-xor       a5, a5, a6                                       
+-xor       a6, a1, t3                                       
+-add       t2, s0, t2                                       
+-add       a4, t2, a4                                       
+-lw        t6, -0x38(s7)                                    
+-and       a6, a2, a6                                       
+-xor       a6, a6, a1                                       
+-add       t2, a4, a5                                       
+-add       a3, t6, a3                                       
+-add       a3, a3, a6                                       
+-add       a3, a3, t2                                       
++custom38  a4, s1                                           
++custom25  a4, a4, s1                                       
++srli      a6, s1, 0x3                                      
++xor       a4, a4, a6                                       
++custom7   a6, a2                                           
++custom1   a6, a6, a2                                       
++custom2   a6, a6, a2                                       
++add       t5, s0, t5                                       
++add       a0, t5, a0                                       
++lw        t2, -0x38(s8)                                    
++add       t5, a0, a4                                       
++xor       a0, a1, a5                                       
++and       a0, a2, a0                                       
++xor       a0, a0, a1                                       
++add       a3, t2, a3                                       
+ add       a0, a3, a0                                       
++add       a0, a0, a6                                       
++add       a0, a0, t5                                       
+ add       a7, a0, a7                                       
+-srli      a3, ra, 0x2                                      
+-slli      a4, ra, 0x1e                                     
+-or        a3, a4, a3                                       
+-srli      a4, ra, 0xd                                      
+-slli      a5, ra, 0x13                                     
+-or        a4, a5, a4                                       
+-xor       a3, a3, a4                                       
+-srli      a4, ra, 0x16                                     
+-slli      a5, ra, 0xa                                      
+-or        a4, a5, a4                                       
+-xor       a3, a3, a4                                       
++srli      a3, ra, 0xd                                      
++custom23  a3, a3, ra, 0x13                                 
++custom33  a3, a3, ra                                       
++custom32  a3, a3, ra                                       
+ and       a4, ra, t1                                       
+-xor       a5, ra, t1                                       
+-and       a5, a5, t0                                       
+-xor       a4, a5, a4                                       
++xor       a6, ra, t1                                       
++and       a6, a6, t0                                       
++xor       a4, a6, a4                                       
+ add       a3, a3, a4                                       
+ add       a4, a3, a0                                       
+-srli      a0, a7, 0x6                                      
+-slli      a3, a7, 0x1a                                     
+-or        a0, a3, a0                                       
+-srli      a3, a7, 0xb                                      
+-slli      a5, a7, 0x15                                     
+-or        a3, a5, a3                                       
++custom41  a0, t3                                           
++custom27  a0, a0, t3                                       
++srli      a3, t3, 0xa                                      
++sw        t3, 0x34(sp)                                     
+ xor       a0, a0, a3                                       
+-srli      a3, a7, 0x19                                     
+-slli      a5, a7, 0x7                                      
+-or        a3, a5, a3                                       
+-xor       a0, a0, a3                                       
+-srli      a3, t5, 0x11                                     
+-slli      a5, t5, 0xf                                      
+-or        a3, a5, a3                                       
+-srli      a5, t5, 0x13                                     
+-slli      a6, t5, 0xd                                      
+-or        a5, a6, a5                                       
+-xor       a3, a3, a5                                       
+-srli      a5, t5, 0xa                                      
+-xor       a3, a3, a5                                       
+-srli      a5, s4, 0x7                                      
+-slli      a6, s4, 0x19                                     
+-or        a5, a6, a5                                       
+-srli      a6, s4, 0x12                                     
+-slli      t6, s4, 0xe                                      
+-or        a6, t6, a6                                       
+-xor       a5, a5, a6                                       
+-srli      a6, s4, 0x3                                      
+-xor       a5, a5, a6                                       
+-xor       a6, a2, t3                                       
+-lw        t4, 0x28(sp)                                     
+-add       s2, s2, t4                                       
+-add       a5, s2, a5                                       
+-lw        t6, -0x34(s7)                                    
+-and       a6, a7, a6                                       
+-xor       a6, a6, t3                                       
+-add       s2, a3, a5                                       
+-add       a1, t6, a1                                       
+-add       a1, a1, s2                                       
+-add       a1, a1, a6                                       
++custom38  a3, s3                                           
++custom25  a3, a3, s3                                       
++srli      a6, s3, 0x3                                      
++xor       a3, a3, a6                                       
++custom7   a6, a7                                           
++custom1   a6, a6, a7                                       
++custom2   a6, a6, a7                                       
++add       s1, s1, s2                                       
++add       a3, s1, a3                                       
++lw        t2, -0x34(s8)                                    
++add       s1, a0, a3                                       
++xor       a0, a2, a5                                       
++and       a0, a7, a0                                       
++xor       a0, a0, a5                                       
++add       a1, t2, a1                                       
++add       a1, a1, s1                                       
+ add       a0, a1, a0                                       
++add       a0, a0, a6                                       
+ add       t0, a0, t0                                       
+-srli      a1, a4, 0x2                                      
+-slli      a3, a4, 0x1e                                     
+-or        a1, a3, a1                                       
+-srli      a3, a4, 0xd                                      
+-slli      a5, a4, 0x13                                     
+-or        a3, a5, a3                                       
+-xor       a1, a1, a3                                       
+-srli      a3, a4, 0x16                                     
+-slli      a5, a4, 0xa                                      
+-or        a3, a5, a3                                       
+-xor       a1, a1, a3                                       
++srli      a1, a4, 0xd                                      
++custom23  a1, a1, a4, 0x13                                 
++custom33  a1, a1, a4                                       
++custom32  a1, a1, a4                                       
+ and       a3, a4, ra                                       
+-xor       a5, a4, ra                                       
+-and       a5, a5, t1                                       
+-xor       a3, a5, a3                                       
++xor       a6, a4, ra                                       
++and       a6, a6, t1                                       
++xor       a3, a6, a3                                       
+ add       a1, a1, a3                                       
+ add       a1, a1, a0                                       
+-srli      a0, t0, 0x6                                      
+-slli      a3, t0, 0x1a                                     
+-or        a0, a3, a0                                       
+-srli      a3, t0, 0xb                                      
+-slli      a5, t0, 0x15                                     
+-or        a3, a5, a3                                       
+-xor       a0, a0, a3                                       
+-srli      a3, t0, 0x19                                     
+-slli      a5, t0, 0x7                                      
+-or        a3, a5, a3                                       
++custom41  a0, t5                                           
++custom27  a0, a0, t5                                       
++srli      a3, t5, 0xa                                      
+ xor       a0, a0, a3                                       
+-srli      a3, t2, 0x11                                     
+-slli      a5, t2, 0xf                                      
+-or        a3, a5, a3                                       
+-srli      a5, t2, 0x13                                     
+-slli      a6, t2, 0xd                                      
+-or        a5, a6, a5                                       
+-xor       a3, a3, a5                                       
+-srli      a5, t2, 0xa                                      
+-xor       a3, a3, a5                                       
+-srli      a5, s6, 0x7                                      
+-slli      a6, s6, 0x19                                     
+-or        a5, a6, a5                                       
+-srli      a6, s6, 0x12                                     
+-slli      t6, s6, 0xe                                      
+-or        a6, t6, a6                                       
+-xor       a5, a5, a6                                       
+-srli      a6, s6, 0x3                                      
+-xor       a5, a5, a6                                       
+-xor       a6, a7, a2                                       
+-add       s4, s3, s4                                       
+-add       a5, s4, a5                                       
+-lw        t6, -0x30(s7)                                    
+-and       a6, t0, a6                                       
+-xor       a6, a6, a2                                       
+-add       s4, a5, a3                                       
+-add       t3, t6, t3                                       
+-add       t3, t3, s4                                       
+-add       a6, t3, a6                                       
+-add       a0, a6, a0                                       
++custom38  a3, s5                                           
++custom25  a3, a3, s5                                       
++srli      a6, s5, 0x3                                      
++xor       a3, a3, a6                                       
++custom7   a6, t0                                           
++custom1   a6, a6, t0                                       
++custom2   a6, a6, t0                                       
++add       s3, s4, s3                                       
++add       a3, s3, a3                                       
++lw        t2, -0x30(s8)                                    
++add       s3, a3, a0                                       
++xor       a0, a7, a2                                       
++and       a0, t0, a0                                       
++xor       a0, a0, a2                                       
++add       a5, t2, a5                                       
++add       a5, a5, s3                                       
++add       a0, a5, a0                                       
++add       a0, a0, a6                                       
+ add       t1, a0, t1                                       
+-srli      a3, a1, 0x2                                      
+-slli      a5, a1, 0x1e                                     
+-or        a3, a5, a3                                       
+-srli      a5, a1, 0xd                                      
+-slli      a6, a1, 0x13                                     
+-or        a5, a6, a5                                       
+-xor       a3, a3, a5                                       
+-srli      a5, a1, 0x16                                     
+-slli      a6, a1, 0xa                                      
+-or        a5, a6, a5                                       
+-xor       a3, a3, a5                                       
+-and       a5, a1, a4                                       
+-xor       a6, a1, a4                                       
+-and       a6, a6, ra                                       
+-xor       a5, a6, a5                                       
+-add       a3, a3, a5                                       
+-add       a6, a3, a0                                       
+-srli      a0, t1, 0x6                                      
+-slli      a3, t1, 0x1a                                     
+-or        a0, a3, a0                                       
+-srli      a3, t1, 0xb                                      
+-slli      a5, t1, 0x15                                     
+-or        a3, a5, a3                                       
+-xor       a0, a0, a3                                       
+-srli      a3, t1, 0x19                                     
+-slli      a5, t1, 0x7                                      
+-or        a3, a5, a3                                       
++srli      a3, a1, 0xd                                      
++custom23  a3, a3, a1, 0x13                                 
++custom33  a3, a3, a1                                       
++custom32  a6, a3, a1                                       
++and       a3, a1, a4                                       
++xor       a5, a1, a4                                       
++and       a5, a5, ra                                       
++xor       a3, a5, a3                                       
++add       a0, a3, a0                                       
++add       a6, a6, a0                                       
++custom41  a0, s1                                           
++custom27  a0, a0, s1                                       
++srli      a3, s1, 0xa                                      
+ xor       a0, a0, a3                                       
+-srli      a3, s2, 0x11                                     
+-slli      a5, s2, 0xf                                      
+-or        a3, a5, a3                                       
+-srli      a5, s2, 0x13                                     
+-slli      t3, s2, 0xd                                      
+-or        a5, t3, a5                                       
++custom38  a3, s7                                           
++custom25  a3, a3, s7                                       
++srli      a5, s7, 0x3                                      
+ xor       a3, a3, a5                                       
+-srli      a5, s2, 0xa                                      
+-xor       a3, a3, a5                                       
+-srli      a5, s8, 0x7                                      
+-slli      t3, s8, 0x19                                     
+-or        a5, t3, a5                                       
+-srli      t3, s8, 0x12                                     
+-slli      t6, s8, 0xe                                      
+-or        t3, t6, t3                                       
+-xor       a5, a5, t3                                       
+-srli      t3, s8, 0x3                                      
+-xor       a5, a5, t3                                       
+-xor       t3, t0, a7                                       
+-add       s6, s5, s6                                       
+-add       a5, s6, a5                                       
+-lw        t6, -0x2c(s7)                                    
+-and       t3, t1, t3                                       
+-xor       t3, t3, a7                                       
+-add       s6, a5, a3                                       
+-add       a2, t6, a2                                       
+-add       a2, a2, s6                                       
+-add       a2, a2, t3                                       
++custom7   a5, t1                                           
++custom1   a5, a5, t1                                       
++custom2   a5, a5, t1                                       
++add       s5, s6, s5                                       
++add       a3, s5, a3                                       
++lw        t2, -0x2c(s8)                                    
++add       s5, a3, a0                                       
++xor       a0, t0, a7                                       
++and       a0, t1, a0                                       
++xor       a0, a0, a7                                       
++add       a2, t2, a2                                       
++add       a2, a2, s5                                       
+ add       a0, a2, a0                                       
++add       a0, a0, a5                                       
+ add       a3, a0, ra                                       
+-srli      a2, a6, 0x2                                      
+-slli      a5, a6, 0x1e                                     
+-or        a2, a5, a2                                       
+-srli      a5, a6, 0xd                                      
+-slli      t3, a6, 0x13                                     
+-or        a5, t3, a5                                       
+-xor       a2, a2, a5                                       
+-srli      a5, a6, 0x16                                     
+-slli      t3, a6, 0xa                                      
+-or        a5, t3, a5                                       
+-xor       a2, a2, a5                                       
++srli      a2, a6, 0xd                                      
++custom23  a2, a2, a6, 0x13                                 
++custom33  a2, a2, a6                                       
++custom32  a2, a2, a6                                       
+ and       a5, a6, a1                                       
+-xor       t3, a6, a1                                       
+-and       t3, t3, a4                                       
+-xor       a5, t3, a5                                       
+-add       a2, a2, a5                                       
++xor       t2, a6, a1                                       
++and       t2, t2, a4                                       
++xor       a5, t2, a5                                       
++add       a0, a5, a0                                       
+ add       a2, a2, a0                                       
+-srli      a0, a3, 0x6                                      
+-slli      a5, a3, 0x1a                                     
+-or        a0, a5, a0                                       
+-srli      a5, a3, 0xb                                      
+-slli      t3, a3, 0x15                                     
+-or        a5, t3, a5                                       
++custom41  a0, s3                                           
++custom27  a0, a0, s3                                       
++srli      a5, s3, 0xa                                      
+ xor       a0, a0, a5                                       
+-srli      a5, a3, 0x19                                     
+-slli      t3, a3, 0x7                                      
+-or        a5, t3, a5                                       
+-xor       a0, a0, a5                                       
+-srli      a5, s4, 0x11                                     
+-slli      t3, s4, 0xf                                      
+-or        a5, t3, a5                                       
+-srli      t3, s4, 0x13                                     
+-slli      t6, s4, 0xd                                      
+-or        t3, t6, t3                                       
+-xor       a5, a5, t3                                       
+-srli      t3, s4, 0xa                                      
+-xor       a5, a5, t3                                       
+-srli      t3, s9, 0x7                                      
+-slli      t6, s9, 0x19                                     
+-or        t3, t6, t3                                       
+-srli      t6, s9, 0x12                                     
+-slli      ra, s9, 0xe                                      
+-or        t6, ra, t6                                       
+-xor       t3, t3, t6                                       
+-srli      t6, s9, 0x3                                      
+-xor       t3, t3, t6                                       
+-xor       t6, t1, t0                                       
+-lw        s1, 0x34(sp)                                     
+-add       s8, s8, s1                                       
+-add       t3, s8, t3                                       
+-lw        ra, -0x28(s7)                                    
+-and       t6, a3, t6                                       
+-xor       t6, t6, t0                                       
+-add       s8, t3, a5                                       
++custom38  a5, s9                                           
++custom25  a5, a5, s9                                       
++srli      t2, s9, 0x3                                      
++xor       a5, a5, t2                                       
++custom7   t2, a3                                           
++custom1   t2, t2, a3                                       
++custom2   t2, t2, a3                                       
++lw        ra, 0x38(sp)                                     
++add       s7, s7, ra                                       
++add       a5, s7, a5                                       
++lw        ra, -0x28(s8)                                    
++add       s7, a5, a0                                       
++xor       a0, t1, t0                                       
++and       a0, a3, a0                                       
++xor       a0, a0, t0                                       
++add       ra, ra, s7                                       
+ add       a7, ra, a7                                       
+-add       a7, a7, s8                                       
+-add       a7, a7, t6                                       
+ add       a0, a7, a0                                       
++add       a0, a0, t2                                       
+ add       a4, a0, a4                                       
+-srli      a5, a2, 0x2                                      
+-slli      a7, a2, 0x1e                                     
+-or        a5, a7, a5                                       
+-srli      a7, a2, 0xd                                      
+-slli      t3, a2, 0x13                                     
+-or        a7, t3, a7                                       
+-xor       a5, a5, a7                                       
+-srli      a7, a2, 0x16                                     
+-slli      t3, a2, 0xa                                      
+-or        a7, t3, a7                                       
+-xor       a5, a5, a7                                       
+-and       a7, a2, a6                                       
+-xor       t3, a2, a6                                       
+-and       t3, t3, a1                                       
+-xor       a7, t3, a7                                       
+-add       a5, a5, a7                                       
+-add       a7, a5, a0                                       
+-srli      a0, a4, 0x6                                      
+-slli      a5, a4, 0x1a                                     
+-or        a0, a5, a0                                       
+-srli      a5, a4, 0xb                                      
+-slli      t3, a4, 0x15                                     
+-or        a5, t3, a5                                       
+-xor       a0, a0, a5                                       
+-srli      a5, a4, 0x19                                     
+-slli      t3, a4, 0x7                                      
+-or        a5, t3, a5                                       
++srli      a5, a2, 0xd                                      
++custom23  a5, a5, a2, 0x13                                 
++custom33  a5, a5, a2                                       
++custom32  a7, a5, a2                                       
++and       a5, a2, a6                                       
++xor       t2, a2, a6                                       
++and       t2, t2, a1                                       
++xor       a5, t2, a5                                       
++add       a0, a5, a0                                       
++add       a7, a7, a0                                       
++custom41  a0, s5                                           
++custom27  a0, a0, s5                                       
++srli      a5, s5, 0xa                                      
+ xor       a0, a0, a5                                       
+-srli      a5, s6, 0x11                                     
+-slli      t3, s6, 0xf                                      
+-or        a5, t3, a5                                       
+-srli      t3, s6, 0x13                                     
+-slli      t6, s6, 0xd                                      
+-or        t3, t6, t3                                       
+-xor       a5, a5, t3                                       
+-srli      t3, s6, 0xa                                      
+-xor       a5, a5, t3                                       
+-srli      t3, s11, 0x7                                     
+-slli      t6, s11, 0x19                                    
+-or        t3, t6, t3                                       
+-srli      t6, s11, 0x12                                    
+-slli      ra, s11, 0xe                                     
+-or        t6, ra, t6                                       
+-xor       t3, t3, t6                                       
+-srli      t6, s11, 0x3                                     
+-xor       t3, t3, t6                                       
+-xor       t6, a3, t1                                       
+-lw        s1, 0x30(sp)                                     
+-add       s9, s9, s1                                       
+-add       t3, s9, t3                                       
+-lw        ra, -0x24(s7)                                    
+-and       t6, a4, t6                                       
+-xor       t6, t6, t1                                       
+-add       s9, t3, a5                                       
++custom38  a5, s10                                          
++custom25  a5, a5, s10                                      
++srli      t2, s10, 0x3                                     
++xor       a5, a5, t2                                       
++custom7   t2, a4                                           
++custom1   t2, t2, a4                                       
++custom2   t2, t2, a4                                       
++add       s9, s9, t6                                       
++add       a5, s9, a5                                       
++lw        ra, -0x24(s8)                                    
++add       s9, a5, a0                                       
++xor       a0, a3, t1                                       
++and       a0, a4, a0                                       
++xor       a0, a0, t1                                       
++add       ra, ra, s9                                       
+ add       t0, t0, ra                                       
+-add       t0, t0, s9                                       
+-add       t0, t0, t6                                       
+ add       a0, t0, a0                                       
++add       a0, a0, t2                                       
+ add       a5, a0, a1                                       
+-srli      a1, a7, 0x2                                      
+-slli      t0, a7, 0x1e                                     
+-or        a1, t0, a1                                       
+-srli      t0, a7, 0xd                                      
+-slli      t3, a7, 0x13                                     
+-or        t0, t3, t0                                       
+-xor       a1, a1, t0                                       
+-srli      t0, a7, 0x16                                     
+-slli      t3, a7, 0xa                                      
+-or        t0, t3, t0                                       
+-xor       a1, a1, t0                                       
+-and       t0, a7, a2                                       
+-xor       t3, a7, a2                                       
+-and       t3, t3, a6                                       
+-xor       t0, t3, t0                                       
+-add       a1, a1, t0                                       
+-add       t0, a1, a0                                       
+-srli      a0, a5, 0x6                                      
+-slli      a1, a5, 0x1a                                     
+-or        a0, a1, a0                                       
+-srli      a1, a5, 0xb                                      
+-slli      t3, a5, 0x15                                     
+-or        a1, t3, a1                                       
+-xor       a0, a0, a1                                       
+-srli      a1, a5, 0x19                                     
+-slli      t3, a5, 0x7                                      
+-or        a1, t3, a1                                       
++srli      a1, a7, 0xd                                      
++custom23  a1, a1, a7, 0x13                                 
++custom33  a1, a1, a7                                       
++custom32  t0, a1, a7                                       
++and       a1, a7, a2                                       
++xor       t2, a7, a2                                       
++and       t2, t2, a6                                       
++xor       a1, t2, a1                                       
++add       a0, a1, a0                                       
++add       t0, t0, a0                                       
++custom41  a0, s7                                           
++custom27  a0, a0, s7                                       
++srli      a1, s7, 0xa                                      
+ xor       a0, a0, a1                                       
+-srli      a1, s8, 0x11                                     
+-slli      t3, s8, 0xf                                      
+-or        a1, t3, a1                                       
+-srli      t3, s8, 0x13                                     
+-slli      t6, s8, 0xd                                      
+-or        t3, t6, t3                                       
+-xor       a1, a1, t3                                       
+-srli      t3, s8, 0xa                                      
+-xor       a1, a1, t3                                       
+-srli      t3, s10, 0x7                                     
+-slli      t6, s10, 0x19                                    
+-or        t3, t6, t3                                       
+-srli      t6, s10, 0x12                                    
+-slli      ra, s10, 0xe                                     
+-or        t6, ra, t6                                       
+-xor       t3, t3, t6                                       
+-srli      t6, s10, 0x3                                     
+-xor       t3, t3, t6                                       
+-xor       t6, a4, a3                                       
+-add       s11, s11, t5                                     
+-add       t3, s11, t3                                      
+-lw        ra, -0x20(s7)                                    
+-and       t6, a5, t6                                       
+-xor       t6, t6, a3                                       
+-add       s11, t3, a1                                      
+-add       ra, s11, ra                                      
++custom38  a1, s11                                          
++custom25  a1, a1, s11                                      
++srli      t2, s11, 0x3                                     
++xor       a1, a1, t2                                       
++custom7   t2, a5                                           
++custom1   t2, t2, a5                                       
++custom2   t2, t2, a5                                       
++add       s10, s10, t3                                     
++add       a1, s10, a1                                      
++lw        ra, -0x20(s8)                                    
++add       s10, a1, a0                                      
++xor       a0, a4, a3                                       
++and       a0, a5, a0                                       
++xor       a0, a0, a3                                       
++add       ra, s10, ra                                      
+ add       t1, ra, t1                                       
+-add       t1, t1, t6                                       
+ add       a0, t1, a0                                       
++add       a0, a0, t2                                       
+ add       a6, a0, a6                                       
+-srli      a1, t0, 0x2                                      
+-slli      t1, t0, 0x1e                                     
+-or        a1, t1, a1                                       
+-srli      t1, t0, 0xd                                      
+-slli      t3, t0, 0x13                                     
+-or        t1, t3, t1                                       
+-xor       a1, a1, t1                                       
+-srli      t1, t0, 0x16                                     
+-slli      t3, t0, 0xa                                      
+-or        t1, t3, t1                                       
+-xor       a1, a1, t1                                       
+-and       t1, t0, a7                                       
+-xor       t3, t0, a7                                       
+-and       t3, t3, a2                                       
+-xor       t1, t3, t1                                       
+-add       a1, a1, t1                                       
+-add       t1, a1, a0                                       
+-srli      a0, a6, 0x6                                      
+-slli      a1, a6, 0x1a                                     
+-or        a0, a1, a0                                       
+-srli      a1, a6, 0xb                                      
+-slli      t3, a6, 0x15                                     
+-or        a1, t3, a1                                       
+-xor       a0, a0, a1                                       
+-srli      a1, a6, 0x19                                     
+-slli      t3, a6, 0x7                                      
+-or        a1, t3, a1                                       
++srli      a1, t0, 0xd                                      
++custom23  a1, a1, t0, 0x13                                 
++custom33  a1, a1, t0                                       
++custom32  t1, a1, t0                                       
++and       a1, t0, a7                                       
++xor       t2, t0, a7                                       
++and       t2, t2, a2                                       
++xor       a1, t2, a1                                       
++add       a0, a1, a0                                       
++add       t1, t1, a0                                       
++custom41  a0, s9                                           
++custom27  a0, a0, s9                                       
++srli      a1, s9, 0xa                                      
+ xor       a0, a0, a1                                       
+-srli      a1, s9, 0x11                                     
+-slli      t3, s9, 0xf                                      
+-or        a1, t3, a1                                       
+-srli      t3, s9, 0x13                                     
+-slli      t6, s9, 0xd                                      
+-or        t3, t6, t3                                       
+-xor       a1, a1, t3                                       
+-srli      t3, s9, 0xa                                      
+-xor       a1, a1, t3                                       
+-lw        s1, 0x38(sp)                                     
+-srli      t3, s1, 0x7                                      
+-slli      t6, s1, 0x19                                     
+-or        t3, t6, t3                                       
+-srli      t6, s1, 0x12                                     
+-slli      ra, s1, 0xe                                      
+-or        t6, ra, t6                                       
+-xor       t3, t3, t6                                       
+-srli      t6, s1, 0x3                                      
+-xor       t3, t3, t6                                       
+-xor       t6, a5, a4                                       
+-and       t6, a6, t6                                       
+-add       t3, t3, s10                                      
+-lw        ra, -0x1c(s7)                                    
+-xor       t6, t6, a4                                       
+-sw        t2, 0x2c(sp)                                     
+-add       t3, t2, t3                                       
+-add       s10, t3, a1                                      
+-add       ra, s10, ra                                      
++custom38  a1, t4                                           
++custom25  a1, a1, t4                                       
++srli      t2, t4, 0x3                                      
++xor       a1, a1, t2                                       
++custom7   t2, a6                                           
++custom1   t2, t2, a6                                       
++custom2   t2, t2, a6                                       
++add       a1, a1, s11                                      
++lw        ra, -0x1c(s8)                                    
++add       a1, t5, a1                                       
++add       s11, a1, a0                                      
++xor       a0, a5, a4                                       
++and       a0, a6, a0                                       
++xor       a0, a0, a4                                       
++add       ra, s11, ra                                      
+ add       a3, ra, a3                                       
+-add       a3, a3, t6                                       
+ add       a0, a3, a0                                       
++add       a0, a0, t2                                       
+ add       a3, a0, a2                                       
+-srli      a1, t1, 0x2                                      
+-slli      a2, t1, 0x1e                                     
+-or        a1, a2, a1                                       
+-srli      a2, t1, 0xd                                      
+-slli      t3, t1, 0x13                                     
+-or        a2, t3, a2                                       
+-xor       a1, a1, a2                                       
+-srli      a2, t1, 0x16                                     
+-slli      t3, t1, 0xa                                      
+-or        a2, t3, a2                                       
+-xor       a1, a1, a2                                       
+-and       a2, t1, t0                                       
+-xor       t3, t1, t0                                       
+-and       t3, t3, a7                                       
+-xor       a2, t3, a2                                       
+-add       a1, a1, a2                                       
+-add       ra, a1, a0                                       
+-srli      a0, a3, 0x6                                      
+-slli      a1, a3, 0x1a                                     
+-or        a0, a1, a0                                       
+-srli      a1, a3, 0xb                                      
+-slli      a2, a3, 0x15                                     
+-or        a1, a2, a1                                       
+-xor       a0, a0, a1                                       
+-srli      a1, a3, 0x19                                     
+-slli      a2, a3, 0x7                                      
+-or        a1, a2, a1                                       
++srli      a1, t1, 0xd                                      
++custom23  a1, a1, t1, 0x13                                 
++custom33  a1, a1, t1                                       
++custom32  ra, a1, t1                                       
++and       a1, t1, t0                                       
++xor       a2, t1, t0                                       
++and       a2, a2, a7                                       
++xor       a1, a2, a1                                       
++add       a0, a1, a0                                       
++add       ra, ra, a0                                       
++custom41  a0, s10                                          
++custom27  a0, a0, s10                                      
++srli      a1, s10, 0xa                                     
+ xor       a0, a0, a1                                       
+-srli      a1, s11, 0x11                                    
+-slli      a2, s11, 0xf                                     
+-or        a1, a2, a1                                       
+-srli      a2, s11, 0x13                                    
+-slli      t3, s11, 0xd                                     
+-or        a2, t3, a2                                       
++custom38  a1, s0                                           
++custom25  a1, a1, s0                                       
++srli      a2, s0, 0x3                                      
+ xor       a1, a1, a2                                       
+-srli      a2, s11, 0xa                                     
+-xor       a1, a1, a2                                       
+-srli      a2, s0, 0x7                                      
+-slli      t3, s0, 0x19                                     
+-or        a2, t3, a2                                       
+-srli      t3, s0, 0x12                                     
+-slli      t6, s0, 0xe                                      
+-or        t3, t6, t3                                       
+-xor       a2, a2, t3                                       
+-srli      t3, s0, 0x3                                      
+-xor       a2, a2, t3                                       
+-xor       t3, a6, a5                                       
+-and       t3, a3, t3                                       
+-add       a2, a2, s1                                       
+-lw        t6, -0x18(s7)                                    
+-xor       t3, t3, a5                                       
+-add       a2, a2, s2                                       
+-add       t2, a2, a1                                       
+-add       t6, t2, t6                                       
+-add       a4, t6, a4                                       
+-add       a4, a4, t3                                       
++custom7   a2, a3                                           
++custom1   a2, a2, a3                                       
++custom2   a2, a2, a3                                       
++add       a1, a1, t4                                       
++lw        t2, -0x18(s8)                                    
++add       a1, a1, s1                                       
++add       t4, a1, a0                                       
++xor       a0, a6, a5                                       
++and       a0, a3, a0                                       
++xor       a0, a0, a5                                       
++add       t2, t4, t2                                       
++add       a4, t2, a4                                       
+ add       a0, a4, a0                                       
++add       a0, a0, a2                                       
+ add       a4, a0, a7                                       
+-srli      a1, ra, 0x2                                      
+-slli      a2, ra, 0x1e                                     
+-or        a1, a2, a1                                       
+-srli      a2, ra, 0xd                                      
+-slli      a7, ra, 0x13                                     
+-or        a2, a7, a2                                       
+-xor       a1, a1, a2                                       
+-srli      a2, ra, 0x16                                     
+-slli      a7, ra, 0xa                                      
+-or        a2, a7, a2                                       
+-xor       a1, a1, a2                                       
++srli      a1, ra, 0xd                                      
++custom23  a1, a1, ra, 0x13                                 
++custom33  a1, a1, ra                                       
++custom32  a1, a1, ra                                       
+ and       a2, ra, t1                                       
+ xor       a7, ra, t1                                       
+ and       a7, a7, t0                                       
+ xor       a2, a7, a2                                       
+-add       a1, a1, a2                                       
++add       a0, a2, a0                                       
+ add       a1, a1, a0                                       
+-srli      a0, a4, 0x6                                      
+-slli      a2, a4, 0x1a                                     
+-or        a0, a2, a0                                       
+-srli      a2, a4, 0xb                                      
+-slli      a7, a4, 0x15                                     
+-or        a2, a7, a2                                       
+-xor       a0, a0, a2                                       
+-srli      a2, a4, 0x19                                     
+-slli      a7, a4, 0x7                                      
+-or        a2, a7, a2                                       
++custom41  a0, s11                                          
++custom27  a0, a0, s11                                      
++srli      a2, s11, 0xa                                     
+ xor       a0, a0, a2                                       
+-srli      a2, s10, 0x11                                    
+-slli      a7, s10, 0xf                                     
+-or        a2, a7, a2                                       
+-srli      a7, s10, 0x13                                    
+-slli      t3, s10, 0xd                                     
+-or        a7, t3, a7                                       
+-xor       a2, a2, a7                                       
+-srli      a7, s10, 0xa                                     
++custom38  a2, s2                                           
++custom25  a2, a2, s2                                       
++srli      a7, s2, 0x3                                      
+ xor       a2, a2, a7                                       
+-srli      a7, t4, 0x7                                      
+-slli      t3, t4, 0x19                                     
+-or        a7, t3, a7                                       
+-srli      t3, t4, 0x12                                     
+-slli      t6, t4, 0xe                                      
+-or        t3, t6, t3                                       
+-xor       a7, a7, t3                                       
+-srli      t3, t4, 0x3                                      
+-xor       a7, a7, t3                                       
+-xor       t3, a3, a6                                       
+-and       t3, a4, t3                                       
+-add       a7, a7, s0                                       
+-lw        t6, -0x14(s7)                                    
+-xor       t3, t3, a6                                       
+-add       a7, a7, s4                                       
+-add       s1, a7, a2                                       
+-add       t6, s1, t6                                       
+-add       a5, t6, a5                                       
+-add       a5, a5, t3                                       
++custom7   a7, a4                                           
++custom1   a7, a7, a4                                       
++custom2   a7, a7, a4                                       
++add       a2, a2, s0                                       
++lw        t2, -0x14(s8)                                    
++add       a2, a2, s3                                       
++add       s0, a2, a0                                       
++xor       a0, a3, a6                                       
++and       a0, a4, a0                                       
++xor       a0, a0, a6                                       
++add       t2, s0, t2                                       
++add       a5, t2, a5                                       
+ add       a0, a5, a0                                       
++add       a0, a0, a7                                       
+ add       t0, a0, t0                                       
+-srli      a2, a1, 0x2                                      
+-slli      a5, a1, 0x1e                                     
+-or        a2, a5, a2                                       
+-srli      a5, a1, 0xd                                      
+-slli      a7, a1, 0x13                                     
+-or        a5, a7, a5                                       
+-xor       a2, a2, a5                                       
+-srli      a5, a1, 0x16                                     
+-slli      a7, a1, 0xa                                      
+-or        a5, a7, a5                                       
+-xor       a2, a2, a5                                       
++srli      a2, a1, 0xd                                      
++custom23  a2, a2, a1, 0x13                                 
++custom33  a2, a2, a1                                       
++custom32  a2, a2, a1                                       
+ and       a5, a1, ra                                       
+ xor       a7, a1, ra                                       
+ and       a7, a7, t1                                       
+ xor       a5, a7, a5                                       
+-add       a2, a2, a5                                       
++add       a0, a5, a0                                       
+ add       a2, a2, a0                                       
+-srli      a0, t0, 0x6                                      
+-slli      a5, t0, 0x1a                                     
+-or        a0, a5, a0                                       
+-srli      a5, t0, 0xb                                      
+-slli      a7, t0, 0x15                                     
+-or        a5, a7, a5                                       
+-xor       a0, a0, a5                                       
+-srli      a5, t0, 0x19                                     
+-slli      a7, t0, 0x7                                      
+-or        a5, a7, a5                                       
++custom41  a0, t4                                           
++custom27  a0, a0, t4                                       
++srli      a5, t4, 0xa                                      
+ xor       a0, a0, a5                                       
+-srli      a5, t2, 0x11                                     
+-slli      a7, t2, 0xf                                      
+-or        a5, a7, a5                                       
+-srli      a7, t2, 0x13                                     
+-slli      t3, t2, 0xd                                      
+-or        a7, t3, a7                                       
+-xor       a5, a5, a7                                       
+-sw        t2, 0x38(sp)                                     
+-srli      a7, t2, 0xa                                      
++custom38  a5, s4                                           
++custom25  a5, a5, s4                                       
++srli      a7, s4, 0x3                                      
+ xor       a5, a5, a7                                       
+-srli      a7, s3, 0x7                                      
+-slli      t3, s3, 0x19                                     
+-or        a7, t3, a7                                       
+-srli      t3, s3, 0x12                                     
+-slli      t6, s3, 0xe                                      
+-or        t3, t6, t3                                       
+-xor       a7, a7, t3                                       
+-srli      t3, s3, 0x3                                      
+-xor       a7, a7, t3                                       
+-xor       t3, a4, a3                                       
+-and       t3, t0, t3                                       
+-add       a7, a7, t4                                       
+-lw        t6, -0x10(s7)                                    
+-xor       t3, t3, a3                                       
+-add       a7, a7, s6                                       
+-add       t2, a7, a5                                       
+-add       t6, t2, t6                                       
+-add       a6, t6, a6                                       
+-add       a6, a6, t3                                       
++custom7   a7, t0                                           
++custom1   a7, a7, t0                                       
++custom2   a7, a7, t0                                       
++add       a5, a5, s2                                       
++lw        t2, -0x10(s8)                                    
++add       a5, a5, s5                                       
++add       s2, a5, a0                                       
++xor       a0, a4, a3                                       
++and       a0, t0, a0                                       
++xor       a0, a0, a3                                       
++add       t2, s2, t2                                       
++add       a6, t2, a6                                       
+ add       a0, a6, a0                                       
++add       a0, a0, a7                                       
+ add       t1, a0, t1                                       
+-srli      a5, a2, 0x2                                      
+-slli      a6, a2, 0x1e                                     
+-or        a5, a6, a5                                       
+-srli      a6, a2, 0xd                                      
+-slli      a7, a2, 0x13                                     
+-or        a6, a7, a6                                       
+-xor       a5, a5, a6                                       
+-srli      a6, a2, 0x16                                     
+-slli      a7, a2, 0xa                                      
+-or        a6, a7, a6                                       
+-xor       a5, a5, a6                                       
++srli      a5, a2, 0xd                                      
++custom23  a5, a5, a2, 0x13                                 
++custom33  a5, a5, a2                                       
++custom32  a5, a5, a2                                       
+ and       a6, a2, a1                                       
+ xor       a7, a2, a1                                       
+ and       a7, a7, ra                                       
+ xor       a6, a7, a6                                       
+-add       a5, a5, a6                                       
++add       a0, a6, a0                                       
+ add       a5, a5, a0                                       
+-srli      a0, t1, 0x6                                      
+-slli      a6, t1, 0x1a                                     
+-or        a0, a6, a0                                       
+-srli      a6, t1, 0xb                                      
+-slli      a7, t1, 0x15                                     
+-or        a6, a7, a6                                       
+-xor       a0, a0, a6                                       
+-srli      a6, t1, 0x19                                     
+-slli      a7, t1, 0x7                                      
+-or        a6, a7, a6                                       
++custom41  a0, s0                                           
++custom27  a0, a0, s0                                       
++srli      a6, s0, 0xa                                      
+ xor       a0, a0, a6                                       
+-srli      a6, s1, 0x11                                     
+-slli      a7, s1, 0xf                                      
+-or        a6, a7, a6                                       
+-srli      a7, s1, 0x13                                     
+-slli      t3, s1, 0xd                                      
+-or        a7, t3, a7                                       
++custom38  a6, s6                                           
++custom25  a6, a6, s6                                       
++srli      a7, s6, 0x3                                      
+ xor       a6, a6, a7                                       
+-srli      a7, s1, 0xa                                      
+-xor       a6, a6, a7                                       
+-srli      a7, s5, 0x7                                      
+-slli      t3, s5, 0x19                                     
+-or        a7, t3, a7                                       
+-srli      t3, s5, 0x12                                     
+-slli      t6, s5, 0xe                                      
+-or        t3, t6, t3                                       
+-xor       a7, a7, t3                                       
+-srli      t3, s5, 0x3                                      
+-xor       a7, a7, t3                                       
+-xor       t3, t0, a4                                       
+-and       t3, t1, t3                                       
+-add       a7, a7, s3                                       
+-lw        t6, -0xc(s7)                                     
+-xor       t3, t3, a4                                       
+-add       a7, a7, s8                                       
+-add       s3, a7, a6                                       
+-add       t6, s3, t6                                       
+-add       a3, t6, a3                                       
+-add       a3, a3, t3                                       
++custom7   a7, t1                                           
++custom1   a7, a7, t1                                       
++custom2   a7, a7, t1                                       
++add       a6, a6, s4                                       
++lw        t2, -0xc(s8)                                     
++add       a6, a6, s7                                       
++add       s4, a6, a0                                       
++xor       a0, t0, a4                                       
++and       a0, t1, a0                                       
++xor       a0, a0, a4                                       
++add       t2, s4, t2                                       
++add       a3, t2, a3                                       
+ add       a0, a3, a0                                       
++add       a0, a0, a7                                       
+ add       ra, a0, ra                                       
+-srli      a3, a5, 0x2                                      
+-slli      a6, a5, 0x1e                                     
+-or        a3, a6, a3                                       
+-srli      a6, a5, 0xd                                      
+-slli      a7, a5, 0x13                                     
+-or        a6, a7, a6                                       
+-xor       a3, a3, a6                                       
+-srli      a6, a5, 0x16                                     
+-slli      a7, a5, 0xa                                      
+-or        a6, a7, a6                                       
+-xor       a3, a3, a6                                       
+-and       a6, a5, a2                                       
++srli      a3, a5, 0xd                                      
++custom23  a3, a3, a5, 0x13                                 
++custom33  a3, a3, a5                                       
++custom32  a6, a3, a5                                       
++and       a3, a5, a2                                       
+ xor       a7, a5, a2                                       
+ and       a7, a7, a1                                       
+-xor       a6, a7, a6                                       
+-add       a3, a3, a6                                       
+-add       a6, a3, a0                                       
+-srli      a0, ra, 0x6                                      
+-slli      a3, ra, 0x1a                                     
+-or        a0, a3, a0                                       
+-srli      a3, ra, 0xb                                      
+-slli      a7, ra, 0x15                                     
+-or        a3, a7, a3                                       
+-xor       a0, a0, a3                                       
+-srli      a3, ra, 0x19                                     
+-slli      a7, ra, 0x7                                      
+-or        a3, a7, a3                                       
++xor       a3, a7, a3                                       
++add       a0, a3, a0                                       
++add       a6, a6, a0                                       
++custom41  a0, s2                                           
++custom27  a0, a0, s2                                       
++srli      a3, s2, 0xa                                      
+ xor       a0, a0, a3                                       
+-srli      a3, t2, 0x11                                     
+-slli      a7, t2, 0xf                                      
+-or        a3, a7, a3                                       
+-srli      a7, t2, 0x13                                     
+-slli      t3, t2, 0xd                                      
+-or        a7, t3, a7                                       
++lw        t2, 0x38(sp)                                     
++custom38  a3, t2                                           
++custom25  a3, a3, t2                                       
++srli      a7, t2, 0x3                                      
++mv        t3, t2                                           
+ xor       a3, a3, a7                                       
+-sw        t2, 0x28(sp)                                     
+-srli      a7, t2, 0xa                                      
+-xor       a3, a3, a7                                       
+-lw        t2, 0x34(sp)                                     
+-srli      a7, t2, 0x7                                      
+-slli      t3, t2, 0x19                                     
+-or        a7, t3, a7                                       
+-srli      t3, t2, 0x12                                     
+-slli      t6, t2, 0xe                                      
+-or        t3, t6, t3                                       
+-xor       a7, a7, t3                                       
+-srli      t3, t2, 0x3                                      
+-xor       a7, a7, t3                                       
+-xor       t3, t1, t0                                       
+-and       t3, ra, t3                                       
+-add       a7, s5, a7                                       
+-lw        t6, -0x8(s7)                                     
+-xor       t3, t3, t0                                       
+-add       a7, a7, s9                                       
+-add       s5, a7, a3                                       
+-add       t6, s5, t6                                       
+-add       a4, t6, a4                                       
+-add       a4, a4, t3                                       
++custom7   a7, ra                                           
++custom1   a7, a7, ra                                       
++custom2   a7, a7, ra                                       
++add       a3, s6, a3                                       
++lw        t2, -0x8(s8)                                     
++add       a3, a3, s9                                       
++add       s6, a3, a0                                       
++xor       a0, t1, t0                                       
++and       a0, ra, a0                                       
++xor       a0, a0, t0                                       
++add       t2, s6, t2                                       
++add       a4, t2, a4                                       
+ add       a0, a4, a0                                       
++add       a0, a0, a7                                       
+ add       a3, a0, a1                                       
+-srli      a1, a6, 0x2                                      
+-slli      a4, a6, 0x1e                                     
+-or        a1, a4, a1                                       
+-srli      a4, a6, 0xd                                      
+-slli      a7, a6, 0x13                                     
+-or        a4, a7, a4                                       
+-xor       a1, a1, a4                                       
+-srli      a4, a6, 0x16                                     
+-slli      a7, a6, 0xa                                      
+-or        a4, a7, a4                                       
+-xor       a1, a1, a4                                       
+-and       a4, a6, a5                                       
+-xor       a7, a6, a5                                       
+-and       a7, a7, a2                                       
+-xor       a4, a7, a4                                       
+-add       a1, a1, a4                                       
+-add       a7, a1, a0                                       
+-srli      a0, a3, 0x6                                      
+-slli      a1, a3, 0x1a                                     
+-or        a0, a1, a0                                       
+-srli      a1, a3, 0xb                                      
+-slli      a4, a3, 0x15                                     
+-or        a1, a4, a1                                       
+-xor       a0, a0, a1                                       
+-srli      a1, a3, 0x19                                     
+-slli      a4, a3, 0x7                                      
+-or        a1, a4, a1                                       
++srli      a1, a6, 0xd                                      
++custom23  a1, a1, a6, 0x13                                 
++custom33  a1, a1, a6                                       
++custom32  a7, a1, a6                                       
++and       a1, a6, a5                                       
++xor       a4, a6, a5                                       
++and       a4, a4, a2                                       
++xor       a1, a4, a1                                       
++add       a0, a1, a0                                       
++add       a7, a7, a0                                       
++custom41  a0, s4                                           
++custom27  a0, a0, s4                                       
++srli      a1, s4, 0xa                                      
+ xor       a0, a0, a1                                       
+-srli      a1, s3, 0x11                                     
+-slli      a4, s3, 0xf                                      
+-or        a1, a4, a1                                       
+-srli      a4, s3, 0x13                                     
+-slli      t3, s3, 0xd                                      
+-or        a4, t3, a4                                       
+-xor       a1, a1, a4                                       
+-srli      a4, s3, 0xa                                      
++custom38  a1, t6                                           
++custom25  a1, a1, t6                                       
++srli      a4, t6, 0x3                                      
+ xor       a1, a1, a4                                       
+-lw        s0, 0x30(sp)                                     
+-srli      a4, s0, 0x7                                      
+-slli      t3, s0, 0x19                                     
+-or        a4, t3, a4                                       
+-srli      t3, s0, 0x12                                     
+-slli      t6, s0, 0xe                                      
+-or        t3, t6, t3                                       
+-xor       a4, a4, t3                                       
+-srli      t3, s0, 0x3                                      
+-xor       a4, a4, t3                                       
+-xor       t3, ra, t1                                       
+-and       t3, a3, t3                                       
+-add       a4, a4, t2                                       
+-lw        t6, -0x4(s7)                                     
+-xor       t3, t3, t1                                       
+-add       a4, a4, s11                                      
+-add       a1, a4, a1                                       
+-mv        t2, a1                                           
+-add       t6, a1, t6                                       
+-add       t0, t6, t0                                       
+-add       t0, t0, t3                                       
++custom7   a4, a3                                           
++custom1   a4, a4, a3                                       
++custom2   a4, a4, a3                                       
++add       a1, a1, t3                                       
++lw        t2, -0x4(s8)                                     
++add       a1, a1, s10                                      
++add       a1, a1, a0                                       
++xor       a0, ra, t1                                       
++and       a0, a3, a0                                       
++xor       a0, a0, t1                                       
++mv        t3, a1                                           
++add       t2, a1, t2                                       
++add       t0, t2, t0                                       
++lw        t2, 0x34(sp)                                     
+ add       a0, t0, a0                                       
++add       a0, a0, a4                                       
+ add       a1, a0, a2                                       
+-srli      a2, a7, 0x2                                      
+-slli      a4, a7, 0x1e                                     
+-or        a2, a4, a2                                       
+-srli      a4, a7, 0xd                                      
+-slli      t0, a7, 0x13                                     
+-or        a4, t0, a4                                       
+-xor       a2, a2, a4                                       
+-srli      a4, a7, 0x16                                     
+-slli      t0, a7, 0xa                                      
+-or        a4, t0, a4                                       
+-xor       a2, a2, a4                                       
+-and       a4, a7, a6                                       
+-xor       t0, a7, a6                                       
+-and       t0, t0, a5                                       
+-xor       a4, t0, a4                                       
+-add       a2, a2, a4                                       
+-add       t0, a2, a0                                       
+-srli      a0, a1, 0x6                                      
+-slli      a2, a1, 0x1a                                     
+-or        a0, a2, a0                                       
+-srli      a2, a1, 0xb                                      
+-slli      a4, a1, 0x15                                     
+-or        a2, a4, a2                                       
+-xor       a0, a0, a2                                       
+-srli      a2, a1, 0x19                                     
+-slli      a4, a1, 0x7                                      
+-or        a2, a4, a2                                       
++srli      a2, a7, 0xd                                      
++custom23  a2, a2, a7, 0x13                                 
++custom33  a2, a2, a7                                       
++custom32  t0, a2, a7                                       
++and       a2, a7, a6                                       
++xor       a4, a7, a6                                       
++and       a4, a4, a5                                       
++xor       a2, a4, a2                                       
++add       a0, a2, a0                                       
++add       t0, t0, a0                                       
++custom41  a0, s6                                           
++custom27  a0, a0, s6                                       
++srli      a2, s6, 0xa                                      
+ xor       a0, a0, a2                                       
+-srli      a2, s5, 0x11                                     
+-slli      a4, s5, 0xf                                      
+-or        a2, a4, a2                                       
+-srli      a4, s5, 0x13                                     
+-slli      t3, s5, 0xd                                      
+-or        a4, t3, a4                                       
++custom38  a2, t2                                           
++custom25  a2, a2, t2                                       
++srli      a4, t2, 0x3                                      
+ xor       a2, a2, a4                                       
+-srli      a4, s5, 0xa                                      
+-xor       a2, a2, a4                                       
+-srli      a4, t5, 0x7                                      
+-slli      t3, t5, 0x19                                     
+-or        a4, t3, a4                                       
+-srli      t3, t5, 0x12                                     
+-slli      t6, t5, 0xe                                      
+-or        t3, t6, t3                                       
+-xor       a4, a4, t3                                       
+-mv        t4, t5                                           
+-srli      t3, t5, 0x3                                      
+-xor       a4, a4, t3                                       
+-add       a4, a4, s0                                       
+-mv        s0, s1                                           
+-lw        t3, 0x0(s7)                                      
+-add       a4, a4, s10                                      
+-add       t5, a4, a2                                       
++add       a2, a2, t6                                       
++lw        a4, 0x0(s8)                                      
++add       a2, a2, s11                                      
++add       t6, a2, a0                                       
++custom7   a0, a1                                           
++custom1   a0, a0, a1                                       
++custom2   a0, a0, a1                                       
++add       a4, t6, a4                                       
++add       a4, a4, t1                                       
+ xor       a2, a3, ra                                       
+ and       a2, a1, a2                                       
+ xor       a2, a2, ra                                       
+-add       t3, t5, t3                                       
+-add       t1, t3, t1                                       
+-add       a2, t1, a2                                       
++add       a2, a4, a2                                       
+ add       a0, a2, a0                                       
+-srli      a2, t0, 0x2                                      
+-slli      a4, t0, 0x1e                                     
+-or        a2, a4, a2                                       
+-srli      a4, t0, 0xd                                      
+-slli      t1, t0, 0x13                                     
+-or        a4, t1, a4                                       
+-xor       a2, a2, a4                                       
+-srli      a4, t0, 0x16                                     
+-slli      t1, t0, 0xa                                      
+-or        a4, t1, a4                                       
+-xor       a2, a2, a4                                       
+-and       a4, t0, a7                                       
+-xor       t1, t0, a7                                       
+-and       t1, t1, a6                                       
+-xor       a4, t1, a4                                       
+-add       a2, a2, a4                                       
+-add       t3, a0, a5                                       
+-addi      s7, s7, 0x40                                     
+-add       t1, a2, a0                                       
+-lw        a0, 0x24(sp)                                     
+-bne       s7, a0, 0x1000930 <_nettle_sha256_compress+0x5f4>
++and       a2, t0, a7                                       
++xor       a4, t0, a7                                       
++and       a4, a4, a6                                       
++xor       a2, a4, a2                                       
++add       a5, a0, a5                                       
++add       a0, a2, a0                                       
++srli      a2, t0, 0xd                                      
++custom23  a2, a2, t0, 0x13                                 
++custom33  a2, a2, t0                                       
++custom32  t1, a2, t0                                       
++addi      s8, s8, 0x40                                     
++add       t1, t1, a0                                       
++lw        a0, 0x30(sp)                                     
++bne       s8, a0, 0x1000740 <_nettle_sha256_compress+0x400>
+
+1) <_nettle_sha256_compress-%bb.4>
+rel_weight [old] : 0.15546869269392474
+rel_weight [new] : 0.09509255171898787
+rel_weight [diff]: -0.06038
+rel_weight [rel] : -38.84%
+num_instrs [old] : 309
+num_instrs [new] : 189
+num_instrs [diff]: -120
+num_instrs [rel] : -38.83%
+diff --git a/old b/new
+index fa86307..7251dfd 100644
+--- a/old
++++ b/new
+@@ -1,53 +1,30 @@
+-srli      a0, t3, 0x6                                 
+-slli      a4, t3, 0x1a                                
+-or        a0, a4, a0                                  
+-srli      a4, t3, 0xb                                 
+-slli      t5, t3, 0x15                                
+-or        a4, t5, a4                                  
+-xor       a0, a0, a4                                  
+-srli      a4, t3, 0x19                                
+-slli      t5, t3, 0x7                                 
+-or        a4, t5, a4                                  
+-xor       a0, a0, a4                                  
++custom7   a0, a5                                      
++custom1   a0, a0, a5                                  
++custom2   a0, a0, a5                                  
+ xor       a4, a3, a1                                  
+-and       a4, a4, t3                                  
++and       a4, a4, a5                                  
+ lw        t5, 0x0(t4)                                 
+ lw        t6, 0x0(t2)                                 
+ xor       a4, a4, a3                                  
+-add       a4, ra, a4                                  
+-add       a0, a4, a0                                  
++add       a0, ra, a0                                  
++add       a0, a0, a4                                  
+ add       t5, t5, t6                                  
+ add       a0, a0, t5                                  
+ add       a6, a0, a6                                  
+-srli      a4, t1, 0x2                                 
+-slli      t5, t1, 0x1e                                
+-or        a4, t5, a4                                  
+-srli      t5, t1, 0xd                                 
+-slli      t6, t1, 0x13                                
+-or        t5, t6, t5                                  
+-xor       a4, a4, t5                                  
+-srli      t5, t1, 0x16                                
+-slli      t6, t1, 0xa                                 
+-or        t5, t6, t5                                  
+-xor       a4, a4, t5                                  
++srli      a4, t1, 0xd                                 
++custom23  a4, a4, t1, 0x13                            
++custom33  a4, a4, t1                                  
++custom32  a4, a4, t1                                  
+ and       t5, t0, t1                                  
+ xor       t6, t0, t1                                  
+ and       t6, a7, t6                                  
+ xor       t5, t6, t5                                  
+ add       a4, t5, a4                                  
+ add       ra, a4, a0                                  
+-srli      a0, a6, 0x6                                 
+-slli      a4, a6, 0x1a                                
+-or        a0, a4, a0                                  
+-srli      a4, a6, 0xb                                 
+-slli      t5, a6, 0x15                                
+-or        a4, t5, a4                                  
+-xor       a0, a0, a4                                  
+-srli      a4, a6, 0x19                                
+-slli      t5, a6, 0x7                                 
+-or        a4, t5, a4                                  
+-xor       a0, a0, a4                                  
+-xor       a4, a1, t3                                  
++custom7   a0, a6                                      
++custom1   a0, a0, a6                                  
++custom2   a0, a0, a6                                  
++xor       a4, a1, a5                                  
+ lw        t5, 0x4(t4)                                 
+ lw        t6, 0x4(t2)                                 
+ and       a4, a6, a4                                  
+@@ -57,110 +34,65 @@ add       a3, a3, t6
+ add       a3, a3, a4                                  
+ add       a0, a3, a0                                  
+ add       a7, a0, a7                                  
+-srli      a3, ra, 0x2                                 
+-slli      a4, ra, 0x1e                                
+-or        a3, a4, a3                                  
+-srli      a4, ra, 0xd                                 
+-slli      t5, ra, 0x13                                
+-or        a4, t5, a4                                  
+-xor       a3, a3, a4                                  
+-srli      a4, ra, 0x16                                
+-slli      t5, ra, 0xa                                 
+-or        a4, t5, a4                                  
+-xor       a3, a3, a4                                  
++srli      a3, ra, 0xd                                 
++custom23  a3, a3, ra, 0x13                            
++custom33  a3, a3, ra                                  
++custom32  a3, a3, ra                                  
+ and       a4, ra, t1                                  
+ xor       t5, ra, t1                                  
+ and       t5, t5, t0                                  
+ xor       a4, t5, a4                                  
+ add       a3, a3, a4                                  
+ add       a3, a3, a0                                  
+-srli      a0, a7, 0x6                                 
+-slli      a4, a7, 0x1a                                
+-or        a0, a4, a0                                  
+-srli      a4, a7, 0xb                                 
+-slli      t5, a7, 0x15                                
+-or        a4, t5, a4                                  
+-xor       a0, a0, a4                                  
+-srli      a4, a7, 0x19                                
+-slli      t5, a7, 0x7                                 
+-or        a4, t5, a4                                  
+-xor       a0, a0, a4                                  
+-xor       a4, a6, t3                                  
++custom7   a0, a7                                      
++custom1   a0, a0, a7                                  
++custom2   a0, a0, a7                                  
++xor       a4, a6, a5                                  
+ lw        t5, 0x8(t4)                                 
+ lw        t6, 0x8(t2)                                 
+ and       a4, a7, a4                                  
+-xor       a4, a4, t3                                  
++xor       a4, a4, a5                                  
+ add       a1, t5, a1                                  
+ add       a1, a1, t6                                  
+ add       a1, a1, a4                                  
+ add       a0, a1, a0                                  
+ add       t0, a0, t0                                  
+-srli      a1, a3, 0x2                                 
+-slli      a4, a3, 0x1e                                
+-or        a1, a4, a1                                  
+-srli      a4, a3, 0xd                                 
+-slli      t5, a3, 0x13                                
+-or        a4, t5, a4                                  
+-xor       a1, a1, a4                                  
+-srli      a4, a3, 0x16                                
+-slli      t5, a3, 0xa                                 
+-or        a4, t5, a4                                  
+-xor       a1, a1, a4                                  
++srli      a1, a3, 0xd                                 
++custom23  a1, a1, a3, 0x13                            
++custom33  a1, a1, a3                                  
++custom32  a1, a1, a3                                  
+ and       a4, a3, ra                                  
+ xor       t5, a3, ra                                  
+ and       t5, t5, t1                                  
+ xor       a4, t5, a4                                  
+-add       a1, a1, a4                                  
++add       a0, a4, a0                                  
+ add       a1, a1, a0                                  
+-srli      a0, t0, 0x6                                 
+-slli      a4, t0, 0x1a                                
+-or        a0, a4, a0                                  
+-srli      a4, t0, 0xb                                 
+-slli      t5, t0, 0x15                                
+-or        a4, t5, a4                                  
+-xor       a0, a0, a4                                  
+-srli      a4, t0, 0x19                                
+-slli      t5, t0, 0x7                                 
+-or        a4, t5, a4                                  
+-xor       a0, a0, a4                                  
++custom7   a0, t0                                      
++custom1   a0, a0, t0                                  
++custom2   a0, a0, t0                                  
+ xor       a4, a7, a6                                  
+ lw        t5, 0xc(t4)                                 
+ lw        t6, 0xc(t2)                                 
+ and       a4, t0, a4                                  
+ xor       a4, a4, a6                                  
+-add       a5, t5, t3                                  
++add       a5, t5, a5                                  
+ add       a5, a5, t6                                  
+ add       a4, a5, a4                                  
+ add       a0, a4, a0                                  
+ add       t1, a0, t1                                  
+-srli      a4, a1, 0x2                                 
+-slli      a5, a1, 0x1e                                
+-or        a4, a5, a4                                  
+-srli      a5, a1, 0xd                                 
+-slli      t5, a1, 0x13                                
+-or        a5, t5, a5                                  
+-xor       a4, a4, a5                                  
+-srli      a5, a1, 0x16                                
+-slli      t5, a1, 0xa                                 
+-or        a5, t5, a5                                  
+-xor       a4, a4, a5                                  
+-and       a5, a1, a3                                  
++srli      a4, a1, 0xd                                 
++custom23  a4, a4, a1, 0x13                            
++custom33  a4, a4, a1                                  
++custom32  a5, a4, a1                                  
++and       a4, a1, a3                                  
+ xor       t5, a1, a3                                  
+ and       t5, t5, ra                                  
+-xor       a5, t5, a5                                  
+-add       a4, a4, a5                                  
+-add       a5, a4, a0                                  
+-srli      a0, t1, 0x6                                 
+-slli      a4, t1, 0x1a                                
+-or        a0, a4, a0                                  
+-srli      a4, t1, 0xb                                 
+-slli      t5, t1, 0x15                                
+-or        a4, t5, a4                                  
+-xor       a0, a0, a4                                  
+-srli      a4, t1, 0x19                                
+-slli      t5, t1, 0x7                                 
+-or        a4, t5, a4                                  
+-xor       a0, a0, a4                                  
++xor       a4, t5, a4                                  
++add       a0, a4, a0                                  
++add       a5, a5, a0                                  
++custom7   a0, t1                                      
++custom1   a0, a0, t1                                  
++custom2   a0, a0, t1                                  
+ lw        a4, 0x10(t4)                                
+ lw        t5, 0x10(t2)                                
+ xor       t6, t0, a7                                  
+@@ -171,34 +103,19 @@ add       a4, a4, a6
+ add       a4, a4, t6                                  
+ add       a0, a4, a0                                  
+ add       ra, a0, ra                                  
+-srli      a4, a5, 0x2                                 
+-slli      a6, a5, 0x1e                                
+-or        a4, a6, a4                                  
+-srli      a6, a5, 0xd                                 
+-slli      t5, a5, 0x13                                
+-or        a6, t5, a6                                  
+-xor       a4, a4, a6                                  
+-srli      a6, a5, 0x16                                
+-slli      t5, a5, 0xa                                 
+-or        a6, t5, a6                                  
+-xor       a4, a4, a6                                  
+-and       a6, a5, a1                                  
++srli      a4, a5, 0xd                                 
++custom23  a4, a4, a5, 0x13                            
++custom33  a4, a4, a5                                  
++custom32  a6, a4, a5                                  
++and       a4, a5, a1                                  
+ xor       t5, a5, a1                                  
+ and       t5, t5, a3                                  
+-xor       a6, t5, a6                                  
+-add       a4, a4, a6                                  
+-add       a6, a4, a0                                  
+-srli      a0, ra, 0x6                                 
+-slli      a4, ra, 0x1a                                
+-or        a0, a4, a0                                  
+-srli      a4, ra, 0xb                                 
+-slli      t5, ra, 0x15                                
+-or        a4, t5, a4                                  
+-xor       a0, a0, a4                                  
+-srli      a4, ra, 0x19                                
+-slli      t5, ra, 0x7                                 
+-or        a4, t5, a4                                  
+-xor       a0, a0, a4                                  
++xor       a4, t5, a4                                  
++add       a0, a4, a0                                  
++add       a6, a6, a0                                  
++custom7   a0, ra                                      
++custom1   a0, a0, ra                                  
++custom2   a0, a0, ra                                  
+ lw        a4, 0x14(t4)                                
+ lw        t5, 0x14(t2)                                
+ xor       t6, t1, t0                                  
+@@ -209,34 +126,19 @@ add       a4, a4, a7
+ add       a4, a4, t6                                  
+ add       a0, a4, a0                                  
+ add       a3, a0, a3                                  
+-srli      a4, a6, 0x2                                 
+-slli      a7, a6, 0x1e                                
+-or        a4, a7, a4                                  
+-srli      a7, a6, 0xd                                 
+-slli      t5, a6, 0x13                                
+-or        a7, t5, a7                                  
+-xor       a4, a4, a7                                  
+-srli      a7, a6, 0x16                                
+-slli      t5, a6, 0xa                                 
+-or        a7, t5, a7                                  
+-xor       a4, a4, a7                                  
+-and       a7, a6, a5                                  
++srli      a4, a6, 0xd                                 
++custom23  a4, a4, a6, 0x13                            
++custom33  a4, a4, a6                                  
++custom32  a7, a4, a6                                  
++and       a4, a6, a5                                  
+ xor       t5, a6, a5                                  
+ and       t5, t5, a1                                  
+-xor       a7, t5, a7                                  
+-add       a4, a4, a7                                  
+-add       a7, a4, a0                                  
+-srli      a0, a3, 0x6                                 
+-slli      a4, a3, 0x1a                                
+-or        a0, a4, a0                                  
+-srli      a4, a3, 0xb                                 
+-slli      t5, a3, 0x15                                
+-or        a4, t5, a4                                  
+-xor       a0, a0, a4                                  
+-srli      a4, a3, 0x19                                
+-slli      t5, a3, 0x7                                 
+-or        a4, t5, a4                                  
+-xor       a0, a0, a4                                  
++xor       a4, t5, a4                                  
++add       a0, a4, a0                                  
++add       a7, a7, a0                                  
++custom7   a0, a3                                      
++custom1   a0, a0, a3                                  
++custom2   a0, a0, a3                                  
+ lw        a4, 0x18(t4)                                
+ lw        t5, 0x18(t2)                                
+ xor       t6, ra, t1                                  
+@@ -247,34 +149,19 @@ add       a4, a4, t0
+ add       a4, a4, t6                                  
+ add       a0, a4, a0                                  
+ add       a1, a0, a1                                  
+-srli      a4, a7, 0x2                                 
+-slli      t0, a7, 0x1e                                
+-or        a4, t0, a4                                  
+-srli      t0, a7, 0xd                                 
+-slli      t5, a7, 0x13                                
+-or        t0, t5, t0                                  
+-xor       a4, a4, t0                                  
+-srli      t0, a7, 0x16                                
+-slli      t5, a7, 0xa                                 
+-or        t0, t5, t0                                  
+-xor       a4, a4, t0                                  
+-and       t0, a7, a6                                  
++srli      a4, a7, 0xd                                 
++custom23  a4, a4, a7, 0x13                            
++custom33  a4, a4, a7                                  
++custom32  t0, a4, a7                                  
++and       a4, a7, a6                                  
+ xor       t5, a7, a6                                  
+ and       t5, t5, a5                                  
+-xor       t0, t5, t0                                  
+-add       a4, a4, t0                                  
+-add       t0, a4, a0                                  
+-srli      a0, a1, 0x6                                 
+-slli      a4, a1, 0x1a                                
+-or        a0, a4, a0                                  
+-srli      a4, a1, 0xb                                 
+-slli      t5, a1, 0x15                                
+-or        a4, t5, a4                                  
+-xor       a0, a0, a4                                  
+-srli      a4, a1, 0x19                                
+-slli      t5, a1, 0x7                                 
+-or        a4, t5, a4                                  
+-xor       a0, a0, a4                                  
++xor       a4, t5, a4                                  
++add       a0, a4, a0                                  
++add       t0, t0, a0                                  
++custom7   a0, a1                                      
++custom1   a0, a0, a1                                  
++custom2   a0, a0, a1                                  
+ lw        a4, 0x1c(t4)                                
+ lw        t5, 0x1c(t2)                                
+ xor       t6, a3, ra                                  
+@@ -284,26 +171,19 @@ add       a4, t5, a4
+ add       a4, a4, t1                                  
+ add       a4, a4, t6                                  
+ add       a0, a4, a0                                  
+-add       t3, a0, a5                                  
+-srli      a4, t0, 0x2                                 
+-slli      t1, t0, 0x1e                                
+-or        a4, t1, a4                                  
+-srli      t1, t0, 0xd                                 
+-slli      t5, t0, 0x13                                
+-or        t1, t5, t1                                  
+-xor       a4, a4, t1                                  
+-srli      t1, t0, 0x16                                
+-slli      t5, t0, 0xa                                 
+-or        t1, t5, t1                                  
+-xor       a4, a4, t1                                  
+-and       t1, t0, a7                                  
++add       a5, a0, a5                                  
++srli      a4, t0, 0xd                                 
++custom23  a4, a4, t0, 0x13                            
++custom33  a4, a4, t0                                  
++custom32  t1, a4, t0                                  
++and       a4, t0, a7                                  
+ xor       t5, t0, a7                                  
+ and       t5, t5, a6                                  
+-xor       t1, t5, t1                                  
+-add       a4, a4, t1                                  
+-add       t1, a4, a0                                  
++xor       a4, t5, a4                                  
++add       a0, a4, a0                                  
++add       t1, t1, a0                                  
+ addi      t4, t4, 0x20                                
+-andi      a0, s0, 0x1                                 
++andi      a0, t3, 0x1                                 
+ addi      t2, t2, 0x20                                
+-li        s0, 0x0                                     
+-bnez      a0, 0x1000404 <_nettle_sha256_compress+0xc8>
++li        t3, 0x0                                     
++bnez      a0, 0x1000400 <_nettle_sha256_compress+0xc0>
+
+2) <_nettle_sha256_compress-%bb.1>
+rel_weight [old] : 0.05635111191495007
+rel_weight [new] : 0.048300978650914476
+rel_weight [diff]: -0.00805
+rel_weight [rel] : -14.29%
+num_instrs [old] : 14
+num_instrs [new] : 12
+num_instrs [diff]: -2
+num_instrs [rel] : -14.29%
+diff --git a/old b/new
+index 61dd0a6..0363253 100644
+--- a/old
++++ b/new
+@@ -1,14 +1,12 @@
+ lbu       a4, 0x0(a1)                                     
+ lbu       a5, 0x1(a1)                                     
+-slli      a4, a4, 0x18                                    
+ lbu       a6, 0x2(a1)                                     
+ lbu       a7, 0x3(a1)                                     
+-slli      a5, a5, 0x10                                    
+-or        a4, a5, a4                                      
+-slli      a6, a6, 0x8                                     
+-or        a5, a6, a7                                      
+-or        a4, a4, a5                                      
++slli      a4, a4, 0x18                                    
++custom23  a4, a4, a5, 0x10                                
++custom23  a4, a4, a6, 0x8                                 
++or        a4, a4, a7                                      
+ sw        a4, 0x0(a3)                                     
+ addi      a1, a1, 0x4                                     
+ addi      a3, a3, 0x4                                     
+-bne       a1, t0, 0x100037c <_nettle_sha256_compress+0x40>
++bne       a1, t0, 0x1000380 <_nettle_sha256_compress+0x40>
+

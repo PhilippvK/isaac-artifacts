@@ -1,0 +1,16 @@
+import "/var/tmp/ga87puy/isaac-demo/etiss_arch_riscv/rv_base/RVI.core_desc"
+
+InstructionSet XIsaacCUSTOM48single extends RV32I {
+    instructions {
+        CUSTOM48 {
+            encoding: uimm7[11:0] :: rs1[4:0] :: 3'b010 :: rd[4:0] :: 7'b1011011;
+            assembly: {"custom48", "{name(rd)}, {name(rs1)}, {uimm7}"};
+            behavior: {
+                unsigned<32> rs1_val = X[rs1];
+                unsigned<32> outp0 = (unsigned<32>)((((unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) << (unsigned<32>)((13)))))) | (unsigned<32>)((unsigned<32>)((((unsigned<32>)(rs1_val) >> (unsigned<32>)((unsigned<7>)((uimm7))))))))));
+                X[rd] = outp0;
+            }
+        }
+    }
+}
+

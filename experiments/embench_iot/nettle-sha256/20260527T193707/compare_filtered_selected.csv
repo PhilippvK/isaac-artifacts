@@ -1,0 +1,3 @@
+,Model,Arch,Run Instructions,Run Instructions (rel.),Total ROM,Total RAM,ROM code,ROM code (rel.)
+0,nettle-sha256,rv32im_zicsr_zifencei,3776360,1.0,9904,1336,9572,1.0
+1,nettle-sha256,rv32im_zicsr_zifencei_xisaaccustom1single_xisaaccustom2single_xisaaccustom7single_xisaaccustom23single_xisaaccustom25single_xisaaccustom27single_xisaaccustom32single_xisaaccustom33single_xisaaccustom38single_xisaaccustom41single,2345660,0.6211431113559088,7760,1336,7428,0.7760133723359799

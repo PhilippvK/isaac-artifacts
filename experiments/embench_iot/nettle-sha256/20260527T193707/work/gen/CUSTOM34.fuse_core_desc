@@ -1,0 +1,27 @@
+// DateTime: 20260527T194026, Sub: 34, Name: CUSTOM34, Inputs: 2, Outputs: 1
+
+import "RV32I.core_desc"
+
+InstructionSet MySet extends RV32I {
+    instructions {
+        CUSTOM34 {
+            operands: {
+                unsigned<5> rd [[is_reg]] [[reg_class="GPR"]] [[reg_type="s32"]] [[out]];
+                unsigned<5> rs1 [[is_reg]] [[reg_class="GPR"]] [[reg_type="s32"]] [[in]];
+                unsigned<5> rs2 [[is_reg]] [[reg_class="GPR"]] [[reg_type="s32"]] [[in]];
+                unsigned<5> uimm5 [[is_imm]] [[in]];
+            }
+            encoding: auto;
+            assembly: {"custom34", "{name(rd)}, {name(rs1)}, {name(rs2)}, {uimm5}"};
+            behavior: {
+                unsigned<32> rs2_val=X[rs2];
+                unsigned<32> rs1_val=X[rs1];
+                unsigned<32> outp0=(unsigned<32>)(XOR(rs1_val,(unsigned<32>)(OR((unsigned<32>)(SLLI(rs2_val,(19))),(unsigned<32>)(SRLI(rs2_val,(unsigned<5>)(uimm5)))))));
+                X[rd]=outp0;
+                
+            }
+        }
+        
+
+    }
+}

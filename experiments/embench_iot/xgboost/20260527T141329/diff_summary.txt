@@ -1,0 +1,36 @@
+=== DIFFS ===
+0) <predict-%bb.5>
+Not found!
+1) <predict-%bb.9>
+Not found!
+2) <predict-%bb.6>
+rel_weight [old] : 0.1506929669061174
+rel_weight [new] : 0.1205544444885928
+rel_weight [diff]: -0.03014
+rel_weight [rel] : -20.00%
+num_instrs [old] : 10
+num_instrs [new] : 8
+num_instrs [diff]: -2
+num_instrs [rel] : -20.00%
+diff --git a/old b/new
+index 74692e9..b5f748f 100644
+--- a/old
++++ b/new
+@@ -1,10 +1,8 @@
+-add      s4, t4, a4                      
+-andi     s3, s3, 0x7f                    
+-add      s3, s4, s3                      
++add      s4, t4, a3                      
++custom1  s3, s4, s3                      
+ lbu      s3, 0x0(s3)                     
+ add      s0, s0, s3                      
+ addi     s1, s1, 0x1                     
+ add      a2, a2, s2                      
+-add      a4, a4, s2                      
+-addi     a4, a4, 0x1                     
+-beq      s1, a5, 0x10004b8 <predict+0x8c>
++custom3  a3, a3, s2, 0x1                 
++beq      s1, a5, 0x10004bc <predict+0x8c>
+
+3) <predict-%bb.4>
+Not found!

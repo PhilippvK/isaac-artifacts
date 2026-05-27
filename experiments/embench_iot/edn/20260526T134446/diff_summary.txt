@@ -1,0 +1,51 @@
+=== DIFFS ===
+0) <benchmark_body-%bb.8>
+Not found!
+1) <benchmark_body-%bb.12>
+rel_weight [old] : 0.36944851846366744
+rel_weight [new] : 0.3140314073872757
+rel_weight [diff]: -0.05542
+rel_weight [rel] : -15.00%
+num_instrs [old] : 20
+num_instrs [new] : 17
+num_instrs [diff]: -3
+num_instrs [rel] : -15.00%
+diff --git a/old b/new
+index 6797ed0..9f5e97a 100644
+--- a/old
++++ b/new
+@@ -1,20 +1,17 @@
+ lh       a7, -0x2(a3)                            
+-lh       t0, -0x2(a4)                            
+-slli     a5, a5, 0x10                            
+-srai     a5, a5, 0x10                            
+-mul      a5, a7, a5                              
+-add      a6, a5, a6                              
+-lh       t1, 0x0(a4)                             
+-mul      a5, a7, t0                              
+-lh       a7, 0x0(a3)                             
+-add      a2, a5, a2                              
+-slli     a5, t1, 0x10                            
+-srli     a5, a5, 0x10                            
+-mul      t0, a7, t0                              
+-add      a6, a6, t0                              
+-mul      a7, a7, t1                              
++lh       t0, -0x2(a5)                            
++custom0  a4, a7, a4                              
++add      a6, a4, a6                              
++lh       t1, 0x0(a5)                             
++lh       t2, 0x0(a3)                             
++mul      a4, a7, t0                              
++add      a2, a4, a2                              
++custom2  a4, t1                                  
++mul      a7, t2, t0                              
++add      a6, a6, a7                              
++mul      a7, t2, t1                              
+ add      a2, a2, a7                              
+ addi     a3, a3, 0x4                             
+ addi     a7, s3, 0x42                            
+-addi     a4, a4, 0x4                             
+-bne      a3, a7, 0x10007d4 <benchmark_body+0x194>
++addi     a5, a5, 0x4                             
++bne      a3, a7, 0x1000798 <benchmark_body+0x194>
+

@@ -1,0 +1,4 @@
+// DateTime: 20260527T121428, Sub: 12, Name: CUSTOM12, Inputs: 1, Outputs: 1
+unsigned<32> rs1_val=X[rs1];
+unsigned<32> outp0=(unsigned<32>)(SLLI((unsigned<32>)(ANDI(rs1_val,(255))),(2)));
+X[rd]=outp0;

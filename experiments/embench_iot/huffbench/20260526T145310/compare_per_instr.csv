@@ -1,0 +1,11 @@
+,Model,Arch,Run Instructions,Run Instructions (rel.),Total ROM,Total RAM,ROM code,ROM code (rel.)
+0,huffbench,rv32im_zicsr_zifencei,2281930,1.0,6244,9936,5668,1.0
+1,huffbench,rv32im_zicsr_zifencei_xisaaccustom0single,2281930,1.0,6244,9936,5668,1.0
+2,huffbench,rv32im_zicsr_zifencei_xisaaccustom1single,2281930,1.0,6244,9936,5668,1.0
+3,huffbench,rv32im_zicsr_zifencei_xisaaccustom2single,2281930,1.0,6244,9936,5668,1.0
+4,huffbench,rv32im_zicsr_zifencei_xisaaccustom3single,2219087,0.9724605925685712,6080,9936,5504,0.9710656316160904
+5,huffbench,rv32im_zicsr_zifencei_xisaaccustom4single,2281930,1.0,6244,9936,5668,1.0
+6,huffbench,rv32im_zicsr_zifencei_xisaaccustom5single,2203477,0.9656198919335826,6080,9936,5504,0.9710656316160904
+7,huffbench,rv32im_zicsr_zifencei_xisaaccustom6single,2219087,0.9724605925685712,6080,9936,5504,0.9710656316160904
+8,huffbench,rv32im_zicsr_zifencei_xisaaccustom7single,2281930,1.0,6244,9936,5668,1.0
+9,huffbench,rv32im_zicsr_zifencei_xisaaccustom8single,2203477,0.9656198919335826,6080,9936,5504,0.9710656316160904

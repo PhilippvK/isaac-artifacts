@@ -1,0 +1,5 @@
+instruction,mask,tags,schedule,latency,locs
+CUSTOM0,0000000----------000-----1111011,"['RdStallFlush-Is-Per-ISAX', 'ReadResults-Are-Per-ISAX']","[{'interface': 'RdRS1', 'stage': 2}, {'interface': 'RdRS2', 'stage': 2}, {'interface': 'RdIValid', 'stage': 2}, {'interface': 'RdIValid', 'stage': 3}, {'interface': 'RdStall', 'stage': 2}, {'interface': 'RdStall', 'stage': 3}, {'interface': 'WrRD', 'stage': 3}]",4.0,
+CUSTOM2,000001000000-----000-----1111011,"['RdStallFlush-Is-Per-ISAX', 'ReadResults-Are-Per-ISAX']","[{'interface': 'RdRS1', 'stage': 2}, {'interface': 'RdIValid', 'stage': 2}, {'interface': 'RdStall', 'stage': 2}, {'interface': 'WrRD', 'stage': 2}]",3.0,
+CUSTOM3,0000011----------000-----1111011,"['RdStallFlush-Is-Per-ISAX', 'ReadResults-Are-Per-ISAX']","[{'interface': 'RdRS1', 'stage': 2}, {'interface': 'RdRS2', 'stage': 2}, {'interface': 'RdIValid', 'stage': 2}, {'interface': 'RdIValid', 'stage': 3}, {'interface': 'RdStall', 'stage': 2}, {'interface': 'RdStall', 'stage': 3}, {'interface': 'WrRD', 'stage': 3}]",4.0,
+,,,,,159.0

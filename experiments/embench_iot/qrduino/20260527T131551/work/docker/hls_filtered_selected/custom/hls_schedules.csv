@@ -1,0 +1,17 @@
+,config,idx,II,Fallback,Instruction latencies,Allocation,Overall latency,Area estimate w/o lifetimes,Area estimate w/ lifetimes,Total lifetime,Total decoupled ops
+0,SG_7_SOL_IDX_1,1,1,False,{'CUSTOM35': 3},{},,1909.330933,1909.330933,0.0,0.0
+1,SG_7_SOL_IDX_0,0,1,True,{},{},3.0,,,,
+2,SG_2_SOL_IDX_1,1,1,False,{'CUSTOM6': 3},{},,808.276001,808.276001,0.0,0.0
+3,SG_2_SOL_IDX_0,0,1,True,{},{},3.0,,,,
+4,SG_4_SOL_IDX_1,1,1,False,{'CUSTOM22': 3},{},,2504.90625,2504.90625,0.0,0.0
+5,SG_4_SOL_IDX_0,0,1,True,{},{},3.0,,,,
+6,SG_6_SOL_IDX_1,1,1,False,{'CUSTOM28': 3},{},,2008.171875,2008.171875,0.0,0.0
+7,SG_6_SOL_IDX_0,0,1,True,{},{},3.0,,,,
+8,SG_1_SOL_IDX_1,1,1,False,{'CUSTOM2': 3},{},,2617.507324,2617.507324,0.0,0.0
+9,SG_1_SOL_IDX_0,0,1,True,{},{},3.0,,,,
+10,SG_8_SOL_IDX_1,1,1,False,{'CUSTOM37': 3},{},,3613.461182,3613.461182,0.0,0.0
+11,SG_8_SOL_IDX_0,0,1,True,{},{},3.0,,,,
+12,SG_3_SOL_IDX_1,1,1,False,{'CUSTOM15': 3},{},,3713.561279,3713.561279,0.0,0.0
+13,SG_3_SOL_IDX_0,0,1,True,{},{},3.0,,,,
+14,SG_5_SOL_IDX_1,1,1,False,{'CUSTOM26': 3},{},,2008.171875,2008.171875,0.0,0.0
+15,SG_5_SOL_IDX_0,0,1,True,{},{},3.0,,,,

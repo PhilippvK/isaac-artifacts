@@ -1,0 +1,25 @@
+- instruction: CUSTOM4
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 4
+- instruction: CUSTOM6
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 2
+- instruction: CUSTOM10
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 2
+- instruction: CUSTOM12
+  schedule:
+  - interface: foo
+    stage: 2
+  - interface: bar
+    stage: 2
+- last stage: 5

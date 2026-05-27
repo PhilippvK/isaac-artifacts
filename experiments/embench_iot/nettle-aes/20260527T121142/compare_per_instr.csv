@@ -1,0 +1,26 @@
+,Model,Arch,Run Instructions,Run Instructions (rel.),Total ROM,Total RAM,ROM code,ROM code (rel.)
+0,nettle-aes,rv32im_zicsr_zifencei,3582415,1.0,16364,2760,6548,1.0
+1,nettle-aes,rv32im_zicsr_zifencei_xisaaccustom0single,3448567,0.9626374945392984,16328,2760,6512,0.9945021380574222
+2,nettle-aes,rv32im_zicsr_zifencei_xisaaccustom1single,3181183,0.8879995757052156,16284,2760,6468,0.9877825290164935
+3,nettle-aes,rv32im_zicsr_zifencei_xisaaccustom2single,3582415,1.0,16364,2760,6548,1.0
+4,nettle-aes,rv32im_zicsr_zifencei_xisaaccustom3single,3445446,0.9617662945247828,16312,2760,6496,0.9920586438607208
+5,nettle-aes,rv32im_zicsr_zifencei_xisaaccustom4single,3314719,0.9252749890785964,16300,2760,6484,0.9902260232131948
+6,nettle-aes,rv32im_zicsr_zifencei_xisaaccustom5single,3314719,0.9252749890785964,16300,2760,6484,0.9902260232131948
+7,nettle-aes,rv32im_zicsr_zifencei_xisaaccustom6single,3582415,1.0,16364,2760,6548,1.0
+8,nettle-aes,rv32im_zicsr_zifencei_xisaaccustom7single,3314719,0.9252749890785964,16300,2760,6484,0.9902260232131948
+9,nettle-aes,rv32im_zicsr_zifencei_xisaaccustom8single,2778703,0.7756507830611473,16124,2760,6308,0.9633475870494808
+10,nettle-aes,rv32im_zicsr_zifencei_xisaaccustom9single,3582415,1.0,16364,2760,6548,1.0
+11,nettle-aes,rv32im_zicsr_zifencei_xisaaccustom10single,3582415,1.0,16364,2760,6548,1.0
+12,nettle-aes,rv32im_zicsr_zifencei_xisaaccustom11single,3582415,1.0,16364,2760,6548,1.0
+13,nettle-aes,rv32im_zicsr_zifencei_xisaaccustom12single,3582415,1.0,16364,2760,6548,1.0
+14,nettle-aes,rv32im_zicsr_zifencei_xisaaccustom13single,3448567,0.9626374945392984,16332,2760,6516,0.9951130116065976
+15,nettle-aes,rv32im_zicsr_zifencei_xisaaccustom14single,3448567,0.9626374945392984,16332,2760,6516,0.9951130116065976
+16,nettle-aes,rv32im_zicsr_zifencei_xisaaccustom15single,3582415,1.0,16364,2760,6548,1.0
+17,nettle-aes,rv32im_zicsr_zifencei_xisaaccustom16single,3582415,1.0,16364,2760,6548,1.0
+18,nettle-aes,rv32im_zicsr_zifencei_xisaaccustom17single,3448567,0.9626374945392984,16332,2760,6516,0.9951130116065976
+19,nettle-aes,rv32im_zicsr_zifencei_xisaaccustom18single,3315031,0.9253620811659174,16316,2760,6500,0.9926695174098962
+20,nettle-aes,rv32im_zicsr_zifencei_xisaaccustom19single,3582415,1.0,16364,2760,6548,1.0
+21,nettle-aes,rv32im_zicsr_zifencei_xisaaccustom20single,3582415,1.0,16364,2760,6548,1.0
+22,nettle-aes,rv32im_zicsr_zifencei_xisaaccustom21single,3582415,1.0,16364,2760,6548,1.0
+23,nettle-aes,rv32im_zicsr_zifencei_xisaaccustom22single,3582415,1.0,16364,2760,6548,1.0
+24,nettle-aes,rv32im_zicsr_zifencei_xisaaccustom23single,3582415,1.0,16364,2760,6548,1.0

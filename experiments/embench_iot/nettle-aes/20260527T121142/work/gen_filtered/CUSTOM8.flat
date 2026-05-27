@@ -1,0 +1,5 @@
+// DateTime: 20260527T121428, Sub: 6, Name: CUSTOM8, Inputs: 2, Outputs: 1
+unsigned<32> rs1_val=X[rs1];
+unsigned<32> rs2_val=X[rs2];
+unsigned<32> outp0=(unsigned<32>)(ADD(rs1_val,(unsigned<32>)(ANDI((unsigned<32>)(SRLI(rs2_val,(unsigned<5>)(uimm5))),(1020)))));
+X[rd]=outp0;

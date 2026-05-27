@@ -1,0 +1,1221 @@
+candidates:
+- artifacts:
+    cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/gen_filtered/CUSTOM2.core_desc
+    cdsl_encoded: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/gen/CUSTOM2.encoded.core_desc
+    flat: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/gen_filtered/CUSTOM2.flat
+    fuse_cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/gen_filtered/CUSTOM2.fuse_core_desc
+    io_sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/qrencode_%bb.94_0/io_sub208.pkl
+    sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/qrencode_%bb.94_0/sub208.pkl
+    tree: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/qrencode_%bb.94_0/tree208.pkl
+  id: 20
+  metrics:
+    arch: xisaaccustom2single
+    benefit: 0.04567101877886803
+    code_size_reduction_rel: 0.00874794969928916
+    cost: 2617.507324
+    enc_score: 0.96875
+    enc_weight: 0.03125
+    hls_area: 2617.507324
+    hls_area_scaled: 2617.507324
+    hls_ii: 1
+    hls_latency: 3
+    hls_num_shared: 1
+    instr: CUSTOM2
+    ratio: 1.7448286910263495e-05
+    runtime_reduction_rel: 0.04567101877886803
+    seal5_score: 1.0
+    util_score: 0.0917525667033951
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 2.0
+    '#InputNodes': 2.0
+    '#Instrs': 4.0
+    '#Isos': 2.0
+    '#IsosNO': 0.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 4.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 3.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 4
+    - 1
+    ConstantNodes:
+    - 1187
+    - 2021
+    ConstantSigns:
+    - false
+    - false
+    - true
+    ConstantValues:
+    - 7
+    - -1
+    Constraints: []
+    DateTime: 20260527T131849
+    EncodingBitsLeft (32 bits): 5.0
+    EncodingFootprint (32 bits): 0.8
+    EncodingWeight (32 bits): 0.03125
+    Freq: 25000.0
+    FullHash: 72df065325af96a8241f417a6faf5db58ac0e24e
+    GlobalHash: 1fc132fa6b0938bdbb861e4822f5b4000ba44707
+    IOSubHash: 78d806923bdab0a6d7ece8bbe6ed16a4
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 69
+    - 1601
+    InstrName: CUSTOM2
+    Instrs:
+    - ANDI
+    - SRL
+    - ANDI
+    - XORI
+    IsoNodes:
+    - 36
+    - 875
+    - 16
+    - 445
+    IsoWeight: 0.03535091617201897
+    Isos:
+    - 149
+    - 157
+    IsosNO: []
+    LoadNodes: []
+    Nodes:
+    - 16
+    - 36
+    - 445
+    - 875
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 20.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    - uimm5
+    OperandNodes:
+    - 2356
+    - 69
+    - 1601
+    - 2429
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    - null
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    - IMM
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 2356
+    Parent: 143.0
+    Predicates: 0
+    Predicates (str): '0'
+    Registers: 2
+    ScheduleLength: 5.0
+    Status: 1
+    Status (str): '1'
+    StoreNodes: []
+    SubHash: 5ff0337f3f37155ba94b3012bfb3023c
+    TerminatorNodes: []
+    UniqueInstrs:
+    - ANDI
+    - SRL
+    - XORI
+    Variations: 16
+    Weight: 0.03535091617201897
+    result: 208
+- artifacts:
+    cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/gen_filtered/CUSTOM6.core_desc
+    cdsl_encoded: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/gen/CUSTOM6.encoded.core_desc
+    flat: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/gen_filtered/CUSTOM6.flat
+    fuse_cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/gen_filtered/CUSTOM6.fuse_core_desc
+    io_sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/qrencode_%bb.80_0/io_sub216.pkl
+    sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/qrencode_%bb.80_0/sub216.pkl
+    tree: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/qrencode_%bb.80_0/tree216.pkl
+  id: 9
+  metrics:
+    arch: xisaaccustom6single
+    benefit: 0.03186666657239878
+    code_size_reduction_rel: 0.0032804811372334486
+    cost: 808.276001
+    enc_score: 0.9990234375
+    enc_weight: 0.0009765625
+    hls_area: 808.276001
+    hls_area_scaled: 808.276001
+    hls_ii: 1
+    hls_latency: 3
+    hls_num_shared: 1
+    instr: CUSTOM6
+    ratio: 3.942547661067916e-05
+    runtime_reduction_rel: 0.03186666657239878
+    seal5_score: 1.0
+    util_score: 0.000710186669015
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 1.0
+    '#InputNodes': 1.0
+    '#Instrs': 2.0
+    '#Isos': 1.0
+    '#IsosNO': 1.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 2.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 2.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 1
+    ConstantNodes:
+    - 1414
+    ConstantSigns:
+    - false
+    - true
+    ConstantValues:
+    - -1
+    Constraints: []
+    DateTime: 20260527T131829
+    EncodingBitsLeft (32 bits): 10.0
+    EncodingFootprint (32 bits): 0.6
+    EncodingWeight (32 bits): 0.0009765625
+    Freq: 23040.0
+    FullHash: d727c4f842793468ef050b79ef5a036d886ff2ef
+    GlobalHash: a66c4af0a440f21f85470f5c201dcb884273487b
+    IOSubHash: 4e4020a10241dccbdce3bfd72759143e
+    InputNames:
+    - inp0
+    InputNodes:
+    - 806
+    InstrName: CUSTOM6
+    Instrs:
+    - ANDI
+    - XORI
+    IsoNodes:
+    - 219
+    - 403
+    - 389
+    - 775
+    IsoWeight: 0.03257940434413268
+    Isos:
+    - 183
+    IsosNO:
+    - 183
+    LoadNodes: []
+    Nodes:
+    - 219
+    - 403
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 15.0
+    OperandNames:
+    - rd
+    - rs1
+    - uimm5
+    OperandNodes:
+    - 2438
+    - 806
+    - 2487
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - null
+    OperandTypes:
+    - REG
+    - REG
+    - IMM
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 2438
+    Parent: 171.0
+    Predicates: 0
+    Predicates (str): '0'
+    Registers: 2
+    ScheduleLength: 3.0
+    Status: 1
+    Status (str): '1'
+    StoreNodes: []
+    SubHash: 2a2752aad25d95ee7167c0eb08811855
+    TerminatorNodes: []
+    UniqueInstrs:
+    - ANDI
+    - XORI
+    Variations: 16
+    Weight: 0.01628970217206634
+    result: 216
+- artifacts:
+    cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/gen_filtered/CUSTOM15.core_desc
+    cdsl_encoded: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/gen/CUSTOM15.encoded.core_desc
+    flat: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/gen_filtered/CUSTOM15.flat
+    fuse_cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/gen_filtered/CUSTOM15.fuse_core_desc
+    io_sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/qrencode_%bb.97_0/io_sub1.pkl
+    sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/qrencode_%bb.97_0/sub1.pkl
+    tree: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/qrencode_%bb.97_0/tree1.pkl
+  id: 29
+  metrics:
+    arch: xisaaccustom15single
+    benefit: 0.022178874710214624
+    code_size_reduction_rel: -0.0010934937124111865
+    cost: 3713.561279
+    enc_score: 0.9990234375
+    enc_weight: 0.0009765625
+    hls_area: 3713.561279
+    hls_area_scaled: 3713.561279
+    hls_ii: 1
+    hls_latency: 3
+    hls_num_shared: 1
+    instr: CUSTOM15
+    ratio: 5.972400357477614e-06
+    runtime_reduction_rel: 0.022178874710214624
+    seal5_score: 1.0
+    util_score: 0.0355093334507508
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 2.0
+    '#InputNodes': 2.0
+    '#Instrs': 3.0
+    '#Isos': 1.0
+    '#IsosNO': 0.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 3.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 3.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 1
+    - 1
+    ConstantNodes:
+    - 1704
+    - 1658
+    ConstantSigns:
+    - true
+    - false
+    ConstantValues:
+    - -1
+    - 1
+    Constraints: []
+    DateTime: 20260527T131924
+    EncodingBitsLeft (32 bits): 10.0
+    EncodingFootprint (32 bits): 0.6
+    EncodingWeight (32 bits): 0.0009765625
+    Freq: 25000.0
+    FullHash: c8b49657a153399f86bf84f240901fa24fd2bd6f
+    GlobalHash: 6954a126372099812a56af341aa7a936f2b416a1
+    IOSubHash: d150ba0e8b277b7bc62c6ee37474e711
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 1321
+    - 1504
+    InstrName: CUSTOM15
+    Instrs:
+    - ADDI
+    - ORI
+    - ADD
+    IsoNodes:
+    - 196
+    - 725
+    - 362
+    IsoWeight: 0.02651318712901423
+    Isos:
+    - 2
+    IsosNO: []
+    LoadNodes: []
+    Nodes:
+    - 725
+    - 362
+    - 196
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 15.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    OperandNodes:
+    - 2158
+    - 1321
+    - 1504
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 2158
+    Parent: .nan
+    Predicates: 256
+    Predicates (str): '256'
+    Registers: 2
+    ScheduleLength: 4.0
+    Status: 1
+    Status (str): '1'
+    StoreNodes: []
+    SubHash: 3d101e62310720cd166144391db4e45a
+    TerminatorNodes: []
+    UniqueInstrs:
+    - ADDI
+    - ORI
+    - ADD
+    Variations: 0
+    Weight: 0.02651318712901423
+    result: 1
+- artifacts:
+    cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/gen_filtered/CUSTOM22.core_desc
+    cdsl_encoded: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/gen/CUSTOM22.encoded.core_desc
+    flat: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/gen_filtered/CUSTOM22.flat
+    fuse_cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/gen_filtered/CUSTOM22.fuse_core_desc
+    io_sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/qrencode_%bb.80_0/io_sub209.pkl
+    sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/qrencode_%bb.80_0/sub209.pkl
+    tree: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/qrencode_%bb.80_0/tree209.pkl
+  id: 7
+  metrics:
+    arch: xisaaccustom22single
+    benefit: 0.03257897821634337
+    code_size_reduction_rel: 0.0010934937124111865
+    cost: 2504.90625
+    enc_score: 0.96875
+    enc_weight: 0.03125
+    hls_area: 2504.90625
+    hls_area_scaled: 2504.90625
+    hls_ii: 1
+    hls_latency: 3
+    hls_num_shared: 1
+    instr: CUSTOM22
+    ratio: 1.3006066880284789e-05
+    runtime_reduction_rel: 0.03257897821634337
+    seal5_score: 1.0
+    util_score: 0.065450803416424
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 1.0
+    '#InputNodes': 2.0
+    '#Instrs': 3.0
+    '#Isos': 1.0
+    '#IsosNO': 0.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 3.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 3.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 1
+    ConstantNodes:
+    - 1414
+    ConstantSigns:
+    - false
+    - true
+    ConstantValues:
+    - -1
+    Constraints: []
+    DateTime: 20260527T131829
+    EncodingBitsLeft (32 bits): 5.0
+    EncodingFootprint (32 bits): 0.8
+    EncodingWeight (32 bits): 0.03125
+    Freq: 23040.0
+    FullHash: f4bf67a88d992e06af3977f1d4427f6b1175059c
+    GlobalHash: a66c4af0a440f21f85470f5c201dcb884273487b
+    IOSubHash: 34f87437713c54714adcac4984f4b57e
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 806
+    - 807
+    InstrName: CUSTOM22
+    Instrs:
+    - ANDI
+    - SLL
+    - XORI
+    IsoNodes:
+    - 130
+    - 403
+    - 219
+    IsoWeight: 0.02443455325809951
+    Isos:
+    - 166
+    IsosNO: []
+    LoadNodes: []
+    Nodes:
+    - 219
+    - 130
+    - 403
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 20.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    - uimm5
+    OperandNodes:
+    - 2409
+    - 806
+    - 807
+    - 2480
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    - null
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    - IMM
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 2409
+    Parent: 149.0
+    Predicates: 0
+    Predicates (str): '0'
+    Registers: 2
+    ScheduleLength: 4.0
+    Status: 1
+    Status (str): '1'
+    StoreNodes: []
+    SubHash: 63145b24fca24a206f4b1757d9c31834
+    TerminatorNodes: []
+    UniqueInstrs:
+    - ANDI
+    - SLL
+    - XORI
+    Variations: 16
+    Weight: 0.02443455325809951
+    result: 209
+- artifacts:
+    cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/gen_filtered/CUSTOM26.core_desc
+    cdsl_encoded: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/gen/CUSTOM26.encoded.core_desc
+    flat: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/gen_filtered/CUSTOM26.flat
+    fuse_cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/gen_filtered/CUSTOM26.fuse_core_desc
+    io_sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/qrencode_%bb.94_0/io_sub223.pkl
+    sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/qrencode_%bb.94_0/sub223.pkl
+    tree: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/qrencode_%bb.94_0/tree223.pkl
+  id: 26
+  metrics:
+    arch: xisaaccustom26single
+    benefit: 0.018744578124149425
+    code_size_reduction_rel: 0.015308911973756167
+    cost: 2008.171875
+    enc_score: 0.96875
+    enc_weight: 0.03125
+    hls_area: 2008.171875
+    hls_area_scaled: 2008.171875
+    hls_ii: 1
+    hls_latency: 3
+    hls_num_shared: 1
+    instr: CUSTOM26
+    ratio: 9.334150307303465e-06
+    runtime_reduction_rel: 0.018744578124149425
+    seal5_score: 1.0
+    util_score: 0.0070734592233895
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 0.0
+    '#InputNodes': 2.0
+    '#Instrs': 2.0
+    '#Isos': 0.0
+    '#IsosNO': 0.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 2.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 2.0
+    BranchNodes: []
+    ConstantMinBits: []
+    ConstantNodes: []
+    ConstantSigns:
+    - false
+    ConstantValues: []
+    Constraints: []
+    DateTime: 20260527T131849
+    EncodingBitsLeft (32 bits): 5.0
+    EncodingFootprint (32 bits): 0.8
+    EncodingWeight (32 bits): 0.03125
+    Freq: 25000.0
+    FullHash: 1abd6959803cc5e976b384ec5565128f2ee6dd22
+    GlobalHash: 1fc132fa6b0938bdbb861e4822f5b4000ba44707
+    IOSubHash: 9fd508bad0a6d465b5c0f19d384cfd2e
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 69
+    - 875
+    InstrName: CUSTOM26
+    Instrs:
+    - ANDI
+    - SRL
+    IsoNodes:
+    - 36
+    - 445
+    IsoWeight: 0.017675458086009486
+    Isos: []
+    IsosNO: []
+    LoadNodes: []
+    Nodes:
+    - 445
+    - 36
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 20.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    - uimm5
+    OperandNodes:
+    - 2419
+    - 69
+    - 875
+    - 2444
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    - null
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    - IMM
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 2419
+    Parent: 199.0
+    Predicates: 0
+    Predicates (str): '0'
+    Registers: 2
+    ScheduleLength: 3.0
+    Status: 1
+    Status (str): '1'
+    StoreNodes: []
+    SubHash: 56894f5ff0ad4952ee23b49b063f8a00
+    TerminatorNodes: []
+    UniqueInstrs:
+    - ANDI
+    - SRL
+    Variations: 16
+    Weight: 0.017675458086009486
+    result: 223
+- artifacts:
+    cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/gen_filtered/CUSTOM28.core_desc
+    cdsl_encoded: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/gen/CUSTOM28.encoded.core_desc
+    flat: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/gen_filtered/CUSTOM28.flat
+    fuse_cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/gen_filtered/CUSTOM28.fuse_core_desc
+    io_sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/qrencode_%bb.94_0/io_sub229.pkl
+    sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/qrencode_%bb.94_0/sub229.pkl
+    tree: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/qrencode_%bb.94_0/tree229.pkl
+  id: 28
+  metrics:
+    arch: xisaaccustom28single
+    benefit: 0.02406128637473315
+    code_size_reduction_rel: 0.0032804811372334486
+    cost: 2008.171875
+    enc_score: 0.96875
+    enc_weight: 0.03125
+    hls_area: 2008.171875
+    hls_area_scaled: 2008.171875
+    hls_ii: 1
+    hls_latency: 3
+    hls_num_shared: 1
+    instr: CUSTOM28
+    ratio: 1.1981686764103869e-05
+    runtime_reduction_rel: 0.02406128637473315
+    seal5_score: 1.0
+    util_score: 0.0177546667253754
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 0.0
+    '#InputNodes': 2.0
+    '#Instrs': 2.0
+    '#Isos': 0.0
+    '#IsosNO': 0.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 2.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 2.0
+    BranchNodes: []
+    ConstantMinBits: []
+    ConstantNodes: []
+    ConstantSigns:
+    - false
+    ConstantValues: []
+    Constraints: []
+    DateTime: 20260527T131849
+    EncodingBitsLeft (32 bits): 5.0
+    EncodingFootprint (32 bits): 0.8
+    EncodingWeight (32 bits): 0.03125
+    Freq: 25000.0
+    FullHash: db61283b929febc6732935a853eff28bc2412c88
+    GlobalHash: 1fc132fa6b0938bdbb861e4822f5b4000ba44707
+    IOSubHash: 0e82137aead9d012d08a7dbac26ce709
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 69
+    - 445
+    InstrName: CUSTOM28
+    Instrs:
+    - ANDI
+    - SRL
+    IsoNodes:
+    - 16
+    - 36
+    IsoWeight: 0.017675458086009486
+    Isos: []
+    IsosNO: []
+    LoadNodes: []
+    Nodes:
+    - 16
+    - 36
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 20.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    - uimm5
+    OperandNodes:
+    - 2424
+    - 69
+    - 445
+    - 2450
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    - null
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    - IMM
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 2424
+    Parent: 204.0
+    Predicates: 0
+    Predicates (str): '0'
+    Registers: 2
+    ScheduleLength: 3.0
+    Status: 1
+    Status (str): '1'
+    StoreNodes: []
+    SubHash: 1e9f2fc5405a9920570cb35f75638968
+    TerminatorNodes: []
+    UniqueInstrs:
+    - ANDI
+    - SRL
+    Variations: 16
+    Weight: 0.017675458086009486
+    result: 229
+- artifacts:
+    cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/gen_filtered/CUSTOM35.core_desc
+    cdsl_encoded: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/gen/CUSTOM35.encoded.core_desc
+    flat: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/gen_filtered/CUSTOM35.flat
+    fuse_cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/gen_filtered/CUSTOM35.fuse_core_desc
+    io_sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/qrencode_%bb.80_0/io_sub177.pkl
+    sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/qrencode_%bb.80_0/sub177.pkl
+    tree: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/qrencode_%bb.80_0/tree177.pkl
+  id: 2
+  metrics:
+    arch: xisaaccustom35single
+    benefit: 0.03495276118859536
+    code_size_reduction_rel: 0.013121924548933794
+    cost: 1909.330933
+    enc_score: 0.9990234375
+    enc_weight: 0.0009765625
+    hls_area: 1909.330933
+    hls_area_scaled: 1909.330933
+    hls_ii: 1
+    hls_latency: 3
+    hls_num_shared: 1
+    instr: CUSTOM35
+    ratio: 1.8306287602891603e-05
+    runtime_reduction_rel: 0.03495276118859536
+    seal5_score: 1.0
+    util_score: 0.0703013783657965
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 1.0
+    '#InputNodes': 2.0
+    '#Instrs': 2.0
+    '#Isos': 0.0
+    '#IsosNO': 0.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 2.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 2.0
+    BranchNodes: []
+    ConstantMinBits:
+    - 3
+    ConstantNodes:
+    - 1151
+    ConstantSigns:
+    - false
+    ConstantValues:
+    - 3
+    Constraints: []
+    DateTime: 20260527T131829
+    EncodingBitsLeft (32 bits): 10.0
+    EncodingFootprint (32 bits): 0.6
+    EncodingWeight (32 bits): 0.0009765625
+    Freq: 23040.0
+    FullHash: b0ed089ab00c8595c245996d647af70fa26d9745
+    GlobalHash: a66c4af0a440f21f85470f5c201dcb884273487b
+    IOSubHash: 57218bb27e26dcdeed21eb0d5172dbc0
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 806
+    - 1559
+    InstrName: CUSTOM35
+    Instrs:
+    - SRLI
+    - ADD
+    IsoNodes:
+    - 218
+    - 402
+    IsoWeight: 0.01628970217206634
+    Isos: []
+    IsosNO: []
+    LoadNodes: []
+    Nodes:
+    - 402
+    - 218
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 15.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    OperandNodes:
+    - 2446
+    - 806
+    - 1559
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 2446
+    Parent: .nan
+    Predicates: 256
+    Predicates (str): '256'
+    Registers: 2
+    ScheduleLength: 3.0
+    Status: 1
+    Status (str): '1'
+    StoreNodes: []
+    SubHash: 66bcae466d3253e66d39932d76a7da9e
+    TerminatorNodes: []
+    UniqueInstrs:
+    - SRLI
+    - ADD
+    Variations: 0
+    Weight: 0.01628970217206634
+    result: 177
+- artifacts:
+    cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/gen_filtered/CUSTOM37.core_desc
+    cdsl_encoded: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/gen/CUSTOM37.encoded.core_desc
+    flat: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/gen_filtered/CUSTOM37.flat
+    fuse_cdsl: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/gen_filtered/CUSTOM37.fuse_core_desc
+    io_sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/qrencode_%bb.80_0/io_sub226.pkl
+    sub: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/qrencode_%bb.80_0/sub226.pkl
+    tree: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/qrencode_%bb.80_0/tree226.pkl
+  id: 11
+  metrics:
+    arch: xisaaccustom37single
+    benefit: 0.04107192474029797
+    code_size_reduction_rel: 0.02077638053581199
+    cost: 3613.461182
+    enc_score: 0.96875
+    enc_weight: 0.03125
+    hls_area: 3613.461182
+    hls_area_scaled: 3613.461182
+    hls_ii: 1
+    hls_latency: 3
+    hls_num_shared: 1
+    instr: CUSTOM37
+    ratio: 1.1366366669411746e-05
+    runtime_reduction_rel: 0.04107192474029797
+    seal5_score: 1.0
+    util_score: 0.012296882173995
+  properties:
+    '#Branches': 0.0
+    '#ConstantNodes': 0.0
+    '#InputNodes': 2.0
+    '#Instrs': 2.0
+    '#Isos': 0.0
+    '#IsosNO': 0.0
+    '#Loads': 0.0
+    '#Mems': 0.0
+    '#Nodes': 2.0
+    '#Operands': .nan
+    '#OutputNodes': 1.0
+    '#Stores': 0.0
+    '#Terminators': 0.0
+    '#UniqueInstrs': 2.0
+    BranchNodes: []
+    ConstantMinBits: []
+    ConstantNodes: []
+    ConstantSigns:
+    - false
+    ConstantValues: []
+    Constraints: []
+    DateTime: 20260527T131829
+    EncodingBitsLeft (32 bits): 5.0
+    EncodingFootprint (32 bits): 0.8
+    EncodingWeight (32 bits): 0.03125
+    Freq: 23040.0
+    FullHash: 5dc9bb8275c119a0df727351893c3e9194946b2c
+    GlobalHash: a66c4af0a440f21f85470f5c201dcb884273487b
+    IOSubHash: 57218bb27e26dcdeed21eb0d5172dbc0
+    InputNames:
+    - inp0
+    - inp1
+    InputNodes:
+    - 806
+    - 1559
+    InstrName: CUSTOM37
+    Instrs:
+    - SRLI
+    - ADD
+    IsoNodes:
+    - 218
+    - 402
+    IsoWeight: 0.01628970217206634
+    Isos: []
+    IsosNO: []
+    LoadNodes: []
+    Nodes:
+    - 402
+    - 218
+    OperandDirs:
+    - OUT
+    - IN
+    - IN
+    - IN
+    OperandEncBits:
+    - 5
+    - 5
+    - 5
+    - 5
+    OperandEncBitsSum: 20.0
+    OperandNames:
+    - rd
+    - rs1
+    - rs2
+    - uimm5
+    OperandNodes:
+    - 2446
+    - 806
+    - 1559
+    - 2497
+    OperandRegClasses:
+    - GPR
+    - GPR
+    - GPR
+    - null
+    OperandTypes:
+    - REG
+    - REG
+    - REG
+    - IMM
+    OutputNames:
+    - outp0
+    OutputNodes:
+    - 2446
+    Parent: 177.0
+    Predicates: 256
+    Predicates (str): '256'
+    Registers: 2
+    ScheduleLength: 3.0
+    Status: 1
+    Status (str): '1'
+    StoreNodes: []
+    SubHash: 66bcae466d3253e66d39932d76a7da9e
+    TerminatorNodes: []
+    UniqueInstrs:
+    - SRLI
+    - ADD
+    Variations: 16
+    Weight: 0.01628970217206634
+    result: 226
+global:
+  artifacts:
+    ETISS_INSTALL_DIR: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/local//etiss//etiss_install
+    ETISS_PERF_INSTALL_DIR: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/local//etiss_perf_filtered_selected//etiss_perf_install
+    HLS_DIR: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/docker/hls_filtered_selected/default
+    LLVM_INSTALL_DIR: /var/tmp/ga87puy/isaac-demo/out/embench_iot/qrduino/20260527T131551/work/local//seal5//llvm_install
+  properties:
+  - allowed_enc_sizes:
+    - 32
+    bb: '%bb.80'
+    candidate_count: 18
+    func: qrencode
+    ignore_names:
+    - G_PHI
+    - PHI
+    - COPY
+    - PseudoCALLIndirect
+    - PseudoLGA
+    - Select_GPR_Using_CC_GPR
+    - LUI
+    - PseudoMovAddr
+    - IMPLICIT_DEF
+    ignore_op_types:
+    - input
+    - constant
+    - label
+    instr_predicates: 511
+    limit_results: null
+    max_branches: 1
+    max_enc_footprint: 1.0
+    max_enc_weight: 1.0
+    max_inputs: 4
+    max_loads: 1
+    max_mems: 0
+    max_nodes: 1000
+    max_outputs: 2
+    max_path_len: 9
+    max_path_width: 2
+    max_stores: 1
+    min_enc_bits_left: 5
+    min_inputs: 1
+    min_iso_weight: 0.007330365977429854
+    min_nodes: 1
+    min_outputs: 1
+    min_path_len: 1
+    session: isaac-demo-qrduino-20260527T131551
+    stage: 32
+    timestamp: 20260527T131829
+    xlen: 32
+  - allowed_enc_sizes:
+    - 32
+    bb: '%bb.94'
+    candidate_count: 21
+    func: qrencode
+    ignore_names:
+    - G_PHI
+    - PHI
+    - COPY
+    - PseudoCALLIndirect
+    - PseudoLGA
+    - Select_GPR_Using_CC_GPR
+    - LUI
+    - PseudoMovAddr
+    - IMPLICIT_DEF
+    ignore_op_types:
+    - input
+    - constant
+    - label
+    instr_predicates: 511
+    limit_results: null
+    max_branches: 1
+    max_enc_footprint: 1.0
+    max_enc_weight: 1.0
+    max_inputs: 4
+    max_loads: 1
+    max_mems: 0
+    max_nodes: 1000
+    max_outputs: 2
+    max_path_len: 9
+    max_path_width: 2
+    max_stores: 1
+    min_enc_bits_left: 5
+    min_inputs: 1
+    min_iso_weight: 0.0010746853072612227
+    min_nodes: 1
+    min_outputs: 1
+    min_path_len: 1
+    session: isaac-demo-qrduino-20260527T131551
+    stage: 32
+    timestamp: 20260527T131849
+    xlen: 32
+  - allowed_enc_sizes:
+    - 32
+    bb: '%bb.120'
+    candidate_count: 3
+    func: qrencode
+    ignore_names:
+    - G_PHI
+    - PHI
+    - COPY
+    - PseudoCALLIndirect
+    - PseudoLGA
+    - Select_GPR_Using_CC_GPR
+    - LUI
+    - PseudoMovAddr
+    - IMPLICIT_DEF
+    ignore_op_types:
+    - input
+    - constant
+    - label
+    instr_predicates: 511
+    limit_results: null
+    max_branches: 1
+    max_enc_footprint: 1.0
+    max_enc_weight: 1.0
+    max_inputs: 4
+    max_loads: 1
+    max_mems: 0
+    max_nodes: 1000
+    max_outputs: 2
+    max_path_len: 9
+    max_path_width: 2
+    max_stores: 1
+    min_enc_bits_left: 5
+    min_inputs: 1
+    min_iso_weight: 0.00015755673225582831
+    min_nodes: 1
+    min_outputs: 1
+    min_path_len: 1
+    session: isaac-demo-qrduino-20260527T131551
+    stage: 32
+    timestamp: 20260527T131909
+    xlen: 32
+  - allowed_enc_sizes:
+    - 32
+    bb: '%bb.97'
+    candidate_count: 9
+    func: qrencode
+    ignore_names:
+    - G_PHI
+    - PHI
+    - COPY
+    - PseudoCALLIndirect
+    - PseudoLGA
+    - Select_GPR_Using_CC_GPR
+    - LUI
+    - PseudoMovAddr
+    - IMPLICIT_DEF
+    ignore_op_types:
+    - input
+    - constant
+    - label
+    instr_predicates: 511
+    limit_results: null
+    max_branches: 1
+    max_enc_footprint: 1.0
+    max_enc_weight: 1.0
+    max_inputs: 4
+    max_loads: 1
+    max_mems: 0
+    max_nodes: 1000
+    max_outputs: 2
+    max_path_len: 9
+    max_path_width: 2
+    max_stores: 1
+    min_enc_bits_left: 5
+    min_inputs: 1
+    min_iso_weight: 2.3098970192862973e-05
+    min_nodes: 1
+    min_outputs: 1
+    min_path_len: 1
+    session: isaac-demo-qrduino-20260527T131551
+    stage: 32
+    timestamp: 20260527T131924
+    xlen: 32

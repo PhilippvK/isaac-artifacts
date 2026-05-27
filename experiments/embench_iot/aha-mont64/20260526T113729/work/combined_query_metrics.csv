@@ -1,0 +1,7 @@
+num_rows,num_nodes,num_edges,func,basic_block
+3003,1232,1078,benchmark_body,%bb.24
+3003,1232,1078,benchmark_body,%bb.28
+3003,1232,1078,benchmark_body,%bb.50
+3003,1232,1078,benchmark_body,%bb.22
+3003,1232,1078,benchmark_body,%bb.30
+3003,1232,1078,benchmark_body,%bb.26

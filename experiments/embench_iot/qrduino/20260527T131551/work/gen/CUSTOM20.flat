@@ -1,0 +1,5 @@
+// DateTime: 20260527T131829, Sub: 20, Name: CUSTOM20, Inputs: 2, Outputs: 1
+unsigned<32> rs1_val=X[rs1];
+unsigned<32> rs2_val=X[rs2];
+unsigned<32> outp0=(unsigned<32>)(SLL(rs1_val,(unsigned<32>)(ANDI((unsigned<32>)(XORI(rs2_val,(unsigned<5>)(simm5))),(7)))));
+X[rd]=outp0;

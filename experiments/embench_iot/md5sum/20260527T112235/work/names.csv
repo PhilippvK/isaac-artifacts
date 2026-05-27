@@ -1,0 +1,4 @@
+instr,instr_lower,idx,num_fused_instrs
+CUSTOM0,custom0,0,2.0
+CUSTOM1,custom1,1,2.0
+CUSTOM2,custom2,2,2.0

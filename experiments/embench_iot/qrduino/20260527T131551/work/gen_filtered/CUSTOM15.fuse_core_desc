@@ -1,0 +1,26 @@
+// DateTime: 20260527T131924, Sub: 10, Name: CUSTOM15, Inputs: 2, Outputs: 1
+
+import "RV32I.core_desc"
+
+InstructionSet MySet extends RV32I {
+    instructions {
+        CUSTOM15 {
+            operands: {
+                unsigned<5> rd [[is_reg]] [[reg_class="GPR"]] [[reg_type="s32"]] [[out]];
+                unsigned<5> rs1 [[is_reg]] [[reg_class="GPR"]] [[reg_type="s32"]] [[in]];
+                unsigned<5> rs2 [[is_reg]] [[reg_class="GPR"]] [[reg_type="s32"]] [[in]];
+            }
+            encoding: auto;
+            assembly: {"custom15", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
+            behavior: {
+                unsigned<32> rs2_val=X[rs2];
+                unsigned<32> rs1_val=X[rs1];
+                unsigned<32> outp0=(unsigned<32>)(ADD((unsigned<32>)(ORI((unsigned<32>)(ADDI(rs1_val,(-1))),(1))),rs2_val));
+                X[rd]=outp0;
+                
+            }
+        }
+        
+
+    }
+}

@@ -1,0 +1,5 @@
+num_rows,num_nodes,num_edges,func,basic_block
+17766,3572,3572,qrencode,%bb.80
+21528,2484,2277,qrencode,%bb.94
+6328,1008,896,qrencode,%bb.120
+28,42,28,qrencode,%bb.97

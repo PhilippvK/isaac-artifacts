@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Choices Summary</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<style>
+  body { font-family: sans-serif; margin: 2em; background: #fafafa; }
+  h1 { border-bottom: 3px solid #ccc; padding-bottom: .2em; }
+  h2 { margin-top: 2em; }
+  table { border-collapse: collapse; margin: 1em 0; width: 100%; }
+  th, td { border: 1px solid #ccc; padding: 0.5em 1em; text-align: left; }
+  th { background: #eee; }
+  pre { padding: 1em; background: #f0f0f0; border-radius: 8px; overflow-x: auto; }
+</style>
+</head>
+<body>
+<h1>Choices Summary</h1>
+
+<h2>Choice 0</h2>
+<table>
+<tr><th>func_name</th><th>bb_name</th><th>rel_weight</th><th>num_instrs</th><th>freq</th><th>start</th><th>end</th></tr>
+<tr><td>qrencode</td><td>%bb.80</td><td>0.146607</td><td>18</td><td>23040.0</td><td>0x1001e00</td><td>0x1001e48</td></tr>
+</table>
+<pre><code class='asm'>
+ 1001e00: 0038d393     	srli	t2, a7, 0x3
+ 1001e04: 007603b3     	add	t2, a2, t2
+ 1001e08: 00538e33     	add	t3, t2, t0
+ 1001e0c: 000e4e03     	lbu	t3, 0x0(t3)
+ 1001e10: fff8ce93     	not	t4, a7
+ 1001e14: 007efe93     	andi	t4, t4, 0x7
+ 1001e18: 01dc1eb3     	sll	t4, s8, t4
+ 1001e1c: 01cef4b3     	and	s1, t4, t3
+ 1001e20: 00188893     	addi	a7, a7, 0x1
+ 1001e24: 0038de13     	srli	t3, a7, 0x3
+ 1001e28: 01c60e33     	add	t3, a2, t3
+ 1001e2c: 005e0f33     	add	t5, t3, t0
+ 1001e30: 000f4f83     	lbu	t6, 0x0(t5)
+ 1001e34: fff8cf13     	not	t5, a7
+ 1001e38: 007f7f13     	andi	t5, t5, 0x7
+ 1001e3c: 01ec1f33     	sll	t5, s8, t5
+ 1001e40: 01ff7fb3     	and	t6, t5, t6
+ 1001e44: fa048ae3     	beqz	s1, 0x1001df8 <qrencode+0x84c>
+</code></pre>
+<h2>Choice 1</h2>
+<table>
+<tr><th>func_name</th><th>bb_name</th><th>rel_weight</th><th>num_instrs</th><th>freq</th><th>start</th><th>end</th></tr>
+<tr><td>qrencode</td><td>%bb.94</td><td>0.123728</td><td>14</td><td>25000.0</td><td>0x1001f00</td><td>0x1001f38</td></tr>
+</table>
+<pre><code class='asm'>
+ 1001f00: 6bca4683     	lbu	a3, 0x6bc(s4)
+ 1001f04: 6d09a883     	lw	a7, 0x6d0(s3)
+ 1001f08: 00078293     	mv	t0, a5
+ 1001f0c: 00375793     	srli	a5, a4, 0x3
+ 1001f10: 02d606b3     	mul	a3, a2, a3
+ 1001f14: 00f887b3     	add	a5, a7, a5
+ 1001f18: 00d786b3     	add	a3, a5, a3
+ 1001f1c: 0006c783     	lbu	a5, 0x0(a3)
+ 1001f20: fff74693     	not	a3, a4
+ 1001f24: 0076f893     	andi	a7, a3, 0x7
+ 1001f28: 6c8da683     	lw	a3, 0x6c8(s11)
+ 1001f2c: 0117d7b3     	srl	a5, a5, a7
+ 1001f30: 0017f793     	andi	a5, a5, 0x1
+ 1001f34: fa5792e3     	bne	a5, t0, 0x1001ed8 <qrencode+0x92c>
+</code></pre>
+<h2>Choice 2</h2>
+<table>
+<tr><th>func_name</th><th>bb_name</th><th>rel_weight</th><th>num_instrs</th><th>freq</th><th>start</th><th>end</th></tr>
+<tr><td>qrencode</td><td>%bb.120</td><td>0.097215</td><td>11</td><td>25000.0</td><td>0x10020c0</td><td>0x10020ec</td></tr>
+</table>
+<pre><code class='asm'>
+ 10020c0: 6bca4603     	lbu	a2, 0x6bc(s4)
+ 10020c4: 6d09a883     	lw	a7, 0x6d0(s3)
+ 10020c8: 02c58633     	mul	a2, a1, a2
+ 10020cc: 00d888b3     	add	a7, a7, a3
+ 10020d0: 00c88633     	add	a2, a7, a2
+ 10020d4: 00064883     	lbu	a7, 0x0(a2)
+ 10020d8: 00080293     	mv	t0, a6
+ 10020dc: 6c8da603     	lw	a2, 0x6c8(s11)
+ 10020e0: 00f8d833     	srl	a6, a7, a5
+ 10020e4: 00187813     	andi	a6, a6, 0x1
+ 10020e8: fa581ee3     	bne	a6, t0, 0x10020a4 <qrencode+0xaf8>
+</code></pre>
+<h2>Choice 3</h2>
+<table>
+<tr><th>func_name</th><th>bb_name</th><th>rel_weight</th><th>num_instrs</th><th>freq</th><th>start</th><th>end</th></tr>
+<tr><td>qrencode</td><td>%bb.97</td><td>0.053026</td><td>6</td><td>25000.0</td><td>0x1001ee8</td><td>0x1001f00</td></tr>
+</table>
+<pre><code class='asm'>
+ 1001ee8: 6bdac683     	lbu	a3, 0x6bd(s5)
+ 1001eec: fff78893     	addi	a7, a5, -0x1
+ 1001ef0: 0018e893     	ori	a7, a7, 0x1
+ 1001ef4: 00170713     	addi	a4, a4, 0x1
+ 1001ef8: 00b885b3     	add	a1, a7, a1
+ 1001efc: 04d77c63     	bgeu	a4, a3, 0x1001f54 <qrencode+0x9a8>
+</code></pre>
+</body></html>

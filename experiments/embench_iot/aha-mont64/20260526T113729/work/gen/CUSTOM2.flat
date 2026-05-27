@@ -1,0 +1,4 @@
+// DateTime: 20260526T114014, Sub: 2, Name: CUSTOM2, Inputs: 1, Outputs: 1
+unsigned<32> rs1_val=X[rs1];
+unsigned<32> outp0=(unsigned<32>)(SLTIU((unsigned<32>)(ADDI(rs1_val,(1))),(1)));
+X[rd]=outp0;

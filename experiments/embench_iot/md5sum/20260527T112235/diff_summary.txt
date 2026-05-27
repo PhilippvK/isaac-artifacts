@@ -1,0 +1,27 @@
+=== DIFFS ===
+0) <md5-%bb.10>
+rel_weight [old] : 0.5691619716530658
+rel_weight [new] : 0.543291511218753
+rel_weight [diff]: -0.02587
+rel_weight [rel] : -4.54%
+num_instrs [old] : 22
+num_instrs [new] : 21
+num_instrs [diff]: -1
+num_instrs [rel] : -4.55%
+diff --git a/old b/new
+index ea76b99..603aaf4 100644
+--- a/old
++++ b/new
+@@ -1,6 +1,5 @@
+ lw       s11, 0x0(s2)                 
+-slli     s10, s10, 0x2                
+-add      s10, t6, s10                 
++custom0  s10, t6, s10                 
+ lw       s10, 0x0(s10)                
+ lw       ra, 0x0(s4)                  
+ add      s8, s9, s8                   
+
+1) <md5-%bb.3>
+Not found!
+2) <benchmark_body-%bb.3>
+Not found!

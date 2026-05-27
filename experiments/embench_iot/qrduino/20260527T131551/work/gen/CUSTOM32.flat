@@ -1,0 +1,5 @@
+// DateTime: 20260527T131924, Sub: 32, Name: CUSTOM32, Inputs: 2, Outputs: 1
+unsigned<32> rs2_val=X[rs2];
+unsigned<32> rs1_val=X[rs1];
+unsigned<32> outp0=(unsigned<32>)(ADD((unsigned<32>)(ORI(rs1_val,(unsigned<5>)(uimm5))),rs2_val));
+X[rd]=outp0;

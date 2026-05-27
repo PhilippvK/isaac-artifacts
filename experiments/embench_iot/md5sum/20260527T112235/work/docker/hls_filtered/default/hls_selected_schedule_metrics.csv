@@ -1,0 +1,2 @@
+,num_groups,num_instrs,max_instrs,min_instrs,avg_instrs,min_ii,max_ii,avg_ii,min_lat,max_lat,avg_lat,total_area_estimate,total_area_estimate_with_lifetimes
+0,2,2,1,1,1.0,1,1,1.0,3,3,3.0,5515.292115,5515.292115

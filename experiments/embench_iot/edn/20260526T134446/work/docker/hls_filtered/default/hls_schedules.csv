@@ -1,0 +1,11 @@
+,config,idx,II,Fallback,Instruction latencies,Allocation,Overall latency,Area estimate w/o lifetimes,Area estimate w/ lifetimes,Total lifetime,Total decoupled ops
+0,SG_2_SOL_IDX_1,1,1,False,{'CUSTOM1': 3},{},,198.940994,198.940994,0.0,0.0
+1,SG_2_SOL_IDX_0,0,1,True,{},{},3.0,,,,
+2,SG_4_SOL_IDX_1,1,1,False,{'CUSTOM3': 4},{'mul': 1},,26361.541016,26361.541016,0.0,0.0
+3,SG_4_SOL_IDX_0,0,4,True,{},{},4.0,,,,
+4,SG_1_SOL_IDX_1,1,1,False,{'CUSTOM0': 4},{'mul': 1},,26361.541016,26361.541016,0.0,0.0
+5,SG_1_SOL_IDX_0,0,4,True,{},{},4.0,,,,
+6,SG_3_SOL_IDX_1,1,1,False,{'CUSTOM2': 3},{},,198.940994,198.940994,0.0,0.0
+7,SG_3_SOL_IDX_0,0,1,True,{},{},3.0,,,,
+8,SG_5_SOL_IDX_1,1,1,False,{'CUSTOM4': 4},{'mul': 1},,28065.669922,28065.669922,0.0,0.0
+9,SG_5_SOL_IDX_0,0,4,True,{},{},4.0,,,,

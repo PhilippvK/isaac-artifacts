@@ -39,3 +39,19 @@ find . -type d -name "etiss_perf_install" -exec rm -rf "{}" \; || :
 find . -type f -name "etiss_source.zip" -delete || :
 find . -type d -name "run_*_mem*" -exec rm -rf "{}" \; || :
 find . -type d -name "run_compare_*" -exec rm -rf "{}" \; || :
+find . -type d -name "VexRiscv_*s" -exec rm -rf "{}" \; || :
+find . -type d -name "build_config" -exec rm -rf "{}" \; || :
+find . -type d -name "rtl" -exec rm -rf "{}" \; || :
+find . -type d -name "mlir" -exec rm -rf "{}" \; || :
+find . -type f -name "rtl.patch" -delete || :
+find . -type f -name "rtl.patch.stat" -delete || :
+find . -type f -name "*.mlir" -delete || :
+find . -type f -name "*.sv" -delete || :
+find . -type f -name "PREDGRAPH_AFTER_MERGE.dot" -delete || :
+find . -type f -name "PROB_AFTER_MERGE.dot" -delete || :
+find . -type f -name "PARAMS_*.dot" -delete || :
+find . -type f -name "PARAMS_*.dot.stats" -delete || :
+find . -type f -name "filelist.f" -delete || :
+find . -type f -name "Kconfig" -delete || :
+find . -type f -name "config" -delete || :
+find . -type f -name ".config" -delete || :
